@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.insurtech.kanguro.ui.scenes.codeValidation.CodeValidationViewModel" />
+
+        <import type="com.insurtech.kanguro.ui.scenes.codeValidation.CodeValidationViewModel.ValidationState" />
+
+    </data>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:animateLayoutChanges="true"
+            android:orientation="vertical"
+            android:paddingHorizontal="@dimen/spacing_xxs"
+            android:paddingVertical="@dimen/spacing_xs">
+
+            <ImageView
+                android:id="@+id/logo_title"
+                android:layout_width="160dp"
+                android:layout_height="75dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="40dp"
+                android:src="@drawable/logo_single" />
+
+            <TextView
+                android:id="@+id/helloLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/spacing_xs"
+                android:paddingBottom="@dimen/spacing_xs"
+                android:text="@string/we_sent_a_code"
+                android:textAppearance="@style/KanguroTextStyle.Title1" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="8dp"
+                android:text="@string/enter_the_code"
+                android:textAppearance="@style/KanguroTextStyle.Body.Regular" />
+
+            <LinearLayout
+                android:id="@+id/codeLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:animateLayoutChanges="true"
+                android:focusableInTouchMode="true"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/code0Field"
+                    style="@style/PhoneCodeEditTextStyle"
+                    android:background="@{viewModel.inputBackground}"
+                    android:enabled="@{viewModel.validationState != ValidationState.LOADING}"
+                    android:text="@={viewModel.digit0}"
+                    app:onFocusChanged="@{viewModel::notifyEditTextFocusChanged}"
+                    tools:text="1" />
+
+                <EditText
+                    android:id="@+id/code1Field"
+                    style="@style/PhoneCodeEditTextStyle"
+                    android:layout_marginStart="@dimen/spacing_quark"
+                    android:background="@{viewModel.inputBackground}"
+                    android:enabled="@{viewModel.validationState != ValidationState.LOADING}"
+                    android:text="@={viewModel.digit1}"
+                    app:onFocusChanged="@{viewModel::notifyEditTextFocusChanged}"
+                    tools:text="2" />
+
+                <EditText
+                    android:id="@+id/code2Field"
+                    style="@style/PhoneCodeEditTextStyle"
+                    android:layout_marginStart="@dimen/spacing_quark"
+                    android:background="@{viewModel.inputBackground}"
+                    android:enabled="@{viewModel.validationState != ValidationState.LOADING}"
+                    android:text="@={viewModel.digit2}"
+                    app:onFocusChanged="@{viewModel::notifyEditTextFocusChanged}"
+                    tools:text="3" />
+
+                <EditText
+                    android:id="@+id/code3Field"
+                    style="@style/PhoneCodeEditTextStyle"
+                    android:layout_marginStart="@dimen/spacing_quark"
+                    android:background="@{viewModel.inputBackground}"
+                    android:enabled="@{viewModel.validationState != ValidationState.LOADING}"
+                    android:text="@={viewModel.digit3}"
+                    app:onFocusChanged="@{viewModel::notifyEditTextFocusChanged}" />
+
+                <EditText
+                    android:id="@+id/code4Field"
+                    style="@style/PhoneCodeEditTextStyle"
+                    android:layout_marginStart="@dimen/spacing_quark"
+                    android:background="@{viewModel.inputBackground}"
+                    android:enabled="@{viewModel.validationState != ValidationState.LOADING}"
+                    android:text="@={viewModel.digit4}"
+                    app:onFocusChanged="@{viewModel::notifyEditTextFocusChanged}" />
+
+                <EditText
+                    android:id="@+id/code5Field"
+                    style="@style/PhoneCodeEditTextStyle"
+                    android:layout_marginStart="@dimen/spacing_quark"
+                    android:background="@{viewModel.inputBackground}"
+                    android:enabled="@{viewModel.validationState != ValidationState.LOADING}"
+                    android:text="@={viewModel.digit5}"
+                    app:onFocusChanged="@{viewModel::notifyEditTextFocusChanged}" />
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/spacing_nano"
+                    android:visibility="@{viewModel.validationState == ValidationState.LOADING}"
+                    app:lottie_autoPlay="true"
+                    app:lottie_loop="true"
+                    app:lottie_rawRes="@raw/loader_lottie" />
+
+                <View
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/spacing_nano"
+                    android:background="@drawable/ic_circle_success"
+                    android:visibility="@{viewModel.validationState == ValidationState.VALID}" />
+
+                <View
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/spacing_nano"
+                    android:background="@drawable/ic_circle_error"
+                    android:visibility="@{viewModel.validationState == ValidationState.INVALID}" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/spacing_nano"
+                android:text="@string/invalid_code"
+                android:textAppearance="@style/KanguroTextStyle.Body.Regular"
+                android:textColor="@color/negative_darkest"
+                android:visibility="@{viewModel.validationState == ValidationState.INVALID}" />
+
+            <TextView
+                android:id="@+id/codeHasntArrivedLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_xxs"
+                android:text="@{viewModel.resendTimerText}"
+                android:textAppearance="@style/KanguroTextStyle.Body.Regular"
+                android:textColor="@color/neutral_dark"
+                android:textColorLink="@color/secondary_darkest"
+                android:visibility="@{viewModel.validationState != ValidationState.VALID}"
+                tools:text="@string/code_hasnt_arrived" />
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/backButton"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_xxxs"
+                android:text="@string/back_underlined"
+                android:textAllCaps="false"
+                android:textAppearance="@style/KanguroTextStyle.Body.Bold"
+                app:icon="@drawable/ic_back_ios"
+                app:iconPadding="16dp" />
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+</layout>

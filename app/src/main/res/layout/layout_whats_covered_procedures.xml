@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        style="@style/whats_covered_item_content_box_style"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/title"
+            style="@style/KanguroTextStyle.Title3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/procedures"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/centerGuide"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5" />
+
+        <androidx.constraintlayout.helper.widget.Flow
+            android:id="@+id/leftFlow"
+            style="@style/whats_covered_item_flow_style"
+            android:layout_marginEnd="@dimen/spacing_nano"
+            app:constraint_referenced_ids="line0,line1,line2,line3"
+            app:layout_constraintEnd_toEndOf="@id/centerGuide"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/title" />
+
+        <androidx.constraintlayout.helper.widget.Flow
+            android:id="@+id/rightFlow"
+            style="@style/whats_covered_item_flow_style"
+            android:layout_marginStart="@dimen/spacing_nano"
+            app:constraint_referenced_ids="line4,line5,line6,line7"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/centerGuide"
+            app:layout_constraintTop_toBottomOf="@id/title" />
+
+        <!-- Left -->
+
+        <com.insurtech.kanguro.designsystem.ui.views.TopLeftDrawableTextView
+            android:id="@+id/line0"
+            style="@style/whats_covered_item_style"
+            android:text="@string/item_prosthetic_limbs" />
+
+        <com.insurtech.kanguro.designsystem.ui.views.TopLeftDrawableTextView
+            android:id="@+id/line1"
+            style="@style/whats_covered_item_style"
+            android:text="@string/item_cremation" />
+
+        <com.insurtech.kanguro.designsystem.ui.views.TopLeftDrawableTextView
+            android:id="@+id/line2"
+            style="@style/whats_covered_item_style"
+            android:text="@string/item_euthanasia" />
+
+        <com.insurtech.kanguro.designsystem.ui.views.TopLeftDrawableTextView
+            android:id="@+id/line3"
+            style="@style/whats_covered_item_style"
+            android:text="@string/item_vet_exam" />
+
+        <com.insurtech.kanguro.designsystem.ui.views.TopLeftDrawableTextView
+            android:id="@+id/line4"
+            style="@style/whats_covered_item_style"
+            android:text="@string/item_surgery" />
+
+        <!-- Right -->
+
+        <com.insurtech.kanguro.designsystem.ui.views.TopLeftDrawableTextView
+            android:id="@+id/line5"
+            style="@style/whats_covered_item_style"
+            android:text="@string/item_er_vets" />
+
+        <com.insurtech.kanguro.designsystem.ui.views.TopLeftDrawableTextView
+            android:id="@+id/line6"
+            style="@style/whats_covered_item_style"
+            android:text="@string/item_cancer_treatment" />
+
+        <com.insurtech.kanguro.designsystem.ui.views.TopLeftDrawableTextView
+            android:id="@+id/line7"
+            style="@style/whats_covered_item_style"
+            android:text="@string/item_dental_illness" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="133dp"
+        android:layout_gravity="center_horizontal"
+        android:src="@drawable/img_procedures" />
+
+</FrameLayout>

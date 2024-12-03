@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.scenes.welcome.WelcomeCarouselItemFragment">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/backgroundImage"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toTopOf="@id/guidline46"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearanceOverlay="@style/WelcomeScreenCornerSize"
+            tools:src="@drawable/image_onboarding_1" />
+
+        <TextView
+            android:id="@+id/contentText"
+            style="@style/KanguroTextStyle.Title3"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="@dimen/spacing_xs"
+            android:layout_marginEnd="@dimen/spacing_xs"
+            android:gravity="start"
+            android:textSize="@dimen/font_md"
+            app:autoSizeMaxTextSize="@dimen/font_md"
+            app:autoSizeMinTextSize="11sp"
+            app:autoSizeTextType="uniform"
+            app:layout_constraintBottom_toBottomOf="@id/guidline65"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/guidline51"
+            tools:text="@tools:sample/lorem[12]" />
+
+        <TextView
+            android:id="@+id/switchLanguage"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginStart="@dimen/spacing_xs"
+            android:drawablePadding="@dimen/spacing_nano"
+            android:gravity="start|center_vertical"
+            android:text="@string/switch_language"
+            android:textAppearance="@style/KanguroTextStyle.Body.Bold"
+            android:textColor="@color/primary_dark"
+            app:autoSizeMaxTextSize="@dimen/font_s"
+            app:autoSizeMinTextSize="11sp"
+            app:autoSizeTextType="uniform"
+            android:textSize="@dimen/font_s"
+            app:drawableEndCompat="@drawable/ic_repeat"
+            app:layout_constraintBottom_toTopOf="@id/guidline69"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/guidline65" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidline46"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.465" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidline51"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.51" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidline65"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.65" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidline69"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.69" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

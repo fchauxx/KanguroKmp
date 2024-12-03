@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/spacing_xs"
+        android:layout_marginTop="@dimen/spacing_nano"
+        android:layout_marginEnd="@dimen/spacing_xs"
+        android:animateLayoutChanges="true"
+        android:background="@drawable/bg_card_options"
+        android:padding="@dimen/spacing_xxxs">
+
+        <LinearLayout
+            android:id="@+id/headerTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="@id/constraintLayout"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/charityInitials"
+                    style="@style/KanguroTextStyle.Body.Bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAllCaps="true"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="BCR" />
+
+                <TextView
+                    android:id="@+id/charityTitle"
+                    style="@style/KanguroTextStyle.Body.Regular"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:textColor="@color/neutral_dark"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/charityInitials"
+                    tools:text="@tools:sample/lorem[2]" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <ImageView
+                android:id="@+id/summaryIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="@dimen/spacing_nano"
+                android:src="@drawable/ic_down" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/charityInfo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="@id/constraintLayout"
+            app:layout_constraintStart_toStartOf="@id/constraintLayout"
+            app:layout_constraintTop_toBottomOf="@id/headerTitle"
+            tools:visibility="visible">
+
+            <TextView
+                android:id="@+id/charityDescription"
+                style="@style/KanguroTextStyle.Body.Regular"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_xxs"
+                tools:text="@tools:sample/lorem[15]" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_xxs">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/chooseCauseButton"
+                    style="@style/KanguroButtonStyle.Primary.Large"
+                    android:text="@string/choose_cause"
+                    app:icon="@drawable/ic_heart_search_white" />
+
+                <ProgressBar
+                    android:id="@+id/isLoading"
+                    style="@style/ProgressBarBtnSmall"
+                    android:layout_gravity="center"
+                    android:visibility="gone"
+                    tools:visibility="visible" />
+
+            </FrameLayout>
+
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

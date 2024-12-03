@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_pre_login"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.insurtech.kanguro.ui.scenes.login.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_loginFragment_to_passwordFragment"
+            app:destination="@id/passwordFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/passwordFragment"
+        android:name="com.insurtech.kanguro.ui.scenes.password.PasswordFragment"
+        android:label="PasswordFragment"
+        tools:layout="@layout/fragment_password">
+        <action
+            android:id="@+id/toForgotPassword"
+            app:destination="@id/preForgotPassword" />
+        <action
+            android:id="@+id/toLoginBlocked"
+            app:destination="@id/loginBlocked" />
+        <action
+            android:id="@+id/toNewPasswordFragment"
+            app:destination="@id/newPasswordFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/phoneValidationNewFragment"
+        android:name="com.insurtech.kanguro.ui.scenes.phoneValidationNew.PhoneValidationNewFragment"
+        android:label="PhoneValidationNewFragment"
+        tools:layout="@layout/fragment_phone_validation_new" />
+    <dialog
+        android:id="@+id/preForgotPassword"
+        android:name="com.insurtech.kanguro.ui.scenes.forgotPassword.PreForgotPasswordFragment"
+        android:label="ForgotPasswordFragment"
+        tools:layout="@layout/bottomsheet_pre_forgot_password">
+        <argument
+            android:name="email"
+            app:argType="string" />
+    </dialog>
+    <dialog
+        android:id="@+id/loginBlocked"
+        android:name="com.insurtech.kanguro.ui.scenes.login.LoginBlockedFragment"
+        android:label="LoginBlockedFragment"
+        tools:layout="@layout/bottomsheet_blocked_login">
+        <argument
+            android:name="isUserLogged"
+            app:argType="boolean" />
+    </dialog>
+    <fragment
+        android:id="@+id/newPasswordFragment"
+        android:name="com.insurtech.kanguro.ui.scenes.password.NewPasswordFragment"
+        android:label="fragment_new_password"
+        tools:layout="@layout/fragment_new_password" >
+        <argument
+            android:name="email"
+            app:argType="string" />
+        <argument
+            android:name="oldPassword"
+            app:argType="string" />
+    </fragment>
+</navigation>

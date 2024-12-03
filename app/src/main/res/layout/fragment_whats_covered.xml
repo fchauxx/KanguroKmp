@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/spacing_xs">
+
+        <ImageButton
+            android:id="@+id/closeButton"
+            style="@style/KanguroCloseButtonX" />
+
+        <TextView
+            style="@style/KanguroTextStyle.Title1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/what_is_covered" />
+
+        <TextView
+            android:id="@+id/planName"
+            style="@style/KanguroTextStyle.Body.Bold"
+            tools:text="@string/perro_bueno"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:textAllCaps="true"
+            android:textColor="@color/secondary_medium" />
+
+        <include
+            layout="@layout/layout_whats_covered_diagnostics"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_xs"
+            android:layout_marginTop="@dimen/spacing_xs"
+            android:layout_marginEnd="@dimen/spacing_xs" />
+
+        <include
+            layout="@layout/layout_whats_covered_procedures"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_xs"
+            android:layout_marginTop="@dimen/spacing_xs"
+            android:layout_marginEnd="@dimen/spacing_xs" />
+
+        <include
+            layout="@layout/layout_whats_covered_medications"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_xs"
+            android:layout_marginTop="@dimen/spacing_xs"
+            android:layout_marginEnd="@dimen/spacing_xs" />
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="com.insurtech.kanguro.core.utils.PetExtensionsKt" />
+
+        <variable
+            name="viewModel"
+            type="com.insurtech.kanguro.ui.scenes.coverageDetails.CoverageDetailsViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.motion.widget.MotionLayout
+            android:id="@+id/myActual"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/white"
+            app:layoutDescription="@xml/fragment_scroll_scene"
+            tools:context=".ui.scenes.coverageDetails.CoverageDetailsFragment">
+
+
+            <RelativeLayout
+                android:id="@+id/photoHeader"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                app:layout_constraintBaseline_toTopOf="parent">
+
+                <FrameLayout
+                    android:id="@+id/returnButtonFrame"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/spacing_xxs"
+                    android:layout_marginTop="@dimen/spacing_xxs"
+                    android:translationZ="10dp">
+
+                    <ImageView
+                        android:id="@+id/returnButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="@string/go_back_content_description"
+                        android:enabled="@{!viewModel.isLoadingPicture}"
+                        android:src="@drawable/ic_return" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/editPictureButtonFrame"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/returnButtonFrame"
+                    android:layout_alignBottom="@id/returnButtonFrame"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="@dimen/spacing_xxs"
+                    android:translationZ="10dp">
+
+                    <ImageView
+                        android:id="@+id/editPictureButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:contentDescription="@string/edit_pet_picture_content_description"
+                        android:enabled="@{!viewModel.isLoadingPicture}"
+                        android:src="@drawable/ic_edit_picture" />
+                </FrameLayout>
+
+                <ImageView
+                    android:id="@+id/petImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:contentDescription="@string/pet_picture"
+                    android:scaleType="centerCrop"
+                    android:src="@{PetExtensionsKt.getCacheableImage(viewModel.coverage.pet)}"
+                    android:visibility="@{!viewModel.isLoadingPicture}"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:placeholder="@{PetExtensionsKt.getPlaceholderImage(viewModel.coverage.pet)}"
+                    tools:src="@drawable/bg_dog" />
+
+                <androidx.compose.ui.platform.ComposeView
+                    android:id="@+id/loadingComponent"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="@{viewModel.isLoadingPicture}" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="16dp"
+                    android:layout_alignBottom="@id/petImage"
+                    android:background="@drawable/bg_coverage_details" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/petName"
+                style="@style/KanguroTextStyle.Title1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/spacing_nano"
+                android:layout_marginEnd="@dimen/spacing_nano"
+                android:gravity="center"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/photoHeader"
+                tools:text="hello, Doggo" />
+
+            <TextView
+                android:id="@+id/subTitleInfo"
+                style="@style/KanguroTextStyle.Subhead.Regular"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@{viewModel.petBreedAndAge}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/petName"
+                tools:text="breed, 3y" />
+
+            <TextView
+                android:id="@+id/policyNumber"
+                style="@style/KanguroTextStyle.Subhead.Regular"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_xxxs"
+                android:gravity="center"
+                android:text="@{viewModel.coverageNumber}"
+                android:textColor="@color/secondary_medium"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/subTitleInfo"
+                tools:text="POLICY NUMBER #20000278" />
+
+            <com.airbnb.epoxy.EpoxyRecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="@dimen/spacing_xxxs"
+                android:clipToPadding="false"
+                android:paddingBottom="@dimen/spacing_xxs"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/policyNumber" />
+        </androidx.constraintlayout.motion.widget.MotionLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

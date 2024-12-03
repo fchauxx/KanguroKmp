@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <import type="kotlin.Unit"/>
+        <import type="kotlin.jvm.functions.Function0"/>
+        <variable name="text" type="String" />
+        <variable
+            name="onClick"
+            type="Function0&lt;Unit>" />
+    </data>
+
+    <Button
+        style="@style/chatbot_button_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@{text}"
+        android:onClick="@{(v) -> onClick.invoke()}"
+        android:minHeight="@dimen/chatbot_button_height_vertical"
+        tools:text="Test" />
+
+</layout>

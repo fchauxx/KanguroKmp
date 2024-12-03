@@ -1,0 +1,879 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_dashboard"
+    app:startDestination="@id/dashboardFragment">
+    <fragment
+        android:id="@+id/getQuoteFragment"
+        android:name="com.insurtech.kanguro.ui.scenes.webView.GetQuoteFragment"
+        android:label="GetAQuoteFragment"
+        tools:layout="@layout/bottomsheet_webview" />
+    <fragment
+        android:id="@+id/privacyPolicyFragment"
+        android:name="com.insurtech.kanguro.ui.scenes.webView.PrivacyPolicyFragment"
+        android:label="PrivacyPolicyFragment"
+        tools:layout="@layout/bottomsheet_webview" />
+    <fragment
+        android:id="@+id/javierChatbotFragment"
+        android:name="com.insurtech.kanguro.ui.scenes.javier.JavierChatbotFragment"
+        android:label="JavierChatbotFragment"
+        tools:layout="@layout/fragment_claims_chatbot">
+        <argument
+            android:name="type"
+            app:argType="com.insurtech.kanguro.ui.scenes.javier.ChatbotType" />
+        <action
+            android:id="@+id/action_javierChatbotFragment_to_experienceFeedbackFragment"
+            app:destination="@id/experienceFeedbackFragment" />
+        <action
+            android:id="@+id/action_javierChatbotFragment_to_codeValidationFragment"
+            app:destination="@id/codeValidationFragment" />
+        <action
+            android:id="@+id/action_javierChatbotFragment_to_claimsFragment"
+            app:destination="@id/petTrackYourClaimsFragment"
+            app:popUpTo="@id/javierChatbotFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/medicalHistoryChatbotFragment"
+        android:name="com.insurtech.kanguro.ui.scenes.javier.MedicalHistoryChatbotFragment"
+        android:label="MedicalHistoryChatbotFragment"
+        tools:layout="@layout/fragment_claims_chatbot">
+        <argument
+            android:name="type"
+            app:argType="com.insurtech.kanguro.ui.scenes.javier.ChatbotType" />
+        <action
+            android:id="@+id/action_medicalHistoryChatbotFragment_to_experienceFeedbackFragment"
+            app:destination="@id/experienceFeedbackFragment" />
+        <action
+            android:id="@+id/action_medicalHistoryChatbotFragment_to_codeValidationFragment"
+            app:destination="@id/codeValidationFragment" />
+    </fragment>
+    <dialog
+        android:id="@+id/settingsFragment"
+        android:name="com.insurtech.kanguro.ui.scenes.settings.SettingsBottomSheetFragment"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings" />
+    <fragment
+        android:id="@+id/chatBotFragment"
+        android:name="com.insurtech.kanguro.ui.scenes.chatbot.AdditionalInfoChatBotFragment"
+        android:label="ChatBotFragment"
+        tools:layout="@layout/fragment_additional_info_chat_bot">
+        <action
+            android:id="@+id/action_chatBotFragment_to_chatBotMapFragment"
+            app:destination="@id/chatBotMapFragment" />
+        <argument
+            android:name="pets"
+            app:argType="com.insurtech.kanguro.domain.model.Pet[]" />
+    </fragment>
+    <dialog
+        android:id="@+id/chatBotMapFragment"
+        android:name="com.insurtech.kanguro.ui.scenes.chatbot.ChatBotMapFragment"
+        android:label="fragment_chat_bot_map"
+        tools:layout="@layout/fragment_chat_bot_map" />
+    <action
+        android:id="@+id/action_global_chatBotMapFragment"
+        app:destination="@id/chatBotMapFragment" />
+    <fragment
+        android:id="@+id/dashboardFragment"
+        android:name="com.insurtech.kanguro.ui.scenes.dashboard.DashboardFragment"
+        android:label="fragment_dashboard"
+        tools:layout="@layout/fragment_dashboard">
+        <action
+            android:id="@+id/action_dashboardFragment_to_chatBotFragment"
+            app:destination="@id/chatBotFragment" />
+
+        <action
+            android:id="@+id/action_teste_experienceFeedbackFragment"
+            app:destination="@id/experienceFeedbackFragment" />
+        <action
+            android:id="@+id/action_dashboardFragment_to_directPayToVetInitFlowFragment"
+            app:destination="@id/directPayToVetInitFlowFragment" />
+    </fragment>
+    <dialog
+        android:id="@+id/wellnessPreventiveFragment"
+        android:name="com.insurtech.kanguro.ui.scenes.wellnessPreventive.WellnessPreventiveFragment"
+        android:label="fragment_wellness"
+        tools:layout="@layout/fragment_whats_covered_usage">
+        <argument
+            android:name="policyId"
+            app:argType="string" />
+        <argument
+            android:name="petId"
+            app:argType="integer" />
+    </dialog>
+    <action
+        android:id="@+id/action_global_wellnessPreventiveFragment"
+        app:destination="@id/wellnessPreventiveFragment" />
+    <fragment
+        android:id="@+id/coveragesFragment"
+        android:name="com.insurtech.kanguro.ui.scenes.coverages.CoveragesFragment"
+        android:label="fragment_coverages"
+        tools:layout="@layout/fragment_coverages">
+        <action
+            android:id="@+id/action_coveragesFragment_to_directPayToVetInitFlowFragment"
+            app:destination="@id/directPayToVetInitFlowFragment" />
+        <action
+            android:id="@+id/action_coveragesFragment_to_petFrequentlyAskedQuestionsFragment"
+            app:destination="@id/petFrequentlyAskedQuestionsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/kanguroCloudFragment"
+        android:name="com.insurtech.kanguro.ui.scenes.cloud.KanguroCloudFragment"
+        android:label="fragment_kanguro_cloud"
+        tools:layout="@layout/fragment_kanguro_cloud">
+        <action
+            android:id="@+id/action_kanguroCloudFragment_to_cloudPetFragment"
+            app:destination="@id/cloudPetFragment"
+            app:enterAnim="@anim/enter_from_right"
+            app:exitAnim="@anim/exit_to_left"
+            app:popEnterAnim="@anim/enter_from_left"
+            app:popExitAnim="@anim/exit_to_right" />
+    </fragment>
+    <action
+        android:id="@+id/action_global_kanguroCloudFragment"
+        app:destination="@id/kanguroCloudFragment" />
+
+    <fragment
+        android:id="@+id/cloudPetFragment"
+        android:name="com.insurtech.kanguro.ui.scenes.cloud.CloudPetFragment"
+        android:label="fragment_cloud_pet"
+        tools:layout="@layout/fragment_cloud_files">
+        <action
+            android:id="@+id/action_cloudPetFragment_to_cloudPolicyFragment"
+            app:destination="@id/cloudPolicyFragment"
+            app:enterAnim="@anim/enter_from_right"
+            app:exitAnim="@anim/exit_to_left"
+            app:popEnterAnim="@anim/enter_from_left"
+            app:popExitAnim="@anim/exit_to_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/cloudPolicyFragment"
+        android:name="com.insurtech.kanguro.ui.scenes.cloud.CloudPolicyFragment"
+        android:label="fragment_cloud_policy"
+        tools:layout="@layout/fragment_cloud_files">
+        <argument
+            android:name="policyId"
+            app:argType="string" />
+        <argument
+            android:name="name"
+            app:argType="string" />
+        <argument
+            android:name="cloudType"
+            app:argType="com.insurtech.kanguro.ui.scenes.cloud.CloudType" />
+        <action
+            android:id="@+id/action_cloudPolicyFragment_to_cloudClaimFragment"
+            app:destination="@id/cloudClaimFragment"
+            app:enterAnim="@anim/enter_from_right"
+            app:exitAnim="@anim/exit_to_left"
+            app:popEnterAnim="@anim/enter_from_left"
+            app:popExitAnim="@anim/exit_to_right" />
+        <action
+            android:id="@+id/action_cloudPolicyFragment_to_cloudFileFragment"
+            app:destination="@id/cloudFileFragment"
+            app:enterAnim="@anim/enter_from_right"
+            app:exitAnim="@anim/exit_to_left"
+            app:popEnterAnim="@anim/enter_from_left"
+            app:popExitAnim="@anim/exit_to_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/cloudClaimFragment"
+        android:name="com.insurtech.kanguro.ui.scenes.cloud.CloudClaimFragment"
+        android:label="fragment_cloud_claim"
+        tools:layout="@layout/fragment_cloud_files">
+        <action
+            android:id="@+id/action_cloudClaimFragment_to_cloudFileFragment"
+            app:destination="@id/cloudFileFragment"
+            app:enterAnim="@anim/enter_from_right"
+            app:exitAnim="@anim/exit_to_left"
+            app:popEnterAnim="@anim/enter_from_left"
+            app:popExitAnim="@anim/exit_to_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/cloudFileFragment"
+        android:name="com.insurtech.kanguro.ui.scenes.cloud.CloudFileFragment"
+        android:label="fragment_cloud_file"
+        tools:layout="@layout/fragment_cloud_files" />
+
+    <fragment
+        android:id="@+id/moreFragment"
+        android:name="com.insurtech.kanguro.ui.scenes.moreActions.MoreFragment"
+        android:label="fragment_more"
+        tools:layout="@layout/fragment_more" />
+    <dialog
+        android:id="@+id/claimDetailsBottomSheet"
+        android:name="com.insurtech.kanguro.ui.scenes.claims.ClaimDetailsBottomSheet"
+        android:label="ClaimDetailsBottomSheet"
+        tools:layout="@layout/bottomsheet_claim_details">
+        <argument
+            android:name="claim"
+            app:argType="com.insurtech.kanguro.domain.coverage.Claim" />
+    </dialog>
+
+    <fragment
+        android:id="@+id/coverageDetailsFragment"
+        android:name="com.insurtech.kanguro.ui.scenes.coverageDetails.CoverageDetailsFragment"
+        android:label="CoverageDetailsFragment"
+        tools:layout="@layout/fragment_coverage_details">
+        <argument
+            android:name="coverage"
+            app:argType="com.insurtech.kanguro.domain.model.PetPolicy" />
+        <action
+            android:id="@+id/action_coverageDetailsFragment_to_billingPreferencesFragment"
+            app:destination="@id/billingPreferencesFragment" />
+        <action
+            android:id="@+id/action_coverageDetailsFragment_to_whatsCoveredFragment"
+            app:destination="@id/whatsCoveredFragment" />
+        <action
+            android:id="@+id/action_coverageDetailsFragment_to_whatsCoveredUsageFragment"
+            app:destination="@id/whatsCoveredUsageFragment" />
+        <action
+            android:id="@+id/action_coverageDetailsFragment_to_directPayToVetInitFlowFragment"
+            app:destination="@id/directPayToVetInitFlowFragment" />
+    </fragment>
+    <action
+        android:id="@+id/action_global_coverageDetailFragment"
+        app:destination="@id/coverageDetailsFragment" />
+    <fragment
+        android:id="@+id/paymentSettingsFragment"
+        android:name="com.insurtech.kanguro.ui.scenes.paymentSettings.PaymentSettingsFragment"
+        android:label="fragment_payment_settings"
+        tools:layout="@layout/fragment_payment_settings">
+        <action
+            android:id="@+id/action_paymentSettingsFragment_to_bankingInformationBottomSheet"
+            app:destination="@id/bankingInformationBottomSheet" />
+        <action
+            android:id="@+id/action_paymentSettingsFragment_to_paymentMethodFragment"
+            app:destination="@id/paymentMethodFragment" />
+    </fragment>
+    <dialog
+        android:id="@+id/billingPreferencesFragment"
+        android:name="com.insurtech.kanguro.ui.scenes.billingPreferences.BillingPreferencesFragment"
+        android:label="fragment_billing_preferences"
+        tools:layout="@layout/fragment_billing_preferences" />
+    <dialog
+        android:id="@+id/remindersFragment"
+        android:name="com.insurtech.kanguro.ui.scenes.reminders.RemindersFragment"
+        android:label="fragment_reminders"
+        tools:layout="@layout/fragment_reminders" />
+    <action
+        android:id="@+id/action_global_remindersFragment"
+        app:destination="@id/remindersFragment" />
+    <dialog
+        android:id="@+id/whatsCoveredFragment"
+        android:name="com.insurtech.kanguro.ui.scenes.whatsCovered.WhatsCoveredFragment"
+        android:label="WhatsCoveredFragment"
+        tools:layout="@layout/fragment_whats_covered">
+        <argument
+            android:name="policy"
+            app:argType="com.insurtech.kanguro.domain.model.PetPolicy" />
+    </dialog>
+    <dialog
+        android:id="@+id/profileInfoFragment"
+        android:name="com.insurtech.kanguro.ui.scenes.profile.ProfileFragment"
+        android:label="ProfileFragment"
+        tools:layout="@layout/fragment_profile">
+        <argument
+            android:name="profileSectionStartsOpen"
+            app:argType="boolean" />
+    </dialog>
+    <action
+        android:id="@+id/action_global_profileInfoFragment"
+        app:destination="@id/profileInfoFragment" />
+    <dialog
+        android:id="@+id/whatsCoveredUsageFragment"
+        android:name="com.insurtech.kanguro.ui.scenes.whatsCoveredUsage.WhatsCoveredUsageFragment"
+        android:label="WhatsCoveredUsageFragment"
+        tools:layout="@layout/fragment_whats_covered_usage">
+        <argument
+            android:name="policy"
+            app:argType="com.insurtech.kanguro.domain.model.PetPolicy" />
+    </dialog>
+    <action
+        android:id="@+id/action_global_javierChatbotFragment"
+        app:destination="@id/javierChatbotFragment" />
+    <action
+        android:id="@+id/action_global_medicalHistoryChatbotFragment"
+        app:destination="@id/medicalHistoryChatbotFragment" />
+    <action
+        android:id="@+id/action_global_settingsFragment"
+        app:destination="@id/settingsFragment" />
+    <action
+        android:id="@+id/action_global_privacyPolicyFragment"
+        app:destination="@id/privacyPolicyFragment" />
+    <action
+        android:id="@+id/action_global_getQuoteFragment"
+        app:destination="@id/getQuoteFragment" />
+    <action
+        android:id="@+id/action_global_loginBlockedFragment"
+        app:destination="@id/loginBlockedFragment" />
+    <action
+        android:id="@+id/action_global_blogFragment"
+        app:destination="@+id/blogFragment" />
+    <dialog
+        android:id="@+id/referFriendsDialog"
+        android:name="com.insurtech.kanguro.ui.scenes.referFriends.ReferFriendsDialog"
+        android:label="ReferFriendsDialog"
+        tools:layout="@layout/dialog_refer_friends">
+        <action
+            android:id="@+id/action_referFriendsDialog_to_referFriendsFragment"
+            app:destination="@id/referFriendsFragment"
+            app:popUpTo="@layout/activity_main" />
+    </dialog>
+
+    <dialog
+        android:id="@+id/loginBlockedFragment"
+        android:name="com.insurtech.kanguro.ui.scenes.login.LoginBlockedFragment"
+        android:label="LoginBlockedFragment"
+        tools:layout="@layout/bottomsheet_blocked_login">
+        <argument
+            android:name="isUserLogged"
+            app:argType="boolean" />
+    </dialog>
+    <dialog
+        android:id="@+id/referFriendsFragment"
+        android:name="com.insurtech.kanguro.ui.scenes.referFriends.ReferFriendsFragment"
+        android:label="ReferFriendsFragment"
+        tools:layout="@layout/bottomsheet_refer_friends" />
+    <action
+        android:id="@+id/action_global_referFriendsDialog"
+        app:destination="@id/referFriendsDialog" />
+    <fragment
+        android:id="@+id/experienceFeedbackFragment"
+        android:name="com.insurtech.kanguro.ui.scenes.experienceFeedback.ExperienceFeedbackFragment"
+        android:label="ExperienceFeedbackFragment"
+        tools:layout="@layout/fragment_experience_feedback">
+        <argument
+            android:name="sessionId"
+            app:argType="string" />
+    </fragment>
+    <action
+        android:id="@+id/action_global_experienceFeedbackFragment"
+        app:destination="@id/experienceFeedbackFragment" />
+
+    <fragment
+        android:id="@+id/codeValidationFragment"
+        android:name="com.insurtech.kanguro.ui.scenes.codeValidation.CodeValidationFragment"
+        android:label="CodeValidationFragment"
+        tools:layout="@layout/fragment_code_validation" />
+
+    <fragment
+        android:id="@+id/vetAdviceFragment"
+        android:name="com.insurtech.kanguro.ui.scenes.vetAdvice.VetAdviceFragment"
+        android:label="fragment_vet_advice"
+        tools:layout="@layout/fragment_vet_advice" />
+    <action
+        android:id="@+id/action_global_vetAdviceFragment"
+        app:destination="@id/vetAdviceFragment" />
+
+    <fragment
+        android:id="@+id/informationTopicsFragment"
+        android:name="com.insurtech.kanguro.ui.scenes.vetAdvice.InformationTopicsFragment"
+        android:label="fragment_information_topics"
+        tools:layout="@layout/fragment_information_topics">
+        <argument
+            android:name="topicReferred"
+            app:argType="com.insurtech.kanguro.ui.scenes.vetAdvice.InformationScreenType" />
+    </fragment>
+    <action
+        android:id="@+id/action_global_informationTopicsFragment"
+        app:destination="@id/informationTopicsFragment" />
+    <fragment
+        android:id="@+id/paymentMethodFragment"
+        android:name="com.insurtech.kanguro.ui.scenes.webView.PaymentMethodFragment"
+        android:label="PaymentMethodFragment" />
+    <action
+        android:id="@+id/action_global_paymentSettingsFragment"
+        app:destination="@id/paymentSettingsFragment" />
+    <dialog
+        android:id="@+id/bankingInformationBottomSheet"
+        android:name="com.insurtech.kanguro.ui.scenes.bankingInformation.BankingInformationBottomSheet"
+        android:label="BankingInformationBottomSheet"
+        tools:layout="@layout/bottomsheet_banking_information">
+        <action
+            android:id="@+id/action_paymentSettingsFragment_to_SearchBanksBottomSheet"
+            app:destination="@id/searchBanksBottomSheet" />
+        <argument
+            android:name="comingFromChatbot"
+            android:defaultValue="false"
+            app:argType="boolean" />
+    </dialog>
+    <dialog
+        android:id="@+id/searchBanksBottomSheet"
+        android:name="com.insurtech.kanguro.ui.scenes.bankingInformation.SearchBanksBottomSheet"
+        android:label="SearchBanksBottomSheet"
+        tools:layout="@layout/bottomsheet_search_banks" />
+    <fragment
+        android:id="@+id/communicationChatbotFragment"
+        android:name="com.insurtech.kanguro.ui.scenes.javier.CommunicationChatbotFragment"
+        android:label="fragment_communication_chatbot"
+        tools:layout="@layout/fragment_claims_chatbot">
+        <argument
+            android:name="claimId"
+            app:argType="string" />
+    </fragment>
+    <action
+        android:id="@+id/action_global_communicationChatbotFragment"
+        app:destination="@id/communicationChatbotFragment" />
+    <fragment
+        android:id="@+id/blogFragment"
+        android:name="com.insurtech.kanguro.ui.scenes.webView.BlogFragment"
+        android:label="BlogFragment"
+        tools:layout="@layout/bottomsheet_webview" />
+    <fragment
+        android:id="@+id/updateAppFragment"
+        android:name="com.insurtech.kanguro.ui.scenes.appSupport.UpdateAppFragment"
+        android:label="UpdateAppFragment"
+        tools:layout="@layout/fragment_update_app" />
+    <action
+        android:id="@+id/action_global_updateAppFragment"
+        app:destination="@id/updateAppFragment" />
+    <dialog
+        android:id="@+id/supportCause"
+        android:name="com.insurtech.kanguro.ui.scenes.supportCause.SupportCauseBottomSheet"
+        android:label="SupportCauseBottomSheet"
+        tools:layout="@layout/bottomsheet_support_cause" />
+    <action
+        android:id="@+id/action_global_supportCause"
+        app:destination="@id/supportCause" />
+    <dialog
+        android:id="@+id/supportCauseMessage"
+        android:name="com.insurtech.kanguro.ui.scenes.supportCause.SupportCauseMessageDialog"
+        android:label="SupportCause"
+        tools:layout="@layout/dialog_refer_friends" />
+    <action
+        android:id="@+id/action_global_supportCauseMessage"
+        app:destination="@id/supportCauseMessage" />
+    <dialog
+        android:id="@+id/categorySelected"
+        android:name="com.insurtech.kanguro.ui.scenes.supportCause.CategorySelectedBottomSheet"
+        android:label="CategorySelected"
+        tools:layout="@layout/bottomsheet_category_selected" />
+    <action
+        android:id="@+id/action_global_categorySelected"
+        app:destination="@id/categorySelected" />
+    <dialog
+        android:id="@+id/changeCause"
+        android:name="com.insurtech.kanguro.ui.scenes.supportCause.ChangeCauseBottomSheet"
+        android:label="ChangeCause"
+        tools:layout="@layout/bottomsheet_change_cause" />
+    <action
+        android:id="@+id/action_global_changeCause"
+        app:destination="@id/changeCause" />
+
+    <fragment
+        android:id="@+id/termsAndConditions"
+        android:name="com.insurtech.kanguro.ui.scenes.webView.TermsAndConditionsFragment"
+        android:label="TermsAndConditions"
+        tools:layout="@layout/bottomsheet_webview" />
+
+    <action
+        android:id="@+id/action_global_terms_and_conditions"
+        app:destination="@id/termsAndConditions" />
+
+    <dialog
+        android:id="@+id/medicalHistoryAlertDialog"
+        android:name="com.insurtech.kanguro.ui.scenes.javier.MedicalHistoryAlertDialog"
+        android:label="MedicalHistoryAlertDialog"
+        tools:layout="@layout/bottomsheet_refer_friends">
+        <argument
+            android:name="petId"
+            app:argType="long" />
+    </dialog>
+
+    <action
+        android:id="@+id/action_global_medicalHistoryAlertDialog"
+        app:destination="@id/medicalHistoryAlertDialog" />
+
+    <fragment
+        android:id="@+id/petUpsellingFragment"
+        android:name="com.insurtech.kanguro.ui.scenes.pet.PetUpsellingFragment"
+        android:label="PetUpsellingFragment"
+        tools:layout="@layout/fragment_upselling" />
+
+    <fragment
+        android:id="@+id/rentersUpsellingFragment"
+        android:name="com.insurtech.kanguro.ui.scenes.renters.RentersUpsellingFragment"
+        android:label="RentersUpsellingFragment"
+        tools:layout="@layout/fragment_upselling" />
+
+    <fragment
+        android:id="@+id/getQuoteRentersFragment"
+        android:name="com.insurtech.kanguro.ui.scenes.renters.GetQuoteRentersFragment"
+        android:label="GetQuoteRentersFragment"
+        tools:layout="@layout/bottomsheet_webview" />
+
+    <action
+        android:id="@+id/action_global_getQuoteRentersFragment"
+        app:destination="@id/getQuoteRentersFragment" />
+    <fragment
+        android:id="@+id/rentersChatbotFragment"
+        android:name="com.insurtech.kanguro.ui.scenes.rentersChatbot.RentersChatbotFragment"
+        android:label="fragment_renters_chatbot"
+        tools:layout="@layout/fragment_renters_chatbot">
+        <argument
+            android:name="policyId"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_rentersChatbotFragment_to_scheduledItemsFragment"
+            app:destination="@id/scheduledItemsFragment" />
+        <action
+            android:id="@+id/action_rentersChatbotFragment_to_rentersOnboardingVideoFragment"
+            app:destination="@id/rentersOnboardingVideoFragment" />
+
+    </fragment>
+
+    <dialog
+        android:id="@+id/scheduledItemsFragment"
+        android:name="com.insurtech.kanguro.ui.scenes.rentersScheduledItems.ScheduledItemsFragment"
+        android:label="fragment_scheduled_items"
+        tools:layout="@layout/fragment_scheduled_items">
+        <argument
+            android:name="policyId"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_scheduledItemsFragment_to_scheduledItemsSelectedPicturesFragment"
+            app:destination="@id/scheduledItemsSelectedPicturesFragment" />
+        <action
+            android:id="@+id/action_scheduledItemsFragment_to_scheduledItemsCategoryFragment"
+            app:destination="@id/scheduledItemsCategoryFragment" />
+        <argument
+            android:name="isReadyOnly"
+            app:argType="boolean" />
+    </dialog>
+
+    <dialog
+        android:id="@+id/rentersOnboardingVideoFragment"
+        android:name="com.insurtech.kanguro.ui.scenes.rentersOnboardingVideo.RentersOnboardingVideoFragment"
+        android:label="fragment_renters_onboarding_video"
+        tools:layout="@layout/fragment_renters_onboarding_video" />
+
+    <dialog
+        android:id="@+id/scheduledItemsSelectedPicturesFragment"
+        android:name="com.insurtech.kanguro.ui.scenes.rentersScheduledItemsSelectedPictures.ScheduledItemsSelectedPicturesFragment"
+        android:label="fragment_scheduled_items_selected_pictures"
+        tools:layout="@layout/fragment_scheduled_items">
+        <argument
+            android:name="scheduledItemId"
+            app:argType="string" />
+    </dialog>
+    <fragment
+        android:id="@+id/homeDashboardFragment"
+        android:name="com.insurtech.kanguro.ui.scenes.home.HomeDashboardFragment"
+        android:label="HomeDashboardFragment">
+        <action
+            android:id="@+id/action_homeDashboardFragment_to_notificationsFragment"
+            app:destination="@id/notificationsFragment" />
+        <action
+            android:id="@+id/action_homeDashboardFragment_to_chatBotFragment"
+            app:destination="@id/chatBotFragment" />
+        <action
+            android:id="@+id/action_homeDashboardFragment_to_rentersCoverageDetailsFragment"
+            app:destination="@id/rentersCoverageDetailsFragment" />
+    </fragment>
+
+    <dialog
+        android:id="@+id/notificationsFragment"
+        android:name="com.insurtech.kanguro.ui.scenes.notification.NotificationsFragment"
+        android:label="NotificationsFragment" />
+
+    <dialog
+        android:id="@+id/directPayToVetInitFlowFragment"
+        android:name="com.insurtech.kanguro.ui.scenes.directPayToVet.directPayToVetInitFlow.DirectPayToVetInitFlowFragment"
+        android:label="DirectPayToVetInitFlowFragment">
+        <action
+            android:id="@+id/action_directPayToVetInitFlowFragment_to_directPayToVetInstructionsFragment"
+            app:destination="@id/directPayToVetInstructionsFragment" />
+    </dialog>
+
+    <dialog
+        android:id="@+id/directPayToVetInstructionsFragment"
+        android:name="com.insurtech.kanguro.ui.scenes.directPayToVet.directPayToVetInstructions.DirectPayToVetInstructionsFragment"
+        android:label="DirectPayToVetInstructionsFragment">
+        <action
+            android:id="@+id/action_directPayToVetInstructionsFragment_to_directPayToVetFormFragment"
+            app:destination="@id/directPayToVetFormFragment" />
+        <argument
+            android:name="sharedFlow"
+            app:argType="com.insurtech.kanguro.domain.model.ClaimDirectPayment" />
+    </dialog>
+
+    <dialog
+        android:id="@+id/directPayToVetAlmostDone"
+        android:name="com.insurtech.kanguro.ui.scenes.directPayToVet.directPayToVetAlmostDone.DirectPayToVetAlmostDoneFragment"
+        android:label="DirectPayToVetAlmostDoneFragment">
+        <argument
+            android:name="claimId"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_directPayToVetAlmostDone_to_directPayToVetShareWithYourVetFragment"
+            app:destination="@id/directPayToVetShareWithYourVetFragment" />
+    </dialog>
+
+    <dialog
+        android:id="@+id/scheduledItemsAddItemFragment"
+        android:name="com.insurtech.kanguro.ui.scenes.rentersScheduledItemsAddItem.ScheduledItemsAddItemFragment"
+        android:label="ScheduledItemsAddItemFragment">
+        <argument
+            android:name="ScheduledItemType"
+            app:argType="com.insurtech.kanguro.domain.model.ScheduledItemTypeModel" />
+        <argument
+            android:name="policyId"
+            app:argType="string" />
+    </dialog>
+
+    <dialog
+        android:id="@+id/scheduledItemsCategoryFragment"
+        android:name="com.insurtech.kanguro.ui.scenes.rentersScheduledItemsCategory.ScheduledItemsCategoryFragment"
+        android:label="ScheduledItemsCategoryFragment">
+        <action
+            android:id="@+id/action_scheduledItemsCategoryFragment_to_scheduledItemsAddItemFragment"
+            app:destination="@id/scheduledItemsAddItemFragment" />
+        <argument
+            android:name="policyId"
+            app:argType="string" />
+    </dialog>
+
+    <dialog
+        android:id="@+id/directPayToVetFormFragment"
+        android:name="com.insurtech.kanguro.ui.scenes.directPayToVet.directPayToVetForm.DirectPayToVetFormFragment"
+        android:label="DirectPayToVetFormFragment">
+        <action
+            android:id="@+id/action_directPayToVetFormFragment_to_directPayToVetPledgeOfHonorBottomSheet"
+            app:destination="@id/directPayToVetPledgeOfHonorBottomSheet" />
+        <argument
+            android:name="sharedFlow"
+            app:argType="com.insurtech.kanguro.domain.model.ClaimDirectPayment" />
+    </dialog>
+    <dialog
+        android:id="@+id/directPayToVetPledgeOfHonorBottomSheet"
+        android:name="com.insurtech.kanguro.ui.scenes.directPayToVet.directPayToVetPledgeOfHonor.DirectPayToVetPledgeOfHonorBottomSheet"
+        android:label="DirectPayToVetPledgeOfHonorBottomSheet">
+        <action
+            android:id="@+id/action_directPayToVetPledgeOfHonorBottomSheet_to_directPayToVetAlmostDone"
+            app:destination="@id/directPayToVetAlmostDone" />
+        <argument
+            android:name="sharedFlow"
+            app:argType="com.insurtech.kanguro.domain.model.ClaimDirectPayment" />
+    </dialog>
+    <dialog
+        android:id="@+id/directPayToVetSignatureInformationDialog2"
+        android:name="com.insurtech.kanguro.ui.scenes.directPayToVet.directPayToVetSignatureInformation.DirectPayToVetSignatureInformationDialog"
+        android:label="DirectPayToVetSignatureInformationDialog" />
+
+    <action
+        android:id="@+id/action_global_directPayToVetSignatureInformationDialog2"
+        app:destination="@id/directPayToVetSignatureInformationDialog2" />
+
+    <dialog
+        android:id="@+id/directPayToVetDocumentSentFragment"
+        android:name="com.insurtech.kanguro.ui.scenes.directPayToVet.directPayToVetDocumentSent.DirectPayToVetDocumentSentFragment"
+        android:label="DirectPayToVetDocumentSentFragment"
+        tools:layout="@layout/fragment_direct_pay_to_vet_document_sent" />
+
+    <dialog
+        android:id="@+id/directPayToVetShareWithYourVetFragment"
+        android:name="com.insurtech.kanguro.ui.scenes.directPayToVet.directPayToVetShareWithYourVet.DirectPayToVetShareWithYourVetFragment"
+        android:label="DirectPayToVetShareWithYourVetFragment"
+        tools:layout="@layout/fragment_direct_pay_to_vet_share_with_your_vet">
+        <argument
+            android:name="claimId"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_directPayToVetShareWithYourVetFragment_to_directPayToVetDocumentSentFragment"
+            app:destination="@id/directPayToVetDocumentSentFragment" />
+    </dialog>
+    <fragment
+        android:id="@+id/rentersCoverageDetailsFragment"
+        android:name="com.insurtech.kanguro.ui.scenes.rentersCoverageDetails.RentersCoverageDetailsFragment"
+        android:label="RentersCoverageDetailsFragment">
+        <argument
+            android:name="policyId"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_rentersCoverageDetailsFragment_to_scheduledItemsFragment"
+            app:destination="@id/scheduledItemsFragment" />
+        <action
+            android:id="@+id/action_rentersCoverageDetailsFragment_to_rentersEditCoverageDetailsFragment"
+            app:destination="@id/rentersEditCoverageDetailsFragment" />
+        <action
+            android:id="@+id/action_rentersCoverageDetailsFragment_to_rentersEditAdditionalPartiesFragment"
+            app:destination="@id/rentersEditAdditionalPartiesFragment" />
+        <action
+            android:id="@+id/action_rentersCoverageDetailsFragment_to_rentersEditAdditionalCoverageBottomSheet"
+            app:destination="@id/rentersEditAdditionalCoverageBottomSheet" />
+        <action
+            android:id="@+id/action_rentersCoverageDetailsFragment_to_rentersChangeMyAddressFragment"
+            app:destination="@id/rentersChangeMyAddressFragment" />
+        <action
+            android:id="@+id/action_rentersCoverageDetailsFragment_to_rentersFrequentlyAskedQuestionsFragment"
+            app:destination="@id/rentersFrequentlyAskedQuestionsFragment" />
+        <action
+            android:id="@+id/action_rentersCoverageDetailsFragment_to_rentersWhatIsCoveredBottomSheet"
+            app:destination="@id/rentersWhatIsCoveredBottomSheet" />
+    </fragment>
+
+    <action
+        android:id="@+id/action_global_chatFragment"
+        app:destination="@id/chatFragment" />
+
+    <fragment
+        android:id="@+id/chatFragment"
+        android:name="com.insurtech.kanguro.ui.scenes.chatFragment.ChatFragment"
+        android:label="ChatFragment" />
+    <fragment
+        android:id="@+id/rentersDashboardFragment"
+        android:name="com.insurtech.kanguro.ui.scenes.rentersDashboard.RentersDashboardFragment"
+        android:label="RentersDashboardFragment">
+        <action
+            android:id="@+id/action_rentersDashboardFragment_to_rentersCoverageDetailsFragment"
+            app:destination="@id/rentersCoverageDetailsFragment" />
+        <action
+            android:id="@+id/action_rentersDashboardFragment_to_rentersFrequentlyAskedQuestionsFragment"
+            app:destination="@id/rentersFrequentlyAskedQuestionsFragment" />
+        <action
+            android:id="@+id/action_rentersDashboardFragment_to_rentersTrackYourClaimsFragment"
+            app:destination="@id/rentersTrackYourClaimsFragment" />
+    </fragment>
+    <dialog
+        android:id="@+id/rentersEditCoverageDetailsFragment"
+        android:name="com.insurtech.kanguro.ui.scenes.rentersEditCoverageDetails.RentersEditCoverageDetailsFragment"
+        android:label="RentersEditCoverageDetailsFragment">
+        <argument
+            android:name="policyId"
+            app:argType="string" />
+        <argument
+            android:name="state"
+            app:argType="string" />
+        <argument
+            android:name="initialValues"
+            app:argType="com.insurtech.kanguro.ui.scenes.rentersEditCoverageDetails.RentersEditCoverageInitialValues" />
+    </dialog>
+
+    <dialog
+        android:id="@+id/rentersEditAdditionalPartiesFragment"
+        android:name="com.insurtech.kanguro.ui.scenes.rentersEditAdditionalParties.RentersEditAdditionalPartiesFragment"
+        android:label="RentersEditAdditionalPartiesFragment">
+        <argument
+            android:name="policyId"
+            app:argType="string" />
+    </dialog>
+
+    <dialog
+        android:id="@+id/rentersEditAdditionalCoverageBottomSheet"
+        android:name="com.insurtech.kanguro.ui.scenes.rentersEditAdditionalCoverage.RentersEditAdditionalCoverageBottomSheet"
+        android:label="RentersEditAdditionalCoverageBottomSheet">
+        <argument
+            android:name="policyInfoSharedFlow"
+            app:argType="com.insurtech.kanguro.ui.scenes.rentersEditAdditionalCoverage.PolicyInfoSharedFlow" />
+    </dialog>
+
+    <fragment
+        android:id="@+id/homeFrequentlyAskedQuestionsFragment"
+        android:name="com.insurtech.kanguro.ui.scenes.homeFaq.HomeFrequentlyAskedQuestionsFragment"
+        android:label="HomeFrequentlyAskedQuestionsFragment"
+        tools:layout="@layout/fragment_home_frequently_asked_questions" />
+
+    <fragment
+        android:id="@+id/petFrequentlyAskedQuestionsFragment"
+        android:name="com.insurtech.kanguro.ui.scenes.petFaq.PetFrequentlyAskedQuestionsFragment"
+        android:label="PetFrequentlyAskedQuestionsFragment"
+        tools:layout="@layout/fragment_pet_frequently_asked_questions" />
+    <fragment
+        android:id="@+id/rentersFrequentlyAskedQuestionsFragment"
+        android:name="com.insurtech.kanguro.ui.scenes.rentersFaq.RentersFrequentlyAskedQuestionsFragment"
+        android:label="RentersFrequentlyAskedQuestionsFragment"
+        tools:layout="@layout/fragment_renters_frequently_asked_questions" />
+
+    <fragment
+        android:id="@+id/rentersTrackYourClaimsFragment"
+        android:name="com.insurtech.kanguro.ui.scenes.rentersTrackYourClaims.RentersTrackYourClaimsFragment"
+        android:label="RentersTrackYourClaimsFragment"
+        tools:layout="@layout/fragment_renters_track_your_claims" />
+
+    <fragment
+        android:id="@+id/rentersChangeMyAddressFragment"
+        android:name="com.insurtech.kanguro.ui.scenes.rentersChangeMyAddress.RentersChangeMyAddressFragment"
+        android:label="RentersChangeMyAddressFragment" />
+
+    <fragment
+        android:id="@+id/petTrackYourClaimsFragment"
+        android:name="com.insurtech.kanguro.ui.scenes.trackYourClaim.TrackYourClaimFragment"
+        android:label="PetTrackYourClaimsFragment">
+        <action
+            android:id="@+id/action_trackYourClaimsFragment_to_claimDetailsBottomSheet"
+            app:destination="@id/claimDetailsBottomSheet" />
+        <action
+            android:id="@+id/action_trackYourClaimsFragment_to_directPayToVetAlmostDone"
+            app:destination="@id/directPayToVetAlmostDone" />
+    </fragment>
+
+    <action
+        android:id="@+id/action_global_petTrackYourClaimsFragment"
+        app:destination="@id/petTrackYourClaimsFragment" />
+
+    <dialog
+        android:id="@+id/rentersWhatIsCoveredBottomSheet"
+        android:name="com.insurtech.kanguro.ui.scenes.rentersWhatIsCovered.RentersWhatIsCoveredBottomSheet"
+        android:label="RentersWhatIsCoveredBottomSheet" />
+
+    <action
+        android:id="@+id/action_rentersChatbotFragment"
+        app:destination="@id/rentersChatbotFragment" />
+
+    <action
+        android:id="@+id/action_homeDashboardFaq"
+        app:destination="@id/homeFrequentlyAskedQuestionsFragment" />
+
+    <dialog
+        android:id="@+id/fileNotSupportedDialog"
+        android:name="com.insurtech.kanguro.ui.scenes.fileNotSupported.FileFormatNotSupportedDialog"
+        android:label="FileFormatNotSupportedDialog"
+        tools:layout="@layout/fragment_compose_container">
+        <argument
+            android:name="fileType"
+            app:argType="string" />
+    </dialog>
+
+    <action
+        android:id="@+id/action_global_fileNotSupportedDialog"
+        app:destination="@id/fileNotSupportedDialog" />
+
+    <dialog
+        android:id="@+id/accessFilesPermissionDialog"
+        android:name="com.insurtech.kanguro.ui.scenes.accessFilesPermission.AccessFilesPermissionDialog"
+        android:label="AccessFilesPermissionDialog"
+        tools:layout="@layout/fragment_compose_container" />
+
+    <action
+        android:id="@+id/action_global_accessFilesPermissionDialog"
+        app:destination="@id/accessFilesPermissionDialog" />
+    <fragment
+        android:id="@+id/petDashboardFragment"
+        android:name="com.insurtech.kanguro.ui.scenes.petDashboard.PetDashboardFragment"
+        android:label="PetDashboardFragment" >
+        <action
+            android:id="@+id/action_petDashboardFragment_to_directPayToVetInitFlowFragment"
+            app:destination="@id/directPayToVetInitFlowFragment" />
+        <action
+            android:id="@+id/action_petDashboardFragment_to_petFrequentlyAskedQuestionsFragment"
+            app:destination="@id/petFrequentlyAskedQuestionsFragment" />
+    </fragment>
+
+    <dialog
+        android:id="@+id/liveVetBottomSheet"
+        android:name="com.insurtech.kanguro.ui.scenes.liveVet.LiveVetBottomSheet"
+        android:label="LiveVetBottomSheet"
+        tools:layout="@layout/bottomsheet_live_vet"
+        />
+
+    <action
+        android:id="@+id/action_global_to_liveVetBottomsheet"
+        app:destination="@id/liveVetBottomSheet"
+        />
+
+</navigation>

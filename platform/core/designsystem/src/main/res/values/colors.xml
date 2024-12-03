@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <color name="primary_darkest">#FF6961</color>
+    <color name="primary_dark">#FF8781</color>
+    <color name="primary_medium">#FFA5A0</color>
+    <color name="primary_light">#FFC3C0</color>
+    <color name="primary_lightest">#FFE1DF</color>
+
+    <color name="secondary_darkest">#002454</color>
+    <color name="secondary_dark">#335076</color>
+    <color name="secondary_medium">#667C98</color>
+    <color name="secondary_light">#99A7BB</color>
+    <color name="secondary_lightest">#CCD3DD</color>
+
+    <color name="tertiary_extra_dark">#5405BE</color>
+    <color name="tertiary_darkest">#9648FF</color>
+    <color name="tertiary_dark">#AB6DFF</color>
+    <color name="tertiary_medium">#C091FF</color>
+    <color name="tertiary_light">#D5B6FF</color>
+    <color name="tertiary_lightest">#EADAFF</color>
+
+    <color name="information_darkest">#2AEEFF</color>
+    <color name="information_dark">#55F1FF</color>
+    <color name="information_medium">#7FF5FF</color>
+    <color name="information_light">#AAF8FF</color>
+    <color name="information_lightest">#EAFDFF</color>
+
+    <color name="neutral_darkest">#000000</color>
+    <color name="neutral_dark">#333333</color>
+    <color name="neutral_dark_30">#4D333333</color>
+    <color name="neutral_medium">#666666</color>
+    <color name="neutral_medium_2">#7A7A7A</color>
+    <color name="neutral_light">#999999</color>
+    <color name="neutral_lightest">#B7B7B7</color>
+    <color name="neutral_background">#F0F0F0</color>
+    <color name="neutral_background_10_alpha">#1AF0F0F0</color>
+    <color name="dark_background_40_alpha">#66000000</color>
+    <color name="dark_background_50_alpha">#80000000</color>
+
+    <color name="positive_darkest">#219653</color>
+    <color name="positive_dark">#4DAB75</color>
+    <color name="positive_medium">#7AC098</color>
+    <color name="positive_light">#A6D5BA</color>
+    <color name="positive_lightest">#D3EADD</color>
+
+    <color name="negative_darkest">#DF3636</color>
+    <color name="negative_dark">#E55E5E</color>
+    <color name="negative_medium">#EC8686</color>
+    <color name="negative_light">#F2AFAF</color>
+    <color name="negative_lightest">#F9D7D7</color>
+
+    <color name="warning_extra_dark">#9A7505</color>
+    <color name="warning_darkest">#DEAC13</color>
+    <color name="warning_dark">#E5BC42</color>
+    <color name="warning_medium">#EBCD71</color>
+    <color name="warning_light">#F2DEA0</color>
+    <color name="warning_lightest">#F8EED0</color>
+
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="white_50">#80FFFFFF</color>
+
+    <color name="clear">#00FFFFFF</color>
+
+    <color name="shadow_color">#33000000</color>
+
+    <color name="mtrl_textinput_default_box_stroke_color" tools:override="true">@color/secondary_darkest</color>
+
+</resources>

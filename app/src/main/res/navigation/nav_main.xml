@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_main"
+    app:startDestination="@id/welcomeFragment">
+
+    <fragment
+        android:id="@+id/getQuoteFragment"
+        android:name="com.insurtech.kanguro.ui.scenes.webView.GetQuoteFragment"
+        android:label="GetAQuoteFragment"
+        tools:layout="@layout/bottomsheet_webview" />
+    <dialog
+        android:id="@+id/preLoginFragment"
+        android:name="com.insurtech.kanguro.ui.scenes.PreLoginFragment"
+        android:label="fragment_pre_login"
+        tools:layout="@layout/fragment_pre_login" />
+    <fragment
+        android:id="@+id/welcomeFragment"
+        android:name="com.insurtech.kanguro.ui.scenes.welcome.WelcomeFragment"
+        android:label="WelcomeFragment"
+        tools:layout="@layout/fragment_welcome">
+        <action
+            android:id="@+id/action_welcomeFragment_to_preLoginFragment"
+            app:destination="@id/preLoginFragment" />
+    </fragment>
+    <action
+        android:id="@+id/action_global_getQuoteFragment"
+        app:destination="@id/getQuoteFragment" />
+    <fragment
+        android:id="@+id/updateAppFragment"
+        android:name="com.insurtech.kanguro.ui.scenes.appSupport.UpdateAppFragment"
+        android:label="UpdateAppFragment"
+        tools:layout="@layout/fragment_update_app"/>
+    <action
+        android:id="@+id/action_global_updateAppFragment"
+        app:destination="@id/updateAppFragment" />
+
+    <fragment
+        android:id="@+id/selectProductFragment"
+        android:name="com.insurtech.kanguro.ui.scenes.selectProduct.SelectProductWebViewFragment"
+        android:label="SelectProductWebViewFragment"
+        tools:layout="@layout/bottomsheet_webview" />
+
+    <action
+        android:id="@+id/action_global_selectProductFragment"
+        app:destination="@id/selectProductFragment" />
+</navigation>

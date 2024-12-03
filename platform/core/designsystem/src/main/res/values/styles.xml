@@ -1,0 +1,495 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="KanguroTextStyle" />
+
+    <!-- Footnote -->
+
+    <style name="KanguroTextStyle.Footnote">
+        <item name="android:textSize">@dimen/font_xxs</item>
+    </style>
+
+    <style name="KanguroTextStyle.Footnote.Regular">
+        <item name="android:fontFamily">@font/lato</item>
+    </style>
+
+    <style name="KanguroTextStyle.Footnote.Bold">
+        <item name="android:fontFamily">@font/lato_bold</item>
+    </style>
+
+    <style name="KanguroTextStyle.Footnote.Black">
+        <item name="android:fontFamily">@font/lato_black</item>
+    </style>
+
+    <!-- Caption -->
+
+    <style name="KanguroTextStyle.Caption">
+        <item name="android:textSize">@dimen/font_xs</item>
+    </style>
+
+    <style name="KanguroTextStyle.Caption.Regular">
+        <item name="android:fontFamily">@font/lato</item>
+    </style>
+
+    <style name="KanguroTextStyle.Caption.Bold">
+        <item name="android:fontFamily">@font/lato_bold</item>
+    </style>
+
+    <style name="KanguroTextStyle.Caption.Black">
+        <item name="android:fontFamily">@font/lato_black</item>
+    </style>
+
+    <!-- Subhead -->
+
+    <style name="KanguroTextStyle.Subhead">
+        <item name="android:textSize">@dimen/font_s</item>
+    </style>
+
+    <style name="KanguroTextStyle.Subhead.Regular">
+        <item name="android:fontFamily">@font/lato</item>
+    </style>
+
+    <style name="KanguroTextStyle.Subhead.Bold">
+        <item name="android:fontFamily">@font/lato_bold</item>
+    </style>
+
+    <style name="KanguroTextStyle.Subhead.Black">
+        <item name="android:fontFamily">@font/lato_black</item>
+    </style>
+
+    <!-- Body -->
+
+    <style name="KanguroTextStyle.Body">
+        <item name="android:textSize">@dimen/font_base</item>
+    </style>
+
+    <style name="KanguroTextStyle.Body.Regular">
+        <item name="android:fontFamily">@font/lato</item>
+    </style>
+
+    <style name="KanguroTextStyle.Body.Bold">
+        <item name="android:fontFamily">@font/lato_bold</item>
+    </style>
+
+    <style name="KanguroTextStyle.Body.Black">
+        <item name="android:fontFamily">@font/lato_black</item>
+    </style>
+
+    <style name="KanguroTextStyle.Headline">
+        <item name="android:textSize">@dimen/font_sm</item>
+        <item name="android:lineSpacingMultiplier">1</item>
+        <item name="android:fontFamily">@font/museo_sans_bold</item>
+    </style>
+
+    <style name="KanguroTextStyle.Title3">
+        <item name="android:textSize">@dimen/font_md</item>
+        <item name="android:lineSpacingMultiplier">1</item>
+        <item name="android:fontFamily">@font/museo_sans_bold</item>
+    </style>
+
+    <style name="KanguroTextStyle.Title2">
+        <item name="android:textSize">@dimen/font_lg</item>
+        <item name="android:lineSpacingMultiplier">1</item>
+        <item name="android:fontFamily">@font/museo_sans_bold</item>
+    </style>
+
+    <style name="KanguroTextStyle.Title1">
+        <item name="android:textSize">@dimen/font_xl</item>
+        <item name="android:lineSpacingMultiplier">1</item>
+        <item name="android:fontFamily">@font/museo_sans_bold</item>
+    </style>
+
+    <style name="KanguroTextStyle.LargeTitle">
+        <item name="android:textSize">@dimen/font_xxl</item>
+        <item name="android:lineSpacingMultiplier">1</item>
+        <item name="android:fontFamily">@font/museo_sans_bold</item>
+    </style>
+
+    <!-- Buttons -->
+
+    <style name="KanguroButtonStyle" parent="Widget.MaterialComponents.Button.TextButton">
+        <item name="cornerRadius">@dimen/border_radius_sm</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="iconPadding">10dp</item>
+        <item name="iconGravity">textEnd</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:textAppearance">@style/KanguroTextStyle.Body.Black</item>
+        <item name="android:paddingStart">40dp</item>
+        <item name="android:paddingEnd">40dp</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+    </style>
+
+
+    <style name="KanguroButtonStyle.Primary">
+        <item name="backgroundTint">@color/color_button_dark</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="rippleColor">@color/tertiary_darkest</item>
+        <item name="iconTint">@color/white</item>
+    </style>
+
+    <style name="KanguroButtonStyle.Primary.Large">
+        <item name="android:layout_height">@dimen/button_height_large</item>
+    </style>
+
+    <style name="KanguroButtonStyle.Primary.Medium">
+        <item name="android:textAppearance">@style/KanguroTextStyle.Subhead.Black</item>
+        <item name="android:layout_height">@dimen/button_height_medium</item>
+    </style>
+
+    <style name="KanguroButtonStyle.Primary.Small">
+        <item name="cornerRadius">@dimen/border_radius_md</item>
+        <item name="android:textAppearance">@style/KanguroTextStyle.Caption.Black</item>
+        <item name="android:layout_height">@dimen/button_height_small</item>
+        <item name="iconSize">16dp</item>
+    </style>
+
+
+    <style name="KanguroButtonStyle.SecondaryLight">
+        <item name="rippleColor">@color/tertiary_light</item>
+        <item name="strokeWidth">1dp</item>
+        <item name="backgroundTint">@android:color/white</item>
+        <item name="iconTint">@color/color_button_secondary_light</item>
+        <item name="android:textColor">@color/color_button_secondary_light</item>
+        <item name="strokeColor">@color/color_button_secondary_light</item>
+    </style>
+
+    <style name="KanguroButtonStyle.Hug">
+        <item name="strokeWidth">0dp</item>
+        <item name="iconTint">@color/tertiary_extra_dark</item>
+        <item name="backgroundTint">@color/neutral_background</item>
+        <item name="android:textColor">@color/tertiary_extra_dark</item>
+    </style>
+
+    <style name="KanguroButtonStyle.SecondaryLight.Large">
+        <item name="android:layout_height">@dimen/button_height_large</item>
+    </style>
+
+    <style name="KanguroButtonStyle.SecondaryLight.Medium">
+        <item name="android:textAppearance">@style/KanguroTextStyle.Subhead.Black</item>
+        <item name="android:layout_height">@dimen/button_height_medium</item>
+    </style>
+
+    <style name="KanguroButtonStyle.Hug.Medium">
+        <item name="android:textAppearance">@style/KanguroTextStyle.Title3</item>
+        <item name="android:layout_height">@dimen/button_height_large</item>
+    </style>
+
+    <style name="KanguroButtonStyle.SecondaryLight.Small">
+        <item name="cornerRadius">@dimen/border_radius_md</item>
+        <item name="android:textAppearance">@style/KanguroTextStyle.Caption.Black</item>
+        <item name="android:layout_height">@dimen/button_height_small</item>
+        <item name="iconSize">16dp</item>
+    </style>
+
+
+    <style name="KanguroButtonStyle.SecondaryDark">
+        <item name="strokeColor">@color/color_button_secondary_dark_stroke</item>
+        <item name="strokeWidth">1dp</item>
+        <item name="rippleColor">@color/tertiary_darkest</item>
+        <item name="backgroundTint">@android:color/transparent</item>
+        <item name="iconTint">@color/color_button_secondary_dark_text</item>
+        <item name="android:textColor">@color/color_button_secondary_dark_text</item>
+    </style>
+
+    <style name="KanguroButtonStyle.SecondaryDark.Large">
+        <item name="android:layout_height">@dimen/button_height_large</item>
+    </style>
+
+    <style name="KanguroButtonStyle.SecondaryDark.Medium">
+        <item name="android:textAppearance">@style/KanguroTextStyle.Subhead.Black</item>
+        <item name="android:layout_height">@dimen/button_height_medium</item>
+    </style>
+
+    <style name="KanguroButtonStyle.SecondaryDark.Small">
+        <item name="cornerRadius">@dimen/border_radius_md</item>
+        <item name="android:textAppearance">@style/KanguroTextStyle.Caption.Black</item>
+        <item name="android:layout_height">@dimen/button_height_small</item>
+        <item name="iconSize">16dp</item>
+    </style>
+
+
+    <style name="KanguroButtonStyle.Tertiary">
+        <item name="backgroundTint">@color/color_button_tertiary</item>
+        <item name="android:textColor">@color/tertiary_darkest</item>
+        <item name="iconTint">@color/tertiary_darkest</item>
+        <item name="android:textAlignment">center</item>
+        <item name="iconGravity">textStart</item>
+        <item name="rippleColor">@color/tertiary_dark</item>
+        <item name="strokeWidth">1dp</item>
+        <item name="strokeColor">@color/tertiary_darkest</item>
+    </style>
+
+    <style name="KanguroButtonStyle.Tertiary.Medium">
+        <item name="android:textAppearance">@style/KanguroTextStyle.Body.Bold</item>
+        <item name="android:layout_height">@dimen/button_height_medium</item>
+    </style>
+
+
+    <style name="KanguroInputLayoutStyle" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="kg_titleColor">@color/color_textfield_text_secondary</item>
+        <item name="kg_titleColorFilled">@color/secondary_dark</item>
+        <item name="kg_errorBackground">@drawable/bg_textfield_error</item>
+        <item name="boxCornerRadiusBottomEnd">8dp</item>
+        <item name="boxCornerRadiusBottomStart">8dp</item>
+        <item name="boxCornerRadiusTopEnd">8dp</item>
+        <item name="boxCornerRadiusTopStart">8dp</item>
+        <item name="boxStrokeColor">@color/color_textfield_text_secondary</item>
+        <item name="boxStrokeWidth">1dp</item>
+        <item name="hintEnabled">false</item>
+        <item name="endIconTint">@color/color_textfield_text_secondary</item>
+        <item name="hintAnimationEnabled">false</item>
+        <item name="boxStrokeErrorColor">@color/negative_dark</item>
+        <item name="errorIconDrawable">@drawable/ic_circle_error</item>
+        <item name="errorTextAppearance">@style/KanguroTextStyle.Subhead.Regular</item>
+        <item name="errorTextColor">@color/negative_darkest</item>
+        <item name="theme">@style/Kanguro.EditTextTheme</item>
+    </style>
+
+    <style name="KanguroInputLayoutStyle.Password">
+        <item name="endIconMode">password_toggle</item>
+        <item name="endIconDrawable">@drawable/ic_password</item>
+    </style>
+
+    <style name="KanguroEditTextStyle" parent="Widget.AppCompat.EditText">
+        <item name="android:textAppearance">@style/KanguroTextStyle.Body.Regular</item>
+        <item name="android:drawableTint">@color/color_textfield_text_secondary</item>
+        <item name="android:background">@drawable/bg_textfield</item>
+        <item name="android:drawablePadding">10dp</item>
+        <item name="android:paddingTop">0dp</item>
+        <item name="android:paddingBottom">0dp</item>
+        <item name="android:paddingStart">@dimen/spacing_xxxs</item>
+        <item name="android:paddingEnd">@dimen/spacing_xxxs</item>
+        <item name="android:minHeight">@dimen/field_height</item>
+        <item name="android:textColor">@color/color_button_dark</item>
+        <item name="android:textColorHint">@color/secondary_medium</item>
+    </style>
+
+    <style name="PhoneCodeEditTextStyle" parent="KanguroEditTextStyle">
+        <item name="android:padding">0dp</item>
+        <item name="android:textColor">@color/secondary_darkest</item>
+        <item name="android:layout_height">@dimen/field_phone_code_height</item>
+        <item name="android:layout_width">@dimen/field_phone_code_height</item>
+        <item name="android:gravity">center</item>
+        <item name="android:inputType">number</item>
+        <item name="android:maxLength">1</item>
+    </style>
+
+    <style name="BottomSheetDialogThemeNoFloating" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowSoftInputMode">adjustResize</item>
+    </style>
+
+    <style name="KanguroDialog" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="android:background">@drawable/bg_dialog_rounded_16</item>
+    </style>
+
+    <style name="WelcomeScreenCornerSize">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeBottomLeft">@dimen/border_radius_lg</item>
+        <item name="cornerSizeBottomRight">@dimen/border_radius_lg</item>
+        <item name="cornerSizeTopLeft">0dp</item>
+        <item name="cornerSizeTopRight">0dp</item>
+    </style>
+
+    <style name="VetAdviceScreenCornerTopSize">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeBottomLeft">0dp</item>
+        <item name="cornerSizeBottomRight">0dp</item>
+        <item name="cornerSizeTopLeft">@dimen/border_radius_md</item>
+        <item name="cornerSizeTopRight">@dimen/border_radius_md</item>
+    </style>
+
+    <style name="VetAdviceScreenCornerBottomSize">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeBottomLeft">@dimen/border_radius_lg</item>
+        <item name="cornerSizeBottomRight">@dimen/border_radius_lg</item>
+        <item name="cornerSizeTopLeft">0dp</item>
+        <item name="cornerSizeTopRight">0dp</item>
+    </style>
+
+    <style name="ShapeAppearanceOverlay.App.CornerSize50Percent" parent="">
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <style name="ShapeAppearanceOverlay.App.TopCornerSize50Percent" parent="">
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <style name="TestingStyle" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="boxCornerRadiusBottomEnd">8dp</item>
+        <item name="boxCornerRadiusBottomStart">8dp</item>
+        <item name="boxCornerRadiusTopEnd">8dp</item>
+        <item name="boxCornerRadiusTopStart">8dp</item>
+        <item name="boxStrokeColor">@color/secondary_darkest</item>
+        <item name="boxStrokeWidth">2dp</item>
+    </style>
+
+    <style name="chatbot_button_style" parent="Widget.MaterialComponents.Button.UnelevatedButton">
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:insetLeft">0dp</item>
+        <item name="android:insetRight">0dp</item>
+        <item name="cornerSize">0dp</item>
+        <item name="android:textAppearance">@style/KanguroTextStyle.Body.Regular</item>
+        <item name="android:elevation">0dp</item>
+        <item name="android:textColor">@color/secondary_darkest</item>
+        <item name="android:backgroundTint">@color/neutral_background</item>
+    </style>
+
+    <style name="KanguroChoiceChip" parent="Widget.MaterialComponents.Chip.Choice">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:checked">true</item>
+        <item name="android:textColor">@color/secondary_dark</item>
+        <item name="chipBackgroundColor">@color/chip_background</item>
+        <item name="chipIconEnabled">true</item>
+        <item name="chipStrokeColor">@color/chip_stroke</item>
+        <item name="chipStrokeWidth">1dp</item>
+        <item name="textEndPadding">@dimen/spacing_xxxs</item>
+        <item name="textStartPadding">@dimen/spacing_xxxs</item>
+    </style>
+
+    <style name="KanguroRadioButton">
+        <item name="android:button">@drawable/radio_button_drawable</item>
+        <item name="android:buttonTint">@color/radio_button_tint</item>
+        <item name="android:paddingStart">10dp</item>
+        <item name="android:textAppearance">@style/KanguroTextStyle.Body.Regular</item>
+        <item name="android:textColor">@color/secondary_darkest</item>
+    </style>
+
+    <style name="whats_covered_item_style">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:drawablePadding">-15dp</item>
+        <item name="android:paddingTop">3dp</item>
+        <item name="android:textAppearance">@style/KanguroTextStyle.Body.Bold</item>
+        <item name="android:textColor">@color/secondary_darkest</item>
+    </style>
+
+    <style name="whats_covered_item_flow_style">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">@dimen/spacing_xs</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="flow_maxElementsWrap">1</item>
+        <item name="flow_verticalGap">@dimen/spacing_xxxs</item>
+        <item name="flow_wrapMode">chain</item>
+    </style>
+
+    <style name="whats_covered_item_content_box_style">
+        <item name="android:layout_marginTop">64dp</item>
+        <item name="android:background">@drawable/bg_claim_summary</item>
+        <item name="android:paddingStart">@dimen/spacing_xxxs</item>
+        <item name="android:paddingEnd">@dimen/spacing_xxxs</item>
+        <item name="android:paddingTop">82dp</item>
+        <item name="android:paddingBottom">@dimen/spacing_xxs</item>
+    </style>
+
+    <style name="KanguroCloseButtonX" parent="Widget.MaterialComponents.Button.UnelevatedButton">
+        <item name="android:layout_width">40dp</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:layout_gravity">top|end</item>
+        <item name="android:layout_margin">4dp</item>
+        <item name="android:src">@drawable/ic_close_x</item>
+    </style>
+
+    <style name="Kanguro.EditTextTheme" parent="">
+        <item name="colorControlActivated">@color/primary_darkest</item>
+    </style>
+
+    <style name="MoreActionsButtonStyle" parent="Widget.MaterialComponents.Button.UnelevatedButton">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:minHeight">@dimen/field_height</item>
+        <item name="android:textAlignment">textStart</item>
+        <item name="android:textAppearance">@style/KanguroTextStyle.Body.Bold</item>
+        <item name="android:textColor">@color/secondary_darkest</item>
+        <item name="backgroundTint">@android:color/white</item>
+        <item name="cornerRadius">@dimen/border_radius_sm</item>
+        <item name="iconPadding">10dp</item>
+        <item name="iconTint">@color/secondary_medium</item>
+    </style>
+
+    <style name="action_button_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/bg_card_options</item>
+        <item name="android:drawablePadding">@dimen/spacing_nano</item>
+        <item name="android:fontFamily">@font/lato_bold</item>
+        <item name="android:gravity">start|center</item>
+        <item name="android:padding">@dimen/spacing_xxxs</item>
+        <item name="drawableTint">@color/secondary_dark</item>
+    </style>
+
+    <style name="ProgressBarBtnSmall">
+        <item name="android:layout_width">24dp</item>
+        <item name="android:layout_height">24dp</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:indeterminateTint">@android:color/white</item>
+    </style>
+
+    <style name="ProgressBarNormal">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:indeterminateTint">@color/secondary_medium</item>
+    </style>
+
+    <style name="KanguroCheckbox">
+        <item name="useMaterialThemeColors">false</item>
+        <item name="android:button">@drawable/kanguro_checkbox</item>
+        <item name="android:checked">false</item>
+        <item name="android:paddingStart">8dp</item>
+        <item name="android:textAppearance">@style/KanguroTextStyle.Body.Bold</item>
+        <item name="android:textColor">@color/checkbox_text_color</item>
+    </style>
+
+    <style name="divider_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:background">@color/neutral_background</item>
+    </style>
+
+    <style name="MobaBodyRegular" parent="TextAppearance.AppCompat">
+        <item name="android:fontFamily">@font/lato</item>
+        <item name="android:textColor">@color/secondary_dark</item>
+        <item name="android:lineSpacingExtra">19.2sp</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+    <style name="MobaSubheadRegular" parent="TextAppearance.AppCompat">
+        <item name="android:fontFamily">@font/lato</item>
+        <item name="android:textColor">@color/secondary_medium</item>
+        <item name="android:lineSpacingExtra">16.8sp</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+
+    <style name="BKSParagraphRegular" parent="TextAppearance.AppCompat">
+        <item name="android:fontFamily">@font/lato</item>
+        <item name="android:textColor">@color/secondary_dark</item>
+        <item name="android:lineSpacingExtra">15.6sp</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:textAlignment">center</item>
+    </style>
+
+    <style name="MobaBodyRegular14" parent="TextAppearance.AppCompat">
+        <item name="android:fontFamily">@font/lato</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="CustomCardViewStyle" parent="@style/Widget.MaterialComponents.CardView">
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearanceOverlay_card_custom_corners</item>
+    </style>
+
+    <style name="ShapeAppearanceOverlay_card_custom_corners" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopRight">0dp</item>
+        <item name="cornerSizeTopLeft">0dp</item>
+        <item name="cornerSizeBottomRight">@dimen/border_radius_sm</item>
+        <item name="cornerSizeBottomLeft">@dimen/border_radius_sm</item>
+    </style>
+
+</resources>

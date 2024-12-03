@@ -1,0 +1,18 @@
+[
+  {
+    "key": 1,
+    "value": "1. A dog questions",
+    "description": "Answer for dogs",
+    "type": "VA_D",
+    "language": "en",
+    "isActive": true
+  },
+  {
+    "key": 1,
+    "value": "2. A cat question",
+    "description": "Answer for cats",
+    "type": "VA_C",
+    "language": "en",
+    "isActive": true
+  }
+]

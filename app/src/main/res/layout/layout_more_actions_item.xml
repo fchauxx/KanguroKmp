@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <import type="android.view.View.OnClickListener" />
+
+        <variable
+            name="action"
+            type="com.insurtech.kanguro.domain.dashboard.Action" />
+
+        <variable
+            name="onClickAction"
+            type="OnClickListener" />
+
+        <variable
+            name="backgroundTint"
+            type="Integer" />
+
+        <variable
+            name="isHighlighted"
+            type="Boolean" />
+
+        <variable
+            name="highlightedLabel"
+            type="String" />
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dashboard_horizontal_padding"
+        android:layout_marginTop="@dimen/spacing_quark"
+        android:layout_marginEnd="@dimen/dashboard_horizontal_padding">
+
+        <com.google.android.material.button.MaterialButton
+            style="@style/MoreActionsButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@{backgroundTint}"
+            android:drawableRight="@drawable/ic_message_favorite"
+            android:onClick="@{onClickAction}"
+            android:text="@{action.nameRes}"
+            app:icon="@{action.icon}"
+            app:iconSize="@dimen/icon_size"
+            tools:backgroundTint="@color/white"
+            tools:icon="@drawable/ic_message_favorite"
+            tools:text="File a claim" />
+
+        <include
+            android:id="@+id/newFeature"
+            layout="@layout/layout_new_feature"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|end"
+            android:layout_marginRight="@dimen/spacing_xxxs"
+            android:visibility="@{isHighlighted ? View.VISIBLE : View.GONE}"
+            app:text="@{highlightedLabel}" />
+    </FrameLayout>
+
+</layout>

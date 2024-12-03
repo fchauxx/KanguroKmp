@@ -1,0 +1,569 @@
+<resources>
+
+    <string name="title_activity_component_test">ComponentTestActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="password">Password</string>
+    <string name="email">Email</string>
+    <string name="enter_your_email">Enter your email</string>
+    <string name="please_confirm_your_email_address">Please, confirm your email address</string>
+    <string name="btn_continue">Continue</string>
+    <string name="btn_delete">Delete</string>
+    <string name="create_your_password">Create your password</string>
+    <string name="enter_your_password">Enter your password</string>
+    <string name="sign_in_with_google">Sign in with Google</string>
+    <string name="sign_in_with_apple">Sign in with Apple</string>
+    <string name="forgot_password">Forgot password?</string>
+    <string name="forgot_your_password_underlined"><u>Forgot your password?</u></string>
+    <string name="instructions_to_reset_password">We sent you instructions to reset your password!</string>
+    <string name="security_reasons_of_password">For security reasons, we do NOT store your password, and we never send your password via any channel.</string>
+    <string name="please_contact_us">If you continue to have problems, please contact us.</string>
+    <string name="contact_us">contact us.</string>
+    <string name="send_reset_instructions">Send reset instructions</string>
+    <string name="back_underlined"><u>Back</u></string>
+    <string name="start_now">Start now</string>
+    <string name="lets_start">Let\'s start!</string>
+    <string name="to_get_start">To get started, you should create a new password</string>
+    <string name="hello">hello,</string>
+    <string name="great_you_re_almost_ready">great,\nyou’re almost ready</string>
+    <string name="enter_your_cellphone_number">Enter your cellphone number</string>
+    <string name="disclaimer_phone_usage">We will only use this number for account setup and security purposes, such as two-factor authentication.</string>
+    <string name="we_sent_a_code">we just sent a code to your phone</string>
+    <string name="enter_the_code">Enter the code</string>
+    <string name="edit_cellphone_number"><u>Edit cellphone number</u></string>
+    <string name="code_hasnt_arrived">Code hasn\'t arrived?</string>
+    <string name="you_can_resend_in">You can resend in</string>
+    <string name="you_can_resend_it">You can resend it</string>
+    <string name="invalid_code">Invalid code!</string>
+    <string name="hint_area_code">+1</string>
+    <string name="hint_phone_number">000 000 0000</string>
+    <string name="invalid_email">Invalid email!</string>
+    <string name="two_strings_template">%1$s %2$s</string>
+
+    <plurals name="plural_year">
+        <item quantity="one">%d year</item>
+        <item quantity="other">%d years</item>
+    </plurals>
+
+    <plurals name="plural_month">
+        <item quantity="one">%d month</item>
+        <item quantity="other">%d months</item>
+    </plurals>
+
+    <!-- General -->
+    <string name="maps_api_key" translatable="false">AIzaSyAatiOtTpVsIw-LA5Iz0MIhFvo_Bc-kLEI</string>
+
+    <!-- Welcome -->
+    <string name="sign_in">Sign in</string>
+    <string name="get_a_quote">Get a quote</string>
+    <string name="add_a_pet">Add a pet</string>
+    <string name="get_a_quote_message">Don\'t have an account yet?</string>
+    <string name="first_content_0">call us Kanguro…</string>
+    <string name="first_content_1">modernizing your experience with insurance</string>
+    <string name="second_content">our main focus is bringing value to your life with coverages designed for your every day</string>
+    <string name="third_content_0">easy to understand,\neasy to quote and\neasy to claim</string>
+    <string name="third_content_1">just a few clicks and\nyou are done!</string>
+    <string name="switch_language"><u>Cambiar a Español</u></string>
+    <string name="update_cellphone_message">Update your cellphone!</string>
+    <string name="onboarding_1">modernizing the insurance experience.</string>
+
+    <!-- Chat Bot -->
+    <string name="bot_greetings">hello, I\'m Javier!</string>
+    <string name="bot_description">Your A.I. personal assistant</string>
+    <string name="skip">Skip</string>
+    <string name="submit">Submit</string>
+    <string name="no">No</string>
+    <string name="yes">Yes</string>
+    <string name="submit_now">Submit now</string>
+    <string name="do_it_later">Do it later</string>
+    <string name="see_map">See map</string>
+    <string name="closer_vets">Here are the vets closer to your location</string>
+    <string name="details">Details</string>
+    <string name="are_you_liking_kanguro">Are you liking\nKanguro?</string>
+    <string name="get_amazon_gift_card">Get a $25 Amazon Gift Card</string>
+    <string name="refer_a_friend_and_earn_rewards">Refer a friend.</string>
+    <string name="see_all">See all</string>
+    <string name="done">Done</string>
+    <string name="add_more">Add more</string>
+    <string name="edit">Edit</string>
+
+    <!-- Dashboard -->
+    <string name="home_menu">Home</string>
+    <string name="coverage_menu">Coverages</string>
+    <string name="cloud_menu">Cloud</string>
+    <string name="more_menu">More</string>
+    <string name="pet_menu">Pet</string>
+    <string name="renters_menu">Renters</string>
+    <string name="chat_menu">Support</string>
+
+    <!-- Coverage -->
+    <string name="active">Active</string>
+    <string name="inactive">Inactive</string>
+    <string name="canceled">Canceled</string>
+    <string name="finished">Finished</string>
+    <string name="policy_number">Policy Number #%s</string>
+    <string name="policy_period">Policy Period: %s - %s</string>
+    <string name="finish_date">Finish Date: %s</string>
+    <string name="purchase_date">Purchase Date: %s</string>
+    <string name="renew_date">Renews on: %s</string>
+    <string name="remaining_limit">remaining</string>
+    <string name="up_to">Up to %s</string>
+
+    <!-- Claims -->
+    <string name="claims_label">Claims</string>
+    <string name="track_claim">Track your claims</string>
+    <string name="open_button">Open</string>
+    <string name="closed_button">Closed</string>
+    <string name="drafts_button">Drafts</string>
+    <string name="continue_claim">Please continue your claim!</string>
+    <string name="claims_empty_list">There is nothing here yet!</string>
+    <string name="open_claim_date_info">Last update on</string>
+    <string name="closed_claim_date_info">Closed on</string>
+    <string name="draft_claim_date_info">Created on</string>
+    <string name="closed_claim_paid">Paid</string>
+    <string name="details_summary">Summary</string>
+    <string name="details_description">Claim Description</string>
+    <string name="details_attachments">Attachments</string>
+    <string name="details_status">Status</string>
+    <string name="details_pet">Pet</string>
+    <string name="details_claim">Claim</string>
+    <string name="details_date">Date</string>
+    <string name="date_submitted">Date submitted</string>
+    <string name="date_incident">Incident date</string>
+    <string name="details_amount">Amount</string>
+    <string name="details_amount_paid">Paid amount</string>
+    <string name="details_amount_transferred">Transferred amount</string>
+    <string name="details_contribution_towards_deductible">Contribution towards deductible</string>
+    <string name="details_amount_claimed">Claimed amount</string>
+    <string name="details_payment">Payment method</string>
+    <string name="pet_coverage">%s\'s coverage</string>
+    <string name="wellness_preventive">WELLNESS AND PREVENTIVE</string>
+    <string name="claim_status_submitted">Submitted</string>
+    <string name="claim_status_assigned">Assigned</string>
+    <string name="claim_status_approved">Approved</string>
+    <string name="claim_status_in_review">In Review</string>
+    <string name="claim_status_draft">Draft</string>
+    <string name="claim_status_closed">Closed</string>
+    <string name="claim_status_deleted">Deleted</string>
+    <string name="claim_status_success">Success</string>
+    <string name="claim_status_denied">Denied</string>
+    <string name="claim_status_approved_paid">Paid</string>
+    <string name="claim_number">Claim %s</string>
+
+    <!-- Reminders -->
+    <string name="med_history">Medical History</string>
+    <string name="reminders_section">Reminders</string>
+    <string name="file_a_claim">File a claim</string>
+    <string name="vet_advice">Vet advice</string>
+    <string name="new_pet_parents">New Pet Parents</string>
+    <string name="frequent_questions">Frequent questions</string>
+    <string name="frequent_asked_questions">Frequently asked questions</string>
+    <string name="payment_settings">Payment settings</string>
+    <string name="coverage_details_transition_name">coverage_detail_transition</string>
+
+    <!-- Claims chatbot -->
+    <string name="new_claim">New Claim</string>
+    <string name="take_pic">Take a picture(s)</string>
+    <string name="select_pic">Select picture(s)</string>
+    <string name="select_file">Select file(s)</string>
+
+    <!-- Coverage details -->
+    <string name="hello_pet">Hello,</string>
+    <string name="warning_end_date">Waiting period end date</string>
+    <string name="remaining_value">You have\n$2,500 remaining</string>
+    <string name="left_to_deductible"><b>$50</b> left to reach\nthe deductible</string>
+    <string name="plan_summary">Plan summary</string>
+    <string name="what_is_covered">What is covered</string>
+    <string name="track_your_benefits">Track your benefits</string>
+    <string name="policy_docs">Policy docs</string>
+    <string name="remember_reimbursement">%d%% reimbursement</string>
+    <string name="billing_prefs">Billing preferences</string>
+    <string name="monthly_payment">Monthly payment</string>
+    <string name="yearly_payment">Yearly payment</string>
+    <string name="quarterly_payment">Quarterly payment</string>
+    <string name="payment">Payment</string>
+    <string name="good_boy">Good Doggie</string>
+    <string name="good_boy_sub">Good Doggie | Accident &amp; illness</string>
+    <string name="prev_wellness">Preventive &amp; Wellness</string>
+    <string name="prev_wellness_sub">Preventive &amp; Wellness | Extra service</string>
+    <string name="next_billing">Next billing in <b>11/10/2021</b></string>
+    <string name="talk_to_javier">Talk to Javier</string>
+    <string name="reimbursement">Reimbursement</string>
+    <string name="deductible">Deductible</string>
+    <string name="annual_limit">Annual limit</string>
+    <string name="up_to_deductible">up to %1$s</string>
+    <string name="used_of_limit">%1$s of %2$s</string>
+    <string name="you_have_remaining">You have\n%1$s remaining \nin annual limit</string>
+    <string name="renew_in">Renew in %1$s</string>
+    <string name="illness_insurance">ACCIDENT &amp; ILLNESS INSURANCE</string>
+    <string name="extra_service">EXTRA SERVICE</string>
+
+    <!-- Pledge of Honor -->
+    <string name="pledge_title">Pledge of honor</string>
+    <string name="pledge_promise">I promise the info I will provide will be truthful.</string>
+    <string name="donated_to">A portion of your unclaimed money will be donated to %s</string>
+    <string name="a_cause">a cause</string>
+    <string name="confirm">Confirm</string>
+
+    <!-- Experience feedback -->
+    <string name="experience_question">How was your experience submitting a claim?</string>
+    <string name="tell_us">Tell us more about your experience (optional)</string>
+    <string name="send_feedback">Send feedback</string>
+    <string name="very_bad">Very Bad</string>
+    <string name="bad">Bad</string>
+    <string name="ok">Ok</string>
+    <string name="good">Good</string>
+    <string name="amazing">Amazing</string>
+
+    <!-- Payment settings -->
+    <string name="payment_settings_label">Payment Settings</string>
+
+    <!-- Billing preferences -->
+    <string name="billing_history">Billing history</string>
+    <string name="good_boy_label">Monthly Perro Bueno</string>
+    <string name="prev_wellness_label">Preventive and Wellness</string>
+    <string name="chatbot_date">%2$02d/%1$02d/%3$04d</string>
+    <string name="claim_summary">Claim Summary</string>
+    <string name="pet">Pet</string>
+    <string name="date">Date</string>
+    <string name="attachments">Attachments</string>
+    <string name="amount">Amount</string>
+    <string name="paymentMethod">Payment method</string>
+    <string name="reimbursementMethod">Reimbursement method</string>
+    <string name="see_details"><u>see details</u></string>
+    <string name="what_you_want_to_see">What you want to see?</string>
+    <string name="all">All</string>
+
+    <string name="more_actions">More Actions</string>
+    <string name="preferences">Preferences</string>
+    <string name="support">Support</string>
+    <string name="legal">Legal</string>
+    <string name="profile">Profile</string>
+    <string name="logout">Logout</string>
+    <string name="settings">Settings</string>
+    <string name="language">Language</string>
+    <string name="language_preferences">Language preferences</string>
+    <string name="language_preferences_subtitle">Please tell us in what language you speak to your furry friend in!</string>
+    <string name="english">English</string>
+    <string name="espanol">Español</string>
+    <string name="language_settings">Language settings</string>
+    <string name="phone_number_support" translatable="false">+1-888-546-5264</string>
+    <string name="refer_a_friend_action">Refer a friend</string>
+    <string name="app_version" translatable="false">v %1$s</string>
+    <string name="no_title" translatable="false" />
+    <string name="privacy_policy">Privacy Policy</string>
+    <string name="terms_of_use">Terms of Use</string>
+    <string name="chat_sms">Chat via Text Message</string>
+    <string name="chat_whatsapp">Chat via WhatsApp</string>
+    <string name="call_us">Call us</string>
+    <string name="tag_faster">Faster</string>
+
+    <!-- What is covered screen -->
+    <string name="procedures">Procedures</string>
+    <string name="item_prosthetic_limbs">Prosthetic Limbs, Devices &amp; Mobility Aids</string>
+    <string name="item_cremation">Cremation</string>
+    <string name="item_euthanasia">End of life - Euthanasia up to $1,000</string>
+    <string name="item_vet_exam">Vet exam fees</string>
+    <string name="item_surgery">Surgery &amp; Hospitalization</string>
+    <string name="item_er_vets">Specialty and ER vets</string>
+    <string name="item_cancer_treatment">Cancer treatment</string>
+    <string name="item_dental_illness">Dental illness up to $1,000/year</string>
+    <string name="diagnostics">Diagnostics</string>
+    <string name="item_blood_test">Blood test</string>
+    <string name="item_urinalysis">Urinalysis</string>
+    <string name="item_krays">KRAYS</string>
+    <string name="item_mri_s">MRI\'s</string>
+    <string name="item_labwork">Labwork</string>
+    <string name="item_ct_scans">CT Scans</string>
+    <string name="item_ultrasounds">Ultrasounds</string>
+    <string name="item_behavioral_exam">Behavioral exam</string>
+    <string name="medications">Medications</string>
+    <string name="item_chronic_conditions">Chronic conditions that may develop</string>
+    <string name="item_hereditary_conditions">Hereditary breed-specific conditions that may develop</string>
+    <string name="item_prescription_medication">Prescription medication caused by other accidents or illness</string>
+    <string name="item_blood_disorders">Blood disorders</string>
+    <string name="item_eye_disorders">Eye Disorders</string>
+    <string name="item_musculoskeletal_disorder">Musculoskeletal disorder</string>
+    <string name="item_respiratory_conditions">Respiratory conditions</string>
+
+    <!-- Refer a Friend -->
+    <string name="refer_friends">Refer friends</string>
+    <string name="get_gift_card">Get a Gift Card!</string>
+    <string name="earn_amazon">Amazon $25</string>
+    <string name="inviting_friends">Earn Amazon $25 by inviting friends and family to Kanguro.</string>
+    <string name="maybe_later">Maybe later</string>
+    <string name="lets_do_it">Let\'s do it</string>
+    <string name="decided_to_share_love"> We decided to share some love with you and your friends!</string>
+    <string name="amazon_gift_card">$25 Amazon gift card</string>
+    <string name="refer_a_friend">Refer a friend and we\'ll give you a reward of $25 Amazon gift card for every sign-up that comes through your custom code below.</string>
+    <string name="share_code">share your code</string>
+    <string name="share_to">Share to</string>
+    <string name="terms_of_service"><u>Terms of Service</u></string>
+    <string name="share_code_message">%s sent you a 10%% discount for the Kanguro health and wellness insurance plan for your furry friend.\nhttps://www.kanguroseguro.com\nYour referral code: %s</string>
+
+    <!--Cloud-->
+    <string name="kanguro_cloud">Kanguro Cloud</string>
+    <string name="search_file_here">Search your files her</string>
+    <string name="new_document">New document</string>
+    <string name="select"><u>Select</u></string>
+    <string name="delete"><u>Delete</u></string>
+    <string name="latest">Latest</string>
+    <string name="claim_documents">Claim documents</string>
+    <string name="policy_documents">Policy documents</string>
+    <string name="digital_vaccine_card">Digital vaccine card</string>
+    <string name="policy">Policy</string>
+    <string name="policy_attachments">Policy attachments</string>
+    <string name="policy_file">Policy file</string>
+
+    <!-- Profile information screen -->
+    <string name="edit_profile">Edit profile</string>
+    <string name="first_name">First name</string>
+    <string name="surname">Surname</string>
+    <string name="phone_number">Phone number</string>
+    <string name="zip_code">Zip code</string>
+    <string name="addresses">Addresses</string>
+    <string name="address">Address</string>
+    <string name="apt_unit">Apt/unit</string>
+    <string name="city">City</string>
+    <string name="state">State</string>
+    <string name="change_password">Change password</string>
+    <string name="current_password">Current password</string>
+    <string name="new_password">New password</string>
+    <string name="email_capt">Email</string>
+    <string name="repeat_new_password">Repeat new password</string>
+    <string name="save">Save</string>
+    <string name="address_change_reminder">Updating your address will not change your pets\' policy.</string>
+    <string name="error_passwords_dont_match">The passwords don\'t match!</string>
+    <string name="error_passwords_invalid">You must provide a valid password</string>
+    <string name="profile_information">Profile information</string>
+    <string name="perro_bueno">Good Doggie</string>
+    <string name="gato_sano">Cool Cat</string>
+    <string name="communications">Communications</string>
+    <string name="contact_us_action">Contact Us</string>
+
+    <!-- Vet Advice -->
+    <string name="vet_advice_button">Vet Advice</string>
+    <string name="doctor_name">by Dr. Cristina Bustamante</string>
+    <string name="doctor_formation">VETERINARIAN FOUNDER OF Dr.B Vet</string>
+    <string name="dogs_label">Dogs</string>
+    <string name="cats_label">Cats</string>
+    <string name="new_parents_label">Parents</string>
+    <string name="see_advices"><u>see advices</u></string>
+    <string name="dogs_card_description">The best vet advice for dog offered by the experienced and well known veterinarian exclusively to our Kanguro community</string>
+    <string name="cats_card_description">The best vet advice for your cat offered by the experienced and well known veterinarian exclusively to our Kanguro community</string>
+    <string name="vet_advice_for_dogs">Vet advice for Dogs </string>
+    <string name="vet_advice_for_cats">Vet advice for Cats </string>
+    <string name="faq_title">FAQ</string>
+    <string name="frequently_asked_questions">Frequently Asked Questions</string>
+
+    <!-- Error dialog -->
+    <string name="error_dialog_title">Oops!</string>
+    <string name="error_dialog_generic_message">Something went wrong.</string>
+    <string name="error_dialog_generic_retry_message">Something went wrong. Please, try again.</string>
+    <string name="error_dialog_retry">Retry</string>
+    <string name="error_dialog_cancel">Cancel</string>
+    <string name="error_dialog_timeout">We couldn\'t get a response, please check your connection and try again.</string>
+    <string name="error_dialog_code">(Code: %d)</string>
+    <string name="back">Back</string>
+    <string name="upload_document_error">It was not possible to upload your document. Please try again.</string>
+    <string name="send_document_error">It was not possible to send your document. Please try again.</string>
+
+    <!-- What is covered usage -->
+    <string name="completed">Completed</string>
+    <string name="availableValue">%d/%d Available</string>
+    <string name="plan_cover_title">What your preventive care plan covers</string>
+    <string name="annual_limit_2_lines">Annual\nlimit</string>
+    <string name="get_reimbursed">Get Reimbursed</string>
+
+
+    <string name="javier_generic_salutation">Hi, %s!</string>
+    <string name="javier_generic_what_can_i_do">What can I do for you and your buddies today?</string>
+    <string name="no_reminders">You don’t have active reminders</string>
+    <string name="talk_with_support">Talk with support</string>
+    <string name="im_a_new_pet_parent">I\'m a new pet parent</string>
+    <string name="delete_personal_data">Delete personal data</string>
+    <string name="delete_personal_data_information">Kanguro needs to processes some personal data in order to provide you with the Kanguro services. To delete that personal data, you need to close your account.</string>
+    <string name="delete_personal_data_switch">Delete my account and personal data at the end of my pet\'s coverage.</string>
+    <string name="cancel_or_change_policy">Cancel or change my Policy</string>
+    <string name="other">Other</string>
+
+    <string name="payments">Payments</string>
+    <string name="reimbursement_account">Reimbursement account</string>
+    <string name="banking_information">Banking information</string>
+    <string name="type_of_account">Type of account</string>
+    <string name="checking_account">Checking</string>
+    <string name="saving_account">Saving</string>
+    <string name="bank_name">Bank name</string>
+    <string name="routing">Routing</string>
+    <string name="account">Account</string>
+    <string name="claims_title">Track your claim</string>
+    <string name="select_your_bank">Select your bank:</string>
+    <string name="search_your_bank">Search your bank here.</string>
+
+    <string name="claim_amount_suffix">Claim amount: %s</string>
+    <string name="claim_details">Claim Details</string>
+    <string name="submit_documents">Submit documents</string>
+    <string name="document">Document</string>
+    <string name="file_size">%s kB</string>
+
+
+    <string name="my_account">My Account</string>
+    <string name="delete_user_id_and_password">Delete your user id and password</string>
+    <string name="profile_first_topic">Once we complete your request to delete your account, you won’t be able to log in to your Kanguro account.</string>
+    <string name="profile_second_topic">Your personal data regarding your online account will be deleted.</string>
+    <string name="profile_third_topic">You won’t have access to your Kanguro documents which means you acknowledge the Kanguro will only be able to contact you by e-mail until you re-enroll.</string>
+    <string name="profile_fourth_topic">This won’t affect your insurance coverage or cancel your policy.</string>
+    <string name="profile_send_deletion_request">Do you want to send a request to initiate account deletion and delete personal data?</string>
+    <string name="send_request">Send request</string>
+    <string name="cancel">Cancel</string>
+    <string name="attention">Attention</string>
+    <string name="request_deletion_alert_message">This action will permanently delete your account and personal data, would you like to continue?</string>
+    <string name="your_claim_was_denied_because">Your claim was denied because:</string>
+    <string name="your_claim_warning">Please submit required documents.</string>
+
+
+
+    <!-- Social Give Back -->
+    <string name="support_cause_title">Choose a cause</string>
+    <string name="support_cause_content">Your policy is making the world a better place:</string>
+    <string name="support_cause_message_title">Let\'s help make the world better</string>
+    <string name="support_cause_message">Kanguro cares about giving back!\nWe donate part of the money we do not use to pay claims to animal shelters, global warming foundations, social causes, and hispanic organizations that help the community thrive.</string>
+    <string name="donations">You choose, and we support</string>
+    <string name="we_already_donated">We already donated $%s</string>
+    <string name="select_cause">Select your cause:</string>
+    <string name="choose_cause">Choose this cause</string>
+    <string name="animals">Animals</string>
+    <string name="education">Education</string>
+    <string name="health">Health</string>
+    <string name="kids">Kids</string>
+    <string name="elderly">Elderly</string>
+    <string name="global_warming">Global Warming</string>
+    <string name="social_causes">Social Causes</string>
+    <string name="latin_communities">Latin Communities</string>
+    <string name="support_a_cause">Support a cause</string>
+    <string name="change_cause">Change your cause</string>
+    <string name="you_currently_support">You currently support</string>
+
+    <!-- Login Blocked -->
+    <string name="account_presenting_problems">Your APP account is presenting some problems</string>
+    <string name="contact_us_blocked">CONTACT US TO SOLVE THE PROBLEM:</string>
+
+    <!-- Maps -->
+    <string name="find_vet">Find Vet</string>
+    <string name="place_open_24h">Open 24H</string>
+    <string name="opens_at">Opens %s</string>
+    <string name="closes_at">Closes %s</string>
+    <string name="dash">-</string>
+
+    <!-- Blog -->
+    <string name="blog">Blog</string>
+
+    <!-- Update App -->
+    <string name="update_button">Update</string>
+    <string name="better_than_ever">We\'re better than ever!</string>
+    <string name="please_update_kanguro_app">Please update the Kanguro app so you can access and have a better experience</string>
+
+    <!-- Working hours -->
+    <string name="working_hours">Mon - Fri: 9:00am - 7:00pm EST\nSaturday: 10:00am - 2:00pm EST\nSunday: Closed</string>
+
+    <!-- Password rules -->
+    <string name="password_rule_1">Must be at least <b>8 characters</b> in length</string>
+    <string name="password_rule_2">Should contain at least <b>one lower case</b></string>
+    <string name="password_rule_3">Should contain at least <b>one upper case</b></string>
+    <string name="password_rule_4">Should contain at least <b>one digit or one special character</b></string>
+
+    <string name="open_file">Open file</string>
+
+    <string name="roam_url" translatable="false">https://www.roampets.com</string>
+
+    <string name="medical_history_alert_title">Hey! We need your Medical History</string>
+    <string name="medical_history_alert_message">To make sure we can work our magic and give your furry friend the best care ever, we kindly ask you to send us their medical history. It\'s not just about helping us improve your claims, but also ensuring we protect your pet like superhero sidekicks.</string>
+
+    <!-- Local Chatbot-->
+    <string name="sign_label">Sign</string>
+    <string name="accident_label">Accident</string>
+    <string name="illness_label">Illness</string>
+    <string name="preventive_wellness_label">Checkups, Exams and/or Vaccines</string>
+    <string name="see_options_label">See options</string>
+    <string name="inform_account_label">Inform account</string>
+    <string name="submit_claim_label">Submit claim</string>
+    <string name="confirmed_label">Confirmed</string>
+    <string name="finish_label">Finish</string>
+
+    <string name="start_claim_prompt">I see you would like to start a claim.</string>
+    <string name="ask_claim_for_whom">Who is the claim for?</string>
+    <string name="acknowledge_thank_you">Thank you!</string>
+    <string name="request_pledge_signature">To start your claim process, I\'ll need you to sign your "pledge of honor".</string>
+    <string name="ask_claim_reason">Please, let me know why you\'re filling this claim:</string>
+    <string name="ask_for_options">Please, select the options you want:</string>
+    <string name="ask_invoice_date">What is the date on the invoice you are submitting? \uD83D\uDDD3</string>
+    <string name="ask_description">Please, write a brief description about it:</string>
+    <string name="ask_invoice_total_amount">What is the total amount of the invoice?</string>
+    <string name="instruction_receipt">Right, now we are going to need paid-in-full receipt(s) from the vet visit.</string>
+    <string name="instruction_medical_records">Please, also include the Medical Records related to the exam.</string>
+    <string name="instruction_pet_health_state">For insurance purposes, we need a picture of your pet in its current health state.</string>
+    <string name="ask_pet_health_state">Please take a picture of your pet if they are with you but if they are not please upload the most recent photo you have.</string>
+    <string name="ask_account_info">Please, inform your account for reimbursement:</string>
+    <string name="display_claim_summary">Here\'s the summary of your claim:</string>
+    <string name="notification_claim_submitted">Claim submitted!</string>
+    <string name="instruction_check_status">You can check the status update anytime in %s\'s claim history.</string>
+    <string name="instruction_contact_us">Please, get in touch with us for further questions regarding what to do next in this case\! 1\-800\-123\-4567.</string>
+    <string name="notification_policy_inactive">Dear %s, looks like %s policy is not active!</string>
+    <string name="notification_no_med_history">Looks like %s has no medical history.</string>
+    <string name="reminder_check_updates">Please, check the \"Reminders\" section in the app for any pending medical history updates.</string>
+    <string name="notification_annual_limit_reached">Dear %s, we have reached the annual limit on accident and illness policy for %s.</string>
+    <string name="notification_waiting_period">Dear %s, we is still in the waiting period on accident and illness policy for %s.</string>
+    <string name="notification_benefits_complete">Dear %s, %s already complete the amount of our benefits available.</string>
+    <string name="warning_duplicate_claim">I\'m sorry, but it seems that you already have a claim for %s on this date.</string>
+    <string name="warning_duplicate_claim_2">No worries! You can always track the status of your claim through claim tracker.</string>
+
+    <string name="pet_upselling_pet_health_plan">Pet Health Plan</string>
+    <string name="pet_upselling_do_you_have_a_pet">Do you have a pet?</string>
+    <string name="pet_upselling_content_text">Save up to 90% in yearly costs with our\nKanguro Pet Health Plan!\n\nThe first health insurance and wellness plan for pets that is truly easy to use. We got you a special 10% discount!</string>
+    <string name="pet_upselling_content_text_plan_highlighted">Kanguro Pet Health Plan!</string>
+    <string name="pet_upselling_content_discount_highlighted">We got you a special 10% discount!</string>
+    <string name="upselling_quote_now">Quote now, easy and fast!</string>
+    <string name="upselling_tell_me_more">Tell me more!</string>
+
+    <string name="renters_upselling_renters_insurance">Renters Insurance</string>
+    <string name="renters_upselling_do_you_rent_a_place">Do you rent a place?</string>
+    <string name="renters_upselling_content_text">Keep your belongings safe with our\nKanguro Renters Insurance!\n\nIt protects your personal property and helps cover personal liability costs. We got you a special 10% discount!</string>
+    <string name="renters_upselling_content_text_plan_highlighted">Kanguro Renters Insurance!</string>
+    <string name="renters_upselling_content_discount_highlighted">We got you a special 10% discount!</string>
+
+    <string name="permission_granted">Permission granted</string>
+
+    <string name="direct_pay_vet">Direct pay your Vet</string>
+    <string name="direct_pay_vet_underline"><u>Direct pay your Vet</u></string>
+
+    <string name="close">Close</string>
+    <string name="clear">Clear</string>
+
+    <string name="direct_pay_to_vet_medical_authorization_agree">You agree to let Us generate a Medical Authorization document with your signature that will authorize the release of your pet\'s medical records.</string>
+    <string name="read_more">Read more</string>
+    <string name="send_form">Send Form</string>
+    <string name="direct_pay_to_vet_information_title">Availability and access to medical records:</string>
+    <string name="direct_pay_to_vet_information_message">Please note by purchasing this Policy, You agree to let Us contact current or previous Veterinarians on Your behalf, and obtain all of Your Pet\'s medical records if needed. To facilitate this process, we will be generating a Medical Authorization document with your signature that will authorize the release of your pet\'s medical records.\n\nAny person who, with intent to defraud or knowing that he is facilitating a fraud against an insured, submits an application or files a claim containing false or deceptive statement is guilty of insurance fraud.</string>
+
+    <string name="download_completed">Download completed</string>
+    <string name="direct_pay_to_vet_document">direct_pay_to_vet_document.pdf</string>
+    <string name="tag_new">NEW</string>
+    <string name="go_back_content_description">go back</string>
+    <string name="edit_pet_picture_content_description">edit pet picture</string>
+    <string name="pet_picture">pet picture</string>
+
+    <string name="whatsapp_not_installed">WhatsApp is not installed on your device</string>
+    <string name="sms_not_available">SMS is not available on your device</string>
+
+    <string name="whatsapp_contact_info_not_available">WhatsApp contact information is not available</string>
+    <string name="sms_contact_info_not_available">SMS contact information is not available</string>
+    <string name="text_contact_info_not_available">Text contact information is not available</string>
+    <string name="phone_contact_info_not_available">Phone contact information is not available</string>
+
+</resources>

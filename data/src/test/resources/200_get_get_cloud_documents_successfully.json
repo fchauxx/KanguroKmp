@@ -1,0 +1,29 @@
+{
+  "userId": "67991761-77a1-44c7-a0f7-90d74a8bd8ed",
+  "pets": [
+    {
+      "id": 446,
+      "name": "Helga",
+      "cloudDocumentPolicies": [
+        {
+          "id": "6f5300d0-d456-45ec-daa6-08daf4df4b01",
+          "ciId": 20000488,
+          "policyStartDate": "2023-01-17T00:00:00"
+        }
+      ]
+    }
+  ],
+  "renters": [
+    {
+      "id": "67991761-77a1-44c7-a0f7-90d74a8bd8ed",
+      "name": "Home",
+      "cloudDocumentPolicies": [
+        {
+          "id": "6f5300d0-d456-45ec-daa6-08daf4df4b01",
+          "ciId": 20000500,
+          "policyStartDate": "2023-01-17T00:00:00"
+        }
+      ]
+    }
+  ]
+}

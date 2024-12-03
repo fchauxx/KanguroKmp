@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dashboard_horizontal_padding"
+        android:layout_marginEnd="@dimen/dashboard_horizontal_padding"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textHello"
+            tools:text="@string/hello"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/KanguroTextStyle.Title1" />
+
+        <TextView
+            android:id="@+id/textNames"
+            tools:text="@tools:sample/full_names"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/KanguroTextStyle.Title1" />
+
+    </LinearLayout>
+</layout>

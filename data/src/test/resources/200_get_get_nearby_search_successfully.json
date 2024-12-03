@@ -1,0 +1,113 @@
+{
+  "html_attributions": [],
+  "next_page_token": "AUacShi8LuaRAgCBQuIpdbEkruXrYMq88pIA03ytakf_L0QtfpgG0nekfBXTzE7JYEmIBP5hKBJL5ivRi3vLjcz73V-DopVJR9SE9apwNLFUzY8y0UQwwOJZEwB6Nx_tt36laPNRqNxOv7MRJ7odB06lX4J9YDYFpfzgQH-AL45--_zI8oZb22zYqcN0j3yEaqNa1Khbpf4tDLar6KFBe89nhlPlIuqLo2z-49vzPOk1KaZkjWNPyX7jLW1dcvi-nqhSoapUPZAhZ2jerbPTyU6MzM3p5IVcjKwK0cYtiCB2n2iw5WT5kqyTx_UyzdAkMD1bzjeo5O0d3gDYW_-n8use74rqJcKa_XqxKAFeTaF_kJwElYcHQb3XSp4dLtoZ3VmrnKzy3juYmA5wYHLvBCimpV3h2eZ9I1tUPiG3sph2agk1haDmb9EEmb0",
+  "results": [
+    {
+      "business_status": "OPERATIONAL",
+      "geometry": {
+        "location": {
+          "lat": -30.03661430000001,
+          "lng": -51.2071266
+        },
+        "viewport": {
+          "northeast": {
+            "lat": -30.03526606970851,
+            "lng": -51.2058529197085
+          },
+          "southwest": {
+            "lat": -30.0379640302915,
+            "lng": -51.2085508802915
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/shopping-71.png",
+      "icon_background_color": "#4B96F3",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/shopping_pinlet",
+      "name": "Prov\u00edncia dos Bichos - Pet Shop",
+      "opening_hours": {
+        "open_now": true
+      },
+      "photos": [
+        {
+          "height": 809,
+          "html_attributions": [
+            "\u003ca href=\"https://maps.google.com/maps/contrib/107237642666283296050\"\u003eProv\u00edncia dos Bichos - Pet Shop\u003c/a\u003e"
+          ],
+          "photo_reference": "AUacShgMo5ewMukGH0smdDh9plhPE7YjopJpJ1IP5jOyGgY3s2rmPWpUMv0kq4QPj3K3hs1jVcXVX_uI7-F_Ewe8-W38e_y7j2VmfLb4zYSVhXX3YL5cHhZXQUzD6ZOOKNW7diAuSfAX7otPemB2c-qEGqjZKFKbx_XZXAoCyqJTLPIkgKR9",
+          "width": 1440
+        }
+      ],
+      "place_id": "ChIJtfyxXEx4GZURzq5lLk40Ci8",
+      "plus_code": {
+        "compound_code": "XQ7V+94 Rio Branco, Porto Alegre - RS, Brazil",
+        "global_code": "48XCXQ7V+94"
+      },
+      "rating": 4.8,
+      "reference": "ChIJtfyxXEx4GZURzq5lLk40Ci8",
+      "scope": "GOOGLE",
+      "types": [
+        "pet_store",
+        "veterinary_care",
+        "store",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 28,
+      "vicinity": "Rua Francisco Ferrer, 484 - Rio Branco, Porto Alegre"
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "geometry": {
+        "location": {
+          "lat": -30.035124,
+          "lng": -51.21112699999999
+        },
+        "viewport": {
+          "northeast": {
+            "lat": -30.0337769697085,
+            "lng": -51.2097377697085
+          },
+          "southwest": {
+            "lat": -30.0364749302915,
+            "lng": -51.2124357302915
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+      "icon_background_color": "#7B9EB0",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+      "name": "\u00c1guia Veterin\u00e1ria - Fernandes Vieira",
+      "opening_hours": {
+        "open_now": true
+      },
+      "photos": [
+        {
+          "height": 1920,
+          "html_attributions": [
+            "\u003ca href=\"https://maps.google.com/maps/contrib/115257159748696002002\"\u003eAndre Tonding\u003c/a\u003e"
+          ],
+          "photo_reference": "AUacShiRumrn3ZVtxysldVsidvMogkyRFxaHhLc7XBqu50VVB43uqoNJKHNw2D3oRHE4NQ-o6rNkUd_MIbAhrxVrxpspPFrNrd0Ka6XqkLxNkHPXfdZl5lS-hOyoXopgT1gmfpWyq3R1zjgNY0tNiXgVtHd7wBZd0o2-VT-qfcAngrMa1s8K",
+          "width": 1080
+        }
+      ],
+      "place_id": "ChIJR_3MVK15GZURoVKEQLErdEg",
+      "plus_code": {
+        "compound_code": "XQ7Q+XG Bom Fim, Porto Alegre - RS, Brazil",
+        "global_code": "48XCXQ7Q+XG"
+      },
+      "rating": 4.3,
+      "reference": "ChIJR_3MVK15GZURoVKEQLErdEg",
+      "scope": "GOOGLE",
+      "types": [
+        "veterinary_care",
+        "pet_store",
+        "store",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 421,
+      "vicinity": "Rua Fernandes Vieira, 635/639 - Bom Fim, Porto Alegre"
+    }
+  ],
+  "status": "OK"
+}

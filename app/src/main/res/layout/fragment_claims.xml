@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.insurtech.kanguro.ui.scenes.claims.ClaimsViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/neutral_background"
+        tools:context=".ui.scenes.dashboard.coverage.CoverageFragment">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/coverageLabel"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/spacing_xxxs"
+            android:layout_marginTop="@dimen/spacing_nano"
+            android:drawablePadding="@dimen/spacing_nano"
+            android:minHeight="0dp"
+            android:text="@string/coverage_menu"
+            android:textAppearance="@style/KanguroTextStyle.Subhead.Bold"
+            android:textColor="@color/secondary_dark"
+            app:icon="@drawable/ic_left_arrow"
+            app:iconPadding="@dimen/spacing_xxxs"
+            app:iconTint="@color/secondary_dark"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/claimsLabel"
+            style="@style/KanguroTextStyle.Title1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_xxs"
+            android:layout_marginTop="@dimen/spacing_xxxs"
+            android:layout_marginEnd="@dimen/spacing_xxs"
+            android:text="@string/claims_title"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/coverageLabel" />
+
+        <RadioGroup
+            android:id="@+id/claimsOptions"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_xxs"
+            android:layout_marginTop="@dimen/spacing_xs"
+            android:layout_marginEnd="@dimen/spacing_xxs"
+            android:background="@drawable/claims_radio_background"
+            android:checkedButton="@id/openButton"
+            android:orientation="horizontal"
+            android:padding="@dimen/spacing_quark"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/claimsLabel">
+
+            <RadioButton
+                android:id="@+id/openButton"
+                style="@style/KanguroTextStyle.Body.Regular"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/claim_radio_height"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="@drawable/claims_selector"
+                android:button="@android:color/transparent"
+                android:gravity="center"
+                android:lines="1"
+                android:paddingHorizontal="@dimen/spacing_xxs"
+                android:text="@string/open_button"
+                android:textColor="@drawable/claims_text_color"
+                app:autoSizeMaxTextSize="@dimen/font_base"
+                app:autoSizeMinTextSize="@dimen/font_smallest"
+                app:autoSizeTextType="uniform" />
+
+            <RadioButton
+                android:id="@+id/closedButton"
+                style="@style/KanguroTextStyle.Body.Regular"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/claim_radio_height"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="@drawable/claims_selector"
+                android:button="@android:color/transparent"
+                android:gravity="center"
+                android:lines="1"
+                android:paddingHorizontal="@dimen/spacing_xxs"
+                android:text="@string/closed_button"
+                android:textColor="@drawable/claims_text_color"
+                app:autoSizeMaxTextSize="@dimen/font_base"
+                app:autoSizeMinTextSize="@dimen/font_smallest"
+                app:autoSizeTextType="uniform" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/emptyListMessage"
+            style="@style/KanguroTextStyle.Body.Regular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/claims_empty_list"
+            android:textColor="@color/secondary_medium"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/claimsOptions" />
+
+        <ProgressBar
+            android:id="@+id/isLoading"
+            style="@style/ProgressBarNormal"
+            android:layout_gravity="end|center_vertical"
+            android:layout_marginEnd="@dimen/spacing_xxxs"
+            android:visibility="@{viewModel.isLoading}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/claimsOptions" />
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/swipeRefresh"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/spacing_xs"
+            android:clipToPadding="false"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/claimsOptions"
+            app:refreshing="@{viewModel.isRefreshing}">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/claimsList"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="@dimen/spacing_xs"
+                android:clipToPadding="false"
+                android:paddingStart="@dimen/spacing_xxs"
+                android:paddingEnd="@dimen/spacing_xxs"
+                android:paddingBottom="@dimen/spacing_xl"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/claimsOptions"
+                tools:itemCount="8"
+                tools:listitem="@layout/layout_open_claim" />
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/addClaimFab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/spacing_xxs"
+            android:layout_marginBottom="@dimen/spacing_xxs"
+            android:backgroundTint="@color/secondary_darkest"
+            android:src="@drawable/ic_add_fab"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

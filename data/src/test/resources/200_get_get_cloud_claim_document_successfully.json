@@ -1,0 +1,11 @@
+{
+  "claimId": "Claim_1 - 2239",
+  "claimPrefixId": "UP 0001",
+  "claimDocuments": [
+    {
+      "id": 1,
+      "fileName": "claim_1.jpg",
+      "fileSize": 1000
+    }
+  ]
+}

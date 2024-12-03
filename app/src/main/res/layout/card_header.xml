@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="cardHeaderIcon"
+            type="android.graphics.drawable.Drawable" />
+
+        <variable
+            name="cardHeaderTitle"
+            type="String" />
+
+        <variable
+            name="cardHeaderDate"
+            type="java.util.Date" />
+
+        <variable
+            name="cardHeaderSubtitle"
+            type="String" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/icHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@{cardHeaderIcon}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@drawable/ic_gato_sano" />
+
+        <TextView
+            android:id="@+id/cardTitle"
+            style="@style/KanguroTextStyle.Body.Bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_nano"
+            android:text="@{cardHeaderTitle}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/icHeader"
+            tools:text="Perro Bueno" />
+
+        <TextView
+            android:id="@+id/upperCardDate"
+            style="@style/KanguroTextStyle.Footnote.Regular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_quark"
+            android:textColor="@color/neutral_medium"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Renew in 00/00/0000" />
+
+        <TextView
+            android:id="@+id/lowerCardDate"
+            style="@style/KanguroTextStyle.Footnote.Regular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_quark"
+            android:textColor="@color/neutral_medium"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/upperCardDate"
+            tools:text="Cancellation Date 00/00/0000" />
+
+        <TextView
+            android:id="@+id/cardSubtitle"
+            style="@style/KanguroTextStyle.Footnote.Black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_nano"
+            android:text="@{cardHeaderSubtitle}"
+            android:textAllCaps="true"
+            android:textColor="@color/secondary_light"
+            android:visibility="@{cardHeaderSubtitle == null ? View.GONE : View.VISIBLE}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cardTitle"
+            tools:text="Extra Service" />
+
+        <View
+            android:id="@+id/separator"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/spacing_xxxs"
+            android:background="@color/secondary_lightest"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cardSubtitle" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,38 @@
+{
+  "id": "c20de444-c6a2-4f2a-6f62-00db27161111",
+  "startDate": "2023-03-18T00:00:00",
+  "waitingPeriod": "2023-03-31T00:00:00",
+  "waitingPeriodRemainingDays": -130,
+  "endDate": "2024-03-17T00:00:00",
+  "deductable": {
+    "id": 550001,
+    "limit": 500,
+    "consumed": 62.1
+  },
+  "reimbursment": {
+    "id": 550008,
+    "amount": 80
+  },
+  "sumInsured": {
+    "id": 550012,
+    "limit": 15000,
+    "consumed": 0,
+    "remainingValue": 15000
+  },
+  "status": "ACTIVE",
+  "feedbackRate": null,
+  "payment": {
+    "totalFees": 25,
+    "totalPayment": 547.36,
+    "invoiceInterval": "YEARLY",
+    "totalDiscounts": 182.54,
+    "totalPaymentWithoutFees": 522.36,
+    "firstPayment": 547.36,
+    "recurringPayment": 0
+  },
+  "petId": 953,
+  "preventive": true,
+  "policyExternalId": 20000518,
+  "policyOfferId": 518,
+  "isFuture": false
+}

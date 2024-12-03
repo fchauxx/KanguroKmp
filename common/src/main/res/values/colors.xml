@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="policy_status_active">#4DAB75</color>
+    <color name="policy_status_canceled">#DF3636</color>
+    <color name="policy_status_terminated">@color/policy_status_canceled</color>
+    <color name="policy_status_pending">@color/policy_status_canceled</color>
+
+    <color name="place_status_open">#4DAB75</color>
+    <color name="place_status_closed">#E55E5E</color>
+</resources>

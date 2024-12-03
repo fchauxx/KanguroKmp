@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/neutral_background">
+
+        <ImageView
+            android:id="@+id/icKanguro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_xxs"
+            android:layout_gravity="center_vertical"
+            android:transitionName="shared_element_container"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_kanguro_toolbar" />
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:paddingEnd="@dimen/spacing_nano"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:menu="@menu/dash_toolbar_menu" />
+
+    </FrameLayout>
+
+</layout>

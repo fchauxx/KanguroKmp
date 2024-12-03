@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_quark"
+        android:layout_marginBottom="@dimen/spacing_quark"
+        android:elevation="16dp"
+        app:elevation="16dp"
+        tools:background="@drawable/reminder_background_stroke">
+
+        <TextView
+            android:id="@+id/reminderTitle"
+            style="@style/KanguroTextStyle.Body.Bold"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_xxxs"
+            android:layout_marginTop="@dimen/spacing_xxxs"
+            android:layout_marginEnd="@dimen/spacing_xxxs"
+            android:maxLines="1"
+            app:autoSizeMaxTextSize="@dimen/font_base"
+            app:autoSizeMinTextSize="@dimen/font_xs"
+            app:autoSizeTextType="uniform"
+            app:layout_constraintEnd_toStartOf="@id/headerImage"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="@tools:sample/lorem[15]" />
+
+        <TextView
+            android:id="@+id/reminderSubtitle"
+            style="@style/KanguroTextStyle.Subhead.Regular"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/spacing_xxxs"
+            android:textColor="@color/negative_dark"
+            app:layout_constraintBottom_toTopOf="@id/petName"
+            app:layout_constraintEnd_toEndOf="@id/reminderTitle"
+            app:layout_constraintStart_toStartOf="@+id/reminderTitle"
+            app:layout_constraintTop_toBottomOf="@+id/reminderTitle"
+            app:layout_constraintVertical_bias="0"
+            tools:text="Due in 5 days." />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/headerImage"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_marginTop="@dimen/spacing_xxxs"
+            android:layout_marginEnd="@dimen/spacing_quark"
+            android:scaleType="centerCrop"
+            app:layout_constraintEnd_toStartOf="@id/petName"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearance="@style/ShapeAppearanceOverlay.App.CornerSize50Percent"
+            tools:src="@tools:sample/backgrounds/scenic" />
+
+        <TextView
+            android:id="@+id/petName"
+            style="@style/KanguroTextStyle.Footnote.Bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="@dimen/spacing_xxxs"
+            android:maxLines="1"
+            android:textColor="@color/secondary_dark"
+            app:layout_constraintBottom_toBottomOf="@id/headerImage"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/headerImage"
+            tools:text="Oliver" />
+
+        <ImageView
+            android:id="@+id/claimWarningIcon"
+            android:layout_width="@dimen/icon_size_small"
+            android:layout_height="@dimen/icon_size_small"
+            android:layout_marginEnd="@dimen/spacing_xxxs"
+            android:layout_marginBottom="@dimen/spacing_nano"
+            android:src="@drawable/ic_info_circle"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

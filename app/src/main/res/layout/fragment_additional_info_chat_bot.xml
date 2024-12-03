@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/neutral_background"
+        tools:context=".ui.scenes.chatbot.AdditionalInfoChatBotFragment">
+
+        <include
+            android:id="@+id/header"
+            layout="@layout/chatbot_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/messageList"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@color/white"
+            android:clipToPadding="false"
+            android:paddingTop="@dimen/spacing_nano"
+            android:paddingBottom="@dimen/spacing_xxs"
+            app:layout_constraintBottom_toTopOf="@+id/actionsLayout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:itemCount="5"
+            app:layout_constraintTop_toBottomOf="@+id/header"
+            tools:listitem="@layout/message_item" />
+
+        <View
+            app:layout_constraintBottom_toTopOf="@id/actionsLayout"
+            android:background="@color/neutral_lightest"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/chat_divider_size"/>
+
+        <ScrollView
+            android:id="@+id/actionsLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHeight_max="300dp" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

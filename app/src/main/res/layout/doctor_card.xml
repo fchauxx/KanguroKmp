@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/doctorCard"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/spacing_xxs">
+
+    <TextView
+        android:id="@+id/vetAdviceLabel"
+        style="@style/KanguroTextStyle.Title1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/spacing_nano"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@id/doctorImage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="@string/vet_advice_for_dogs" />
+
+    <ImageView
+        android:id="@+id/doctorImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_xxxs"
+        android:src="@drawable/ic_vet_advice_cristina"
+        app:layout_constraintStart_toStartOf="@id/doctorCard"
+        app:layout_constraintTop_toBottomOf="@id/vetAdviceLabel" />
+
+    <TextView
+        android:id="@+id/doctorName"
+        style="@style/KanguroTextStyle.Body.Bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/spacing_xxxs"
+        android:text="@string/doctor_name"
+        android:textColor="@color/secondary_darkest"
+        android:textSize="@dimen/font_base"
+        app:layout_constraintStart_toEndOf="@id/doctorImage"
+        app:layout_constraintTop_toTopOf="@id/doctorImage" />
+
+    <TextView
+        android:id="@+id/doctorFormation"
+        style="@style/KanguroTextStyle.Footnote.Bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/spacing_xxxs"
+        android:layout_marginTop="@dimen/spacing_quark"
+        android:text="@string/doctor_formation"
+        android:textColor="@color/primary_darkest"
+        android:textSize="@dimen/font_xxs"
+        app:layout_constraintStart_toEndOf="@id/doctorImage"
+        app:layout_constraintTop_toBottomOf="@id/doctorName" />
+
+    <ImageView
+        android:id="@+id/instagram_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_nano"
+        android:layout_marginBottom="@dimen/spacing_xs"
+        android:src="@drawable/instagram_button"
+        app:layout_constraintBottom_toBottomOf="@id/doctorCard"
+        app:layout_constraintStart_toStartOf="@id/doctorFormation"
+        app:layout_constraintTop_toBottomOf="@id/doctorFormation" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

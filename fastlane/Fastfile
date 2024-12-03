@@ -1,0 +1,88 @@
+# This file contains the fastlane.tools configuration
+# You can find the documentation at https://docs.fastlane.tools
+#
+# For a list of all available actions, check out
+#
+#     https://docs.fastlane.tools/actions
+#
+# For a list of all available plugins, check out
+#
+#     https://docs.fastlane.tools/plugins/available-plugins
+#
+
+# Uncomment the line if you want fastlane to automatically update itself
+# update_fastlane
+
+default_platform(:android)
+
+platform :android do
+
+  desc "Build Project"
+  lane :build_debug do |options|
+    flavor = options[:flavor]
+    gradle(
+        task: "build",
+        flavor: flavor,
+        build_type: "Debug"
+    )
+  end
+
+  desc "Run Unit Tests"
+  lane :unit_test do |options|
+    flavor = options[:flavor]
+    gradle(
+        task: "test#{flavor.capitalize}DebugUnitTest",
+    )
+  end
+
+  desc "Run Lint Checks"
+  lane :lint do
+    gradle(
+        task: "lint",
+        build_type: "Debug"
+    )
+  end
+
+  desc "Run ktlintCheck"
+    lane :ktlint do
+      gradle(
+          task: "ktlintCheck"
+      )
+  end
+
+  desc "Deploy Dev Flavor to Internal track on Play Store"
+  lane :to_dev do
+    gradle(
+          task: "bundle",
+          flavor: "dev",
+          build_type: "Release",
+          properties: {
+            "KEY_STORE_ALIAS": ENV["KEY_STORE_ALIAS"],
+            "KEY_STORE_PASSWORD": ENV["KEY_STORE_PASSWORD"],
+            "KEY_STORE_FILE": ENV["KEY_STORE_FILE"]
+          }
+    )
+    upload_to_play_store(
+          package_name: "com.insurtech.kanguro.dev",
+          track: "internal"
+    )
+  end
+
+  desc "Deploy Stage Flavor to Alpha track on Play Store"
+  lane :to_stage do
+    gradle(
+          task: "bundle",
+          flavor: "stage",
+          build_type: "Release",
+          properties: {
+            "KEY_STORE_ALIAS": ENV["KEY_STORE_ALIAS"],
+            "KEY_STORE_PASSWORD": ENV["KEY_STORE_PASSWORD"],
+            "KEY_STORE_FILE": ENV["KEY_STORE_FILE"]
+          }
+    )
+    upload_to_play_store(
+          package_name: "com.insurtech.kanguro.stage",
+          track: "alpha"
+    )
+  end
+end

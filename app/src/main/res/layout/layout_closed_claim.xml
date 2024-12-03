@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <import type="com.insurtech.kanguro.core.utils.PetExtensionsKt" />
+
+        <import type="com.insurtech.kanguro.core.utils.ClaimStatusExtensionsKt" />
+
+        <import type="com.insurtech.kanguro.common.enums.ClaimStatus" />
+
+        <variable
+            name="claim"
+            type="com.insurtech.kanguro.domain.coverage.Claim" />
+    </data>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="@dimen/spacing_quark"
+        app:cardCornerRadius="@dimen/border_radius_sm"
+        app:cardElevation="@dimen/border_radius_sm"
+        app:strokeColor="@color/neutral_background"
+        app:strokeWidth="1dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <View
+                android:id="@+id/claimSatusIndicator"
+                android:layout_width="@dimen/border_width_heavy"
+                android:layout_height="0dp"
+                android:background="@{ClaimStatusExtensionsKt.getColor(claim.status)}"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:background="@color/positive_darkest" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/headerImage"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="@dimen/spacing_nano"
+                android:layout_marginTop="@dimen/spacing_xxxs"
+                android:scaleType="centerCrop"
+                android:src="@{PetExtensionsKt.getCacheableImage(claim.pet)}"
+                app:layout_constraintStart_toEndOf="@+id/claimSatusIndicator"
+                app:layout_constraintTop_toTopOf="parent"
+                app:placeholder="@{PetExtensionsKt.getPlaceholderImage(claim.pet)}"
+                app:shapeAppearance="@style/ShapeAppearanceOverlay.App.CornerSize50Percent"
+                tools:src="@tools:sample/backgrounds/scenic" />
+
+            <TextView
+                android:id="@+id/petName"
+                style="@style/KanguroTextStyle.Body.Black"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/spacing_xxxs"
+                android:layout_marginTop="@dimen/spacing_xxxs"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:text="@{claim.pet.name}"
+                android:visibility="@{claim.pet.name == null ? View.GONE : View.VISIBLE}"
+                app:layout_constraintEnd_toStartOf="@id/claimDetails"
+                app:layout_constraintStart_toEndOf="@id/headerImage"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Oliver" />
+
+            <TextView
+                android:id="@+id/value"
+                style="@style/KanguroTextStyle.Body.Regular"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_quark"
+                android:visibility="@{claim.amountTransferred == null || claim.status != ClaimStatus.Paid ? View.GONE : View.VISIBLE}"
+                app:currencyInfo="@{@string/closed_claim_paid}"
+                app:currencyValue="@{claim.amountTransferred}"
+                app:layout_constraintStart_toStartOf="@id/petName"
+                app:layout_constraintTop_toBottomOf="@id/petName"
+                app:layout_constraintEnd_toStartOf="@id/claimDetails"
+                tools:text="Paid $150.00" />
+
+            <TextView
+                android:id="@+id/description"
+                style="@style/KanguroTextStyle.Footnote.Regular"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_quark"
+                android:text="@{claim.description}"
+                android:textColor="@color/neutral_medium"
+                android:visibility="@{claim.description == null || claim.description.empty ? View.GONE : View.VISIBLE}"
+                app:layout_constraintStart_toStartOf="@id/petName"
+                app:layout_constraintTop_toBottomOf="@id/value"
+                app:layout_constraintEnd_toStartOf="@id/claimStatus"
+                app:layout_constraintVertical_bias="0.0"
+                tools:text="Veterinary fees" />
+
+            <TextView
+                android:id="@+id/date"
+                style="@style/KanguroTextStyle.Footnote.Regular"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_quark"
+                android:layout_marginBottom="@dimen/spacing_xxxs"
+                android:textColor="@color/neutral_medium"
+                android:visibility="@{claim.createdAt == null ? View.GONE : View.VISIBLE}"
+                app:date="@{claim.updatedAt}"
+                app:info="@{@string/closed_claim_date_info}"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@id/petName"
+                app:layout_constraintTop_toBottomOf="@id/description"
+                app:layout_constraintVertical_bias="0.0"
+                tools:text="Closed on Sep 04, 2021" />
+
+            <TextView
+                android:id="@+id/claimDetails"
+                style="@style/KanguroTextStyle.Caption.Black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_xxxs"
+                android:layout_marginEnd="@dimen/spacing_xxxs"
+                android:background="@drawable/claims_details_background"
+                android:paddingHorizontal="@dimen/spacing_xxxs"
+                android:paddingVertical="@dimen/spacing_nano"
+                android:text="@string/details"
+                android:textColor="@color/secondary_darkest"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/claimStatus"
+                style="@style/KanguroTextStyle.Subhead.Regular"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_xxs"
+                android:layout_marginEnd="@dimen/spacing_xxxs"
+                android:layout_marginBottom="@dimen/spacing_xxxs"
+                android:drawablePadding="@dimen/spacing_quark"
+                android:gravity="center"
+                android:setTextColor="@{ClaimStatusExtensionsKt.getColor(claim.status)}"
+                android:text="@{ClaimStatusExtensionsKt.getString(claim.status)}"
+                android:visibility="@{claim.status == ClaimStatus.Paid || claim.status == ClaimStatus.Denied ? View.VISIBLE : View.GONE}"
+                app:drawableEnd="@{ClaimStatusExtensionsKt.getIcon(claim.status)}"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/claimDetails"
+                app:layout_constraintVertical_bias="0.0"
+                tools:drawableEnd="@drawable/ic_circle_success"
+                tools:text="Paid"
+                tools:textColor="@color/positive_darkest" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+</layout>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/neutral_background"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/takePicOption"
+        style="@style/KanguroTextStyle.Body.Regular"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawablePadding="@dimen/spacing_nano"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="@dimen/spacing_xxxs"
+        android:paddingVertical="12dp"
+        android:text="@string/take_pic"
+        app:drawableStartCompat="@drawable/ic_take_pic" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/chat_divider_size"
+        android:background="@color/neutral_lightest" />
+
+    <TextView
+        android:id="@+id/selectPicOption"
+        style="@style/KanguroTextStyle.Body.Regular"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawablePadding="@dimen/spacing_nano"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="@dimen/spacing_xxxs"
+        android:paddingVertical="12dp"
+        android:text="@string/select_pic"
+        app:drawableStartCompat="@drawable/ic_select_pic" />
+
+</LinearLayout>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="more_actions">
+        <item>File a claim</item>
+        <item>Vet advice</item>
+        <item>New pet parents</item>
+    </string-array>
+</resources>

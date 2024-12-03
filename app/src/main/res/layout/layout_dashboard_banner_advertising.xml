@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <import type="android.view.View.OnClickListener" />
+
+        <variable
+            name="onClickAction"
+            type="OnClickListener" />
+    </data>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dashboard_horizontal_padding"
+        android:layout_marginTop="@dimen/spacing_xs"
+        android:onClick="@{onClickAction}"
+        android:outlineProvider="none"
+        app:cardCornerRadius="@dimen/spacing_nano">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:src="@drawable/img_banner_advertising" />
+
+    </com.google.android.material.card.MaterialCardView>
+
+</layout>

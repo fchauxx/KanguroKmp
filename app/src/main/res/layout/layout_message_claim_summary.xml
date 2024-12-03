@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="com.insurtech.kanguro.domain.claimsChatbot.ClaimSummary" />
+
+        <variable
+            name="summary"
+            type="ClaimSummary" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_xxs"
+        android:layout_marginHorizontal="@dimen/spacing_xxs"
+        android:background="@drawable/bg_claim_summary"
+        android:padding="@dimen/border_radius_md">
+
+        <TextView
+            android:id="@+id/title"
+            style="@style/KanguroTextStyle.Caption.Bold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingVertical="@dimen/border_radius_sm"
+            android:text="@string/claim_summary"
+            android:textAllCaps="true"
+            android:textColor="@color/primary_darkest"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/petTitle"
+            style="@style/KanguroTextStyle.Body.Regular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/border_radius_sm"
+            android:text="@string/pet"
+            android:textColor="@color/neutral_medium"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/title" />
+
+        <TextView
+            android:id="@+id/petField"
+            style="@style/KanguroTextStyle.Body.Bold"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:padding="@dimen/border_radius_sm"
+            android:text="@{summary.pet}"
+            android:textColor="@color/secondary_dark"
+            app:layout_constraintBaseline_toBaselineOf="@id/petTitle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/petTitle"
+            tools:text="Oliver" />
+
+        <TextView
+            android:id="@+id/claimTitle"
+            style="@style/KanguroTextStyle.Body.Regular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/border_radius_sm"
+            android:text="@string/claim"
+            android:textColor="@color/neutral_medium"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/petTitle" />
+
+        <TextView
+            android:id="@+id/claimField"
+            style="@style/KanguroTextStyle.Body.Bold"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:padding="@dimen/border_radius_sm"
+            android:text="@{summary.claim}"
+            android:textColor="@color/secondary_dark"
+            app:layout_constraintBaseline_toBaselineOf="@id/claimTitle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/claimTitle"
+            tools:text="Oliver" />
+
+
+        <TextView
+            android:id="@+id/dateTitle"
+            style="@style/KanguroTextStyle.Body.Regular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/border_radius_sm"
+            android:text="@string/date"
+            android:textColor="@color/neutral_medium"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/claimField" />
+
+        <TextView
+            android:id="@+id/dateField"
+            style="@style/KanguroTextStyle.Body.Bold"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            app:date="@{summary.date}"
+            android:padding="@dimen/border_radius_sm"
+            android:textColor="@color/secondary_dark"
+            app:layout_constraintBaseline_toBaselineOf="@id/dateTitle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/dateTitle"
+            tools:text="Oliver" />
+
+
+        <TextView
+            android:id="@+id/attachmentsTitle"
+            style="@style/KanguroTextStyle.Body.Regular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/border_radius_sm"
+            android:text="@string/attachments"
+            android:textColor="@color/neutral_medium"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/dateField" />
+
+        <TextView
+            android:id="@+id/attachmentsField"
+            style="@style/KanguroTextStyle.Body.Bold"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:padding="@dimen/border_radius_sm"
+            android:text="@{summary.attachments.toString()}"
+            android:textColor="@color/secondary_dark"
+            app:layout_constraintBaseline_toBaselineOf="@id/attachmentsTitle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/attachmentsTitle"
+            tools:text="Oliver" />
+
+
+        <TextView
+            android:id="@+id/amountTitle"
+            style="@style/KanguroTextStyle.Body.Regular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/border_radius_sm"
+            android:text="@string/amount"
+            android:textColor="@color/neutral_medium"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/attachmentsField" />
+
+        <TextView
+            android:id="@+id/amountField"
+            style="@style/KanguroTextStyle.Body.Bold"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:padding="@dimen/border_radius_sm"
+            android:textColor="@color/secondary_dark"
+            app:currencyValue="@{summary.amount}"
+            app:layout_constraintBaseline_toBaselineOf="@id/amountTitle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/amountTitle"
+            tools:text="Oliver" />
+
+
+        <TextView
+            android:id="@+id/paymentMethodTitle"
+            style="@style/KanguroTextStyle.Body.Regular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/border_radius_sm"
+            android:text="@string/reimbursementMethod"
+            android:textColor="@color/neutral_medium"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/amountField" />
+
+        <TextView
+            android:id="@+id/paymentMethodField"
+            style="@style/KanguroTextStyle.Body.Bold"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:padding="@dimen/border_radius_sm"
+            android:text="@{summary.paymentMethod}"
+            android:textColor="@color/secondary_dark"
+            app:layout_constraintBaseline_toBaselineOf="@id/paymentMethodTitle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/paymentMethodTitle"
+            tools:text="Oliver" />
+
+        <!--Separators-->
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/neutral_background"
+            app:layout_constraintTop_toBottomOf="@id/petField" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/neutral_background"
+            app:layout_constraintTop_toBottomOf="@id/claimField" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/neutral_background"
+            app:layout_constraintTop_toBottomOf="@id/dateField" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/neutral_background"
+            app:layout_constraintTop_toBottomOf="@id/attachmentsField" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/neutral_background"
+            app:layout_constraintTop_toBottomOf="@id/amountField" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,23 @@
+[
+  {
+    "id": "1234",
+    "name": "Diamond Ring",
+    "type": "Jewelry",
+    "valuation": 100.00,
+    "images": null
+  },
+  {
+    "id": "1234",
+    "name": "Macbook Pro",
+    "type": "Electronics",
+    "valuation": 200.00,
+    "images": null
+  },
+  {
+    "id": "1234",
+    "name": "Brown Scooter",
+    "type": "ElectricScooter",
+    "valuation": 300.00,
+    "images": null
+  }
+]

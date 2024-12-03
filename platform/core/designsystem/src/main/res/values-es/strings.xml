@@ -1,0 +1,455 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="scheduled_items_title">Aqui está a lista de tus elementos programados</string>
+    <string name="scheduled_items_add_more">Agrega más artículos\'</string>
+    <string name="scheduled_items_submit">Enviar artículos</string>
+    <string name="scheduled_item_submit_label">Enviar artículo</string>
+    <string name="scheduled_items">Elementos programados</string>
+    <string name="my_scheduled_items">Mis artículos programados</string>
+    <string name="scheduled_item_section_text">Tienes un total de %s en elementos programados.</string>
+
+    <string name="scheduled_items_category_title">Selecciona la categoría de tu nuevo elemento programado</string>
+
+    <string name="scheduled_items_picture_selected_title">Necesitamos algunas fotos relacionadas con su artículo para que podamos determinar su valor</string>
+
+    <string name="back">Volver</string>
+    <string name="add">Agregar</string>
+    <string name="send">Enviar</string>
+    <string name="done">Hecho</string>
+    <string name="confirm">Confirmar</string>
+    <string name="close">Cerrar</string>
+    <string name="information">Información</string>
+    <string name="submit">Enviar</string>
+    <string name="cancel">Cancelar</string>
+    <string name="next">Próximo</string>
+    <string name="okay">Bueno</string>
+    <string name="maybe_later">Quizás más tarde</string>
+    <string name="turn_on">Activar</string>
+    <string name="allow_access">Permitir acceso</string>
+
+    <string name="picture_of_receipt">Imagen de un recibo o tasación</string>
+    <string name="picture_of_your_item">Imagen de tu artículo</string>
+    <string name="picture_of_your_item_placed_on_receipt">Imagen del artículo incluido en el recibo o tasación</string>
+
+    <string name="record_videos">Grabar vídeo(s)</string>
+    <string name="record_video">Grabar video</string>
+    <string name="take_picture">Hacer una(s) fotografía(s)</string>
+    <string name="select_picture">Seleccionar imagen(es)</string>
+    <string name="select_file">Seleccionar archivo(s)</string>
+    <string name="select_single_file">Seleccionar archivo</string>
+    <string name="scan_document">Escanear documento</string>
+
+    <string name="date_picker_hint">Fecha</string>
+    <string name="text_message_hint">Mensaje</string>
+
+    <string name="javier_chatbot_header_title">¡Hola, me llamo Javier!!</string>
+    <string name="javier_chatbot_header_subtitle">Soy tu asistente personal I.A</string>
+
+    <string name="renters_insurance">Seguro de Inquilino</string>
+    <string name="renters_additional_coverage">Cobertura Adicional</string>
+    <string name="renters_additional_parties">Partes adicionales</string>
+    <string name="renters_edit_additional_parties">Editar partes adicionales</string>
+
+    <string name="what_is_covered">Qué está cubierto</string>
+
+    <string name="plan_summary">Resumen del plan</string>
+    <string name="liability">Responsabilidad</string>
+    <string name="injury">Lesión</string>
+    <string name="deductible">Deducible</string>
+    <string name="personal_property">Propiedad personal</string>
+    <string name="loss_of_use">Pérdida de uso</string>
+    <string name="injury_and_property">Lesión y Propiedad</string>
+
+    <string name="renew_date">Se renueva el: %s</string>
+    <string name="period_dates">Período de Póliza: %s - %s</string>
+    <string name="policy_number">Número de Póliza #%s</string>
+    <string name="documentation">Documentación</string>
+    <string name="renters_insurance_status">Su póliza está %s.</string>
+    <string name="renters_insurance_text">\n¡Con Kanguro siempre estarás seguro!</string>
+    <string name="edit_policy_detail">Editar detalle de poliza</string>
+
+    <string name="scheduled_items_empty_message">Aún no tienes ningún artículo programado</string>
+    <string name="scheduled_items_empty_message_add_new">Protege tus bienes más preciados añadiéndolos a esta lista.</string>
+
+    <string name="something_went_wrong">Algo ha ido mal</string>
+    <string name="try_again_message">Por favor, revise su conexión y pruebe nuevamente.</string>
+    <string name="try_again">pruebe nuevamente.</string>
+
+    <string name="trash">Papelera</string>
+    <string name="yes_delete">Sí, eliminar</string>
+    <string name="yes_close">Sí, cerrar</string>
+    <string name="close_window_alert_message">¿Estás seguro de que quieres cerrar?</string>
+    <string name="all_will_be_lost">Todos los cambios no guardados se perderán.</string>
+    <string name="delete_item_alert_message">¿Estás seguro de que deseas eliminar este elemento?</string>
+    <string name="what_is_the_item">¿Qué es el artículo?</string>
+    <string name="item_label">Artículo</string>
+    <string name="item_value">Valor</string>
+    <string name="dollar">$</string>
+    <string name="resume_feel_price">Sus tarifas ahora serán de</string>
+    <string name="resume_total_price">Tu precio total ahora será de</string>
+
+    <string name="direct_pay_to_vet_title">Pago Directo al Veterinario</string>
+    <string name="direct_pay_to_vet_step_1_highlight">Rellene el formulario </string>
+    <string name="direct_pay_to_vet_step_1">de la página siguiente para generar un documento.</string>
+    <string name="direct_pay_to_vet_step_2_highlight">Pídale a su veterinario</string>
+    <string name="direct_pay_to_vet_step_2">que complete el formulario que recibió en su correo electrónico, ya sea en su computadora o teléfono.</string>
+    <string name="direct_pay_to_vet_step_3">Después de esto, nuestro equipo de reclamos se pondrá en contacto con usted.</string>
+    <string name="step">PASO %s</string>
+    <string name="direct_pay_to_vet_getting_started">Empezando</string>
+    <string name="direct_pay_to_vet_please_note">Tenga en cuenta</string>
+    <string name="direct_pay_to_vet_please_note_1">Nuestro equipo de reclamos revisará su envío y se comunicará con usted y su veterinario para confirmar la aprobación o el rechazo.</string>
+    <string name="direct_pay_to_vet_please_note_1_highlight">equipo de reclamos revisará</string>
+    <string name="direct_pay_to_vet_please_note_2">Usted será responsable de pagar su parte de la factura, que incluye su deducible y el monto del copago.</string>
+    <string name="direct_pay_to_vet_please_note_2_highlight">Usted será responsable de pagar su parte de la factura</string>
+    <string name="direct_pay_to_vet_almost_done">¡Casi Terminado!</string>
+    <string name="direct_pay_to_vet_almost_done_instruction">Ahora <b>pídale a su veterinario que complete el formulario que recibió por correo electrónico.</b> Después de esto, nuestro equipo de reclamos se comunicará con usted para confirmar la aprobación o el rechazo.</string>
+    <string name="direct_pay_to_vet_share_with_the_vet">Compartir con el veterinario</string>
+
+    <string name="add_to_your_policy">+ Agregue a su póliza por $ %s/mo</string>
+    <string name="coverage_limit">Límite de cobertura</string>
+    <string name="deductible_limit">Límite de deducible</string>
+    <string name="your_policy_already_have_this_coverage">Su póliza ya tiene esta cobertura.</string>
+    <string name="edit_additional_coverage">Editar cobertura adicional</string>
+
+    <string name="before_get_start">Antes de comenzar</string>
+
+    <string name="accident_and_illness">Esto se aplica solo para reclamaciones de <b>Accidentes y Enfermedades</b> que sean <b>mínimo $900.</b></string>
+    <string name="vet_needs_to_agree"><b>El veterinario necesita estar de acuerdo</b> con que el Seguro Kanguro les pague.</string>
+    <string name="diagnosis_medication_treatment">Disponible para cualquier <b>diagnóstico, medicación o tratamiento.</b></string>
+    <string name="time_to_submit">Respuesta el mismo día de <b>8am a 2pm EST, si se envía después de las 2pm,</b> respuesta al siguiente día hábil.</string>
+
+    <string name="claim_value">Valor de la reivindicación</string>
+    <string name="date_of_service_label">Fecha de Servicio</string>
+    <string name="select_date">Seleccionar fecha</string>
+
+
+    <string name="your_information">Tu información</string>
+    <string name="claim_information">Información del Reclamo</string>
+    <string name="what_is_this_claim_related_to">¿A qué se relaciona este reclamo?</string>
+    <string name="accident">Accidente</string>
+    <string name="illness">Enfermedad</string>
+    <string name="other">Otro</string>
+
+    <string name="pet_name">Nombre de mascota</string>
+    <string name="policy_holder_ame">Nombre del titular de la póliza</string>
+    <string name="vet_name">Nombre del veterinario</string>
+    <string name="your_vet">Su veterinario</string>
+    <string name="email_vet">Correo electrónico del veterinario</string>
+    <string name="your_vet_email">Correo electrónico de su veterinario</string>
+    <string name="find_your_vet">Encuentra su veterinario</string>
+    <string name="about_your_claim">Sobre su reclamo</string>
+    <string name="description">Descripción</string>
+    <string name="clinic_name">Nombre de la clínica</string>
+    <string name="name_of_the_clinic">Nombre de la clínica de su veterinario</string>
+
+    <string name="vet_search_hint">Busca el correo electrónico de tu veterinario</string>
+    <string name="vet_search_not_found">Este correo electrónico no existe en nuestra base de datos de veterinarios.</string>
+    <string name="kepp_use_email">Continúe usando este correo electrónico.</string>
+    <string name="enter_valid_email">Por favor introduzca una dirección de correo electrónico válida</string>
+
+    <string name="share_with_vet_hint">Si su veterinario no recibió el correo electrónico, toque aquí para enviar el formulario usted mismo.</string>
+    <string name="tap_here">toque aquí</string>
+
+    <string name="document_sent">Documento enviado</string>
+    <string name="document_sent_instruction">Nuestro equipo de reclamos se pondrá en contacto con usted para confirmar su aprobación o rechazo.</string>
+
+    <string name="share_with_your_vet">Comparte con su veterinario</string>
+    <string name="share_with_your_vet_instruction">Si su veterinario no recibió el correo electrónico, siga estos sencillos pasos:</string>
+    <string name="share_with_your_vet_step_1">Descarga el formulario y compártelo con tu veterinario.</string>
+    <string name="share_with_your_vet_step_2"><b>Sube el documento firmado.</b> Puedes subirlo con una firma digital o tomar una fotografía del documento impreso.</string>
+    <string name="download_document">Descargar Documento</string>
+    <string name="upload_signed_document">Subir Documento Firmado </string>
+
+    <string name="change_house_picture">Cambiar foto de casa</string>
+    <string name="enable_camera">Habilitar cámara</string>
+    <string name="enable_camera_message">Brindenos acceso a su cámara, que es necesario para las funcionalidades de la aplicación Kanguro.</string>
+    <string name="enable_notifications">Habilitar notificaciones</string>
+    <string name="enable_notifications_message">Activa las notificaciones para no perderte nada en su aplicación Kanguro.</string>
+    <string name="enable_location">Habilitar ubicación</string>
+    <string name="enable_location_message">Activar su ubicación permite a Kanguro brindarte la mejor experiencia en nuestros servicios.</string>
+
+    <string name="donation_banner_title">¡Vamos a hacer el mundo mejor!</string>
+    <string name="donation_banner_subtitle">Únase a Kanguro para donar por grandes causas.</string>
+
+    <string name="hello_comma">hola,</string>
+    <string name="single_family">Unifamiliar</string>
+    <string name="multi_family">Multifamiliar</string>
+    <string name="townhouse">Casa de la ciudad</string>
+    <string name="apartment">Apartamento</string>
+    <string name="student_housing">Alojamiento para estudiantes</string>
+
+    <string name="see_details">ver detalles</string>
+    <string name="home">Casa</string>
+    <string name="active">Activo</string>
+    <string name="pending">Pendiente</string>
+    <string name="cancelled">Cancelado</string>
+    <string name="terminated">Terminado</string>
+
+    <string name="more_actions">Mas acciones</string>
+    <string name="file_claim">Presentar un reclamo</string>
+    <string name="track_your_claim">Seguimiento de su reclamo</string>
+    <string name="track_claims">Seguimiento de reclamos</string>
+    <string name="add_residence">Agregar una residencia</string>
+    <string name="payment_settings">Configuración de pago</string>
+    <string name="frequently_asked_questions">Preguntas frecuentes</string>
+    <string name="support">Suporte</string>
+    <string name="email_kanguro">Correo Electrónico Kanguro</string>
+    <string name="communications">Comunicaciones</string>
+    <string name="emergency">Emergencia</string>
+
+    <string name="payment">Pago</string>
+    <string name="billing_preferences">Preferencias de facturación</string>
+    <string name="monthly_payment">Mensualidad</string>
+    <string name="yearly_payment">Pago anual</string>
+    <string name="quarterly_payment">Pago trimestral</string>
+    <string name="perro_bueno">Perro Bueno</string>
+    <string name="accident_illness">Accidente &amp; enfermedad</string>
+    <string name="preventive_wellness">Preventivo &amp; Bienestar</string>
+    <string name="extra_service_label">Servicio extra</string>
+    <string name="next_billing_in">Próxima facturación el\u0020</string>
+
+    <string name="do_you_have_pet">¿Tienes una mascota?</string>
+    <string name="pet_upselling_banner_text">¡Ahorre dinero con nuestro Seguro para mascotas Kanguro!</string>
+    <string name="pet_upselling_banner_text_highlight">Seguro para mascotas Kanguro!</string>
+
+    <string name="do_you_rent_a_place">¿Alquilas un lugar?</string>
+    <string name="renters_upselling_banner_text">¡Mantenga sus pertenencias seguras con Seguro para inquilinos de Kanguro!</string>
+    <string name="renters_upselling_banner_text_highlight">Seguro para inquilinos de Kanguro!</string>
+    <string name="edit_policy_details">Editar detalles de poliza</string>
+    <string name="change_my_address">Cambiar mi dirección</string>
+    <string name="cancel_this_policy">Cancelar esta póliza</string>
+
+    <string name="cancel_or_change_coverage_information_0">Kanguro está muy triste por perderte, pero siempre estaremos aquí si quieres volver. También podemos cambiar su cobertura por una opción más económica.\n\nPuede notificarnos que desea cancelar por teléfono al %s.</string>
+    <string name="cancel_or_change_coverage_information_1">También puede enviarnos un correo electrónico con su solicitud de cancelación.</string>
+    <string name="cancel_or_change_coverage_information_1_link">enviarnos</string>
+
+    <string name="email_us_label">correo electrónico</string>
+
+    <string name="pet_upselling_pet_health_plan">Plan de Salud para Mascotas</string>
+    <string name="pet_upselling_do_you_have_a_pet">¿Tienes una mascota?</string>
+    <string name="pet_upselling_content_upper_text">¡Ahorra hasta un 90\% en costos anuales con nuestro\n Plan de Salud para Mascotas Kanguro!</string>
+    <string name="pet_upselling_content_upper_text_highlighted">Plan de Salud para Mascotas Kanguro!</string>
+    <string name="pet_upselling_content_bottom_text">El primer seguro de salud y plan de bienestar para mascotas que es realmente fácil de usar. ¡Te ofrecemos un descuento especial del 10%!</string>
+    <string name="pet_upselling_content_bottom_text_highlighted">¡Te ofrecemos un descuento especial del 10%!</string>
+    <string name="upselling_quote_now">¡Obtén una cotización ahora, fácil y rápido!</string>
+    <string name="upselling_tell_me_more">¡Cuéntame más!</string>
+
+    <string name="renters_upselling_renters_insurance">Seguro de Inquilinos</string>
+    <string name="renters_upselling_do_you_rent_a_place">¿Alquilas un lugar?</string>
+    <string name="renters_upselling_content_upper_text">¡Mantén tus pertenencias seguras con nuestro\n Seguro de Inquilinos Kanguro!</string>
+    <string name="renters_upselling_content_upper_text_highlighted">Seguro de Inquilinos Kanguro!</string>
+    <string name="renters_upselling_content_bottom_text">Protege tus propiedades personales y ayuda a cubrir los costos de responsabilidad personal. ¡Te ofrecemos un descuento especial del 10%!</string>
+    <string name="renters_upselling_content_bottom_text_highlighted">¡Te ofrecemos un descuento especial del 10%!</string>
+
+    <string name="replacement_cost">Costo de reemplazo</string>
+    <string name="replacement_cost_content">En caso de que necesites usar tu seguro, cubriremos los costos reales de reparación o reemplazo de los artículos.</string>
+    <string name="water_sewer_backup">Respaldo de alcantarillado</string>
+    <string name="water_sewer_backup_content">La cobertura incluye hasta $2,500 en daños si un sistema de alcantarillado o desagüe se desborda en tu hogar. Se aplica un deducible de $250.</string>
+    <string name="fraud_protection">Fraude de Identidad</string>
+    <string name="fraud_protection_content">La cobertura incluye hasta $15,000 para tus gastos como resultado de ser víctima de robo de identidad. Se aplica un deducible de $100.</string>
+
+    <string name="years_prefix">a</string>
+
+    <string name="additional_party_spouse">Cónyuge</string>
+    <string name="additional_party_child">Hijo(a)</string>
+    <string name="additional_party_roommate">Compañero(a) de cuarto</string>
+    <string name="additional_party_landlord">Propietario</string>
+    <string name="additional_party_property_manager">Administrador(a) de la propiedad</string>
+
+    <string name="pet_greeting">hello,\n%s &amp;</string>
+
+    <string name="are_you_liking_kanguro">¿Te gusta Kanguro?</string>
+    <string name="kanguro_refer_a_friend">Recomienda a un amigo y gana recompensas.</string>
+    <string name="reminders">Recordatorios</string>
+    <string name="see_all">Ver todo</string>
+    <string name="add_a_pet_label">Añadir una mascota!</string>
+    <string name="get_new_pet_quote">obtener una <u>nueva cotización</u>\npara tu mascota!</string>
+    <string name="medical_history">Historial médico</string>
+    <string name="claim">Reclamos</string>
+    <string name="pet_picture">Foto de mascota</string>
+    <string name="direct_pay">Pago directo</string>
+    <string name="flea_medication">Medicamentos contra las pulgas</string>
+    <string name="reminder_missing_document">falta documento</string>
+    <plurals name="due_in">
+        <item quantity="one">hasta 1 día</item>
+        <item quantity="other">hasta %d días</item>
+    </plurals>
+    <string name="processing">procesando</string>
+
+    <string name="main_numbers_of_policy">Aquí están los números principales de tu póliza:</string>
+
+    <string name="your_belongings">Tus pertenencias</string>
+    <string name="your_belongings_instructions">¿Cuánto costaría reemplazar tus posesiones, como muebles, ropa y electrónicos? Elige tu cobertura en base a esta estimación. La cantidad seleccionada también puede aplicar a las pertenencias de tu compañero/a de cuarto. Solo asegúrate de incluirlos en tu póliza al finalizar la compra.</string>
+
+    <string name="most_popular">Más popular</string>
+
+    <string name="liability_information">Información de responsabilidad</string>
+    <string name="liability_dialog_information">Esta cobertura asegura que estés protegido/a en caso de que dañes involuntariamente tu propia propiedad o la propiedad de un vecino debido a humo, fuego, agua o explosiones. Además, si un visitante resulta herido o mordido por tu perro, nos haremos cargo de los gastos médicos y legales esenciales hasta el límite que selecciones a continuación.</string>
+    <string name="your_liability_section_title">Tu Responsabilidad</string>
+
+    <string name="loss_off_use_description">Esta cobertura brinda asistencia en caso de que tu hogar sea declarado inhabitable. Con esta cobertura, puedes recuperar los gastos razonables incurridos por vivir fuera de tu hogar, como alquiler, comida, lavandería, etc.</string>
+    <string name="loss_of_use_camel_case">Pérdida de uso</string>
+
+    <string name="deductible_information">Información de educible</string>
+
+    <string name="medical_payments">Pagos médicos</string>
+    <string name="medical_payments_description">Esta cobertura ofrece pagos voluntarios para facturas médicas menores si alguien resulta herido en tu propiedad.</string>
+
+    <string name="hurricane_deductible">Deducible de huracán</string>
+    <string name="hurricane_deductible_description">Este deducible es lo que restaremos de tu pago en caso de una pérdida por huracán.</string>
+    <string name="here_s_the_list_of_your_additional_parties">Aquí está la lista de tus partes adicionales</string>
+
+    <string name="deductible_explanation">Un deducible es una cantidad inicial de la cual eres responsable, pero con nuestro seguro Kanguro, se deduce de tu liquidación de reclamación. Optar por un deducible más alto reduce tu prima mensual, pero también disminuye la cantidad que recibirás por una pérdida asegurada. Por ejemplo, si seleccionas un deducible de $500 y tienes una mesa de $1000, te reembolsaremos $500.</string>
+    <string name="edit_additional_party">Editar parte adicional</string>
+    <string name="delete_additional_party">Eliminar parte adicional</string>
+    <string name="add_additional_party">Añade una parte adicional</string>
+
+    <string name="talk_to_javier">Hablar con Javier</string>
+    <string name="talk_to_javier_specialist_available">Él es nuestro especialista en Kanguro, disponible siempre para apoyarte con los reclamos y pagos + cualquier otra duda.</string>
+
+    <string name="additional_coverage_options">Aquí están nuestras opciones de cobertura adicional:</string>
+
+    <string name="monthly_price">$ %s/mes</string>
+    <string name="this_additional_coverage_is_active">Esta cobertura adicional está activa.</string>
+
+    <string name="chat_title">Suporte</string>
+
+    <string name="additional_coverage_opions">Aquí están nuestras opciones de cobertura adicional</string>
+
+    <string name="monthly_short">(+$%s/MES)</string>
+    <string name="yearly_short">(+$%s/AN)</string>
+    <string name="quarterly_short">(+$%s/TR)</string>
+
+    <string name="track_your_claim_content">Para hacer un seguimiento del estado de su reclamación, por favor contacte con el servicio de atención al cliente en</string>
+
+    <string name="renters_file_claim_instructions">Actualmente estamos trabajando para crear la mejor experiencia de reclamación para usted.\n\nMientras tanto, para presentar sus reclamaciones, por favor contáctenos en</string>
+
+    <string name="coverage_active_filter">Activo</string>
+    <string name="coverage_inactive_filter">Inactivo</string>
+    <string name="coverage_all_filter">Todo</string>
+
+    <string name="renters_status_active">activo</string>
+    <string name="renters_status_canceled">cancelado</string>
+    <string name="renters_status_terminated">acabado</string>
+    <string name="renters_status_pending">inactivo</string>
+
+    <string name="pet_insurance_claim">Reclamo de Seguro para Mascotas</string>
+    <string name="renters_insurance_claim">Reclamo de Seguro para Inquilinos</string>
+
+    <string name="upload_a_video">Subir un video</string>
+    <string name="upload_a_video_description">Por favor, graba un video mostrando cada habitación de tu casa, con una duración máxima de dos minutos.</string>
+    <string name="send_video">Enviar video</string>
+
+    <string name="edit_policy_dialog_title">Editar Poliza</string>
+    <string name="edit_policy_dialog_instructions">Actualmente estamos trabajando para crear la mejor experiencia de aplicación para ti.\n\nPor ahora, para realizar cambios en tu póliza, por favor contáctanos en</string>
+
+    <string name="upload_video_error_message">Ocurrió un error al cargar el video. Inténtalo de nuevo.</string>
+
+    <string name="renters_what_is_covered_content">Protege tus pertenencias personales y ayuda a cubrir los costos relacionados con la responsabilidad personal. Kanguro te respalda durante eventos desafortunados, <b>incluidos casos en los que alguien resulta herido en tu hogar o te demanda por daños.</b></string>
+
+    <string name="renters_what_is_covered_item_theft">Robo</string>
+    <string name="renters_what_is_covered_item_fire">Incendio</string>
+    <string name="renters_what_is_covered_item_smoke">Homi</string>
+    <string name="renters_what_is_covered_item_hail">Granizo</string>
+    <string name="renters_what_is_covered_item_lightning">Rayo</string>
+    <string name="renters_what_is_covered_item_windstorm">Viento</string>
+    <string name="renters_what_is_covered_item_vandalism">Vandalismo</string>
+    <string name="renters_what_is_covered_item_explosion">Explosión</string>
+
+    <string name="faq">FAQ</string>
+    <string name="pet_insurance_faq">Seguro de Mascotas</string>
+    <string name="renters_insurance_faq">Seguro de Inquilinos</string>
+
+    <string name="no_policies_matching_selected_filter">No hay elementos que coincidan con el filtro que seleccionaste.</string>
+
+    <string name="pet_insurance_summary_label">Seguro de Mascotas</string>
+    <string name="renters_insurance_summary_label">Seguro de Inquilinos</string>
+    <string name="claim_summary_title">Resumen de reclamación</string>
+    <string name="incident_occurred_on">Incidente ocurrido el %s</string>
+    <string name="claim_type_label">Tipo de reclamación</string>
+    <string name="policy_label">Póliza</string>
+    <string name="policy_start_date_label">Inicio de la póliza</string>
+    <string name="contact_phone_label">Teléfono de contacto</string>
+
+    <string name="personal_property_claim">Reclamo de Propiedad Personal</string>
+    <string name="your_scheduled_items">Tus elementos programados</string>
+    <string name="your_scheduled_items_description">Seleccione todos los elementos que resultaron dañados o perdidos en este incidente. Si ninguno de los elementos se vio afectado, simplemente toque <b>Hecho</b>.</string>
+    <string name="adding_an_item">Agregar un elemento</string>
+    <string name="picture_of_the_item_instruction">Tome una fotografía del artículo dañado. Si el artículo fue robado o perdido, omita la foto.</string>
+    <string name="receipt_or_warranty_of_the_item">Recibo o garantía de su artículo</string>
+    <string name="receipt_or_warranty_of_the_item_instruction">Por favor, tome una fotografía del recibo o garantía del artículo. Si no la tienes, omita la foto.</string>
+
+    <string name="policy_holder">Titular de la póliza</string>
+    <string name="another_resident">Otro residente</string>
+    <string name="someone_else">Alguien más</string>
+    <string name="claimants">Demandantes</string>
+    <string name="items_reported">Artículos reportados</string>
+    <string name="description_of_the_injury_incident">Descripción del incidente de lesión</string>
+    <string name="description_of_the_property_incident">Descripción del incidente de propiedad</string>
+
+    <string name="cloud">Nube</string>
+
+    <string name="file_not_supported_title">Tipo de archivo no compatible</string>
+    <string name="file_not_supported_message">El formato de archivo seleccionado (%s) no es compatible. Por favor, seleccione otro formato de archivo.</string>
+
+    <string name="access_to_file_title">Acceso a archivos</string>
+    <string name="access_to_file_message_1">No puede utilizar esta función porque necesitamos permiso para administrar sus archivos.</string>
+    <string name="access_to_file_message_2">Con este permiso, puede enviar fácilmente sus documentos, presentar reclamaciones y asegurarse de recibir un reembolso rápidamente.</string>
+    <string name="access_to_file_message_highlighted">Para utilizar esta función, vaya a la Configuración de su aplicación y administre los permisos.</string>
+
+    <string name="very_bad">Muy mal</string>
+    <string name="bad">Mal</string>
+    <string name="ok">Ok</string>
+    <string name="good">Bien</string>
+    <string name="amazing">Wow</string>
+
+    <string name="action_add_a_pet">Agrega una mascota</string>
+    <string name="action_direct_pay_vet">Pago directo a tu Veterinario</string>
+    <string name="action_live_vet">Habla con un veterinario 24/7</string>
+
+    <string name="chat_sms">Chatea por mensaje de texto</string>
+    <string name="chat_whatsapp">Chatea por WhatsApp</string>
+    <string name="working_hours">Lun - Vie: 9:00 AM - 7:00 PM (EST)\nSab: 10:00 AM - 2:00 PM (EST)\nDom: Cerrado</string>
+
+    <string name="call_us">Llámanos</string>
+
+
+    <string name="action_card_highlight_tag_new">NUEVO</string>
+    <string name="action_card_highlight_tag_faster">Más rápido</string>
+
+    <string name="error_opening_website">Error al abrir el sitio web</string>
+
+    <string name="live_vet_title">Veterinario en vivo 24/7</string>
+    <string name="live_vet_subtitle">Servicio de televeterinaria operado por Airvet</string>
+    <string name="live_vet_policy">Tu póliza de Kanguro ahora incluye chat en vivo o video con un veterinario. Sin costo</string>
+    <string name="live_vet_description">e inmediato - Contacta a un veterinario certificado en menos de 3 minutos.</string>
+    <string name="live_vet_description_2">Todos los veterinarios están certificados - ellos pueden recetar medicamentos para tu mascota. Todo sin salir de casa.</string>
+    <string name="live_vet_description_3">Sin costo adicional - El servicio de Airvet está incluido con tu seguro de mascotas Kanguro.</string>
+    <string name="live_vet_description_4">Bilingüe - Veterinarios disponibles en inglés y español.</string>
+    <string name="live_vet_description_highlight">24/7</string>
+    <string name="live_vet_step_1_full_text">Descarga aquí la aplicación Airvet.</string>
+    <string name="live_vet_step_1">la aplicación Airvet</string>
+    <string name="live_vet_step_1_highlight">Descarga</string>
+    <string name="live_vet_step_1_download_app_highlight">aquí</string>
+    <string name="live_vet_step_2">- Cuando te pregunten, utiliza tu id de cliente %1$s.</string>
+    <string name="live_vet_step_2_highlight">Regístrate</string>
+    <string name="live_vet_step_2_button">copiar</string>
+    <string name="live_vet_step_2_button_clicked">copiado</string>
+    <string name="live_vet_step_3">en menos de un minuto.</string>
+    <string name="live_vet_step_3_highlight">Habla con un veterinario</string>
+    <string name="live_vet_button">Descarga aquí la aplicación Airvet</string>
+    <string name="airvet_link_error">Error al abrir Airvet</string>
+
+    <string name="live_vet_list_card_title">Veterinario gratis 24/7</string>
+    <string name="live_vet_list_card_description">Ahórrate el viaje al veterinario.</string>
+    <string name="live_vet_list_card_action">habla con un veterinario</string>
+
+    <string name="claim_card_claim_amount">Valor de reclamación:</string>
+    <string name="last_update_in">Última actualización</string>
+    <string name="claim_card_closed_in">Cerrado en</string>
+    <string name="claim_card_claims">Reclamos</string>
+    <string name="claim_card_details">Detailes</string>
+    <string name="claim_card_paid">Pago %s</string>
+
+    <string name="track_claims_empty_list">No hay nada aquí todavía!</string>
+</resources>

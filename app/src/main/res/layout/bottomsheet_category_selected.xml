@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineStart"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="@dimen/spacing_xs" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineEnd"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="@dimen/spacing_xs" />
+
+        <ImageView
+            android:id="@+id/logoCause"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@id/titleCause"
+            app:layout_constraintStart_toStartOf="@id/guidelineStart"
+            app:layout_constraintTop_toTopOf="@id/titleCause"
+            tools:src="@drawable/ic_animals" />
+
+        <TextView
+            android:id="@+id/titleCause"
+            style="@style/KanguroTextStyle.Title1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_xxxs"
+            android:layout_marginTop="@dimen/spacing_xxxs"
+            app:layout_constraintEnd_toStartOf="@+id/guidelineEnd"
+            app:layout_constraintStart_toEndOf="@id/logoCause"
+            app:layout_constraintTop_toBottomOf="@id/backButton"
+            tools:text="@string/animals" />
+
+        <TextView
+            android:id="@+id/titleSelectCause"
+            style="@style/KanguroTextStyle.Body.Regular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_xxs"
+            android:text="@string/select_cause"
+            android:textColor="@color/neutral_dark"
+            app:layout_constraintStart_toStartOf="@id/guidelineStart"
+            app:layout_constraintTop_toBottomOf="@id/titleCause" />
+
+        <View
+            android:id="@+id/whiteGradient"
+            android:layout_width="match_parent"
+            android:layout_height="8dp"
+            android:background="@drawable/white_gradient"
+            app:layout_constraintEnd_toEndOf="@id/recyclerView"
+            app:layout_constraintStart_toStartOf="@id/recyclerView"
+            app:layout_constraintTop_toTopOf="@id/recyclerView" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:paddingTop="@dimen/spacing_xxxs"
+            app:layoutManager="LinearLayoutManager"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+            app:layout_constraintStart_toStartOf="@id/guidelineStart"
+            app:layout_constraintTop_toBottomOf="@id/titleSelectCause"
+            tools:listitem="@layout/cause_list_item" />
+
+        <ImageButton
+            android:id="@id/closeButton"
+            style="@style/KanguroCloseButtonX"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/backButton"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/back_underlined"
+            android:textAppearance="@style/KanguroTextStyle.Subhead.Bold"
+            android:textColor="@color/secondary_dark"
+            app:icon="@drawable/ic_back_ios"
+            app:iconPadding="@dimen/spacing_xxxs"
+            app:iconTint="@color/secondary_dark"
+            app:layout_constraintStart_toStartOf="@id/guidelineStart"
+            app:layout_constraintTop_toBottomOf="@id/closeButton" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

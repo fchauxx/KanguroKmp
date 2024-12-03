@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/neutral_background">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="@dimen/spacing_xxs"
+        android:paddingVertical="@dimen/spacing_xxxs">
+
+        <TextView
+            android:id="@+id/screen_title"
+            style="@style/KanguroTextStyle.Title1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="@string/pet_upselling_pet_health_plan" />
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_sm"
+            android:importantForAccessibility="no"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/screen_title"
+            tools:src="@drawable/img_pet_upselling_for_screen" />
+
+        <TextView
+            android:id="@+id/upselling_title"
+            style="@style/KanguroTextStyle.Title3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_sm"
+            android:gravity="center"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/image"
+            tools:text="@string/pet_upselling_do_you_have_a_pet" />
+
+        <TextView
+            android:id="@+id/content_text"
+            style="@style/KanguroTextStyle.Body.Regular"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_xxs"
+            android:gravity="center"
+            android:textColor="@color/secondary_dark"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/upselling_title"
+            tools:text="@string/pet_upselling_content_text" />
+
+        <TextView
+            android:id="@+id/quote_now_text"
+            style="@style/KanguroTextStyle.Title3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_xxs"
+            android:gravity="center"
+            android:text="@string/upselling_quote_now"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/content_text" />
+
+        <com.insurtech.kanguro.designsystem.ui.views.LoadableButtonLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_sm"
+            app:layout_constraintTop_toBottomOf="@id/quote_now_text">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/continueButton"
+                style="@style/KanguroButtonStyle.Primary.Large"
+                android:backgroundTint="@color/tertiary_extra_dark"
+                android:text="@string/upselling_tell_me_more"
+                app:icon="@drawable/ic_star_action_button" />
+
+        </com.insurtech.kanguro.designsystem.ui.views.LoadableButtonLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

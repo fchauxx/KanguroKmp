@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <import type="android.view.View.OnClickListener" />
+
+        <variable
+            name="isAccordionVisible"
+            type="Boolean" />
+
+        <variable
+            name="accordionBackground"
+            type="Integer" />
+
+        <variable
+            name="accordionArrow"
+            type="Integer" />
+
+        <variable
+            name="advice"
+            type="com.insurtech.kanguro.domain.model.KanguroParameter" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/questionConstraint"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/spacing_xxs"
+        android:layout_marginTop="@dimen/spacing_nano"
+        android:layout_marginEnd="@dimen/spacing_xxs"
+        android:animateLayoutChanges="true"
+        tools:background="@drawable/bg_card_options"
+        android:background="@{accordionBackground}"
+        android:padding="@dimen/spacing_xxxs">
+
+        <TextView
+            android:id="@+id/questionText"
+            style="@style/KanguroTextStyle.Body.Bold"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lato_bold"
+            android:gravity="center_vertical"
+            android:text="@{advice.value}"
+            app:layout_constraintEnd_toStartOf="@id/summaryIcon"
+            app:layout_constraintStart_toStartOf="@id/questionConstraint"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="@tools:sample/lorem[5]" />
+
+        <ImageView
+            android:id="@+id/summaryIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@{accordionArrow}"
+            app:layout_constraintBottom_toBottomOf="@id/questionText"
+            app:layout_constraintEnd_toEndOf="@id/questionConstraint"
+            app:layout_constraintTop_toTopOf="@id/questionText" />
+
+        <LinearLayout
+            android:id="@+id/infoField"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="@{isAccordionVisible ? View.VISIBLE : View.GONE}"
+            app:layout_constraintEnd_toEndOf="@id/questionConstraint"
+            app:layout_constraintStart_toStartOf="@id/questionConstraint"
+            app:layout_constraintTop_toBottomOf="@id/questionText">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_xxs">
+
+                <TextView
+                    style="@style/KanguroTextStyle.Body.Regular"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:text="@{advice.description}"
+                    tools:text="@tools:sample/lorem[15]" />
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

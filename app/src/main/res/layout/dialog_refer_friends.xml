@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/spacing_xxs"
+    android:background="@drawable/bg_dialog_rounded_16">
+
+    <ImageView
+        android:id="@+id/referCloseButton"
+        android:layout_width="@dimen/spacing_md"
+        android:layout_height="@dimen/spacing_md"
+        android:layout_marginTop="@dimen/spacing_xxs"
+        android:layout_marginEnd="20dp"
+        android:scaleType="center"
+        android:src="@drawable/ic_close"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineStart"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="@dimen/spacing_xs" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineEnd"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="@dimen/spacing_xs" />
+
+    <ImageView
+        android:id="@+id/headerImage"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/spacing_xxs"
+        android:layout_marginBottom="@dimen/spacing_xxxs"
+        android:src="@drawable/img_cat_god_hug"
+        app:layout_constraintBottom_toTopOf="@id/referTitle"
+        app:layout_constraintDimensionRatio="262:191"
+        app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+        app:layout_constraintStart_toStartOf="@id/guidelineStart"
+        app:layout_constraintTop_toBottomOf="@id/referCloseButton"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <TextView
+        android:id="@+id/referTitle"
+        style="@style/KanguroTextStyle.Headline"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/spacing_xxxs"
+        android:text="@string/get_gift_card"
+        android:textAlignment="center"
+        android:textColor="@color/secondary_darkest"
+        app:layout_constraintBottom_toTopOf="@id/referContent"
+        app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/guidelineStart"
+        app:layout_constraintTop_toBottomOf="@id/headerImage" />
+
+    <TextView
+        android:id="@+id/referContent"
+        style="@style/KanguroTextStyle.Body.Regular"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/spacing_sm"
+        android:text="@string/inviting_friends"
+        android:textAlignment="center"
+        android:textColor="@color/neutral_medium_2"
+        app:layout_constraintBottom_toTopOf="@id/referDiv"
+        app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+        app:layout_constraintStart_toStartOf="@id/guidelineStart"
+        app:layout_constraintTop_toBottomOf="@id/referTitle" />
+
+    <View
+        android:id="@+id/referDiv"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginBottom="@dimen/spacing_sm"
+        android:background="@color/secondary_lightest"
+        app:layout_constraintBottom_toTopOf="@id/actionButtons"
+        app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+        app:layout_constraintStart_toStartOf="@id/guidelineStart" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/actionButtons"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/spacing_xs"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+        app:layout_constraintStart_toStartOf="@id/guidelineStart">
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/laterGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:constraint_referenced_ids="referLaterButton, buttonSpacer" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/referLaterButton"
+            style="@style/KanguroButtonStyle.SecondaryLight.Medium"
+            android:layout_width="0dp"
+            android:paddingStart="0dp"
+            android:paddingEnd="0dp"
+            android:text="@string/maybe_later"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/buttonSpacer"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <View
+            android:id="@+id/buttonSpacer"
+            android:layout_width="@dimen/spacing_xxs"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="@id/referConfirmButton"
+            app:layout_constraintEnd_toStartOf="@id/referConfirmButton"
+            app:layout_constraintStart_toEndOf="@id/referLaterButton"
+            app:layout_constraintTop_toTopOf="@id/referConfirmButton" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/referConfirmButton"
+            style="@style/KanguroButtonStyle.Primary.Medium"
+            android:layout_width="0dp"
+            android:paddingStart="0dp"
+            android:paddingEnd="0dp"
+            android:text="@string/lets_do_it"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/buttonSpacer" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

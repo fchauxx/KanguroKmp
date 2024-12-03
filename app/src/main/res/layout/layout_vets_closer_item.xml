@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingHorizontal="@dimen/spacing_sm">
+
+    <TextView
+        android:id="@+id/name"
+        style="@style/KanguroTextStyle.Body.Bold"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_xxxs"
+        android:layout_marginEnd="@dimen/spacing_xxs"
+        android:ellipsize="end"
+        android:lines="1"
+        android:textColor="@color/secondary_darkest"
+        app:layout_constraintEnd_toStartOf="@id/phoneButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Vet Friends" />
+
+    <TextView
+        android:id="@+id/address"
+        style="@style/KanguroTextStyle.Caption.Regular"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_nano"
+        android:layout_marginEnd="@dimen/spacing_xxs"
+        android:ellipsize="end"
+        android:lines="1"
+        android:textColor="@color/tertiary_extra_dark"
+        app:layout_constraintEnd_toStartOf="@id/phoneButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/name"
+        tools:text="1 m - 9851 NW 58th St #111" />
+
+    <LinearLayout
+        android:id="@+id/operatingInfos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_nano"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/address">
+
+        <TextView
+            android:id="@+id/status"
+            style="@style/KanguroTextStyle.Caption.Regular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/positive_dark"
+            android:visibility="gone"
+            tools:text="Open"
+            tools:visibility="visible" />
+
+        <TextView
+            android:id="@+id/dash"
+            style="@style/KanguroTextStyle.Caption.Regular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_quark"
+            android:layout_marginEnd="@dimen/spacing_quark"
+            android:text="@string/dash"
+            android:textColor="@color/neutral_medium"
+            android:visibility="gone"
+            tools:text="-"
+            tools:visibility="visible" />
+
+        <TextView
+            android:id="@+id/operatingHours"
+            style="@style/KanguroTextStyle.Caption.Regular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/neutral_medium"
+            android:visibility="gone"
+            tools:text="Closes 5PM"
+            tools:visibility="visible" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/phoneButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_phone"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="visible" />
+
+    <View
+        style="@style/divider_style"
+        android:layout_marginTop="@dimen/spacing_xxxs"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/operatingInfos" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

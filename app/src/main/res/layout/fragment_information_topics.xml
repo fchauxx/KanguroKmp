@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="viewModel"
+            type="com.insurtech.kanguro.ui.scenes.vetAdvice.InformationsTopicsViewModel" />
+    </data>
+
+    <androidx.constraintlayout.motion.widget.MotionLayout
+        android:id="@+id/myActual"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        app:layoutDescription="@xml/fragment_scroll_scene"
+        tools:context=".ui.scenes.vetAdvice.InformationTopicsFragment">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineStart"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="@dimen/spacing_xxs" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineEnd"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="@dimen/spacing_xxs" />
+
+        <RelativeLayout
+            android:id="@+id/photoHeader"
+            android:layout_width="match_parent"
+            android:layout_height="300dp">
+
+            <FrameLayout
+                android:id="@+id/returnButtonFrame"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:translationZ="10dp">
+
+                <ImageView
+                    android:id="@+id/returnButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/spacing_xxs"
+                    android:layout_marginTop="@dimen/spacing_xxs"
+                    android:src="@drawable/ic_return" />
+            </FrameLayout>
+
+            <ImageView
+                android:id="@+id/headerImage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:src="@drawable/dog_banner" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="16dp"
+                android:layout_alignBottom="@id/headerImage"
+                android:background="@drawable/bg_coverage_details" />
+        </RelativeLayout>
+
+        <androidx.legacy.widget.Space
+            android:id="@+id/subTitleInfo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_nano"
+            app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+            app:layout_constraintStart_toStartOf="@id/guidelineStart"
+            app:layout_constraintTop_toBottomOf="@id/photoHeader" />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:clipToPadding="false"
+            android:paddingBottom="@dimen/spacing_xxs"
+            app:layoutManager="LinearLayoutManager"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/subTitleInfo"
+            tools:listitem="@layout/advice_list_item" />
+
+        <View
+            android:id="@+id/whiteGradient"
+            android:layout_width="match_parent"
+            android:layout_height="8dp"
+            android:background="@drawable/white_gradient"
+            app:layout_constraintEnd_toEndOf="@id/recyclerView"
+            app:layout_constraintStart_toStartOf="@id/recyclerView"
+            app:layout_constraintTop_toTopOf="@id/recyclerView" />
+
+        <FrameLayout
+            android:id="@+id/loadingLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@id/recyclerView"
+            app:layout_constraintEnd_toEndOf="@id/recyclerView"
+            app:layout_constraintStart_toStartOf="@id/recyclerView"
+            app:layout_constraintTop_toTopOf="@id/recyclerView">
+
+            <ProgressBar
+                android:id="@+id/isLoading"
+                style="@style/ProgressBarNormal"
+                android:visibility="@{viewModel.isLoading() ? View.VISIBLE : View.GONE}" />
+        </FrameLayout>
+
+    </androidx.constraintlayout.motion.widget.MotionLayout>
+</layout>
+

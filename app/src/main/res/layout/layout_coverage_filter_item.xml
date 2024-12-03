@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:background="@color/neutral_background">
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/spacing_xxs"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/spacing_xxxs"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <RadioButton
+                android:id="@+id/buttonAll"
+                style="@style/KanguroTextStyle.Body.Regular"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/spacing_nano"
+                android:background="@drawable/bg_coverages_filter"
+                android:button="@android:color/transparent"
+                android:checked="true"
+                android:paddingStart="@dimen/spacing_xxs"
+                android:paddingEnd="@dimen/spacing_xxs"
+                android:text="@string/all"
+                android:textAlignment="center"
+                android:textColor="@color/secondary_dark" />
+
+            <RadioButton
+                android:id="@+id/buttonActive"
+                style="@style/KanguroTextStyle.Body.Regular"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/spacing_nano"
+                android:background="@drawable/bg_coverages_filter"
+                android:button="@android:color/transparent"
+                android:drawableStart="@drawable/ic_active"
+                android:drawablePadding="@dimen/spacing_quark"
+                android:paddingStart="@dimen/spacing_xxxs"
+                android:paddingEnd="@dimen/spacing_xxxs"
+                android:text="@string/active"
+                android:textAlignment="center"
+                android:textColor="@color/secondary_dark" />
+
+            <RadioButton
+                android:id="@+id/buttonInactive"
+                style="@style/KanguroTextStyle.Body.Regular"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/spacing_nano"
+                android:background="@drawable/bg_coverages_filter"
+                android:button="@android:color/transparent"
+                android:drawableStart="@drawable/ic_inactive"
+                android:drawablePadding="@dimen/spacing_quark"
+                android:paddingStart="@dimen/spacing_xxxs"
+                android:paddingEnd="@dimen/spacing_xxxs"
+                android:text="@string/inactive"
+                android:textAlignment="center"
+                android:textColor="@color/secondary_dark" />
+        </RadioGroup>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

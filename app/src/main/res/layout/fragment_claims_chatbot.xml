@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/neutral_background">
+
+    <FrameLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:animateLayoutChanges="true"
+        android:paddingStart="@dimen/spacing_xxxs"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/backText"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:drawablePadding="@dimen/spacing_xxxs"
+            android:minHeight="0dp"
+            android:text="@string/back"
+            android:textAppearance="@style/KanguroTextStyle.Subhead.Bold"
+            android:textColor="@color/secondary_dark"
+            app:icon="@drawable/ic_left_arrow"
+            app:iconPadding="@dimen/spacing_xxxs"
+            app:iconTint="@color/secondary_dark" />
+
+    </FrameLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/messageList"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@android:color/white"
+        android:clipToPadding="false"
+        android:paddingBottom="@dimen/spacing_xxs"
+        app:layout_constraintBottom_toTopOf="@id/actionsLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/chat_divider_size"
+        android:background="@color/neutral_lightest"
+        app:layout_constraintBottom_toTopOf="@id/actionsLayout" />
+
+    <ScrollView
+        android:id="@+id/actionsLayout"
+        android:animateLayoutChanges="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHeight_max="300dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

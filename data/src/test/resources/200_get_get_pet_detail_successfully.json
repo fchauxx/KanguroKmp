@@ -1,0 +1,16 @@
+{
+  "id": 953,
+  "name": "Helga",
+  "birthDate": "2022-01-04T00:00:00",
+  "isBirthDateApproximated": false,
+  "gender": "Female",
+  "type": "Dog",
+  "isNeutered": false,
+  "petBreedId": 4,
+  "breed": "Mixed Breed Dog - Small (11-30 lbs)",
+  "zipCode": null,
+  "additionalInfoSessionId": null,
+  "hasAdditionalInfo": true,
+  "petPictureUrl": "Image URL",
+  "pictureId": 4724
+}

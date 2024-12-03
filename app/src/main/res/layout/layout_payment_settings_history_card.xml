@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <import type="com.insurtech.kanguro.core.utils.PetExtensionsKt" />
+
+        <import type="com.insurtech.kanguro.domain.policy.PolicyExtensionsKt" />
+
+        <variable
+            name="policy"
+            type="com.insurtech.kanguro.domain.model.PetPolicy" />
+
+        <variable
+            name="onClickAction"
+            type="View.OnClickListener" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/spacing_xxxs"
+            android:layout_marginTop="@dimen/spacing_xs"
+            android:layout_marginBottom="@dimen/spacing_xxxs"
+            android:background="@drawable/bg_coverage_details_card"
+            android:elevation="8dp"
+            android:paddingHorizontal="@dimen/spacing_xxxs"
+            android:paddingTop="@dimen/spacing_xxxs"
+            android:paddingBottom="@dimen/spacing_xxs"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/headerImage"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:scaleType="centerCrop"
+                android:src="@{PetExtensionsKt.getCacheableImage(policy.pet)}"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:placeholder="@{PetExtensionsKt.getPlaceholderImage(policy.pet)}"
+                app:shapeAppearance="@style/ShapeAppearanceOverlay.App.CornerSize50Percent"
+                tools:src="@tools:sample/backgrounds/scenic" />
+
+            <TextView
+                android:id="@+id/petName"
+                style="@style/KanguroTextStyle.Title2"
+                android:layout_width="0dp"
+                android:text="@{policy.pet.name}"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:textColor="@color/primary_darkest"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/headerImage"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Pet name" />
+
+            <LinearLayout
+                android:id="@+id/paymentContent"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_xxs"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/petName">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.7"
+                        android:fontFamily="@font/museo_sans_thin"
+                        android:text="@{policy.payment.invoiceInterval.invoiceTitle}"
+                        android:textColor="@color/secondary_dark"
+                        android:textSize="@dimen/font_sm"
+                        tools:text="@string/monthly_payment" />
+
+                    <TextView
+                        style="@style/KanguroTextStyle.Headline"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.3"
+                        android:gravity="end"
+                        android:textColor="@color/tertiary_darkest"
+                        app:currencyValue="@{PolicyExtensionsKt.getInvoiceCost(policy)}"
+                        tools:text="$9.99" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_xxxs"
+                    android:visibility="gone">
+
+                    <TextView
+                        style="@style/KanguroTextStyle.Footnote.Regular"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:text="@string/good_boy_sub"
+                        android:textColor="@color/secondary_medium" />
+
+                    <TextView
+                        style="@style/KanguroTextStyle.Footnote.Bold"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:gravity="end"
+                        app:currencyValue="@{policy.payment.recurringPayment}" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_nano"
+                    android:visibility="gone">
+
+                    <TextView
+                        style="@style/KanguroTextStyle.Footnote.Regular"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:text="@string/prev_wellness_sub"
+                        android:textColor="@color/secondary_medium" />
+
+                    <TextView
+                        style="@style/KanguroTextStyle.Footnote.Bold"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.4"
+                        android:gravity="end"
+                        app:currencyValue="@{0}" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <androidx.constraintlayout.widget.Group
+                android:visibility="gone"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:constraint_referenced_ids="separator,billingDate,whatIsCovered" />
+
+            <View
+                android:id="@+id/separator"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/spacing_xxs"
+                android:background="@color/secondary_lightest"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/paymentContent" />
+
+            <TextView
+                android:id="@+id/billingDate"
+                style="@style/KanguroTextStyle.Subhead.Regular"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_xxs"
+                android:text="@string/next_billing"
+                android:textColor="@color/secondary_dark"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/separator" />
+
+            <TextView
+                android:id="@+id/whatIsCovered"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_xxs"
+                android:background="@drawable/bg_card_options"
+                android:drawablePadding="@dimen/spacing_nano"
+                android:fontFamily="@font/lato_bold"
+                android:gravity="start|center"
+                android:onClick="@{onClickAction}"
+                android:padding="@dimen/spacing_xxxs"
+                android:text="@string/billing_history"
+                app:drawableStartCompat="@drawable/ic_cards"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/billingDate" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

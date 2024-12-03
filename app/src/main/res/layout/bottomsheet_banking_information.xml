@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="com.insurtech.kanguro.common.enums.AccountType" />
+
+        <variable
+            name="viewModel"
+            type="com.insurtech.kanguro.ui.scenes.bankingInformation.BankingInformationViewModel" />
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingHorizontal="@dimen/spacing_xs"
+                android:paddingTop="@dimen/spacing_lg"
+                android:paddingBottom="@dimen/spacing_sm">
+
+                <TextView
+                    android:id="@+id/reimbAccount"
+                    style="@style/KanguroTextStyle.Body.Bold"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/reimbursement_account"
+                    android:textAllCaps="true"
+                    android:textColor="@color/secondary_medium"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/bankingInfo"
+                    style="@style/KanguroTextStyle.Title3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_nano"
+                    android:text="@string/banking_information"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/reimbAccount" />
+
+                <TextView
+                    android:id="@+id/typeAccount"
+                    style="@style/KanguroTextStyle.Caption.Regular"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_xs"
+                    android:text="@string/type_of_account"
+                    android:textColor="@color/secondary_medium"
+                    app:layout_constraintTop_toBottomOf="@id/bankingInfo" />
+
+                <RadioGroup
+                    android:id="@+id/accountSelector"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_nano"
+                    android:orientation="horizontal"
+                    app:layout_constraintTop_toBottomOf="@id/typeAccount">
+
+                    <RadioButton
+                        android:id="@+id/checkingOption"
+                        style="@style/KanguroRadioButton"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:checked="@{viewModel.accountType == AccountType.checking}"
+                        android:paddingVertical="@dimen/spacing_nano"
+                        android:text="@string/checking_account" />
+
+                    <RadioButton
+                        android:id="@+id/savingOption"
+                        style="@style/KanguroRadioButton"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:checked="@{viewModel.accountType == AccountType.saving}"
+                        android:paddingVertical="@dimen/spacing_nano"
+                        android:text="@string/saving_account" />
+
+                </RadioGroup>
+
+                <TextView
+                    android:id="@+id/bankNameLabel"
+                    style="@style/KanguroTextStyle.Caption.Regular"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_nano"
+                    android:text="@string/bank_name"
+                    android:textColor="@color/secondary_medium"
+                    app:layout_constraintTop_toBottomOf="@id/accountSelector" />
+
+                <TextView
+                    android:id="@+id/bankNameField"
+                    style="@style/KanguroEditTextStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_nano"
+                    android:focusable="false"
+                    android:drawableEnd="@drawable/ic_search"
+                    android:text="@{viewModel.selectedBank}"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/bankNameLabel"
+                    tools:text="Bank name" />
+
+
+                <LinearLayout
+                    android:id="@+id/fieldLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_xxs"
+                    android:orientation="horizontal"
+                    app:layout_constraintTop_toBottomOf="@id/bankNameField">
+
+                    <com.insurtech.kanguro.designsystem.ui.views.KanguroTextInputLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:kg_title="@string/routing">
+
+                        <com.insurtech.kanguro.designsystem.ui.views.KanguroTextInputEditText
+                            android:id="@+id/routingField"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:imeOptions="actionNext"
+                            android:inputType="number"
+                            android:text="@={viewModel.routingNumber}" />
+
+                    </com.insurtech.kanguro.designsystem.ui.views.KanguroTextInputLayout>
+
+                    <com.insurtech.kanguro.designsystem.ui.views.KanguroTextInputLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/spacing_xxs"
+                        android:layout_weight="1"
+                        app:kg_title="@string/account">
+
+                        <com.insurtech.kanguro.designsystem.ui.views.KanguroTextInputEditText
+                            android:id="@+id/accountField"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:imeOptions="actionGo"
+                            android:inputType="number"
+                            android:text="@={viewModel.accountNumber}" />
+
+
+                    </com.insurtech.kanguro.designsystem.ui.views.KanguroTextInputLayout>
+
+                </LinearLayout>
+
+                <com.insurtech.kanguro.designsystem.ui.views.LoadableButtonLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_sm"
+                    app:isLoading="@{viewModel.isSavingUserInformation()}"
+                    app:layout_constraintTop_toBottomOf="@id/fieldLayout">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/continueButton"
+                        style="@style/KanguroButtonStyle.Primary.Large"
+                        android:enabled="@{viewModel.continueButtonEnabled}"
+                        android:text="@string/save"
+                        app:icon="@drawable/ic_paw_outline" />
+
+                    <ProgressBar style="@style/ProgressBarBtnSmall" />
+
+                </com.insurtech.kanguro.designsystem.ui.views.LoadableButtonLayout>
+
+                <FrameLayout
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:background="#B3FFFFFF"
+                    android:clickable="true"
+                    android:visibility="@{viewModel.isLoading()}"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/bankingInfo"
+                    tools:visibility="gone">
+
+                    <ProgressBar
+                        style="@style/ProgressBarNormal"
+                        android:layout_gravity="center" />
+
+                </FrameLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+        <ImageButton
+            android:id="@+id/closeButton"
+            style="@style/KanguroCloseButtonX" />
+
+    </FrameLayout>
+
+</layout>

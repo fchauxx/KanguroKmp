@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/tools"
+    xmlns:binding="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="policy"
+            type="com.insurtech.kanguro.domain.model.PetPolicy" />
+
+        <variable
+            name="onClickAction"
+            type="View.OnClickListener" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/spacing_xxxs"
+        android:layout_marginTop="@dimen/spacing_xxxs"
+        android:layout_marginBottom="@dimen/spacing_xxxs"
+        android:background="@drawable/bg_coverage_details_card"
+        android:elevation="30dp"
+        android:padding="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <include
+            android:id="@+id/cardTitle"
+            layout="@layout/card_header"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            bind:cardHeaderIcon="@{@drawable/ic_card_wellness}"
+            bind:cardHeaderSubtitle="@{@string/extra_service}"
+            bind:cardHeaderTitle="@{@string/prev_wellness_label}" />
+
+        <TextView
+            android:id="@+id/reimbursementValue"
+            style="@style/KanguroTextStyle.Title3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_xxs"
+            android:fontFamily="@font/museo_sans_thin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cardTitle"
+            binding:upToReimbursement="@{policy.reimbursement.amount}" />
+
+        <TextView
+            android:id="@+id/whatIsCovered"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_xxs"
+            android:background="@drawable/bg_card_options"
+            android:drawablePadding="@dimen/spacing_nano"
+            android:gravity="start|center"
+            android:onClick="@{onClickAction}"
+            android:padding="@dimen/spacing_xxxs"
+            android:text="@string/track_your_benefits"
+            android:textAppearance="@style/KanguroTextStyle.Body.Bold"
+            app:drawableStartCompat="@drawable/ic_coverage_list"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/reimbursementValue" />
+
+        <TextView
+            android:id="@+id/policyDocs"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_nano"
+            android:background="@drawable/bg_card_options"
+            android:drawablePadding="@dimen/spacing_nano"
+            android:fontFamily="@font/lato_bold"
+            android:gravity="start|center"
+            android:padding="@dimen/spacing_xxxs"
+            android:text="@string/policy_docs"
+            android:visibility="gone"
+            app:drawableStartCompat="@drawable/ic_coverage"
+            app:drawableTint="@color/secondary_dark"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/reimbursementValue" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

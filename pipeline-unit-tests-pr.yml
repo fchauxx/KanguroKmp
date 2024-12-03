@@ -1,0 +1,45 @@
+variables:
+- name: OS
+  value: macOS-latest
+
+- name: PipelineUnitTestsTemplate
+  value: pipeline-unit-tests-generic.yml
+
+trigger:
+- none
+
+stages:
+- stage: test_and_build_project
+  jobs:
+  - job: dev
+    displayName: dev
+    pool:
+      vmImage: ${{ variables.OS }}
+    condition: and(succeeded(), eq(variables['System.PullRequest.TargetBranch'], 'refs/heads/dev'))
+    steps:
+      - template: ${{variables.PipelineUnitTestsTemplate}}
+        parameters:
+            BuildType: debug
+            Flavor: dev
+
+  - job: stage
+    displayName: stage
+    pool:
+      vmImage: ${{ variables.OS }}
+    condition: and(succeeded(), eq(variables['System.PullRequest.TargetBranch'], 'refs/heads/stage'))
+    steps:
+      - template: ${{variables.PipelineUnitTestsTemplate}}
+        parameters:
+            BuildType: debug
+            Flavor: stage
+
+  - job: prod
+    displayName: prod
+    pool:
+      vmImage: ${{ variables.OS }}
+    condition: and(succeeded(), eq(variables['System.PullRequest.TargetBranch'], 'refs/heads/main'))
+    steps:
+      - template: ${{variables.PipelineUnitTestsTemplate}}
+        parameters:
+            BuildType: debug
+            Flavor: prod

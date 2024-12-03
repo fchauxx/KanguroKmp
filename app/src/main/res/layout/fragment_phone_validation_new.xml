@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.insurtech.kanguro.ui.scenes.login.LoginViewModel" />
+    </data>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/spacing_xs">
+
+            <ImageView
+                android:id="@+id/logo_title"
+                android:layout_width="160dp"
+                android:layout_height="75dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="40dp"
+                android:src="@drawable/logo_single" />
+
+            <TextView
+                android:id="@+id/helloLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/spacing_xs"
+                android:paddingBottom="@dimen/spacing_xs"
+                android:text="@string/great_you_re_almost_ready"
+                android:textAppearance="@style/KanguroTextStyle.Title1" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="8dp"
+                android:text="@string/enter_your_cellphone_number"
+                android:textAppearance="@style/KanguroTextStyle.Body.Regular" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.santalu.maskara.widget.MaskEditText
+                    android:id="@+id/countryCodeField"
+                    style="@style/KanguroEditTextStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".75"
+                    android:hint="@string/hint_area_code"
+                    android:inputType="number"
+                    android:text="@={viewModel.countryCode}"
+                    app:mask="+###" />
+
+                <com.santalu.maskara.widget.MaskEditText
+                    android:id="@+id/phoneField"
+                    style="@style/KanguroEditTextStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_weight="2"
+                    android:hint="@string/hint_phone_number"
+                    android:inputType="number"
+                    android:text="@={viewModel.phoneNumber}"
+                    app:mask="### ### ####" />
+
+            </LinearLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/continueButton"
+                style="@style/KanguroButtonStyle.Primary.Large"
+                android:layout_marginTop="@dimen/spacing_xxs"
+                android:enabled="@{viewModel.phoneIsValid}"
+                android:text="@string/btn_continue"
+                app:icon="@drawable/ic_paw_outline" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="@string/disclaimer_phone_usage"
+                android:textAppearance="@style/KanguroTextStyle.Body.Regular"
+                android:textColor="@color/neutral_dark" />
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/backButton"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_xxxs"
+                android:text="@string/back_underlined"
+                android:textAllCaps="false"
+                android:textAppearance="@style/KanguroTextStyle.Body.Bold"
+                app:icon="@drawable/ic_back_ios"
+                app:iconPadding="16dp" />
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+</layout>

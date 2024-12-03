@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.insurtech.kanguro.designsystem.ui.views.MinimapImageView
+    android:id="@+id/image"
+    android:scaleType="centerCrop"
+    android:src="@drawable/bg_cat"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:padding="@dimen/spacing_nano"
+    android:layout_width="@dimen/chatbot_message_image_size"
+    android:layout_height="@dimen/chatbot_message_image_size">
+
+</com.insurtech.kanguro.designsystem.ui.views.MinimapImageView>

@@ -1,0 +1,602 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.text.TextUtils" />
+
+        <import type="android.view.View" />
+
+        <import type="com.insurtech.kanguro.core.utils.PetExtensionsKt" />
+
+        <import type="com.insurtech.kanguro.common.enums.ClaimStatus" />
+
+        <variable
+            name="closedClaim"
+            type="com.insurtech.kanguro.domain.coverage.Claim" />
+
+        <variable
+            name="viewModel"
+            type="com.insurtech.kanguro.ui.scenes.claims.ClaimDetailsViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageButton
+            android:id="@+id/closeButton"
+            style="@style/KanguroCloseButtonX"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fillViewport="true"
+            app:layout_constraintTop_toBottomOf="@id/closeButton">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="28dp"
+                android:paddingBottom="@dimen/spacing_md">
+
+                <TextView
+                    android:id="@+id/claimId"
+                    style="@style/KanguroTextStyle.Title3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/spacing_xs"
+                    android:layout_marginEnd="@dimen/spacing_xs"
+                    android:gravity="center"
+                    android:text="@string/claim_details"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/claimDate"
+                    style="@style/KanguroTextStyle.Footnote.Bold"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/spacing_xs"
+                    android:layout_marginTop="@dimen/spacing_nano"
+                    android:layout_marginEnd="@dimen/spacing_xs"
+                    android:gravity="center"
+                    android:textColor="@color/neutral_medium"
+                    app:date="@{closedClaim.updatedAt}"
+                    app:info="@{@string/open_claim_date_info}"
+                    app:layout_constraintEnd_toEndOf="@id/claimId"
+                    app:layout_constraintStart_toStartOf="@id/claimId"
+                    app:layout_constraintTop_toBottomOf="@id/claimId"
+                    tools:text="Last update in Sep 04, 2021" />
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/claimStatusCard"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/spacing_xs"
+                    android:layout_marginTop="@dimen/spacing_xs"
+                    android:layout_marginEnd="@dimen/spacing_xs"
+                    android:cardBackgroundColor="@{viewModel.warningCard.cardViewBackground}"
+                    android:visibility="@{viewModel.hasWarning}"
+                    app:cardCornerRadius="@dimen/border_radius_sm"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/claimDate"
+                    app:strokeColor="@{viewModel.warningCard.strokeColor}"
+                    app:strokeWidth="@dimen/border_width_hairline"
+                    tools:cardBackgroundColor="@color/negative_lightest"
+                    tools:strokeColor="@color/negative_medium">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingHorizontal="@dimen/spacing_xxxs"
+                        android:paddingVertical="@dimen/spacing_nano">
+
+                        <ImageView
+                            android:id="@+id/claimStatusCardIcon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@{viewModel.warningCard.claimStatusCardIcon}"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:tint="@{viewModel.warningCard.claimStatusCardIconTint}"
+                            tools:src="@drawable/ic_circle_error"
+                            tools:tint="@color/negative_dark" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toEndOf="@id/claimStatusCardIcon"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <TextView
+                                android:id="@+id/claimStatusCardText"
+                                style="@style/KanguroTextStyle.Footnote.Regular"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/spacing_nano"
+                                android:text="@{viewModel.warningCard.claimStatusCardText}"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toEndOf="@+id/claimStatusCardIcon"
+                                app:layout_constraintTop_toTopOf="parent"
+                                tools:text="@string/your_claim_was_denied_because" />
+
+                            <TextView
+                                android:id="@+id/claimStatusCardTextReason"
+                                style="@style/KanguroTextStyle.Footnote.Black"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/spacing_nano"
+                                android:drawablePadding="@dimen/spacing_quark"
+                                android:text="@{closedClaim.decision}"
+                                android:textColor="@color/tertiary_extra_dark"
+                                android:visibility="@{viewModel.hasReason}"
+                                app:drawableStartCompat="@drawable/img_circle_4"
+                                app:drawableTint="@color/tertiary_extra_dark"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toEndOf="@+id/claimStatusCardIcon"
+                                app:layout_constraintTop_toBottomOf="@+id/claimStatusCardText"
+                                tools:text="Material Misrepresentation" />
+                        </LinearLayout>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <TextView
+                    android:id="@+id/summaryLabel"
+                    style="@style/KanguroTextStyle.Caption.Bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/spacing_md"
+                    android:layout_marginTop="@dimen/spacing_xxs"
+                    android:text="@string/details_summary"
+                    android:textAllCaps="true"
+                    android:textColor="@color/primary_darkest"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/claimStatusCard" />
+
+                <LinearLayout
+                    android:id="@+id/infoContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/spacing_md"
+                    android:layout_marginTop="@dimen/spacing_nano"
+                    android:orientation="vertical"
+                    android:padding="@dimen/spacing_nano"
+                    app:layout_constraintTop_toBottomOf="@id/summaryLabel">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingVertical="@dimen/spacing_nano">
+
+                        <TextView
+                            style="@style/KanguroTextStyle.Subhead.Regular"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:text="@string/details_status"
+                            android:textColor="@color/neutral_medium" />
+
+                        <TextView
+                            style="@style/KanguroTextStyle.Caption.Black"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="end"
+                            android:gravity="center"
+                            android:paddingHorizontal="@dimen/spacing_xxxs"
+                            android:paddingVertical="@dimen/spacing_nano"
+                            android:text="@{closedClaim.status.value}"
+                            app:claimStatusBackground="@{closedClaim}"
+                            tools:background="@drawable/submitted_background"
+                            tools:text="Submitted"
+                            tools:textColor="@color/white" />
+
+                    </FrameLayout>
+
+                    <View style="@style/divider_style" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:paddingVertical="@dimen/spacing_nano">
+
+                        <TextView
+                            style="@style/KanguroTextStyle.Subhead.Regular"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/details_pet"
+                            android:textColor="@color/neutral_medium" />
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:layout_weight="1" />
+
+                        <com.google.android.material.imageview.ShapeableImageView
+                            android:layout_width="16dp"
+                            android:layout_height="16dp"
+                            android:layout_margin="@dimen/spacing_quark"
+                            android:scaleType="centerCrop"
+                            android:src="@{PetExtensionsKt.getCacheableImage(closedClaim.pet)}"
+                            app:placeholder="@{PetExtensionsKt.getPlaceholderImage(closedClaim.pet)}"
+                            app:shapeAppearance="@style/ShapeAppearanceOverlay.App.CornerSize50Percent"
+                            tools:src="@drawable/placeholder_dog_picture" />
+
+                        <TextView
+                            style="@style/KanguroTextStyle.Body.Bold"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@{closedClaim.pet.name}"
+                            tools:text="Oliver" />
+
+                    </LinearLayout>
+
+                    <View style="@style/divider_style" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:paddingVertical="@dimen/spacing_nano">
+
+                        <TextView
+                            style="@style/KanguroTextStyle.Subhead.Regular"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/details_claim"
+                            android:textColor="@color/neutral_medium" />
+
+                        <TextView
+                            style="@style/KanguroTextStyle.Body.Bold"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="end"
+                            android:text="@{closedClaim.type.name}" />
+                    </LinearLayout>
+
+                    <View style="@style/divider_style" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:paddingVertical="@dimen/spacing_nano">
+
+                        <TextView
+                            style="@style/KanguroTextStyle.Subhead.Regular"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/date_submitted"
+                            android:textColor="@color/neutral_medium" />
+
+                        <TextView
+                            style="@style/KanguroTextStyle.Body.Bold"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="end"
+                            app:date="@{closedClaim.createdAt}" />
+                    </LinearLayout>
+
+                    <View style="@style/divider_style" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:paddingVertical="@dimen/spacing_nano">
+
+                        <TextView
+                            style="@style/KanguroTextStyle.Subhead.Regular"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/date_incident"
+                            android:textColor="@color/neutral_medium" />
+
+                        <TextView
+                            style="@style/KanguroTextStyle.Body.Bold"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="end"
+                            app:date="@{closedClaim.invoiceDate}"
+                            app:isUTC="@{true}" />
+                    </LinearLayout>
+
+                    <View style="@style/divider_style" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:paddingVertical="@dimen/spacing_nano">
+
+                        <TextView
+                            style="@style/KanguroTextStyle.Subhead.Regular"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/details_amount_claimed"
+                            android:textColor="@color/neutral_medium" />
+
+                        <TextView
+                            style="@style/KanguroTextStyle.Body.Bold"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="end"
+                            app:currencyValue="@{closedClaim.amount}" />
+                    </LinearLayout>
+
+                    <View
+                        style="@style/divider_style"
+                        android:visibility="@{closedClaim.status == ClaimStatus.Paid ? View.VISIBLE : View.GONE}" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:paddingVertical="@dimen/spacing_nano"
+                        android:visibility="@{closedClaim.status == ClaimStatus.Paid ? View.VISIBLE : View.GONE}">
+
+                        <TextView
+                            style="@style/KanguroTextStyle.Subhead.Regular"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/details_amount_paid"
+                            android:textColor="@color/neutral_medium" />
+
+                        <TextView
+                            style="@style/KanguroTextStyle.Body.Bold"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="end"
+                            app:currencyValue="@{closedClaim.amountPaid}" />
+                    </LinearLayout>
+
+                    <View
+                        style="@style/divider_style"
+                        android:visibility="@{closedClaim.status == ClaimStatus.Paid ? View.VISIBLE : View.GONE}" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:paddingVertical="@dimen/spacing_nano"
+                        android:visibility="@{closedClaim.status == ClaimStatus.Paid ? View.VISIBLE : View.GONE}">
+
+                        <TextView
+                            style="@style/KanguroTextStyle.Subhead.Regular"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/spacing_xxxs"
+                            android:ellipsize="end"
+                            android:gravity="start"
+                            android:maxLines="2"
+                            android:text="@string/details_contribution_towards_deductible"
+                            android:textColor="@color/neutral_medium"
+                            app:layout_constraintEnd_toStartOf="@id/amountTransferredValue"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/amountTransferredValue"
+                            style="@style/KanguroTextStyle.Body.Bold"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="end"
+                            android:maxLines="1"
+                            app:currencyValue="@{closedClaim.deductibleContributionAmount}"
+                            app:layout_constrainedWidth="true"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            tools:text="$1000.00" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <View style="@style/divider_style" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:paddingVertical="@dimen/spacing_nano"
+                        android:visibility="gone">
+
+                        <TextView
+                            style="@style/KanguroTextStyle.Subhead.Regular"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/details_payment"
+                            android:textColor="@color/neutral_medium" />
+
+                        <TextView
+                            style="@style/KanguroTextStyle.Body.Bold"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="end" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/claimLabel"
+                    style="@style/KanguroTextStyle.Caption.Bold"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/spacing_md"
+                    android:layout_marginTop="@dimen/spacing_xs"
+                    android:paddingVertical="@dimen/spacing_nano"
+                    android:text="@string/details_description"
+                    android:textAllCaps="true"
+                    android:textColor="@color/primary_darkest"
+                    android:visibility="@{!TextUtils.isEmpty(closedClaim.description)}"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/infoContainer" />
+
+                <TextView
+                    android:id="@+id/descriptionContent"
+                    style="@style/KanguroTextStyle.Body.Regular"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_nano"
+                    android:text="@{closedClaim.description}"
+                    app:layout_constraintEnd_toEndOf="@+id/claimLabel"
+                    app:layout_constraintStart_toStartOf="@id/claimLabel"
+                    app:layout_constraintTop_toBottomOf="@id/claimLabel"
+                    tools:text="Tobias developed a several otitis. Lorem ipsum dolor sit amet, consectetur adipiscing elit." />
+
+                <View
+                    android:id="@+id/dividerDescription"
+                    style="@style/divider_style"
+                    android:layout_marginHorizontal="@dimen/spacing_md"
+                    android:layout_marginTop="@dimen/spacing_nano"
+                    app:layout_constraintEnd_toEndOf="@id/descriptionContent"
+                    app:layout_constraintStart_toStartOf="@id/descriptionContent"
+                    app:layout_constraintTop_toBottomOf="@id/descriptionContent" />
+
+                <TextView
+                    android:id="@+id/attachmentsLabel"
+                    style="@style/KanguroTextStyle.Caption.Bold"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/spacing_md"
+                    android:layout_marginTop="@dimen/spacing_xs"
+                    android:paddingVertical="@dimen/spacing_nano"
+                    android:text="@string/details_attachments"
+                    android:textAllCaps="true"
+                    android:textColor="@color/primary_darkest"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/dividerDescription" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/attachmentsList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/spacing_md"
+                    android:nestedScrollingEnabled="false"
+                    android:paddingVertical="@dimen/spacing_nano"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/attachmentsLabel"
+                    tools:itemCount="3"
+                    tools:listitem="@layout/layout_claim_attachment_item" />
+
+                <FrameLayout
+                    android:id="@+id/isFetchingAttachment"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:background="@color/white_50"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="@+id/attachmentsList"
+                    app:layout_constraintEnd_toEndOf="@id/attachmentsList"
+                    app:layout_constraintStart_toStartOf="@id/attachmentsList"
+                    app:layout_constraintTop_toTopOf="@id/attachmentsList"
+                    tools:visibility="visible">
+
+                    <ProgressBar
+                        style="@style/ProgressBarNormal"
+                        android:layout_gravity="center"
+                        android:backgroundTint="@color/white_50" />
+
+                </FrameLayout>
+
+                <LinearLayout
+                    android:id="@+id/documentRequired"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/spacing_md"
+                    android:visibility="@{closedClaim.hasPendingCommunications}"
+                    app:layout_constraintTop_toBottomOf="@id/attachmentsList">
+
+                    <TextView
+                        android:id="@+id/documentRequiredLabel"
+                        style="@style/KanguroTextStyle.Subhead.Regular"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="@dimen/spacing_nano"
+                        android:layout_weight="1"
+                        android:drawablePadding="@dimen/spacing_quark"
+                        android:text="@string/document"
+                        android:textColor="@color/tertiary_extra_dark" />
+
+                    <TextView
+                        style="@style/KanguroTextStyle.Caption.Black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:gravity="center"
+                        android:paddingHorizontal="@dimen/spacing_xxxs"
+                        android:paddingVertical="@dimen/spacing_nano"
+                        android:text="@{closedClaim.status.value}"
+                        app:claimStatusBackground="@{closedClaim}"
+                        tools:background="@drawable/in_review_background"
+                        tools:text="Required"
+                        tools:textColor="@color/secondary_darkest" />
+
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/dividerAttachment"
+                    style="@style/divider_style"
+                    android:layout_marginHorizontal="@dimen/spacing_md"
+                    android:layout_marginTop="@dimen/spacing_nano"
+                    android:visibility="@{closedClaim.hasPendingCommunications}"
+                    app:layout_constraintEnd_toEndOf="@id/descriptionContent"
+                    app:layout_constraintStart_toStartOf="@id/descriptionContent"
+                    app:layout_constraintTop_toBottomOf="@id/documentRequired" />
+
+                <FrameLayout
+                    android:id="@+id/submitFrameLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/spacing_xs"
+                    android:layout_marginTop="@dimen/spacing_xxxs"
+                    android:layout_marginEnd="@dimen/spacing_xs"
+                    android:visibility="gone"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/dividerAttachment"
+                    tools:visibility="visible">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/submitButton"
+                        style="@style/KanguroButtonStyle.Primary.Medium"
+                        android:text="@string/submit_documents"
+                        android:visibility="visible" />
+
+                    <ProgressBar
+                        android:id="@+id/submitButtonLoading"
+                        style="@style/ProgressBarBtnSmall"
+                        android:layout_gravity="center"
+                        android:visibility="gone"
+                        tools:visibility="visible" />
+
+                </FrameLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

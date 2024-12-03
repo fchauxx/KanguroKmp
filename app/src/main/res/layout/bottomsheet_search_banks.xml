@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="com.insurtech.kanguro.common.enums.AccountType" />
+
+        <variable
+            name="viewModel"
+            type="com.insurtech.kanguro.ui.scenes.bankingInformation.SearchBanksViewModel" />
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/spacing_xs"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guidelineStart"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:orientation="vertical"
+                app:layout_constraintGuide_begin="@dimen/spacing_xs" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guidelineEnd"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:orientation="vertical"
+                app:layout_constraintGuide_end="@dimen/spacing_xs" />
+
+            <TextView
+                android:id="@+id/selectBankLabel"
+                style="@style/KanguroTextStyle.Title3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_sm"
+                android:text="@string/select_your_bank"
+                app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+                app:layout_constraintStart_toStartOf="@id/guidelineStart"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/bankField"
+                style="@style/KanguroEditTextStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_xxxs"
+                android:drawableEnd="@drawable/ic_search"
+                android:hint="@string/search_your_bank"
+                app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+                app:layout_constraintStart_toStartOf="@id/guidelineStart"
+                app:layout_constraintTop_toBottomOf="@id/selectBankLabel" />
+
+            <View
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:background="@drawable/border_bottom_gray"
+                app:layout_constraintBottom_toBottomOf="@id/bankField"
+                app:layout_constraintStart_toStartOf="@id/bankField" />
+
+            <View
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:background="@drawable/border_bottom_gray"
+                android:rotation="270"
+                app:layout_constraintBottom_toBottomOf="@id/bankField"
+                app:layout_constraintEnd_toEndOf="@id/bankField" />
+
+            <LinearLayout
+                android:id="@+id/addBank"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@color/neutral_background"
+                android:orientation="vertical"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+                app:layout_constraintStart_toStartOf="@id/guidelineStart"
+                app:layout_constraintTop_toBottomOf="@id/bankField"
+                tools:visibility="visible">
+
+                <TextView
+                    android:id="@+id/addBankName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/neutral_background"
+                    android:drawablePadding="@dimen/spacing_nano"
+                    android:gravity="center_vertical"
+                    android:padding="@dimen/spacing_xxxs"
+                    android:textColor="@color/tertiary_extra_dark"
+                    app:drawableStartCompat="@drawable/ic_add"
+                    app:drawableTint="@color/tertiary_extra_dark"
+                    tools:text="New Typed Bank" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginHorizontal="@dimen/spacing_xxxs"
+                    android:background="@color/neutral_light" />
+            </LinearLayout>
+
+            <androidx.core.widget.NestedScrollView
+                android:id="@+id/nestedScrollView"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@drawable/bg_background_rounded"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+                app:layout_constraintStart_toStartOf="@id/guidelineStart"
+                app:layout_constraintTop_toBottomOf="@id/addBank"
+                app:layout_constraintVertical_bias="0.0">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recyclerView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="@dimen/spacing_quark"
+                        android:nestedScrollingEnabled="false"
+                        app:layout_goneMarginBottom="@dimen/spacing_nano"
+                        tools:itemCount="5"
+                        tools:listitem="@layout/banks_list_item" />
+
+                </LinearLayout>
+            </androidx.core.widget.NestedScrollView>
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="#B3FFFFFF"
+                android:clickable="true"
+                android:visibility="@{viewModel.isLoading()}"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/bankField"
+                tools:visibility="gone">
+
+                <ProgressBar
+                    style="@style/ProgressBarNormal"
+                    android:layout_gravity="center" />
+
+            </FrameLayout>
+
+            <ImageButton
+                android:id="@+id/closeButton"
+                style="@style/KanguroCloseButtonX"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</layout>

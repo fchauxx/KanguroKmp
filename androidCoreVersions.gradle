@@ -1,0 +1,10 @@
+ext.buildConfig = [
+        'compileSdk': 34,
+        'minSdk': 24,
+        'targetSdk': 34
+]
+
+ext.appVersion = [
+        'versionCode': 100,
+        'versionName': "2.1.11"
+]

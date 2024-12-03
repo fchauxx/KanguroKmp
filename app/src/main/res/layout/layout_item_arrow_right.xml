@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View.OnClickListener" />
+
+        <variable
+            name="onClickAction"
+            type="OnClickListener" />
+
+        <variable
+            name="text"
+            type="String" />
+
+    </data>
+
+    <com.google.android.material.button.MaterialButton
+        style="@style/MoreActionsButtonStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dashboard_horizontal_padding"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="@dimen/dashboard_horizontal_padding"
+        android:onClick="@{onClickAction}"
+        android:text="@{text}"
+        app:cornerRadius="@dimen/border_radius_sm"
+        app:icon="@drawable/ic_arrow_right"
+        app:iconGravity="end"
+        app:iconTint="@null"
+        tools:text="Reimbursement account">
+
+    </com.google.android.material.button.MaterialButton>
+
+</layout>

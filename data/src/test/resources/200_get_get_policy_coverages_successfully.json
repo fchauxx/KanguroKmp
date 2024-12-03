@@ -1,0 +1,26 @@
+[
+  {
+    "name": "One Routine Wellness Exam",
+    "varName": "wellness_exam",
+    "usedValue": 0,
+    "remainingValue": 50,
+    "value": 50,
+    "annualLimit": 50.0,
+    "remainingLimit": 50.0,
+    "uses": 1,
+    "remainingUses": 1,
+    "usesLimit": 1
+  },
+  {
+    "name": "Heartworm Test",
+    "varName": "heartworm_test",
+    "usedValue": 0,
+    "remainingValue": 40,
+    "value": 40,
+    "annualLimit": 40.0,
+    "remainingLimit": 40.0,
+    "uses": 1,
+    "remainingUses": 1,
+    "usesLimit": null
+  }
+]

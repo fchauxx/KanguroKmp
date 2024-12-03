@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="com.insurtech.kanguro.core.utils.PetExtensionsKt" />
+
+        <variable
+            name="claim"
+            type="com.insurtech.kanguro.domain.coverage.Claim" />
+    </data>
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="@dimen/spacing_quark"
+        app:cardCornerRadius="@dimen/border_radius_sm"
+        app:cardElevation="8dp"
+        app:strokeColor="@color/neutral_background"
+        app:strokeWidth="1dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="@dimen/spacing_xxxs">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/headerImage"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:scaleType="centerCrop"
+                android:src="@{PetExtensionsKt.getCacheableImage(claim.pet)}"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:placeholder="@{PetExtensionsKt.getPlaceholderImage(claim.pet)}"
+                app:shapeAppearance="@style/ShapeAppearanceOverlay.App.CornerSize50Percent"
+                tools:src="@tools:sample/backgrounds/scenic" />
+
+            <TextView
+                android:id="@+id/petName"
+                style="@style/KanguroTextStyle.Body.Black"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/spacing_xxxs"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:text="@{claim.pet.name}"
+                app:layout_constraintEnd_toStartOf="@id/moreOptions"
+                app:layout_constraintStart_toEndOf="@id/headerImage"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Oliver" />
+
+            <TextView
+                android:id="@+id/date"
+                style="@style/KanguroTextStyle.Footnote.Regular"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_quark"
+                android:textColor="@color/neutral_medium"
+                app:date="@{claim.createdAt}"
+                app:info="@{@string/draft_claim_date_info}"
+                app:layout_constraintStart_toStartOf="@id/petName"
+                app:layout_constraintTop_toBottomOf="@id/petName"
+                tools:text="Created on Sep 04, 2021" />
+
+            <TextView
+                android:id="@+id/continueClaim"
+                style="@style/KanguroTextStyle.Footnote.Black"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/font_xxs"
+                android:layout_marginTop="@dimen/spacing_xxxs"
+                android:background="@drawable/continue_claim_background"
+                android:padding="@dimen/spacing_nano"
+                android:text="@string/continue_claim"
+                android:textColor="@color/warning_darkest"
+                app:layout_constraintEnd_toStartOf="@id/moreOptions"
+                app:layout_constraintStart_toStartOf="@id/date"
+                app:layout_constraintTop_toBottomOf="@id/date" />
+
+            <ImageView
+                android:id="@+id/moreOptions"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_more_circle"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+</layout>

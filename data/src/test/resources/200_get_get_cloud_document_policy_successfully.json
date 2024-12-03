@@ -1,0 +1,24 @@
+{
+  "id": "6f5300d0-d456-45ec-daa6-08daf4df4b01",
+  "ciId": 20000488,
+  "policyStartDate": "2023-01-17T00:00:00",
+  "policyAttachments": [],
+  "policyDocuments": [
+    {
+      "id": 2239,
+      "name": "Declarations and Schedule of Insurance Page",
+      "filename": "Declarations and Schedule of Insurance Page (20000488).pdf"
+    },
+    {
+      "id": 2238,
+      "name": "Policy Document",
+      "filename": "Policy Document (20000488).pdf"
+    },
+    {
+      "id": 2240,
+      "name": "Preventive Care Endorsement",
+      "filename": "Preventive Care Endorsement (20000488).pdf"
+    }
+  ],
+  "claimDocuments": []
+}

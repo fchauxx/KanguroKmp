@@ -1,0 +1,107 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="@dimen/spacing_xxxs"
+    android:paddingBottom="@dimen/spacing_xxxs">
+
+    <CheckBox
+        android:id="@+id/checkboxButton"
+        style="@style/KanguroCheckbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toStartOf="@id/coverageName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="gone" />
+
+    <TextView
+        android:id="@+id/coverageName"
+        style="@style/KanguroTextStyle.Body.Bold"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/spacing_xs"
+        android:ellipsize="end"
+        android:maxLines="2"
+        app:layout_constraintEnd_toStartOf="@+id/remainingValue"
+        app:layout_constraintStart_toEndOf="@id/checkboxButton"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Routine Wellness Exam" />
+
+    <TextView
+        android:id="@+id/labelCompleted"
+        style="@style/KanguroTextStyle.Caption.Bold"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_quark"
+        android:drawablePadding="10dp"
+        android:gravity="center_vertical"
+        android:text="@string/completed"
+        android:textColor="@color/secondary_medium"
+        android:visibility="gone"
+        app:drawableStartCompat="@drawable/ic_circle_success"
+        app:layout_constraintStart_toStartOf="@id/coverageName"
+        app:layout_constraintTop_toBottomOf="@id/coverageName"
+        tools:visibility="gone" />
+
+    <TextView
+        android:id="@+id/coveragesItemAnnualLimit"
+        style="@style/KanguroTextStyle.Caption.Bold"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_quark"
+        android:textColor="@color/tertiary_extra_dark"
+        app:layout_constraintStart_toStartOf="@id/coverageName"
+        app:layout_constraintTop_toBottomOf="@id/coverageName"
+        tools:text="Up to $50.00" />
+
+    <com.google.android.material.progressindicator.LinearProgressIndicator
+        android:id="@+id/availabilitySlider"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_xxxs"
+        android:indeterminate="false"
+        app:indicatorColor="@color/positive_dark"
+        app:layout_constraintStart_toStartOf="@id/coverageName"
+        app:layout_constraintTop_toBottomOf="@id/coveragesItemAnnualLimit"
+        app:layout_constraintWidth_percent="0.6"
+        app:trackColor="@color/neutral_background"
+        app:trackCornerRadius="12dp"
+        app:trackThickness="12dp"
+        tools:progress="33" />
+
+    <TextView
+        android:id="@+id/labelAvailability"
+        style="@style/KanguroTextStyle.Caption.Regular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_quark"
+        android:text="@string/remaining_limit"
+        android:textColor="@color/secondary_medium"
+        app:layout_constraintStart_toStartOf="@id/coverageName"
+        app:layout_constraintTop_toBottomOf="@id/availabilitySlider"
+        tools:text="1/3 Available" />
+
+    <TextView
+        android:id="@+id/labelRemaining"
+        style="@style/KanguroTextStyle.Caption.Regular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/remaining_limit"
+        android:textColor="@color/secondary_medium"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/remainingValue"
+        style="@style/KanguroTextStyle.Body.Bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_quark"
+        android:textColor="@color/secondary_medium"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/labelRemaining"
+        tools:text="$0.00" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

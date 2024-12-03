@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <LinearLayout
+            android:id="@+id/animalsButton"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/card_height_large"
+            android:background="@drawable/bg_card_options"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toStartOf="@id/globalWarmingButton"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/animalsIconLogo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/spacing_nano_large"
+                android:layout_marginTop="@dimen/spacing_xxxs"
+                android:src="@drawable/ic_animals" />
+
+            <TextView
+                android:id="@+id/animalsLabel"
+                style="@style/KanguroTextStyle.Body.Bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/spacing_nano_large"
+                android:layout_marginBottom="@dimen/spacing_xxxs"
+                android:paddingTop="@dimen/spacing_nano"
+                android:text="@string/animals"
+                android:textSize="@dimen/font_base" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/globalWarmingButton"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/card_height_large"
+            android:layout_marginStart="@dimen/spacing_xxxs"
+            android:background="@drawable/bg_card_options"
+            android:orientation="vertical"
+            app:layout_constraintStart_toEndOf="@id/animalsButton"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <ImageView
+                android:id="@+id/globalWarmingIconLogo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/spacing_nano_large"
+                android:layout_marginTop="@dimen/spacing_xxxs"
+                android:src="@drawable/ic_global" />
+
+            <TextView
+                android:id="@+id/globalWarmingLabel"
+                style="@style/KanguroTextStyle.Body.Bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/spacing_nano_large"
+                android:layout_marginBottom="@dimen/spacing_xxxs"
+                android:paddingTop="@dimen/spacing_nano"
+                android:text="@string/global_warming"
+                android:textSize="@dimen/font_base" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/socialCausesButton"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/card_height_large"
+            android:background="@drawable/bg_card_options"
+            android:orientation="vertical"
+            android:layout_marginTop="@dimen/spacing_xxxs"
+            app:layout_constraintEnd_toStartOf="@id/latinCommunitiesButton"
+            app:layout_constraintTop_toBottomOf="@id/animalsButton"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <ImageView
+                android:id="@+id/socialCausesButtonIconLogo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/spacing_nano_large"
+                android:layout_marginTop="@dimen/spacing_xxxs"
+                android:src="@drawable/ic_social_causes" />
+
+            <TextView
+                android:id="@+id/socialCausesButtonLabel"
+                style="@style/KanguroTextStyle.Body.Bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/spacing_nano_large"
+                android:layout_marginBottom="@dimen/spacing_xxxs"
+                android:paddingTop="@dimen/spacing_nano"
+                android:text="@string/social_causes"
+                android:textSize="@dimen/font_base" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/latinCommunitiesButton"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/card_height_large"
+            android:layout_marginTop="@dimen/spacing_xxxs"
+            android:background="@drawable/bg_card_options"
+            android:orientation="vertical"
+            android:layout_marginStart="@dimen/spacing_xxxs"
+            app:layout_constraintStart_toEndOf="@id/socialCausesButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/animalsButton">
+
+            <ImageView
+                android:id="@+id/latinCommunitiesButtonIconLogo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/spacing_nano_large"
+                android:layout_marginTop="@dimen/spacing_xxxs"
+                android:src="@drawable/ic_people" />
+
+            <TextView
+                android:id="@+id/latinCommunitiesButtonLabel"
+                style="@style/KanguroTextStyle.Body.Bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/spacing_nano_large"
+                android:layout_marginBottom="@dimen/spacing_xxxs"
+                android:paddingTop="@dimen/spacing_nano"
+                android:text="@string/latin_communities"
+                android:textSize="@dimen/font_base" />
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

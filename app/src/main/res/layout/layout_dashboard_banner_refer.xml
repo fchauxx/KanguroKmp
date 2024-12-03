@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="android.view.View.OnClickListener" />
+
+        <variable
+            name="onClickAction"
+            type="OnClickListener" />
+    </data>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dashboard_horizontal_padding"
+        android:layout_marginTop="@dimen/spacing_xs"
+        android:layout_marginEnd="@dimen/dashboard_horizontal_padding"
+        android:onClick="@{onClickAction}"
+        android:outlineProvider="none"
+        app:cardBackgroundColor="@color/primary_darkest"
+        app:cardCornerRadius="@dimen/spacing_nano"
+        app:cardElevation="@dimen/elevation_dashboard_low">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="16dp"
+            android:paddingTop="16dp"
+            android:paddingEnd="16dp">
+
+            <TextView
+                android:id="@+id/bannerTitleLabel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/spacing_xxxs"
+                android:text="@string/get_amazon_gift_card"
+                android:textAppearance="@style/KanguroTextStyle.Headline"
+                app:layout_constraintEnd_toStartOf="@id/headerImage"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/subtitleLabel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/spacing_quark"
+                android:layout_marginTop="@dimen/spacing_nano"
+                android:layout_marginEnd="@dimen/spacing_xxxs"
+                android:layout_marginBottom="@dimen/spacing_xxxs"
+                android:text="@string/refer_a_friend_and_earn_rewards"
+                android:textAppearance="@style/KanguroTextStyle.Subhead.Regular"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/bannerTitleLabel" />
+
+            <ImageView
+                android:id="@+id/headerImage"
+                android:layout_width="135dp"
+                android:layout_height="120dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/img_banner_cat_dog"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="1" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</layout>

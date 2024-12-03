@@ -1,0 +1,622 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.insurtech.kanguro.ui.scenes.profile.ProfileViewModel" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:paddingStart="@dimen/spacing_xs"
+            android:paddingEnd="@dimen/spacing_xs"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:id="@+id/listLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/title"
+                    style="@style/KanguroTextStyle.Title3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_lg"
+                    android:text="@string/profile_information"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <LinearLayout
+                    android:id="@+id/layoutEditProfile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_xs"
+                    android:animateLayoutChanges="true"
+                    android:background="@drawable/bg_claim_summary"
+                    android:orientation="vertical"
+                    android:paddingHorizontal="@dimen/spacing_xxxs">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/KanguroTextStyle.Subhead.Bold"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableEnd="@{viewModel.profileSectionOpen ? @drawable/ic_up : @drawable/ic_down}"
+                        android:gravity="center_vertical"
+                        android:onClick="@{() -> viewModel.switchProfileSection()}"
+                        android:paddingTop="@dimen/spacing_xxxs"
+                        android:paddingBottom="@dimen/spacing_xxxs"
+                        android:text="@string/edit_profile"
+                        tools:drawableEndCompat="@drawable/ic_down" />
+
+                    <com.insurtech.kanguro.designsystem.ui.views.KanguroTextInputLayout
+                        style="@style/KanguroInputLayoutStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:enabled="false"
+                        android:visibility="@{viewModel.profileSectionOpen}"
+                        app:kg_title="@{@string/first_name}"
+                        tools:kg_title="@string/first_name">
+
+                        <com.insurtech.kanguro.designsystem.ui.views.KanguroTextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/first_name"
+                            android:inputType="textPersonName"
+                            android:text="@={viewModel.firstName}" />
+
+                    </com.insurtech.kanguro.designsystem.ui.views.KanguroTextInputLayout>
+
+                    <com.insurtech.kanguro.designsystem.ui.views.KanguroTextInputLayout
+                        style="@style/KanguroInputLayoutStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/spacing_xxxs"
+                        android:enabled="false"
+                        android:visibility="@{viewModel.profileSectionOpen}"
+                        app:kg_title="@{@string/surname}"
+                        tools:kg_title="@string/surname">
+
+                        <com.insurtech.kanguro.designsystem.ui.views.KanguroTextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/surname"
+                            android:inputType="textPersonName"
+                            android:text="@={viewModel.surname}" />
+
+                    </com.insurtech.kanguro.designsystem.ui.views.KanguroTextInputLayout>
+
+                    <com.insurtech.kanguro.designsystem.ui.views.KanguroTextInputLayout
+                        style="@style/KanguroInputLayoutStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/spacing_xxxs"
+                        android:enabled="false"
+                        android:visibility="@{viewModel.profileSectionOpen}"
+                        app:kg_title="@{@string/email_capt}"
+                        tools:kg_title="@string/email_capt">
+
+                        <com.insurtech.kanguro.designsystem.ui.views.KanguroTextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/email_capt"
+                            android:inputType="textEmailAddress"
+                            android:text="@={viewModel.email}" />
+
+                    </com.insurtech.kanguro.designsystem.ui.views.KanguroTextInputLayout>
+
+                    <com.insurtech.kanguro.designsystem.ui.views.KanguroTextInputLayout
+                        style="@style/KanguroInputLayoutStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/spacing_xxxs"
+                        android:visibility="@{viewModel.profileSectionOpen}"
+                        app:kg_title="@{@string/phone_number}"
+                        tools:kg_title="@string/phone_number">
+
+                        <com.insurtech.kanguro.designsystem.ui.views.KanguroTextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/phone_number"
+                            android:imeOptions="actionDone"
+                            android:inputType="number"
+                            android:maxLength="14"
+                            android:text="@={viewModel.phoneNumber}"
+                            android:textWatcher="@{viewModel.phoneMaskTextWatcher}" />
+
+                    </com.insurtech.kanguro.designsystem.ui.views.KanguroTextInputLayout>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/saveProfileButton"
+                        style="@style/KanguroButtonStyle.Primary.Large"
+                        android:layout_marginTop="@dimen/spacing_xxxs"
+                        android:layout_marginBottom="@dimen/spacing_xxxs"
+                        android:enabled="@{viewModel.saveProfileEnabled}"
+                        android:onClick="@{() -> viewModel.onSaveProfilePressed()}"
+                        android:text="@string/save"
+                        android:visibility="@{viewModel.profileSectionOpen}"
+                        app:icon="@drawable/ic_paw_outline" />
+
+                </LinearLayout>
+
+                <!--    <LinearLayout
+                        android:id="@+id/layoutEditAddress"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/spacing_nano"
+                        android:animateLayoutChanges="true"
+                        android:background="@drawable/bg_claim_summary"
+                        android:orientation="vertical"
+                        android:padding="@dimen/spacing_xxxs"
+                        android:visibility="gone"
+                        app:layout_constraintTop_toBottomOf="@id/layoutEditProfile">
+
+                        <TextView
+                            style="@style/KanguroTextStyle.Subhead.Bold"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:onClick="@{() -> viewModel.switchAddressSection()}"
+                            android:text="@string/addresses"
+                            app:drawableEndCompat="@drawable/ic_up" />
+
+                        <com.insurtech.kanguro.ui.custom.KanguroTextInputLayout
+                            style="@style/KanguroInputLayoutStyle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/spacing_xxxs"
+                            android:visibility="@{viewModel.addressSectionOpen}"
+                            app:kg_title="@{@string/zip_code}"
+                            tools:kg_title="@string/zip_code">
+
+                            <com.insurtech.kanguro.ui.custom.KanguroTextInputEditText
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="00000"
+                                android:inputType="number"
+                                android:text="@={viewModel.zipCode}" />
+
+                        </com.insurtech.kanguro.ui.custom.KanguroTextInputLayout>
+
+                        <com.insurtech.kanguro.ui.custom.KanguroTextInputLayout
+                            style="@style/KanguroInputLayoutStyle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/spacing_xxxs"
+                            android:visibility="@{viewModel.addressSectionOpen}"
+                            app:kg_title="@{@string/address}"
+                            tools:kg_title="@string/address">
+
+                            <com.insurtech.kanguro.ui.custom.KanguroTextInputEditText
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="@string/address"
+                                android:inputType="textCapSentences"
+                                android:text="@={viewModel.address}" />
+
+                        </com.insurtech.kanguro.ui.custom.KanguroTextInputLayout>
+
+                        <com.insurtech.kanguro.ui.custom.KanguroTextInputLayout
+                            style="@style/KanguroInputLayoutStyle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/spacing_xxxs"
+                            android:visibility="@{viewModel.addressSectionOpen}"
+                            app:kg_title="@{@string/apt_unit}"
+                            tools:kg_title="@string/apt_unit">
+
+                            <com.insurtech.kanguro.ui.custom.KanguroTextInputEditText
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="@string/apt_unit"
+                                android:inputType="text"
+                                android:text="@={viewModel.aptUnit}" />
+
+                        </com.insurtech.kanguro.ui.custom.KanguroTextInputLayout>
+
+                        <com.insurtech.kanguro.ui.custom.KanguroTextInputLayout
+                            style="@style/KanguroInputLayoutStyle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/spacing_xxxs"
+                            android:enabled="false"
+                            android:visibility="@{viewModel.addressSectionOpen}"
+                            app:kg_title="@{@string/city}"
+                            tools:kg_title="@string/city">
+
+                            <com.insurtech.kanguro.ui.custom.KanguroTextInputEditText
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="@string/city"
+                                android:inputType="textCapWords"
+                                android:text="@={viewModel.city}" />
+
+                        </com.insurtech.kanguro.ui.custom.KanguroTextInputLayout>
+
+                        <com.insurtech.kanguro.ui.custom.KanguroTextInputLayout
+                            style="@style/KanguroInputLayoutStyle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/spacing_xxxs"
+                            android:enabled="false"
+                            android:visibility="@{viewModel.addressSectionOpen}"
+                            app:kg_title="@{@string/state}"
+                            tools:kg_title="@string/state">
+
+                            <com.insurtech.kanguro.ui.custom.KanguroTextInputEditText
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="@string/state"
+                                android:inputType="text"
+                                android:text="@={viewModel.state}"
+                                android:textAllCaps="true" />
+
+                        </com.insurtech.kanguro.ui.custom.KanguroTextInputLayout>
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/saveAddressButton"
+                            style="@style/KanguroButtonStyle.Primary.Large"
+                            android:layout_marginTop="@dimen/spacing_xxxs"
+                            android:onClick="@{() -> viewModel.onSaveAddressedPressed()}"
+                            android:text="@string/save"
+                            android:visibility="@{viewModel.addressSectionOpen}"
+                            app:icon="@drawable/ic_paw_outline" />
+
+                    </LinearLayout>-->
+
+                <LinearLayout
+                    android:id="@+id/layoutChangePassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_nano"
+                    android:animateLayoutChanges="true"
+                    android:background="@drawable/bg_claim_summary"
+                    android:orientation="vertical"
+                    android:paddingHorizontal="@dimen/spacing_xxxs"
+                    app:layout_constraintTop_toBottomOf="@id/layoutEditProfile">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/KanguroTextStyle.Subhead.Bold"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableEnd="@{viewModel.passwordSectionOpen ? @drawable/ic_up : @drawable/ic_down}"
+                        android:gravity="center_vertical"
+                        android:onClick="@{() -> viewModel.switchPasswordSection()}"
+                        android:paddingTop="@dimen/spacing_xxxs"
+                        android:paddingBottom="@dimen/spacing_xxxs"
+                        android:text="@string/change_password"
+                        app:drawableEndCompat="@drawable/ic_up" />
+
+                    <com.insurtech.kanguro.designsystem.ui.views.KanguroTextInputLayout
+                        style="@style/KanguroInputLayoutStyle.Password"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="@{viewModel.passwordSectionOpen}"
+                        app:kg_title="@{@string/current_password}"
+                        tools:kg_title="@string/current_password">
+
+                        <com.insurtech.kanguro.designsystem.ui.views.KanguroTextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="textPassword"
+                            android:text="@={viewModel.currentPassword}" />
+
+                    </com.insurtech.kanguro.designsystem.ui.views.KanguroTextInputLayout>
+
+                    <com.insurtech.kanguro.designsystem.ui.views.KanguroTextInputLayout
+                        style="@style/KanguroInputLayoutStyle.Password"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/spacing_xxxs"
+                        android:visibility="@{viewModel.passwordSectionOpen}"
+                        app:error="@{viewModel.passwordError}"
+                        app:kg_title="@{@string/new_password}"
+                        tools:kg_title="@string/new_password">
+
+                        <com.insurtech.kanguro.designsystem.ui.views.KanguroTextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="textPassword"
+                            android:text="@={viewModel.newPassword}" />
+
+                    </com.insurtech.kanguro.designsystem.ui.views.KanguroTextInputLayout>
+
+                    <com.insurtech.kanguro.designsystem.ui.views.KanguroTextInputLayout
+                        style="@style/KanguroInputLayoutStyle.Password"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/spacing_xxxs"
+                        android:visibility="@{viewModel.passwordSectionOpen}"
+                        app:error="@{viewModel.passwordError}"
+                        app:kg_title="@{@string/repeat_new_password}"
+                        tools:kg_title="@string/repeat_new_password">
+
+                        <com.insurtech.kanguro.designsystem.ui.views.KanguroTextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="textPassword"
+                            android:text="@={viewModel.repeatPassword}" />
+
+                    </com.insurtech.kanguro.designsystem.ui.views.KanguroTextInputLayout>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/changePasswordButton"
+                        style="@style/KanguroButtonStyle.Primary.Large"
+                        android:layout_marginTop="@dimen/spacing_xxxs"
+                        android:layout_marginBottom="@dimen/spacing_xxxs"
+                        android:enabled="@{viewModel.savePasswordEnabled}"
+                        android:onClick="@{() -> viewModel.onChangePasswordPressed()}"
+                        android:text="@string/save"
+                        android:visibility="@{viewModel.passwordSectionOpen}"
+                        app:icon="@drawable/ic_paw_outline" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/myAccountSection"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_nano"
+                    android:animateLayoutChanges="true"
+                    android:background="@drawable/bg_claim_summary"
+                    android:orientation="vertical"
+                    android:paddingHorizontal="@dimen/spacing_xxxs"
+                    app:layout_constraintTop_toBottomOf="@id/layoutChangePassword">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/KanguroTextStyle.Subhead.Bold"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableEnd="@{viewModel.myAccountSectionOpen ? @drawable/ic_up : @drawable/ic_down}"
+                        android:gravity="center_vertical"
+                        android:onClick="@{() -> viewModel.switchMyAccountSection()}"
+                        android:paddingTop="@dimen/spacing_xxxs"
+                        android:paddingBottom="@dimen/spacing_xxxs"
+                        android:text="@string/my_account"
+                        app:drawableEndCompat="@drawable/ic_up" />
+
+                    <TextView
+                        style="@style/KanguroTextStyle.Subhead.Bold"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="@dimen/spacing_xxxs"
+                        android:text="@string/delete_user_id_and_password"
+                        android:textAllCaps="true"
+                        android:textColor="@color/secondary_dark"
+                        android:visibility="@{viewModel.myAccountSectionOpen}" />
+
+                    <LinearLayout
+                        android:id="@+id/myAccountFirstSection"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingTop="@dimen/spacing_xxs"
+                        android:visibility="@{viewModel.myAccountSectionOpen}"
+                        tools:ignore="UseCompoundDrawables">
+
+                        <ImageView
+                            android:layout_width="@dimen/spacing_xxs"
+                            android:layout_height="@dimen/spacing_xxxs"
+                            android:layout_gravity="center_horizontal"
+                            android:padding="@dimen/spacing_quark"
+                            android:src="@drawable/img_circle_4"
+                            app:tint="@color/secondary_medium" />
+
+                        <TextView
+                            style="@style/KanguroTextStyle.Subhead.Regular"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/profile_first_topic"
+                            android:textColor="@color/secondary_medium" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/myAccountSecondSection"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingTop="@dimen/spacing_xxs"
+                        android:visibility="@{viewModel.myAccountSectionOpen}"
+                        tools:ignore="UseCompoundDrawables">
+
+
+                        <ImageView
+                            android:layout_width="@dimen/spacing_xxs"
+                            android:layout_height="@dimen/spacing_xxxs"
+                            android:layout_gravity="center_horizontal"
+                            android:padding="@dimen/spacing_quark"
+                            android:src="@drawable/img_circle_4"
+                            app:tint="@color/secondary_medium" />
+
+                        <TextView
+                            style="@style/KanguroTextStyle.Subhead.Regular"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/profile_second_topic"
+                            android:textColor="@color/secondary_medium" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/myAccountThirdSection"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingTop="@dimen/spacing_xxs"
+                        android:visibility="@{viewModel.myAccountSectionOpen}"
+                        tools:ignore="UseCompoundDrawables">
+
+                        <ImageView
+                            android:layout_width="@dimen/spacing_xxs"
+                            android:layout_height="@dimen/spacing_xxxs"
+                            android:layout_gravity="center_horizontal"
+                            android:padding="@dimen/spacing_quark"
+                            android:src="@drawable/img_circle_4"
+                            app:tint="@color/secondary_medium" />
+
+                        <TextView
+                            style="@style/KanguroTextStyle.Subhead.Regular"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/profile_third_topic"
+                            android:textColor="@color/secondary_medium" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/myAccountFourthSection"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingTop="@dimen/spacing_xxs"
+                        android:visibility="@{viewModel.myAccountSectionOpen}"
+                        tools:ignore="UseCompoundDrawables">
+
+                        <ImageView
+                            android:layout_width="@dimen/spacing_xxs"
+                            android:layout_height="@dimen/spacing_xxxs"
+                            android:layout_gravity="center_horizontal"
+                            android:padding="@dimen/spacing_quark"
+                            android:src="@drawable/img_circle_4"
+                            app:tint="@color/secondary_medium" />
+
+                        <TextView
+                            style="@style/KanguroTextStyle.Subhead.Regular"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/profile_fourth_topic"
+                            android:textColor="@color/secondary_medium"
+                            android:visibility="@{viewModel.myAccountSectionOpen}" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="@dimen/spacing_xxs"
+                        android:background="@color/neutral_background"
+                        android:visibility="@{viewModel.myAccountSectionOpen}" />
+
+                    <TextView
+                        style="@style/KanguroTextStyle.Subhead.Regular"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="@dimen/spacing_xxs"
+                        android:text="@string/profile_send_deletion_request"
+                        android:textColor="@color/tertiary_extra_dark"
+                        android:visibility="@{viewModel.myAccountSectionOpen}" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/requestDeletionButton"
+                        style="@style/KanguroButtonStyle.Primary.Large"
+                        android:layout_marginTop="@dimen/spacing_xxs"
+                        android:layout_marginBottom="@dimen/spacing_xxxs"
+                        android:text="@string/send_request"
+                        android:visibility="@{viewModel.myAccountSectionOpen}" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layoutOtherSection"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_nano"
+                    android:layout_marginBottom="@dimen/spacing_xxxs"
+                    android:animateLayoutChanges="true"
+                    android:background="@drawable/bg_claim_summary"
+                    android:orientation="vertical"
+                    android:paddingHorizontal="@dimen/spacing_xxxs"
+                    app:layout_constraintTop_toBottomOf="@id/myAccountSection">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/KanguroTextStyle.Subhead.Bold"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableEnd="@{viewModel.otherSectionOpen ? @drawable/ic_up : @drawable/ic_down}"
+                        android:gravity="center_vertical"
+                        android:onClick="@{() -> viewModel.switchOtherSection()}"
+                        android:paddingTop="@dimen/spacing_xxxs"
+                        android:paddingBottom="@dimen/spacing_xxxs"
+                        android:text="@string/other"
+                        app:drawableEndCompat="@drawable/ic_up" />
+
+                    <TextView
+                        style="@style/KanguroTextStyle.Subhead.Bold"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/cancel_or_change_policy"
+                        android:textAllCaps="true"
+                        android:textColor="@color/secondary_dark"
+                        android:visibility="@{viewModel.otherSectionOpen}" />
+
+                    <TextView
+                        android:id="@+id/phoneLabel"
+                        style="@style/KanguroTextStyle.Subhead.Regular"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="@dimen/spacing_xxs"
+                        android:textColor="@color/secondary_medium"
+                        android:textColorLink="@color/tertiary_darkest"
+                        android:visibility="@{viewModel.otherSectionOpen}"
+                        tools:text="@string/cancel_or_change_coverage_information_0" />
+
+                    <TextView
+                        android:id="@+id/emailLabel"
+                        style="@style/KanguroTextStyle.Subhead.Regular"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/spacing_xxxs"
+                        android:paddingBottom="@dimen/spacing_xxs"
+                        android:textColor="@color/secondary_medium"
+                        android:textColorLink="@color/tertiary_darkest"
+                        android:visibility="@{viewModel.otherSectionOpen}"
+                        tools:text="@string/cancel_or_change_coverage_information_1" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@color/white_50"
+            android:visibility="@{viewModel.isLoading()}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:visibility="gone">
+
+            <ProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:progressTint="@color/secondary_darkest" />
+
+        </FrameLayout>
+
+        <ImageButton
+            android:id="@+id/closeButton"
+            style="@style/KanguroCloseButtonX"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
+
+

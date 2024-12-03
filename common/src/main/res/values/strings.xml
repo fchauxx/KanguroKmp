@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="monthly_payment">Monthly payment</string>
+    <string name="yearly_payment">Yearly payment</string>
+    <string name="quarterly_payment">Quarterly payment</string>
+
+    <string name="active">Active</string>
+    <string name="inactive">Inactive</string>
+    <string name="canceled">Canceled</string>
+    <string name="finished">Finished</string>
+
+    <string name="place_open">Open</string>
+    <string name="place_closed">Closed</string>
+
+    <string name="animals">Animals</string>
+    <string name="global_warming">Global Warming</string>
+    <string name="social_causes">Social Causes</string>
+    <string name="latin_communities">Latin Communities</string>
+
+    <string name="claim_status_submitted">Submitted</string>
+    <string name="claim_status_assigned">Assigned</string>
+    <string name="claim_status_approved">Approved</string>
+    <string name="claim_status_in_review">In Review</string>
+    <string name="claim_status_draft">Draft</string>
+    <string name="claim_status_closed">Closed</string>
+    <string name="claim_status_deleted">Deleted</string>
+    <string name="claim_status_success">Success</string>
+    <string name="claim_status_denied">Denied</string>
+    <string name="claim_status_approved_paid">Paid</string>
+    <string name="claim_status_unknown">Unknown</string>
+
+    <string name="claim_status_pending_medical_history">Pending Medical History</string>
+    <string name="claim_status_medical_history_in_review">Medical History In Review</string>
+</resources>

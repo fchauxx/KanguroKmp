@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:paddingHorizontal="@dimen/border_radius_lg"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_marginTop="@dimen/spacing_quark"
+    android:layout_height="wrap_content">
+
+    <FrameLayout
+        android:id="@+id/parentFrame"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/botIcon"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <FrameLayout
+            tools:layout_width="wrap_content"
+            tools:layout_height="wrap_content"
+            android:background="@drawable/received_message_background"
+            android:id="@+id/contentFrame"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:layout_width="70dp"
+                android:layout_height="40dp"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true"
+                app:lottie_rawRes="@raw/chat_typing_dots" />
+
+        </FrameLayout>
+
+    </FrameLayout>
+
+    <ImageView
+        android:id="@+id/botIcon"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:visibility="invisible"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="@dimen/spacing_nano"
+        app:layout_constraintEnd_toStartOf="@id/parentFrame"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/parentFrame" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

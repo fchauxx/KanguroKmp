@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View.OnClickListener" />
+
+        <import type="android.view.View" />
+
+        <variable
+            name="action"
+            type="com.insurtech.kanguro.domain.dashboard.Action" />
+
+        <variable
+            name="isLoading"
+            type="Boolean" />
+
+        <variable
+            name="onClickAction"
+            type="OnClickListener" />
+
+        <variable
+            name="backgroundTint"
+            type="Integer" />
+    </data>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dashboard_horizontal_padding"
+        android:layout_marginTop="@dimen/spacing_quark"
+        android:layout_marginEnd="@dimen/dashboard_horizontal_padding"
+        android:backgroundTint="@{backgroundTint}"
+        android:onClick="@{onClickAction}"
+        app:cardCornerRadius="@dimen/spacing_nano"
+        app:cardElevation="0dp">
+
+        <TextView
+            android:id="@+id/actionName"
+            style="@style/KanguroTextStyle.Body.Bold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawablePadding="10dp"
+            android:gravity="center_vertical"
+            android:padding="18dp"
+            android:text="@{action.nameRes}"
+            app:drawableStart="@{action.icon}"
+            app:drawableTint="@color/secondary_medium"
+            tools:drawableStart="@drawable/ic_message_favorite"
+            tools:text="File a claim" />
+
+        <ProgressBar
+            android:id="@+id/isLoading"
+            style="@style/ProgressBarNormal"
+            android:layout_gravity="end|center_vertical"
+            android:layout_marginEnd="@dimen/spacing_xxxs"
+            android:visibility="@{isLoading ? View.VISIBLE : View.GONE}" />
+
+    </com.google.android.material.card.MaterialCardView>
+
+</layout>

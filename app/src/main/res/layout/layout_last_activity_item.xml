@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <import type="android.view.View.OnClickListener" />
+
+        <variable
+            name="activity"
+            type="com.insurtech.kanguro.domain.dashboard.LastActivity" />
+
+        <variable
+            name="onClickAction"
+            type="OnClickListener" />
+    </data>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="@dimen/spacing_nano"
+        app:strokeColor="@color/neutral_background"
+        app:cardElevation="@dimen/elevation_dashboard_low"
+        app:strokeWidth="1dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="@dimen/spacing_xxxs">
+
+            <TextView
+                android:id="@+id/eventTitleLabel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/spacing_xxxs"
+                android:text="@{activity.activityName}"
+                android:textAppearance="@style/KanguroTextStyle.Body.Bold"
+                app:layout_constraintEnd_toStartOf="@id/detailsButton"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Pet Loves Clinic" />
+
+            <Button
+                android:id="@+id/detailsButton"
+                style="@style/KanguroButtonStyle.SecondaryLight.Small"
+                android:layout_width="wrap_content"
+                android:text="@string/details"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/petImageLabel"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_marginTop="@dimen/spacing_quark"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/eventTitleLabel"
+                app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize50Percent"
+                tools:src="@tools:sample/avatars" />
+
+            <TextView
+                android:id="@+id/petNameAndDateLabel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/spacing_quark"
+                android:layout_marginEnd="@dimen/spacing_xxxs"
+                android:text="@{activity.nameAndDate}"
+                android:textAppearance="@style/KanguroTextStyle.Footnote.Regular"
+                android:textColor="@color/secondary_dark"
+                app:layout_constraintBottom_toBottomOf="@id/petImageLabel"
+                app:layout_constraintEnd_toStartOf="@id/detailsButton"
+                app:layout_constraintStart_toEndOf="@id/petImageLabel"
+                app:layout_constraintTop_toTopOf="@id/petImageLabel"
+                tools:text="Felix - Dev 04, 2021" />
+
+            <TextView
+                android:id="@+id/ratePlaceLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_xxxs"
+                android:textAppearance="@style/KanguroTextStyle.Footnote.Regular"
+                android:textColor="@color/secondary_medium"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/petImageLabel"
+                tools:text="Rate this place" />
+
+            <include
+                layout="@layout/layout_five_stars"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ratePlaceLabel"
+                app:starCount="@{activity.rate}" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</layout>

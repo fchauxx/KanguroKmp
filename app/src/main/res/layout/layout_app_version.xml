@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout>
+
+    <data>
+
+        <variable
+            name="version"
+            type="String" />
+    </data>
+
+    <TextView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/appVersion"
+        style="@style/KanguroTextStyle.Caption.Bold"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:textAlignment="center"
+        tools:text="v 1.0.0"
+        android:text="@{@string/app_version(version)}"
+        android:layout_marginTop="@dimen/spacing_sm"/>
+</layout>

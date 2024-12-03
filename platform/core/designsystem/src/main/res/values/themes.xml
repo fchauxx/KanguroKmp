@@ -1,0 +1,54 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+
+    <style name="Theme.Kanguro" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/secondary_darkest</item>
+        <item name="colorPrimaryVariant">@color/primary_darkest</item>
+        <item name="colorOnPrimary">@color/primary_darkest</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/secondary_medium</item>
+        <item name="colorSecondaryVariant">@color/secondary_darkest</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <item name="android:textColor">@color/secondary_darkest</item>
+
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+
+        <!-- Customize your theme here. -->
+        <item name="kanguroInputLayoutStyleAttr">@style/KanguroInputLayoutStyle</item>
+        <item name="kanguroInputEditTextStyleAttr">@style/KanguroEditTextStyle</item>
+        <item name="android:outlineSpotShadowColor" tools:targetApi="p">@color/shadow_color</item>
+        <item name="android:outlineAmbientShadowColor" tools:targetApi="p">@color/shadow_color</item>
+
+    </style>
+
+    <style name="Theme.Kanguro.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.App.Starting" parent="Theme.SplashScreen">
+        <!-- Set the splash screen background, animated icon, and animation duration. -->
+        <item name="windowSplashScreenBackground">@color/secondary_darkest</item>
+
+        <!-- Use windowSplashScreenAnimatedIcon to add either a drawable or an
+             animated drawable. One of these is required. -->
+        <item name="windowSplashScreenAnimatedIcon">@drawable/img_kanguro_logo_box</item>
+
+        <!-- Required for animated icons -->
+        <item name="windowSplashScreenAnimationDuration">200</item>
+
+        <!-- Set the theme of the Activity that directly follows your splash screen. -->
+        <!-- Required -->
+        <item name="postSplashScreenTheme">@style/Theme.Kanguro</item>
+
+    </style>
+
+
+    <style name="Theme.Kanguro.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.Kanguro.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+</resources>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- FONT -->
+    <dimen name="font_smallest">10sp</dimen>
+    <dimen name="font_xxs">11sp</dimen>
+    <dimen name="font_xs">12sp</dimen>
+    <dimen name="font_s">14sp</dimen>
+    <dimen name="font_base">16sp</dimen>
+    <dimen name="font_sm">21sp</dimen>
+    <dimen name="font_md">24sp</dimen>
+    <dimen name="font_lg">28sp</dimen>
+    <dimen name="font_xl">32sp</dimen>
+    <dimen name="font_xxl">36sp</dimen>
+    <dimen name="font_display">40sp</dimen>
+
+    <!-- SPACING -->
+    <dimen name="spacing_quark">4dp</dimen>
+    <dimen name="spacing_nano">8dp</dimen>
+    <dimen name="spacing_nano_large">12dp</dimen>
+    <dimen name="spacing_xxxs">16dp</dimen>
+    <dimen name="spacing_xxs">24dp</dimen>
+    <dimen name="spacing_xs">32dp</dimen>
+    <dimen name="spacing_sm">40dp</dimen>
+    <dimen name="spacing_md">48dp</dimen>
+    <dimen name="spacing_lg">64dp</dimen>
+    <dimen name="spacing_xl">80dp</dimen>
+    <dimen name="spacing_xxl">96dp</dimen>
+
+    <!-- BORDER -->
+    <dimen name="border_radius_sm">8dp</dimen>
+    <dimen name="border_radius_md">16dp</dimen>
+    <dimen name="border_radius_lg">24dp</dimen>
+    <dimen name="border_radius_pill">100dp</dimen>
+
+    <dimen name="border_width_hairline">1dp</dimen>
+    <dimen name="border_width_thin">2dp</dimen>
+    <dimen name="border_width_thick">4dp</dimen>
+    <dimen name="border_width_heavy">8dp</dimen>
+
+    <dimen name="field_height">56dp</dimen>
+    <dimen name="field_phone_code_height">48dp</dimen>
+
+    <dimen name="button_height_large">64dp</dimen>
+    <dimen name="button_height_medium">46dp</dimen>
+    <dimen name="button_height_small">28dp</dimen>
+
+    <dimen name="border_minimap">4dp</dimen>
+
+    <!-- SIZE -->
+    <dimen name="dots_size">4dp</dimen>
+    <dimen name="inner_bar_size">6dp</dimen>
+    <dimen name="bar_size">10dp</dimen>
+    <dimen name="icon_size">24dp</dimen>
+    <dimen name="icon_size_small">20dp</dimen>
+    <dimen name="icon_size_xxxs">16dp</dimen>
+    <dimen name="helper_icon_size">32dp</dimen>
+    <dimen name="blob_size">64dp</dimen>
+    <dimen name="welcome_screen_bottom_content_height">170dp</dimen>
+    <dimen name="chatbot_action_panel">63dp</dimen>
+    <dimen name="chatbot_button_height_vertical">43dp</dimen>
+    <dimen name="chatbot_message_image_size">120dp</dimen>
+    <dimen name="chatbot_message_map_size">120dp</dimen>
+    <dimen name="chatbot_message_layer_map_size">108dp</dimen>
+    <dimen name="chatbot_message_layer_text_width">51dp</dimen>
+    <dimen name="chatbot_message_layer_text_height">22dp</dimen>
+    <dimen name="card_width">148dp</dimen>
+    <dimen name="card_height">100dp</dimen>
+    <dimen name="card_height_large">110dp</dimen>
+    <dimen name="claim_radio_width">106dp</dimen>
+    <dimen name="claim_radio_height">33dp</dimen>
+    <dimen name="draft_popup_width">150dp</dimen>
+    <dimen name="draft_popup_height">112dp</dimen>
+
+    <!-- TRANSLATION -->
+    <dimen name="icon_translation">10dp</dimen>
+    <dimen name="blob_translation">8dp</dimen>
+
+    <dimen name="elevation_dashboard_low">16dp</dimen>
+    <dimen name="elevation_dashboard_high">24dp</dimen>
+
+    <dimen name="dashboard_horizontal_padding">@dimen/spacing_xxs</dimen>
+    <dimen name="top_carousel_padding">2dp</dimen>
+    <dimen name="bottom_carousel_padding">10dp</dimen>
+    <dimen name="dash_carousel_item_spacing">@dimen/spacing_nano</dimen>
+    <dimen name="chat_divider_size">0.5dp</dimen>
+
+</resources>

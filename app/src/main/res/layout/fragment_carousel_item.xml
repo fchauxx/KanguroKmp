@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="@dimen/welcome_screen_bottom_content_height"
+        tools:context=".ui.scenes.welcome.WelcomeCarouselItemFragment">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/contentHeightGuideline"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_end="150dp" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/backgroundImage"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toTopOf="@id/contentHeightGuideline"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearanceOverlay="@style/WelcomeScreenCornerSize"
+            tools:src="@drawable/img_02" />
+
+        <TextView
+            android:id="@+id/contentText"
+            style="@style/KanguroTextStyle.Title3"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="@dimen/spacing_xs"
+            android:layout_marginTop="@dimen/spacing_xxxs"
+            android:layout_marginEnd="@dimen/spacing_xs"
+            android:layout_marginBottom="@dimen/spacing_xxxs"
+            android:gravity="start"
+            app:autoSizeMaxTextSize="@dimen/font_md"
+            app:autoSizeMinTextSize="11sp"
+            app:autoSizeTextType="uniform"
+            app:layout_constraintBottom_toTopOf="@id/switchLanguage"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/contentHeightGuideline"
+            app:layout_constraintVertical_bias="0.0"
+            tools:text="@tools:sample/lorem[10]" />
+
+        <TextView
+            android:id="@+id/switchLanguage"
+            android:layout_width="wrap_content"
+            android:textAppearance="@style/KanguroTextStyle.Body.Bold"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_xs"
+            android:layout_marginBottom="@dimen/spacing_xxxs"
+            android:drawablePadding="@dimen/spacing_nano"
+            android:gravity="center"
+            android:text="@string/switch_language"
+            android:textColor="@color/primary_dark"
+            app:drawableEndCompat="@drawable/ic_repeat"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/contentText" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

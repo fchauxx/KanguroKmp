@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.insurtech.kanguro.ui.scenes.login.LoginViewModel" />
+    </data>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        tools:context=".ui.scenes.login.LoginFragment">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/spacing_xs">
+
+            <ImageView
+                android:id="@+id/logo_title"
+                android:layout_width="160dp"
+                android:layout_height="75dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="40dp"
+                android:src="@drawable/logo_single" />
+
+            <TextView
+                android:id="@+id/helloLabel"
+                style="@style/KanguroTextStyle.Title1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/spacing_xs"
+                android:paddingBottom="@dimen/spacing_xs"
+                android:text="@string/hello" />
+
+            <com.insurtech.kanguro.designsystem.ui.views.KanguroTextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:kg_title="@string/enter_your_email">
+
+                <com.insurtech.kanguro.designsystem.ui.views.KanguroTextInputEditText
+                    android:id="@+id/emailField"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:autofillHints="emailAddress"
+                    android:drawableStart="@drawable/ic_sms"
+                    android:hint="@string/email"
+                    android:imeOptions="actionGo"
+                    android:inputType="textEmailAddress"
+                    android:text="@={viewModel.email}"
+                    app:onImeAction="@{viewModel::onContinuePressed}" />
+
+            </com.insurtech.kanguro.designsystem.ui.views.KanguroTextInputLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/continueButton"
+                style="@style/KanguroButtonStyle.Primary.Large"
+                android:layout_marginTop="@dimen/spacing_xxs"
+                android:enabled="@{viewModel.isEmailValid}"
+                android:onClick="@{() -> viewModel.onContinuePressed()}"
+                android:text="@string/btn_continue"
+                tools:icon="@drawable/ic_paw_outline" />
+
+            <!--<Space
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />-->
+
+            <!--<com.google.android.material.button.MaterialButton
+                style="@style/KanguroButtonStyle.SecondaryLight.Large"
+                android:layout_marginTop="@dimen/spacing_xxs"
+                android:text="@string/sign_in_with_google"
+                app:icon="@drawable/ic_google"
+                app:iconGravity="textStart" />-->
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+</layout>

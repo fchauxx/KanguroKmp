@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.insurtech.kanguro.ui.scenes.dashboard.DashboardViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:animateLayoutChanges="true"
+        android:background="@color/white">
+
+        <include
+            android:id="@+id/bottomNavigationView"
+            layout="@layout/bottom_navigation_menu"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/toolbarGroup"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:constraint_referenced_ids="bottomNavigationView,borderLeft,borderRight" />
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/fragmentContainerView"
+            android:name="androidx.navigation.fragment.NavHostFragment"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:defaultNavHost="true"
+            app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:navGraph="@navigation/nav_home" />
+
+        <View
+            android:id="@+id/borderLeft"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:background="@drawable/border_bottom_nav"
+            android:elevation="8dp"
+            app:elevation="8dp"
+            app:layout_constraintBottom_toTopOf="@id/bottomNavigationView"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <View
+            android:id="@+id/borderRight"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:background="@drawable/border_bottom_nav"
+            android:elevation="8dp"
+            android:rotation="270"
+            app:elevation="8dp"
+            app:layout_constraintBottom_toTopOf="@id/bottomNavigationView"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/centerJavier"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:constraint_referenced_ids="javierBlob,javierImage" />
+
+        <ImageView
+            android:id="@+id/javierImage"
+            android:layout_width="@dimen/helper_icon_size"
+            android:layout_height="56dp"
+            android:src="@drawable/ic_chat_javier"
+            android:translationZ="@dimen/icon_translation"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/bottomNavigationView" />
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/javierBlob"
+            android:layout_width="@dimen/blob_size"
+            android:layout_height="@dimen/blob_size"
+            android:layout_marginTop="@dimen/spacing_nano"
+            android:translationZ="@dimen/blob_translation"
+            app:layout_constraintBottom_toBottomOf="@id/javierImage"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/javierImage"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/javier_blob" />
+
+        <FrameLayout
+            android:id="@+id/initialLoader"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/neutral_background"
+            android:clickable="true"
+            android:focusable="true"
+            android:translationZ="16dp"
+            tools:visibility="gone">
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:layout_gravity="center"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true"
+                app:lottie_rawRes="@raw/kanguro_jumping_animation" />
+
+        </FrameLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

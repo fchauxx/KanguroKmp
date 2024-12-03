@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.insurtech.kanguro.ui.scenes.experienceFeedback.ExperienceFeedbackViewModel" />
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/primary_medium"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            tools:context=".ui.scenes.experienceFeedback.ExperienceFeedbackFragment">
+
+            <TextView
+                android:id="@+id/title"
+                style="@style/KanguroTextStyle.Title3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/spacing_xxs"
+                android:layout_marginTop="@dimen/spacing_md"
+                android:layout_marginEnd="@dimen/spacing_xxs"
+                android:gravity="center"
+                android:text="@string/experience_question"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/feedbackIcon"
+                android:layout_width="250dp"
+                android:layout_height="250dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/title"
+                app:srcGif="@{viewModel.image}"
+                app:srcGifPlaceholder="@{@drawable/img_feedback_2}"
+                tools:src="@drawable/img_feedback_2" />
+
+            <androidx.compose.ui.platform.ComposeView
+                android:id="@+id/compose_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/spacing_xxs"
+                android:layout_marginTop="@dimen/spacing_xs"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/feedbackIcon"
+                tools:composableName="com.insurtech.kanguro.designsystem.ui.composables.experienceFeedback.RadioGroupRatingKt.RadioGroupRatingFeedbackPreview" />
+
+            <EditText
+                android:id="@+id/feedbackEditText"
+                style="@style/TestingStyle"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginHorizontal="@dimen/spacing_xxs"
+                android:layout_marginTop="@dimen/spacing_xs"
+                android:layout_weight="1"
+                android:background="@drawable/kanguro_feedback_field"
+                android:gravity="top|start"
+                android:hint="@string/tell_us"
+                android:imeOptions="actionDone"
+                android:minHeight="140dp"
+                android:paddingHorizontal="@dimen/spacing_xxxs"
+                android:paddingVertical="@dimen/spacing_xxs"
+                android:text="@={viewModel.feedback}"
+                android:textAppearance="@style/KanguroTextStyle.Body.Bold"
+                android:textColor="@color/secondary_darkest"
+                android:textColorHint="@color/secondary_darkest" />
+
+            <com.insurtech.kanguro.designsystem.ui.views.LoadableButtonLayout
+                android:id="@+id/loadable"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/spacing_xxs"
+                android:layout_marginTop="@dimen/spacing_xxs"
+                android:layout_marginBottom="@dimen/spacing_xs"
+                app:isLoading="@{viewModel.isLoading()}">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/confirmButton"
+                    style="@style/KanguroButtonStyle.Primary.Large"
+                    android:text="@string/send_feedback" />
+
+                <ProgressBar style="@style/ProgressBarBtnSmall" />
+
+            </com.insurtech.kanguro.designsystem.ui.views.LoadableButtonLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</layout>

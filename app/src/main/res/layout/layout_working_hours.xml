@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TextView
+        android:id="@+id/kanguroWorkingHours"
+        style="@style/KanguroTextStyle.Body.Regular"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dashboard_horizontal_padding"
+        android:layout_marginTop="@dimen/spacing_quark"
+        android:layout_marginBottom="@dimen/spacing_xxxs"
+        android:background="@drawable/bg_working_hours"
+        android:paddingHorizontal="@dimen/spacing_xxxs"
+        android:paddingVertical="@dimen/spacing_nano"
+        android:text="@string/working_hours">
+
+    </TextView>
+</layout>

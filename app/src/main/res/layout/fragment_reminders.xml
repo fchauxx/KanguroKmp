@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageButton
+        android:id="@+id/closeButton"
+        style="@style/KanguroCloseButtonX"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/remindersIcon"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="@dimen/spacing_xs"
+        android:src="@drawable/ic_notification"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/title"
+        app:tint="@color/primary_darkest" />
+
+    <TextView
+        android:id="@+id/title"
+        style="@style/KanguroTextStyle.Title1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/spacing_nano"
+        android:layout_marginTop="@dimen/spacing_md"
+        android:layout_marginEnd="@dimen/spacing_xs"
+        android:text="@string/reminders_section"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/remindersIcon"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/subtitle"
+        style="@style/KanguroTextStyle.Body.Regular"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/spacing_xs"
+        android:layout_marginTop="@dimen/spacing_xxs"
+        android:layout_marginEnd="@dimen/spacing_xs"
+        android:text="@string/what_you_want_to_see"
+        android:textColor="@color/neutral_dark"
+        app:layout_constraintTop_toBottomOf="@id/title" />
+
+    <HorizontalScrollView
+        android:id="@+id/filterChipScroll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_nano"
+        android:clipToPadding="false"
+        android:paddingHorizontal="@dimen/spacing_xs"
+        android:scrollbars="none"
+        app:layout_constraintTop_toBottomOf="@id/subtitle">
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/filterChips"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:selectionRequired="true"
+            app:singleLine="true"
+            app:singleSelection="true">
+
+        </com.google.android.material.chip.ChipGroup>
+
+    </HorizontalScrollView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:clipToPadding="false"
+        android:paddingHorizontal="@dimen/spacing_xs"
+        android:paddingBottom="@dimen/spacing_xs"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/filterChipScroll"
+        tools:listitem="@layout/layout_reminder_wide" />
+
+    <TextView
+        android:id="@+id/noRemindersLabel"
+        style="@style/KanguroTextStyle.Body.Regular"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/spacing_md"
+        android:visibility="gone"
+        android:gravity="center"
+        android:text="@string/no_reminders"
+        android:textColor="@color/secondary_medium"
+        app:layout_constraintTop_toBottomOf="@id/filterChipScroll" />
+
+    <androidx.compose.ui.platform.ComposeView
+        android:id="@+id/compose_loader"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

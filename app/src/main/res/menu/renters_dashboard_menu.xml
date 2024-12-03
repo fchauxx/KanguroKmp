@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/homeDashboardFragment"
+        android:icon="@drawable/renters_home_menu_icon"
+        android:title="@string/home_menu" />
+    <item
+        android:id="@+id/petDashboardFragment"
+        android:icon="@drawable/home_menu_icon"
+        android:title="@string/pet_menu" />
+    <item
+        android:id="@+id/rentersDashboardFragment"
+        android:icon="@drawable/renters_coverage_menu_icon"
+        android:title="@string/renters_menu" />
+    <item
+        android:id="@+id/chatFragment"
+        android:icon="@drawable/chat_menu_icon"
+        android:title="@string/chat_menu" />
+    <item
+        android:id="@+id/moreFragment"
+        android:icon="@drawable/more_menu_icon"
+        android:title="@string/more_menu" />
+</menu>

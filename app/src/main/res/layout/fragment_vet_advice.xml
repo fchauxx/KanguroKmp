@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/neutral_background">
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineStart"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="@dimen/spacing_xxs" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineEnd"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="@dimen/spacing_xxs" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/backButton"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginTop="@dimen/spacing_nano"
+        android:drawablePadding="@dimen/spacing_xxxs"
+        android:minHeight="0dp"
+        android:text="@string/vet_advice_button"
+        android:textAppearance="@style/KanguroTextStyle.Subhead.Bold"
+        android:textColor="@color/secondary_dark"
+        app:icon="@drawable/ic_left_arrow"
+        app:iconPadding="@dimen/spacing_xxxs"
+        app:iconTint="@color/secondary_dark"
+        app:layout_constraintStart_toStartOf="@id/guidelineStart"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedScrollView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/guidelineStart"
+        app:layout_constraintTop_toBottomOf="@id/backButton"
+        app:layout_constraintVertical_bias="0.0">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <include
+                android:id="@+id/doctorCard"
+                layout="@layout/doctor_card"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_nano"
+                app:layout_constraintEnd_toEndOf="@id/constraintLayout"
+                app:layout_constraintStart_toStartOf="@id/constraintLayout"
+                app:layout_constraintTop_toTopOf="@id/constraintLayout" />
+
+            <include
+                android:id="@+id/dogCard"
+                layout="@layout/card_dogs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="@id/constraintLayout"
+                app:layout_constraintStart_toStartOf="@id/constraintLayout"
+                app:layout_constraintTop_toBottomOf="@id/doctorCard" />
+
+            <include
+                android:id="@+id/catCard"
+                layout="@layout/card_cats"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/spacing_xxs"
+                app:layout_constraintBottom_toBottomOf="@id/constraintLayout"
+                app:layout_constraintEnd_toEndOf="@id/constraintLayout"
+                app:layout_constraintStart_toStartOf="@id/constraintLayout"
+                app:layout_constraintTop_toBottomOf="@id/dogCard" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

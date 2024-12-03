@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:context=".ComponentTestActivity">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.checkbox.MaterialCheckBox
+                style="@style/KanguroCheckbox"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="Test text" />
+
+            <com.google.android.material.checkbox.MaterialCheckBox
+                style="@style/KanguroCheckbox"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:checked="true"
+                android:text="Test text" />
+
+            <com.google.android.material.checkbox.MaterialCheckBox
+                style="@style/KanguroCheckbox"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:enabled="false"
+                android:text="Test text" />
+
+        </LinearLayout>
+
+        <com.insurtech.kanguro.designsystem.ui.views.KanguroTextInputLayout
+            android:id="@+id/textField"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:kg_title="@string/enter_your_email">
+
+            <com.insurtech.kanguro.designsystem.ui.views.KanguroTextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_sms"
+                android:hint="@string/email"
+                android:inputType="text"
+                android:text="teste" />
+
+        </com.insurtech.kanguro.designsystem.ui.views.KanguroTextInputLayout>
+
+        <com.insurtech.kanguro.designsystem.ui.views.KanguroTextInputLayout
+            android:id="@+id/textField2"
+            style="@style/KanguroInputLayoutStyle.Password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp">
+
+            <com.insurtech.kanguro.designsystem.ui.views.KanguroTextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_lock"
+                android:hint="@string/password"
+                android:inputType="textPassword" />
+
+        </com.insurtech.kanguro.designsystem.ui.views.KanguroTextInputLayout>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Primary" />
+
+        <com.google.android.material.button.MaterialButton
+            style="@style/KanguroButtonStyle.Primary.Large"
+            android:layout_margin="8dp"
+            android:text="Button"
+            app:icon="@drawable/ic_paw_outline" />
+
+        <com.google.android.material.button.MaterialButton
+            style="@style/KanguroButtonStyle.Primary.Large"
+            android:layout_margin="8dp"
+            android:enabled="false"
+            android:text="Button"
+            app:icon="@drawable/ic_paw_outline" />
+
+        <com.google.android.material.button.MaterialButton
+            style="@style/KanguroButtonStyle.Primary.Medium"
+            android:layout_margin="8dp"
+            android:text="Button"
+            app:icon="@drawable/ic_paw_outline" />
+
+        <com.google.android.material.button.MaterialButton
+            style="@style/KanguroButtonStyle.Primary.Small"
+            android:layout_margin="8dp"
+            android:text="Button"
+            app:icon="@drawable/ic_paw_outline" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Secondary Light" />
+
+        <com.google.android.material.button.MaterialButton
+            style="@style/KanguroButtonStyle.SecondaryLight.Large"
+            android:layout_margin="8dp"
+
+            android:text="Button"
+            app:icon="@drawable/ic_paw_outline" />
+
+        <com.google.android.material.button.MaterialButton
+            style="@style/KanguroButtonStyle.SecondaryLight.Large"
+            android:layout_margin="8dp"
+            android:enabled="false"
+            android:text="Button"
+            app:icon="@drawable/ic_paw_outline" />
+
+        <com.google.android.material.button.MaterialButton
+            style="@style/KanguroButtonStyle.SecondaryLight.Medium"
+            android:layout_margin="8dp"
+            android:text="Button"
+            app:icon="@drawable/ic_paw_outline" />
+
+        <com.google.android.material.button.MaterialButton
+            style="@style/KanguroButtonStyle.SecondaryLight.Small"
+            android:layout_margin="8dp"
+            android:text="Button"
+            app:icon="@drawable/ic_paw_outline" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Large Secondary Dark" />
+
+        <com.google.android.material.button.MaterialButton
+            style="@style/KanguroButtonStyle.SecondaryDark.Large"
+            android:layout_width="match_parent"
+            android:layout_margin="8dp"
+            android:text="Button"
+            app:icon="@drawable/ic_paw_outline" />
+
+        <com.google.android.material.button.MaterialButton
+            style="@style/KanguroButtonStyle.SecondaryDark.Large"
+            android:layout_margin="8dp"
+            android:enabled="false"
+            android:text="Button"
+            app:icon="@drawable/ic_paw_outline" />
+
+        <com.google.android.material.button.MaterialButton
+            style="@style/KanguroButtonStyle.SecondaryDark.Medium"
+            android:layout_margin="8dp"
+            android:text="Button"
+            app:icon="@drawable/ic_paw_outline" />
+
+        <com.google.android.material.button.MaterialButton
+            style="@style/KanguroButtonStyle.SecondaryDark.Small"
+            android:layout_margin="8dp"
+            android:text="Button"
+            app:icon="@drawable/ic_paw_outline" />
+
+
+    </LinearLayout>
+
+</ScrollView>

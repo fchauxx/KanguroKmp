@@ -1,0 +1,42 @@
+variables:
+- name: OS
+  value: macOS-latest
+
+- name: PipelineInstrumentedTestsTemplate
+  value: pipeline-instrumented-tests-generic.yml
+
+trigger:
+- none
+
+stages:
+- stage: run_instrumented_tests_and_publish_results
+  jobs:
+  - job: dev
+    displayName: dev
+    pool:
+      vmImage: ${{ variables.OS }}
+    condition: and(succeeded(), eq(variables['System.PullRequest.TargetBranch'], 'refs/heads/dev'))
+    steps:
+      - template: ${{variables.PipelineInstrumentedTestsTemplate}}
+        parameters:
+            Flavor: dev
+
+  - job: stage
+    displayName: stage
+    pool:
+      vmImage: ${{ variables.OS }}
+    condition: and(succeeded(), eq(variables['System.PullRequest.TargetBranch'], 'refs/heads/stage'))
+    steps:
+      - template: ${{variables.PipelineInstrumentedTestsTemplate}}
+        parameters:
+            Flavor: stage
+
+  - job: prod
+    displayName: prod
+    pool:
+      vmImage: ${{ variables.OS }}
+    condition: and(succeeded(), eq(variables['System.PullRequest.TargetBranch'], 'refs/heads/main'))
+    steps:
+      - template: ${{variables.PipelineInstrumentedTestsTemplate}}
+        parameters:
+            Flavor: prod

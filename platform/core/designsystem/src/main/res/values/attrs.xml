@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="KanguroTextInputLayout">
+        <attr name="kg_title" format="reference"/>
+        <attr name="kg_titleTextAppearance" format="reference"/>
+        <attr name="kg_titleColor" format="color"/>
+        <attr name="kg_titleColorFilled" format="color"/>
+        <attr name="kg_errorBackground" format="reference"/>
+    </declare-styleable>
+
+    <attr name="kanguroInputLayoutStyleAttr" format="reference" />
+    <attr name="kanguroInputEditTextStyleAttr" format="reference" />
+
+</resources>

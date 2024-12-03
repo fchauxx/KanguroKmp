@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.imageview.ShapeableImageView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/image"
+    android:layout_width="@dimen/chatbot_message_image_size"
+    android:layout_height="@dimen/chatbot_message_image_size"
+    android:padding="@dimen/spacing_nano"
+    android:scaleType="centerCrop"
+    tools:src="@drawable/bg_cat">
+
+</com.google.android.material.imageview.ShapeableImageView>

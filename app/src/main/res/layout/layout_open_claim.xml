@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:binding="http://schemas.android.com/tools"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="com.insurtech.kanguro.core.utils.PetExtensionsKt" />
+
+        <variable
+            name="claim"
+            type="com.insurtech.kanguro.domain.coverage.Claim" />
+    </data>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="@dimen/spacing_quark"
+        app:cardCornerRadius="@dimen/border_radius_sm"
+        app:cardElevation="8dp"
+        app:strokeWidth="0dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingHorizontal="@dimen/spacing_xxxs"
+                android:paddingTop="@dimen/icon_size_xxxs">
+
+                <com.insurtech.kanguro.ui.custom.ClaimsStepper
+                    android:id="@+id/stepper"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_marginTop="@dimen/spacing_xs"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/date"
+                    binding:claim="@{claim}" />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/headerImage"
+                    android:layout_width="42dp"
+                    android:layout_height="42dp"
+                    android:scaleType="centerCrop"
+                    android:src="@{PetExtensionsKt.getCacheableImage(claim.pet)}"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:placeholder="@{PetExtensionsKt.getPlaceholderImage(claim.pet)}"
+                    app:shapeAppearance="@style/ShapeAppearanceOverlay.App.CornerSize50Percent"
+                    tools:src="@tools:sample/backgrounds/scenic" />
+
+                <TextView
+                    android:id="@+id/claimDetails"
+                    style="@style/KanguroTextStyle.Caption.Black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/claims_details_background"
+                    android:paddingHorizontal="@dimen/spacing_nano"
+                    android:paddingVertical="@dimen/spacing_nano"
+                    android:text="@string/details"
+                    android:textColor="@color/secondary_darkest"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/petName"
+                    style="@style/KanguroTextStyle.Body.Black"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/spacing_xxxs"
+                    android:ellipsize="end"
+                    android:maxLines="2"
+                    android:text="@{claim.pet.name}"
+                    app:layout_constraintEnd_toStartOf="@id/claimDetails"
+                    app:layout_constraintStart_toEndOf="@id/headerImage"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="Oliver" />
+
+                <TextView
+                    android:id="@+id/amount"
+                    style="@style/KanguroTextStyle.Footnote.Regular"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_quark"
+                    android:layout_marginEnd="@dimen/spacing_quark"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:textColor="@color/secondary_dark"
+                    app:claimAmount="@{claim.amount}"
+                    app:layout_constraintEnd_toStartOf="@id/claimDetails"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@id/petName"
+                    app:layout_constraintTop_toBottomOf="@id/petName"
+                    tools:text="Valor de reclamacion: 8.000,00 US$" />
+
+                <TextView
+                    android:id="@+id/date"
+                    style="@style/KanguroTextStyle.Footnote.Regular"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_quark"
+                    android:textColor="@color/secondary_dark"
+                    app:date="@{claim.updatedAt ?? claim.createdAt}"
+                    app:info="@{@string/open_claim_date_info}"
+                    app:layout_constraintStart_toStartOf="@id/petName"
+                    app:layout_constraintTop_toBottomOf="@id/amount"
+                    tools:text="Last update in Sep 04, 2021" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/direct_pay_your_vet"
+                style="@style/CustomCardViewStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:clickable="true"
+                android:focusable="true"
+                app:cardBackgroundColor="@color/secondary_darkest"
+                app:strokeWidth="0dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingVertical="9dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/lato"
+                        android:text="@string/direct_pay_vet_underline"
+                        android:textColor="@color/white"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:layout_marginStart="8dp"
+                        android:contentDescription="@null"
+                        android:src="@drawable/share"
+                        app:tint="@color/white" />
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <View
+                android:id="@+id/bottom_spacer"
+                android:layout_width="match_parent"
+                android:layout_height="16dp"
+                android:visibility="gone" />
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+</layout>

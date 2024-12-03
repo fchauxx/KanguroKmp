@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.insurtech.kanguro.ui.scenes.referFriends.ReferFriendsViewModel" />
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/referCloseButton">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingTop="@dimen/spacing_sm"
+                android:paddingBottom="@dimen/spacing_xs"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/referCloseButton">
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guidelineStart"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_begin="@dimen/spacing_xs" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guidelineEnd"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_end="@dimen/spacing_xs" />
+
+                <TextView
+                    android:id="@+id/referTitle"
+                    style="@style/KanguroTextStyle.Title2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginBottom="@dimen/spacing_xxxs"
+                    android:text="@string/refer_friends"
+                    android:textAlignment="center"
+                    android:textColor="@color/secondary_darkest"
+                    app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+                    app:layout_constraintStart_toStartOf="@id/guidelineStart"
+                    app:layout_constraintTop_toTopOf="@id/constraintLayout" />
+
+                <ImageView
+                    android:id="@+id/headerImage"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="@dimen/spacing_xxs"
+                    android:layout_marginBottom="@dimen/spacing_xxxs"
+                    android:src="@drawable/img_cat_god_hug"
+                    app:layout_constraintDimensionRatio="262:191"
+                    app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+                    app:layout_constraintStart_toStartOf="@id/guidelineStart"
+                    app:layout_constraintTop_toBottomOf="@id/referTitle"
+                    app:layout_constraintVertical_chainStyle="packed" />
+
+
+                <TextView
+                    android:id="@+id/referContentIntro"
+                    style="@style/KanguroTextStyle.Body.Regular"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/spacing_xxxs"
+                    android:layout_marginTop="@dimen/spacing_xs"
+                    android:layout_marginEnd="@dimen/spacing_xxxs"
+                    android:layout_marginBottom="@dimen/spacing_xs"
+                    android:text="@string/decided_to_share_love"
+                    android:textAlignment="center"
+                    android:textColor="@color/neutral_medium_2"
+                    app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+                    app:layout_constraintStart_toStartOf="@id/guidelineStart"
+                    app:layout_constraintTop_toBottomOf="@id/headerImage" />
+
+
+                <TextView
+                    android:id="@+id/referContent"
+                    style="@style/KanguroTextStyle.Body.Regular"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/spacing_xxxs"
+                    android:layout_marginEnd="@dimen/spacing_xxxs"
+                    android:layout_marginBottom="@dimen/spacing_xs"
+                    android:paddingTop="@dimen/spacing_xxxs"
+                    android:textAlignment="center"
+                    android:textColor="@color/neutral_medium_2"
+                    android:textSize="@dimen/font_base"
+                    app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+                    app:layout_constraintStart_toStartOf="@id/guidelineStart"
+                    app:layout_constraintTop_toBottomOf="@id/referContentIntro"
+                    tools:text="@string/refer_a_friend" />
+
+
+                <TextView
+                    android:id="@+id/referShareCode"
+                    style="@style/KanguroTextStyle.Caption.Bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_xxs"
+                    android:paddingBottom="@dimen/spacing_nano"
+                    android:text="@string/share_code"
+                    android:textAlignment="center"
+                    android:textColor="@color/secondary_dark"
+                    app:layout_constraintBottom_toTopOf="@id/referShareButton"
+                    app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+                    app:layout_constraintStart_toStartOf="@id/guidelineStart"
+                    app:layout_constraintTop_toBottomOf="@id/referContent"
+                    app:layout_constraintVertical_bias="1" />
+
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/referShareButton"
+                    style="@style/KanguroButtonStyle.Hug.Medium"
+                    android:layout_width="wrap_content"
+                    android:layout_marginBottom="@dimen/spacing_xs"
+                    android:paddingStart="@dimen/spacing_xxxs"
+                    android:paddingEnd="@dimen/spacing_xxxs"
+                    app:icon="@drawable/share"
+                    app:layout_constraintBottom_toTopOf="@id/referTermsOfService"
+                    app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+                    app:layout_constraintStart_toStartOf="@id/guidelineStart"
+                    tools:text="HXO1406A" />
+
+                <TextView
+                    android:id="@+id/referTermsOfService"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/spacing_xxs"
+                    android:layout_marginTop="@dimen/spacing_xs"
+                    android:text="@string/terms_of_service"
+                    android:textAlignment="center"
+                    android:textColor="@color/tertiary_extra_dark"
+                    android:textStyle="bold"
+                    app:isInvisible="@{viewModel.fetchingUseTerms}"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+                    app:layout_constraintStart_toStartOf="@id/guidelineStart" />
+
+                <ProgressBar
+                    android:id="@+id/loader"
+                    android:visibility="@{viewModel.fetchingUseTerms}"
+                    style="@style/ProgressBarNormal"
+                    app:layout_constraintBottom_toBottomOf="@id/referTermsOfService"
+                    app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+                    app:layout_constraintStart_toStartOf="@id/guidelineStart"
+                    app:layout_constraintTop_toTopOf="@id/referTermsOfService" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+        <ImageButton
+            android:id="@+id/referCloseButton"
+            style="@style/KanguroCloseButtonX"
+            android:layout_gravity="end|top" />
+
+    </FrameLayout>
+    
+</layout>
