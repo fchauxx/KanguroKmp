@@ -1,6 +1,7 @@
 gradle.startParameter.excludedTaskNames.addAll(listOf(":build-logic:convention:testClasses"))
 
 include(":remoteconfigdata")
+//enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
 
 pluginManagement {
     includeBuild("build-logic")
@@ -9,6 +10,20 @@ pluginManagement {
         mavenCentral()
         maven { url = uri("https://jitpack.io") }
         gradlePluginPortal()
+    }
+
+    resolutionStrategy {
+        eachPlugin {
+            if (requested.id.id == "kotlin-multiplatform") {
+                useModule("org.jetbrains.kotlin:kotlin-gradle-plugin:${requested.version}")
+            }
+            if (requested.id.id == "com.android.library") {
+                useModule("org.jetbrains.kotlin:kotlin-gradle-plugin:${requested.version}")
+            }
+            if (requested.id.id == "kotlinx-serialization") {
+                useModule("org.jetbrains.kotlin:kotlin-serialization:${requested.version}")
+            }
+        }
     }
 }
 
@@ -32,3 +47,4 @@ include(":domain")
 include(":platform:firebaseremoteconfig:remoteconfigdata")
 include(":platform:firebaseremoteconfig:remoteconfigdomain")
 include(":usecase")
+include(":shared")

@@ -184,7 +184,7 @@ android {
     }
 
     compileOptions {
-        isCoreLibraryDesugaringEnabled = true
+     //   isCoreLibraryDesugaringEnabled = true
     }
 }
 
@@ -199,10 +199,11 @@ dependencies {
     implementation(project(":platform:firebaseremoteconfig:remoteconfigdomain"))
     implementation(project(":platform:firebaseremoteconfig:remoteconfigdata"))
     implementation(project(":usecase"))
+    implementation(project(":shared"))
 
     implementation(libs.installreferrer)
 
-    coreLibraryDesugaring(libs.desugar.jdk.libs)
+   // coreLibraryDesugaring(libs.desugar.jdk.libs)
 
     /*Base dependencies when creating new project*/
     implementation(libs.android.ktx)

@@ -63,6 +63,7 @@ testParameterInjectorVersion = "1.12"
 timberVersion = "5.0.1"
 turbineVersion = "1.0.0"
 immutableCollectionsVersion = "0.3.7"
+agp = "8.6.0"
 
 [libraries]
 android-gradle-plugin = { group = "com.android.tools.build", name = "gradle", version.ref = "androidGradlePluginVersion" }
@@ -190,9 +191,9 @@ turbine = { group = "app.cash.turbine", name = "turbine", version.ref = "turbine
 immutableCollections = { group = "org.jetbrains.kotlinx", name = "kotlinx-collections-immutable", version.ref = "immutableCollectionsVersion" }
 
 [plugins]
-android-application = { id = "com.android.application", version.ref = "androidGradlePluginVersion" }
+android-application = { id = "com.android.application", version.ref = "agp" }
 android-dagger-hilt = { id = "com.google.dagger.hilt.android", version.ref = "daggerHiltVersion" }
-android-library = { id = "com.android.library", version.ref = "androidGradlePluginVersion" }
+android-library = { id = "com.android.library", version.ref = "agp" }
 android-navigation = { id = "androidx.navigation", version.ref = "daggerHiltVersion" }
 
 gms-googleServices = { id = "com.google.gms.google-services", version.ref = "googleServicesVersion" }
@@ -204,3 +205,7 @@ kotlin-kapt = { id = "org.jetbrains.kotlin.kapt", version.ref = "kotlinVersion" 
 kotlin-parcelize = { id = "org.jetbrains.kotlin.plugin.parcelize", version.ref = "kotlinVersion" }
 
 navigation-safeargs = { id = "androidx.navigation.safeargs", version.ref = "androidNavigationVersion" }
+
+kotlinMultiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlinVersion" }
+kotlinCocoapods = { id = "org.jetbrains.kotlin.native.cocoapods", version.ref = "kotlinVersion" }
+compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlinVersion" }

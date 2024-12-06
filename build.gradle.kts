@@ -3,10 +3,12 @@ buildscript {
 
     apply(from = project.file("androidCoreVersions.gradle"))
 
+
     repositories {
         google()
         mavenCentral()
     }
+
 
     dependencies {
         classpath(libs.android.gradle.plugin)
@@ -21,16 +23,17 @@ buildscript {
 plugins {
     alias(libs.plugins.org.jlleitschuh.gradle.ktlint)
     alias(libs.plugins.com.google.devtools.ksp) apply false
-}
-
-subprojects {
-    apply(plugin = "org.jlleitschuh.gradle.ktlint")
-
-    repositories {
-        mavenCentral()
-    }
+    //alias(libs.plugins.android.application) apply false
+    //alias(libs.plugins.android.library) apply false
+   // alias(libs.plugins.kotlin.android) apply false
+    alias(libs.plugins.kotlinMultiplatform) apply false
+   // id("kanguro.android.application.compose") apply false
 }
 
 tasks.register("clean", Delete::class) {
     delete(project.rootProject.buildDir)
+}
+
+subprojects {
+    apply(plugin = "org.jlleitschuh.gradle.ktlint")
 }
