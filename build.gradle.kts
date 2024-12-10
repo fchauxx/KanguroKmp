@@ -23,11 +23,10 @@ buildscript {
 plugins {
     alias(libs.plugins.org.jlleitschuh.gradle.ktlint)
     alias(libs.plugins.com.google.devtools.ksp) apply false
-    //alias(libs.plugins.android.application) apply false
-    //alias(libs.plugins.android.library) apply false
-   // alias(libs.plugins.kotlin.android) apply false
-    alias(libs.plugins.kotlinMultiplatform) apply false
-   // id("kanguro.android.application.compose") apply false
+    kotlin("multiplatform") version "1.9.24" apply false
+    kotlin("plugin.compose") version "2.0.0" apply false
+    id("org.jetbrains.compose") version "1.6.11" apply false
+    //  alias(libs.plugins.kotlinMultiplatform) apply false
 }
 
 tasks.register("clean", Delete::class) {

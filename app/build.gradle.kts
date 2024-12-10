@@ -8,7 +8,8 @@ plugins {
     id("kanguro.android.hilt")
     id("kotlin-parcelize")
     id("androidx.navigation.safeargs")
-    id("com.google.devtools.ksp")
+   // id("com.google.devtools.ksp")
+    id("kotlin-kapt")
     id("kanguro.android.application.compose")
     id("io.sentry.android.gradle") version "4.3.0"
 }
@@ -236,7 +237,7 @@ dependencies {
     implementation(libs.moshi.core)
     implementation(libs.moshi.kotlin)
     implementation(libs.moshi.adapters)
-    ksp(libs.moshi.kotlin.codegen)
+    kapt(libs.moshi.kotlin.codegen)
     implementation(libs.android.constraint.layout)
     implementation(libs.android.legacy.support)
     implementation(libs.junit.ext.ktx)
@@ -246,7 +247,7 @@ dependencies {
 
     // Glide
     implementation(libs.glide.core)
-    ksp(libs.glide.ksp)
+    kapt(libs.glide.ksp)
 
     // OkHttp3
     implementation(libs.network.response.adapter)

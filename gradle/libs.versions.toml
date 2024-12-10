@@ -4,7 +4,7 @@ androidActivityKtxVersion = "1.8.0"
 androidAppCompatVersion = "1.4.0"
 androidAnnotationVersion = "1.6.0"
 androidBrowserVersion = "1.4.0"
-androidComposeBomVersion = "2023.10.01"
+androidComposeBomVersion = "2024.11.00"
 androidComposeConstrainLayout = "1.1.0-alpha13"
 androidComposeFlowLayout = "0.18.0"
 androidComposeMaterial3 = "1.1.2"
@@ -40,7 +40,7 @@ googlePlayReviewKtxVersion = "2.0.0"
 googlePlayServicesLocationVersion = "20.0.0"
 googlePlayServicesMapsVersion = "18.1.0"
 googleServicesVersion = "4.4.1"
-googleDevToolsKspVersion = "1.8.20-1.0.11"
+googleDevToolsKspVersion = "1.9.23-1.0.20"
 gsonVersion = "2.10.1"
 installreferrerVersion = "2.2"
 jlleitschuhGradleKtlintVersion = "11.5.0"
@@ -48,7 +48,7 @@ junitExtVersion = "1.1.3"
 junitVersion = "4.13.2"
 jwtdecodeVersion = "2.0.1"
 kotlinSerializationVersion = "1.5.1"
-kotlinVersion = "1.8.20"
+kotlinVersion = "1.9.24"
 leakCanaryVersion = "2.7"
 lottieVersion = "4.2.2"
 maskaraVersion = "1.0.0"
@@ -64,6 +64,7 @@ timberVersion = "5.0.1"
 turbineVersion = "1.0.0"
 immutableCollectionsVersion = "0.3.7"
 agp = "8.6.0"
+compose-plugin = "1.6.11"
 
 [libraries]
 android-gradle-plugin = { group = "com.android.tools.build", name = "gradle", version.ref = "androidGradlePluginVersion" }
@@ -140,6 +141,7 @@ firebase-remoteConfig = { group = "com.google.firebase", name = "firebase-config
 
 glide-ksp = { group = "com.github.bumptech.glide", name = "ksp", version.ref = "glideVersion" }
 glide-core = { group = "com.github.bumptech.glide", name = "glide", version.ref = "glideVersion" }
+kotlin-kapt = { group = "org.jetbrains.kotlin", name = "kapt", version.ref = "kotlinVersion" }
 
 google-play-review-ktx = { group = "com.google.android.play", name = "review-ktx", version.ref = "googlePlayReviewKtxVersion" }
 google-play-services-location = { group = "com.google.android.gms", name = "play-services-location", version.ref = "googlePlayServicesLocationVersion" }
@@ -209,3 +211,4 @@ navigation-safeargs = { id = "androidx.navigation.safeargs", version.ref = "andr
 kotlinMultiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlinVersion" }
 kotlinCocoapods = { id = "org.jetbrains.kotlin.native.cocoapods", version.ref = "kotlinVersion" }
 compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlinVersion" }
+jetbrainsCompose = { id = "org.jetbrains.compose", version.ref = "compose-plugin" }

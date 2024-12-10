@@ -32,6 +32,7 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.constraintlayout.compose.ExperimentalMotionApi
 import androidx.constraintlayout.compose.MotionLayout
 import androidx.constraintlayout.compose.MotionScene
 import com.insurtech.kanguro.designsystem.R
@@ -107,6 +108,7 @@ private fun MainContent(
     }
 }
 
+@OptIn(ExperimentalMotionApi::class)
 @Composable
 private fun HeaderSection(
     modifier: Modifier = Modifier,

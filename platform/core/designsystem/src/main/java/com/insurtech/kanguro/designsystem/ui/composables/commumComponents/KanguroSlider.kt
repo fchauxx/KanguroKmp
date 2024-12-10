@@ -57,7 +57,7 @@ fun KanguroSlider(
         },
         track = {
             Track(
-                sliderPositions = it,
+                sliderState = it,
                 colors = sliderColors,
                 modifier = Modifier
                     .scale(scaleX = 1f, scaleY = 1.8f)

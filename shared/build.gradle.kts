@@ -1,32 +1,10 @@
-buildscript {
-
-    dependencies {
-      //  classpath(libs.kotlin.gradle.plugin)
-    //    classpath(libs.android.gradle.plugin)
-       // classpath("co.touchlab:kotlinxcodesync:0.1.5")
-    }
-}
-
-/*allprojects {
-    repositories {
-        mavenLocal()
-        google()
-        mavenCentral()
-        maven("https://dl.bintray.com/kotlin/kotlin-eap")
-        maven("https://kotlin.bintray.com/ktor")
-        maven("https://kotlin.bintray.com/kotlinx")
-    }
-}*/
-
-
 plugins {
-    alias(libs.plugins.kotlinMultiplatform)
+     kotlin("multiplatform")
+     kotlin("plugin.compose")
+    // alias(libs.plugins.kotlinMultiplatform)
     id("com.android.library")
+    id("org.jetbrains.compose")
 }
-
-//apply(plugin = "maven-publish")
-//apply(plugin = "com.android.library")
-//apply(plugin = "kotlin-android-extensions")
 
 kotlin {
     android()
@@ -40,21 +18,19 @@ kotlin {
             isStatic = true
         }
     }
-
     sourceSets {
         commonMain {
             dependencies {
+               implementation(compose.foundation)
+               implementation(compose.material3)
+               implementation(compose.runtime)
             }
         }
         commonTest {
             dependencies {
             }
         }
-        val androidMain by getting {
-            dependencies {
-            }
-        }
-        val androidTest by getting {
+        iosMain{
             dependencies {
             }
         }

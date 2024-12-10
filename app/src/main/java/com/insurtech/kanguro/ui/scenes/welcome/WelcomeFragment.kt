@@ -24,6 +24,7 @@ import com.insurtech.kanguro.core.base.FullscreenFragment
 import com.insurtech.kanguro.core.utils.bottomSheetLikeTransitions
 import com.insurtech.kanguro.core.utils.safeNavigate
 import com.insurtech.kanguro.databinding.FragmentWelcomeBinding
+import com.insurtech.kanguro.shared.Greeting
 import com.insurtech.kanguro.ui.StartActivity.Companion.DEEP_EMAIL
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -117,7 +118,7 @@ class WelcomeFragment : FullscreenFragment<FragmentWelcomeBinding>() {
     }
 
     private fun setupPetQuoteText() {
-        binding.petVersion.getAQuoteText.text = getQuoteText()
+        binding.petVersion.getAQuoteText.text = Greeting().greet()
     }
 
     private fun onPetGetQuotePressed() {
@@ -155,7 +156,7 @@ class WelcomeFragment : FullscreenFragment<FragmentWelcomeBinding>() {
     }
 
     private fun setupPetRentersQuoteText() {
-        binding.petRentersVersion.getAQuoteText.text = getQuoteText()
+        binding.petRentersVersion.getAQuoteText.text = Greeting().greet()
     }
 
     private fun onPetRentersSignInButtonPressed() {

@@ -1,5 +1,4 @@
 import com.android.build.gradle.BaseExtension
-import com.insurtech.kanguro.libs
 import org.gradle.api.Plugin
 import org.gradle.api.Project
 import org.gradle.kotlin.dsl.configure
@@ -9,15 +8,15 @@ class AndroidApplicationComposeConventionPlugin : Plugin<Project> {
     override fun apply(target: Project) {
         with(target) {
             extensions.configure<BaseExtension> {
-                buildFeatures.compose = true
+            //    buildFeatures.compose = true
 
                 composeOptions {
-                    kotlinCompilerExtensionVersion = "1.4.6"
+               //     kotlinCompilerExtensionVersion = "1.5.14"
                 }
             }
 
             dependencies {
-                val composeBom = libs.findLibrary("compose.bom").get()
+              /*  val composeBom = libs.findLibrary("compose.bom").get()
                 add("implementation", platform(composeBom))
                 add("androidTestImplementation", platform(composeBom))
 
@@ -34,7 +33,7 @@ class AndroidApplicationComposeConventionPlugin : Plugin<Project> {
                 "implementation"(libs.findLibrary("compose.view.model").get())
                 "implementation"(libs.findLibrary("compose.activity").get())
                 "implementation"(libs.findLibrary("coil.compose").get())
-                "implementation"(libs.findLibrary("compose.flow.layout").get())
+                "implementation"(libs.findLibrary("compose.flow.layout").get())*/
             }
         }
     }
