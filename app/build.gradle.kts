@@ -8,15 +8,14 @@ plugins {
     id("kanguro.android.hilt")
     id("kotlin-parcelize")
     id("androidx.navigation.safeargs")
-   // id("com.google.devtools.ksp")
+   // id("kanguro.android.application.compose")
     id("kotlin-kapt")
-    id("kanguro.android.application.compose")
+    kotlin("plugin.compose")
+    id("org.jetbrains.compose")
     id("io.sentry.android.gradle") version "4.3.0"
 }
 
-kapt {
-    correctErrorTypes = true
-}
+
 
 // Try to load local properties
 val localProperties = Properties()
@@ -237,7 +236,7 @@ dependencies {
     implementation(libs.moshi.core)
     implementation(libs.moshi.kotlin)
     implementation(libs.moshi.adapters)
-    kapt(libs.moshi.kotlin.codegen)
+    ksp(libs.moshi.kotlin.codegen)
     implementation(libs.android.constraint.layout)
     implementation(libs.android.legacy.support)
     implementation(libs.junit.ext.ktx)
@@ -247,7 +246,7 @@ dependencies {
 
     // Glide
     implementation(libs.glide.core)
-    kapt(libs.glide.ksp)
+    ksp(libs.glide.ksp)
 
     // OkHttp3
     implementation(libs.network.response.adapter)
@@ -269,7 +268,7 @@ dependencies {
     implementation(libs.epoxy.core)
     implementation(libs.epoxy.databinding)
     implementation(libs.epoxy.compose)
-    kapt(libs.epoxy.processor)
+    ksp(libs.epoxy.processor)
 
     // Lottie
     implementation(libs.lottie.core)
@@ -311,6 +310,20 @@ dependencies {
 
     // Play In-App Review
     implementation(libs.google.play.review.ktx)
+
+    // compose
+    implementation(compose.foundation)
+    implementation(compose.material)
+    implementation(compose.ui)
+    implementation(compose.uiTooling)
+    implementation(compose.material3)
+    implementation(compose.runtime)
+    implementation(libs.android.constraint.layout)
+    implementation(libs.compose.foundation.layout)
+    implementation(libs.coil.compose)
+    implementation(libs.compose.flow.layout)
+    implementation(libs.compose.activity)
+    implementation(libs.compose.view.model)
 
     configurations.all {
         resolutionStrategy {
