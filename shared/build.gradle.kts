@@ -1,6 +1,6 @@
 plugins {
-     kotlin("multiplatform")
-     kotlin("plugin.compose")
+    kotlin("multiplatform")
+    kotlin("plugin.compose")
     // alias(libs.plugins.kotlinMultiplatform)
     id("com.android.library")
     id("org.jetbrains.compose")
@@ -21,16 +21,19 @@ kotlin {
     sourceSets {
         commonMain {
             dependencies {
-               implementation(compose.foundation)
-               implementation(compose.material3)
-               implementation(compose.runtime)
+                implementation(compose.foundation)
+                implementation(compose.material3)
+                implementation(compose.components.resources)
+                implementation(compose.ui)
+                implementation(compose.components.uiToolingPreview)
+                implementation(compose.runtime)
             }
         }
         commonTest {
             dependencies {
             }
         }
-        iosMain{
+        iosMain {
             dependencies {
             }
         }
@@ -40,6 +43,10 @@ kotlin {
 android {
     namespace = "com.insurtech.kanguro.shared"
     compileSdk = 34
+    sourceSets["main"].manifest.srcFile("src/androidMain/AndroidManifest.xml")
+    sourceSets["main"].res.srcDirs("src/androidMain/res")
+    sourceSets["main"].resources.srcDirs("src/commonMain/composeResources")
+
     defaultConfig {
         minSdk = 24
     }
@@ -48,3 +55,4 @@ android {
         targetCompatibility = JavaVersion.VERSION_17
     }
 }
+
