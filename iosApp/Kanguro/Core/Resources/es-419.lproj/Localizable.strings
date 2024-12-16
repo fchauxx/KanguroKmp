@@ -1,0 +1,416 @@
+// MARK: - TextFieldType
+"textFieldTypeTitle.email" = "Introduce tu correo electrónico";
+"textFieldTypeTitle.password" = "Ingresa tu contraseña";
+"textFieldTypePlaceholder.email" = "Correo Electrónico";
+"textFieldTypePlaceholder.password" = "Contraseña";
+"textFieldTypeError.email" = "¡Email inválido!";
+"textFieldTypeError.password" = "¡Contraseña inválido!";
+
+// MARK: - Common
+"common.tryAgain" = "Intenta novamente";
+"common.continue" = "Siguiente";
+"common.cancel" = "Cancelar";
+"common.ok" = "Ok";
+"common.back" = "Volver";
+"commom.years" = "años";
+"commom.year" = "año";
+"commom.months" = "meses";
+"commom.month" = "mes";
+"commom.days" = "diás";
+"commom.day" = "dia";
+
+
+// MARK: - Alerts
+"alert.defaultTitle" = "Atención";
+"alert.defaultAction" = "Ok";
+"alert.unknownError" = "Ops, algo salió mal";
+
+// MARK: - Welcome
+"welcome.description1.label" = "llámanos Kanguro... modernizando la experiencia de los latinos con los seguros";
+"welcome.descriptionBold1.label" = "llámanos Kanguro...";
+
+"welcome.description2.label" = "estamos enfocados en aportar valor a tu vida con coberturas diseñadas para tu día a día";
+"welcome.descriptionBold2.label" = "para tu día a día";
+
+"welcome.description3.label" = "fácil de entender, fácil de comprar, y fácil de usar";
+"welcome.descriptionBold3.label" = "fácil de entender,";
+"welcome.subdescription3.label" = "Sólo unos pocos clics y estará listo!";
+"welcome.subdescriptionBold3.label" = "estará listo!";
+
+"welcome.switchLanguage.button" = "Cambiar a ";
+"welcome.signIn.button" = "Iniciar sesión";
+"welcome.getQuote.label" = "¿Aún no tienes una cuenta?";
+"welcome.getQuote.button" = "Cotiza ya";
+
+// MARK: - Login
+"login.hello.label" = "hola";
+"login.continue.button" = "Siguiente";
+
+// MARK: - Password
+"password.hello.label" = "hola";
+"password.welcome.label" = "Bien venido";
+"password.createPassword.textField" = "Crea tu contraseña";
+"password.signIn.button" = "Iniciar sesión";
+"password.start.button" = "Empezar ahora";
+"password.faceID.label" = "Usar identificación facial";
+"password.back.button" = "Volver";
+"password.forgot.button" = "¿Olvidaste tu contraseña?";
+
+// MARK: - Forgot Password
+"forgotPassword.forgotPassword.label" = "¿Olvidaste tu contraseña?";
+"forgotPassword.confirmEmail.textField" = "Por favor confirma tu correo electrónico";
+"forgotPassword.sendResetInstructions.button" = "Enviar instrucciones de reinicio";
+"forgotPassword.sentInstructions.label" = "Le enviamos instrucciones para restablecer tu contraseña!";
+"forgotPassword.securityReasons.label" = "Por razones de seguridad, NO almacenamos su contraseña y nunca la enviamos a través de ningún canal.";
+"forgotPassword.contactUs.label" = "Si continúa teniendo problemas, por favor ";
+"forgotPassword.underlinedContactUs.label" = "contáctenos";
+"forgotPassword.back.label" = "Volver";
+
+// MARK: - Cellphone
+"cellphone.title.label" = "genial, ya casi estás listo";
+"cellphone.continue.button" = "Siguiente";
+"cellphone.warning.label" = "Solo utilizaremos este número para la configuración de la cuenta y para fines de seguridad, como la autenticación de dos factores.";
+"cellphone.back.button" = "Volver";
+"cellphone.cellphoneTitle.label" = "Ingresa tu teléfino celular";
+
+// MARK: - Email Validation
+"emailValidation.title.label" = "enviamos un código a tu teléfono. Inserte el código";
+"emailValidation.back.button" = "Volver";
+
+// MARK: - CodeConfirmationView
+"codeConfirmationView.enterCode.label" = "Ingresa el código";
+"codeConfirmationView.timerMessage.label" = "¿No ha llegado el código? Puedes reenviar en";
+"codeConfirmationView.resendCode.label" = "¿No ha llegado el código?";
+"codeConfirmationView.invalidCode.label" = "Codigo invalido!";
+"codeConfirmationView.resendUnderlined.label" = "Puedes reenviarlo ahora";
+
+// MARK: - HeaderView
+"header.title.label" = "hola, soy Javier!";
+"header.subtitle.label" = "tu asistente personal";
+
+// MARK: - AdditionalInfo
+"addInfo.takePicture.button" = "Toma una foto";
+"addInfo.selectPicture.button" = "Selecciona una foto";
+"addInfo.selectFile.button" = "Selecciona un archivo";
+"addInfo.file.emoji" = "📄";
+
+// MARK: - MapDetail
+"mapDetail.title.label" = "Aquí están los veterinarios más cerca de donde te vas.";
+
+// MARK: - Dashboard
+"dashboard.hello.label" = "hola";
+"dashboard.active.label" = "activo";
+"dashboard.inactive.label" = "inactivo";
+"dashboard.seeDetails.label" = "Ver detalles";
+"dashboard.coveragesTitle.label" = "COBERTURAS";
+"dashboard.reminderTitle.label" = "RECORDATORIOS";
+"dashboard.seeAll.label" = "Ver todos";
+"dashboard.bannerTitle.label" = "¿Te gusta Kanguro?";
+"dashboard.bannerSubtitle.label" = "Recomienda a un amigo y gana recompensas";
+
+// MARK: - LastActivities
+"lastActivities.lastActivities.label" = "ÚLTIMAS ACTIVIDADES";
+"lastActivityCard.rate.label" = "Califica este lugar";
+"lastActivityCard.details.label" = "Detailes";
+
+// MARK: - MoreActions
+"moreActions.titleLabel.label" = "MAS ACCIONES";
+"moreActions.fileClaim.card" = "Solicitar una reclamación";
+"moreActions.vetAdvice.card" = "Consejo veterinario";
+"moreActions.claims.card" = "Reclamaciónes";
+"moreActions.getQuote.card" = "Cotiza ya";
+"moreActions.FAQ.card" = "Perguntas frecuentes";
+"moreActions.petParents.card" = "Nuevos padres de mascotas";
+"moreActions.claims.card" = "Reclamaciónes";
+"moreActions.payment.card" = "Configuración de pago";
+"moreActions.bannerTitle.label" = "¿Te gusta Kanguro?";
+"moreActions.bannerSubtitle.label" = "Recomienda a un amigo y gana recompensas";
+
+
+// MARK: - TabBar
+"tabBarItem.dashboard" = "Inicio";
+"tabBarItem.cloud" = "Nube";
+"tabBarItem.coverage" = "Coberturas";
+"tabBarItem.more" = "Más";
+
+// MARK: - Network
+"serverError.default" = "Ops... algo salió mal";
+
+// MARK: - Coverage
+"coverage.coverageTitle.label" = "Coberturas";
+
+
+// MARK: - Claim
+"claims.title.navigationBackButton" = "Cobertura";
+"claims.title.label" = "Reclamaciónes";
+"claims.continue.popUp" = "Continue";
+"claims.delete.popUp" = "Borrar";
+
+// MARK: - ClaimStatus
+"claimStatus.noClaim.label" = "No hay nada aquí todavía!";
+"claimStatus.open.title" = "Abierto";
+"claimStatus.closed.title" = "Cerrado";
+"claimStatus.draft.title" = "Borradores";
+
+// MARK: - ClaimStatusCards
+"claimStatusCards.lastUpdate" = "Última actualización ";
+"claimStatusCards.claimAmount" = "Valor de reclamación";
+"claimStatusCard.details.label" = "Detailes";
+"claimStatusCards.closedIn.label" = "Encerrado ";
+"claimStatusCards.paid.label" = "Pagado ";
+"claimStatusCards.creditCard.label" = "Tarjeta de crédito ";
+"claimStatusCards.createdIn.label" = "Creado en ";
+"claimStatusCards.continueClaim.label" = "Continua tu reclamación!";
+
+// MARK: - ClaimDetails
+"claimDetails.IDtitle.label" = "Reclamación ";
+"claimDetails.summary.label" = "RESUMEN";
+"claimDetails.lastUpdate.label" = "Última actualización en ";
+"claimDetails.claimDescription.label" = "DESCRIPCIÓN DEL RECLAMO";
+"claimDetails.attachments.label" = "ADJUNTOS";
+
+// MARK: - DetailsButton
+"claimDetails.status.label" = "Estado";
+"claimDetails.pet.label" = "Mascota";
+"claimDetails.claim.label" = "Reembolso";
+"claimDetails.date.label" = "Fecha";
+"claimDetails.ammount.label" = "Monto";
+"claimDetails.payment.label" = "Método de pago";
+
+// MARK: - NewClaim
+"newClaim.newClaim.navigationBar" = "Nueva reclamación";
+"newClaim.pencil.emoji" = "🖋️";
+"newClaim.file.emoji" = "📄";
+"newClaim.mayWriteSomething.textfield" = "Escribe una descripción";
+"newClaim.summaryCell.cell" = "Resumen";
+
+// MARK: - Summary
+"summary.pet" = "Mascota";
+"summary.claim" = "Reclamación";
+"summary.attachments" = "Adjunto archivo";
+"summary.amount" = "Monto";
+"summary.date" = "Fecha";
+"summary.paymentMethod" = "Método de pago";
+
+// MARK: - PledgeOfHonor
+"pledgeOfHonor.title.label" = "Promesa de honor";
+"pledgeOfHonor.subtitle.label" = "Prometo que la información que brindo será confiable.";
+"pledgeOfHonor.bottom.label" = "El dinero que no usamos para reembolsos sera donada al ";
+"pledgeOfHonor.boldedBottom.label" = "Big Dog Ranch Rescue";
+"pledgeOfHonor.confirm.button" = "Confirmar";
+
+// MARK: - Feedback
+"feedback.title.label" = "¿Cómo estuvo tu experiencia al presentar un reclamo?";
+"feedback.placeholder.textfield" = "Cuéntanos más sobre tu experiencia";
+"feedback.sendFeedback.button" = "Enviar un comentario";
+"feedback.awful" = "Muy mal";
+"feedback.notGood" = "Mal";
+"feedback.ok" = "Ok";
+"feedback.good" = "Bien";
+"feedback.awesome" = "Wow";
+"pledgeOfHonor.success.alert" = "¡Éxito!";
+"pledgeOfHonor.savedSignature.alert" = "Tu firma está guardada";
+
+// MARK: - CoverageDetails
+"coverageDetails.hello.label" = "hola,";
+"coverageDetails.yearsOld.label" = "idad";
+"coverageDetails.endDateTitle.label" = "Fecha de finalización del período de espera";
+"coverageDetails.perroBueno.label" = "Perro Bueno";
+"coverageDetails.gatoSano.label" = "Gato Sano";
+"coverageDetails.perroBueno.label" = "Perro Bueno";
+"coverageDetails.renewIn.label" = "renovar en ";
+"coverageDetails.deductibleProgressBar.label" = "para alcanzar el deducible";
+"coverageDetails.annualLimitProgressBar.label" = "para alcanzar el límite anual ";
+"coverageDetails.inAnnualLimit.label" = "en límite anual";
+"coverageDetails.perroBuenoRemainingTop.label" = "Te quedan";
+"coverageDetails.perroBuenoRemainingBottom.label" = "restante";
+"coverageDetails.planSummary.label" = "Resumen del plan";
+"coverageDetails.policy.label" = "Documentos de póliza";
+"coverageDetails.preventiveAndWellness.label" = "Preventivo & Bienestar";
+"coverageDetails.payment.label" = "Pago";
+"coverageDetails.nextBilling.label" = "Próxima facturación en";
+"coverageDetails.billingPreferences.label" = "Preferencias de facturación";
+"coverageDetails.reimbursement.label" = "Reembolso";
+"coverageDetails.deductible.label" = "Deducible";
+"coverageDetails.annualLimit.label" = "Límite anual";
+"coverageDetails.accident&illness.label" = "Accidente & Enfermedad";
+"coverageDetails.upTo.label" = "hasta";
+"coverageDetails.covered.card" = "Que esta cubierto";
+"coverageDetails.policyForm.card" = "Formulario de póliza";
+"coverageDetails.TXState.card" = "Enmienda del estado de TX";
+"coverageDetails.declaration.card" = "Declaración y Calendario";
+//MONTHLY PAYMENT
+"coverageDetails.MONTHLY.label" = "Mensualidad";
+"coverageDetails.QUARTERLY.label" = "Pago trimestral";
+"coverageDetails.YEARLY.label" = "Pago anual";
+"coverageDetails.monthlyPerroBueno.label" = "Perro Bueno | Accidente & Enfermedad";
+"coverageDetails.monthlyGatoSano.label" = "Gato Sano | Accidente & Enfermedad";
+"coverageDetails.monthlyAccident.label" = "Accidente & Enfermedad";
+"coverageDetails.monthlyPreventiveAndWellness.label" = "Preventivo & Bienestar | Servicio extra";
+"coverageDetails.extraService.label" = "Servicio extra";
+
+// MARK: - CardHeader
+"cardHeader.renew.label" = "Renovar en ";
+
+// MARK: - PaymentSettings
+"paymentSettings.title.label" = "Método de pago";
+
+// MARK: - BillingPreferences
+"billingPreferences.billingPreferences.label" = "Preferencias de factura";
+"billingPreferences.billingHistory.label" = "Preferencias de factura";
+
+// MARK: - More
+"more.moreActions.label" = "Más acciones";
+"more.preferences.actionCardsList" = "Preferencias";
+"more.profile.actionCard" = "Perfil";
+"more.reminders.actionCard" = "Recordatorios";
+"more.billingPreferences.actionCard" = "Preferencias de factura";
+"more.appSettings.actionCard" = "Ajustes de aplicacion";
+"more.getQuote.actionCard" = "Cotiza ya";
+"more.referFriend.actionCard" = "Recomenda a un amigo";
+
+"more.support.actionCardsList" = "Suporte";
+"more.vetAdvice.actionCard" = "Consejo veterinario";
+"more.FAQ.actionCard" = "Preguntas frecuentes";
+"more.petParents.actionCard" = "Nuevos padres de mascotas";
+
+"more.legal.actionCardsList" = "Legal";
+"more.termsOfUse.actionCard" = "Términos de uso";
+"more.privacyPolicy.actionCard" = "Política de privacidad";
+
+"more.logout.actionCard" = "Cerrar sesión";
+
+// MARK: - Forgot Password
+"forgotPassword.errorTitle.alert" = "Error";
+"forgotPassword.phone" = "+1-888-546-5264";
+
+// MARK: - Reminder
+"reminder.medicalHistory" = "Historial médico";
+"reminder.claim" = "Cobertura";
+"reminder.petPicture" = "Foto de mascota";
+
+// MARK: - Reminders
+"reminders.reminder.label" = "Recordatorios";
+"reminders.wantToSee.label" = "¿Qué quieres ver?";
+"reminders.all.label" = "Todos";
+"reminders.noReminder.label" = "No tienes recordatorios activos";
+"reminders.dueIn.label" = "debito en ";
+
+// MARK: - ReferFriends
+"referFriends.title.label" = "Recomendar a un amigo";
+"referFriend.shareCode.label" = " te envío un descuento del 10% para acceder al mejor plan de salud  y bienestar de Kanguro para tu peludo. Ir al ";
+"referFriend.referralCode.sharing" = " y usa su código de referencia: ";
+"referFriends.firstDescription.label" = "¡Decidimos compartir un poco de amor contigo y tus amigos!";
+"referFriends.secondDescription.label" = "Recomiende a un amigo y le daremos una recompensa de $10 en una tarjeta de regalo de Amazon por cada amigo que ingrese a través de su código personal.";
+"referFriends.giftCard.label" = "\\$10 en una tarjeta de regalo de Amazon";
+"referFriends.termsOfService.label" = "Términos de uso";
+"referFriends.shareCode.sharing" = " - Use this code to create your account";
+
+// MARK: - ReferFriendPopUp
+"referFriends.giftCardTitle.label" = "Obtenga un regalo";
+"referFriends.giftCardSubtitle.label" = "Gana $10 de Amazon invitando a amigos y familiares a Kanguro.";
+"referFriends.boldedGiftCardSubtitle.label" = "\\$10 de Amazon";
+"referFriends.later.button" = "Mas tarde";
+"referFriends.doIt.button" = "¡Vamos!";
+
+// MARK: - Settings
+"settings.title.label" = "Ajustes";
+"settings.pushNotifications.label" = "Notificaciones push";
+"settings.languageTitle.label" = "Preferencias de idioma";
+"settings.languageSubitle.label" = "¡Díganos en qué idioma le habla a su Kanguamigo!";
+"settings.english.label" = "Inglés";
+"settings.spanish.label" = "Spañol";
+"settings.success.alert" = "Éxito!";
+"settings.restartApp.alert" = "La aplicación se reiniciará";
+
+// MARK: - Profile
+"profile.title.label" = "Información del perfil";
+"profile.editProfile.textFieldView" = "Editar perfil";
+"profile.editPassword.textFieldView" = "Editar contraseña";
+"profile.firstName.label" = "Primer nombre";
+"profile.lastName.label" = "Apellido";
+"profile.email.label" = "Email";
+"profile.phone.label" = "Número de teléfono";
+"profile.oldPassword.label" = "Contraseña anterior";
+"profile.newPassword.label" = "Nueva contraseña";
+"profile.repeatPassword.label" = "Repita la nueva contraseña";
+"profile.success.alert" = "Tu perfil esta actualizado!";
+
+// MARK: - AccordionTextFieldsView
+"accordionTextFieldsView.save.button" = "Guardar";
+
+// MARK: - WhatIsCovered
+"whatIsCovered.title.label" = "Que esta cubierto";
+"whatIsCovered.subtitle.label" = "Perro bueno";
+"whatIsCovered.diagnostic.label" = "Diagnóstico";
+"whatIsCovered.procedures.label" = "Procedimientos";
+"whatIsCovered.medications.label" = "Medicamentos";
+//Diagnostics
+"whatIsCovered.bloodTest.label" = "Exámenes de sangre";
+"whatIsCovered.urinalysis.label" = "Análisis de orina";
+"whatIsCovered.krays.label" = "Rayos X";
+"whatIsCovered.mri.label" = "Resonancia magnética";
+"whatIsCovered.labwork.label" = "Exámenes de laboratorio";
+"whatIsCovered.ctscans.label" = "Tomografías";
+"whatIsCovered.ultrasounds.label" = "Exámenes de ultrasonido";
+"whatIsCovered.behavioral.label" = "Exámenes de comportamiento";
+//Procedures
+"whatIsCovered.prosthetic.label" = "Prótesis de extremidades, dispositivos y ayudas para la movilidad";
+"whatIsCovered.cremation.label" = "Cremación";
+"whatIsCovered.endLife.label" = "Eutanasia";
+"whatIsCovered.vetExam.label" = "Examenes veterinarios";
+"whatIsCovered.surgery.label" = "Cirugías & Hospitalización";
+"whatIsCovered.specialty.label" = "Veterinarios especializados y de urgencias";
+"whatIsCovered.cancer.label" = "Cáncer";
+"whatIsCovered.dental.label" = "Enfermedades dentales, incluida la gingivitis.";
+//Medications
+"whatIsCovered.chronic.label" = "Medicamentos Recetados";
+"whatIsCovered.hereditary.label" = "Condiciones crónicas que puedan desarrollarse";
+"whatIsCovered.prescription.label" = "Condiciones hereditarias específicas de la raza que puedan desarrollarse";
+"whatIsCovered.blood.label" = "Trastornos de la sangre";
+"whatIsCovered.eye.label" = "Trastornos oculares";
+"whatIsCovered.musculokeletal.label" = "Trastorno musculoesquelético";
+"whatIsCovered.respiratory.label" = "Condiciones respiratorias";
+
+// MARK: - Cloud
+"cloud.comingSoon.label" = "¡Próximamente!";
+"cloud.description.label" = "Estamos trabajando arduamente para lanzar esta función muy pronto. Si necesita algo, por favor póngase en contacto con nosotros:";
+"cloud.support.label" = "support@kanguro.com";
+
+// MARK: - Veterinary
+"vet.instagramUsername" = "dr.b.vet";
+"vet.title.label" = "por Dr. Cristina Bustamante";
+"vet.subtitle.label" = "VETERINARIO FUNDADOR DE Dr.B Vet";
+
+// MARK: - FAQ
+"faq.title.label" = "FAQ";
+"faq.subtitle.label" = "Perguntas frequentes";
+
+// MARK: - VetAdvice
+"vetAdvice.title.label" = "Consejos veterinarios para ";
+"vetAdvice.dog.name" = "Perro";
+"vetAdvice.cat.name" = "Gato";
+"vetAdvice.dog.description" = "Los mejores consejos veterinarios para perros ofrecidos por el experimentado y conocido veterinario exclusivamente a nuestra comunidad Kanguro";
+"vetAdvice.cat.description" = "Los mejores consejos veterinarios para gatos ofrecidos por el experimentado y conocido veterinario exclusivamente a nuestra comunidad Kanguro";
+
+// MARK: - PetParents
+"petParents.title.label" = "Nuevos padres de mascotas";
+"petParents.highLightedTitle.label" = "padres";
+
+// MARK: - CentralChatbot
+"centralChatbot.botMsg1.label" = "Ola, ";
+"centralChatbot.botMsg2.label" = "What can I do for you and your buddies Today?";
+"centralChatbot.fileClaim.label" = "File a Claim";
+"centralChatbot.vetAdvice.label" = "Vet Advice";
+"centralChatbot.faq.label" = "Frequently Asked Questions";
+"centralChatbot.support.label" = "Talk with Support";
+"centralChatbot.petParent.label" = "I'm a new pet parent";
+
+// MARK: - PreventiveCovered
+"preventiveCovered.title.label" = "Que esta cubierto";
+"preventiveCovered.subtitle.label" = "Preventivo y Bienestar";
+"preventiveCovered.planCoverTitle.label" = "Lo que cubre su plan de atención preventiva";
+"preventiveCovered.annualLimit.label" = "Límite anual";
+"preventiveCovered.getReimbursement.button" = "Obter reembolso";
+"preventiveCovered.completed.label" = "Terminado";
+"preventiveCovered.avaliable.label" = " Disponible";

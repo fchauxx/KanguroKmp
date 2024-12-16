@@ -2,27 +2,24 @@
 //  ContentView.swift
 //  iosApp
 //
-//  Created by Felipe Chaux on 6/12/24.
+//  Created by Felipe Chaux on 16/12/24.
 //
 
 import SwiftUI
 import shared
 
-struct ComposeView: UIViewControllerRepresentable {
-    func makeUIViewController(context: Context) -> UIViewController {
-        MainViewControllerKt.MainViewController()
-    }
-
-    func updateUIViewController(_ uiViewController: UIViewController, context: Context) {}
-}
-
 struct ContentView: View {
     var body: some View {
-        ComposeView()
-                .ignoresSafeArea(.keyboard) // Compose has own keyboard handler
+        VStack {
+            Image(systemName: "globe")
+                .imageScale(.large)
+                .foregroundStyle(.tint)
+            Text(Greeting().greet())
+        }
+        .padding()
     }
 }
 
 #Preview {
-    ComposeView()
+    ContentView()
 }

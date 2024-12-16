@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "ic-primary-socialcause.svg",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

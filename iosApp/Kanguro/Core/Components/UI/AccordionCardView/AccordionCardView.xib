@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AccordionCardView" customModule="Kanguro" customModuleProvider="target">
+            <connections>
+                <outlet property="actionCard" destination="QJc-7D-2BN" id="J5q-Ii-b3t"/>
+                <outlet property="backgroundView" destination="iN0-l3-epB" id="Lq1-rh-RBU"/>
+                <outlet property="itemsStackView" destination="zUk-PT-v5a" id="eNT-Eb-ppe"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="214"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="AMW-6A-YG3" userLabel="main Stack View">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="214"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QJc-7D-2BN" customClass="ActionCard" customModule="Kanguro" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                            <color key="backgroundColor" name="NeutralBackground"/>
+                        </view>
+                        <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="zUk-PT-v5a" userLabel="Items Stack View">
+                            <rect key="frame" x="0.0" y="64" width="414" height="150"/>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" name="NeutralBackground"/>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="AMW-6A-YG3" firstAttribute="trailing" secondItem="iN0-l3-epB" secondAttribute="trailing" id="0jr-2Z-Wiz"/>
+                <constraint firstItem="AMW-6A-YG3" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="BJe-TL-vmi"/>
+                <constraint firstAttribute="bottom" secondItem="AMW-6A-YG3" secondAttribute="bottom" id="oBb-pU-tTZ"/>
+                <constraint firstItem="AMW-6A-YG3" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="ugV-ly-3wl"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                    <real key="value" value="8"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
+            <point key="canvasLocation" x="137.68115942028987" y="85.714285714285708"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="NeutralBackground">
+            <color red="0.94117647058823528" green="0.94117647058823528" blue="0.94117647058823528" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

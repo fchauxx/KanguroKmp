@@ -1,0 +1,24 @@
+{
+  "configurations" : [
+    {
+      "id" : "358809C7-02EF-4C06-BC64-56C429A61B92",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:",
+        "identifier" : "KanguroUserDataTests",
+        "name" : "KanguroUserDataTests"
+      }
+    }
+  ],
+  "version" : 1
+}

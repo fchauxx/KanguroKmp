@@ -1,0 +1,362 @@
+// MARK: - Generic
+"common.add.label" = "Agregar";
+"common.back.label" = "Volver";
+"common.done.label" = "Terminar";
+"common.item.label" = "Artículos";
+"common.value.label" = "Valor";
+"common.cancel.label" = "Cancelar";
+"common.ok" = "Ok";
+"forgotPassword.phone" = "+1-888-546-5264";
+"common.new" = "Nuevo";
+
+// MARK: - Alerts
+"alert.defaultTitle" = "Atención";
+"alert.defaultAction" = "Ok";
+
+//MARK: - Headers
+"sectionHeader.label"= "Renovar en ";
+"sectionHeader.label.period"= "Vigencia de la Póliza: ";
+"sectionHeader.label.policyNumber"= "NÚMERO DE PÓLIZA #";
+
+// MARK: - Textfields
+"textfield1.title.label" = "Artículo";
+"textfield1.placeholder.label" = "Cual es el articulo";
+"textfield2.title.label" = "Valor";
+"textfield2.placeholder.label" = "$";
+
+// MARK: - Upselling
+"product.upselling.getAQuote.label" = "Obtén una cotización ahora, ¡fácil y rápido!";
+"product.upselling.tellMeMore.label" = "¡Cuéntame más!";
+
+"upselling.pet.title.label" = "Plan de Salud para Mascotas";
+"upselling.pet.question.label" = "¿Tienes una mascota?";
+"upselling.pet.description1.label" = "¡Ahorra hasta un 90% en costos anuales con nuestro Plan de Salud para";
+"upselling.pet.description1Bolded.label" = "Mascotas Kanguro!";
+"upselling.pet.description2.label" = "El primer seguro de salud y plan de bienestar para mascotas que es realmente fácil de usar. ¡Te ofrecemos un descuento especial del 10%!";
+
+"upselling.renters.title.label" = "Seguro de Inquilinos";
+"upselling.renters.question.label" = "¿Alquilas un lugar?";
+"upselling.renters.description1.label" = "¡Mantén tus pertenencias seguras con nuestro";
+"upselling.renters.description1Bolded.label" = "Seguro de Inquilinos Kanguro!";
+"upselling.renters.description2.label" = "Protege tus propiedades personales y ayuda a cubrir los costos de responsabilidad personal. ¡Te ofrecemos un descuento especial del 10%!";
+
+// MARK: - Scheduled Items
+"scheduled.header.label" = "Aquí está la lista de tus artículos programados";
+"scheduled.addMore.label" = "Añadir más ítems";
+"scheduled.submitItem.label" = "Enviar ítems";
+"scheduled.yourTotalPrice.label" = "Su precio total ahora será";
+"scheduled.delete.item.label" = "¿Estás segura de que quieres eliminar este artículo?";
+"scheduled.delete.confirm.label" = "Sí, borrar";
+"scheduled.emptyList1.state" = "Aún no tienes ningún\nelemento programado";
+"scheduled.emptyList2.state" = "Mantenga seguras sus preciadas pertenencias\nadiéndolas a esta lista";
+"scheduled.error1.state" = "Algo salió mal";
+"scheduled.error2.state" = "Inténtalo de nuevo";
+
+// MARK: - Scheduled Item Add Pictures
+"scheduled.header.second.label" = "Necesitamos algunas fotos relacionadas con tu artículo para poder determinar su valor";
+"scheduled.pictureReceiptOrAppraisal.label" = "Foto de un recibo o valoración";
+"scheduled.pictureYourItems.label" = "Foto de tu Ítems";
+"scheduled.picturePlacedOnReceipt.label" = "Foto del artículo colocado en el recibo o la valoración";
+"scheduled.takePicture.button" = "Toma una foto";
+"scheduled.selectPicture.button" = "Selecciona una foto";
+
+// MARK: - Scheduled Add Item Categories
+"scheduled.add.new.item.label" = "Selecciona la categoría de tu nuevo artículo programado";
+
+// MARK: - Schedule New Item
+"scheduled.submit.newItem.label" = "Enviar ítems";
+"scheduled.submit.newItem.petMonth.label" = "/mes";
+"scheduled.submit.newItem.footer.label" = "Su precio total ahora será de";
+
+// MARK: - Onboarding
+"onboarding.boldedTitle.label" = "llámanos Kanguro...";
+"onboarding.description.label" = "modernizando la experiencia de seguros.";
+"onboarding.description2.label" = "estamos enfocados en aportar valor a tu vida con coberturas diseñadas para tu día a día";
+"onboarding.switchLanguage.button" = "Switch to english";
+
+"onboarding.signIn.button" = "Iniciar sesión";
+"onboarding.dontHaveAccount.label" = "¿Aún no tienes una cuenta?";
+"onboarding.getQuote.button" = "Cotiza ya";
+
+// MARK: - Onboarding Chatbot
+"onboarding.chatbot.title" = "¡Hola, me llamo Javier!";
+"onboarding.chatbot.subtitle" = "SOY TU ASISTENTE PERSONAL I.A.";
+"chatbot.date.selection" = "Seleccione la fecha";
+"onboarding.chatbot.uploadVideo.title" = "Subir un video";
+"onboarding.chatbot.uploadVideo.description" = "Por favor, grabe un video mostrando cada habitación de su casa, con una duración máxima de dos minutos.";
+"onboarding.chatbot.uploadVideo.button" = "Enviar video";
+"onboarding.chatbot.video.acion.record" = "Grabar video";
+"onboarding.chatbot.video.acion.select" = "Seleccione archivo";
+"onboarding.chatbot.sendVideo.error.message" = "Asegúrese de que el video esté en un formato válido y dentro del límite de duración de dos minutos.";
+"onboarding.chatbot.uploadingVideo.message" = "Tu vídeo está siendo procesado...";
+"onboarding.chatbot.uploadVideo.error.message" = "Se produjo un error al cargar el video. Por favor, inténtelo nuevamente más tarde.";
+"onboarding.chatbot.video.popUp.description" = "¿Está seguro de que desea cerrar esta ventana?";
+"onboarding.chatbot.video.popUp.subdescription" = "Todos los cambios no guardados se perderán.";
+"onboarding.chatbot.video.popUp.close" = "Si, cerrar";
+
+// MARK: - Renters Coverages
+"cardHeader.renew.label" = "Renovar en";
+"userInfo.hello.label" = "Hola,";
+"renters.policy.additional.hasCoverage.label" = "Tu póliza ya cuenta con esta cobertura.";
+"renters.policy.additional.add.label" = "+ Agrega esto a tu póliza por";
+"renters.policy.additional.edit.label" = "Editar cobertura adicional";
+"renters.policy.myScheduledItems.label" = "Mis artículos programados";
+"renters.policy.additionalParties.edit.label" = "Editar partes adicionales";
+"renters.policy.payment.section.title.label" = "Pago";
+"renters.policy.payment.yearly.label" = "Pago anual";
+"renters.policy.payment.quarterly.label" = "Pago trimestral";
+"renters.policy.payment.monthly.label" = "Mensualidad";
+"renters.policy.insurance.label" = "Seguro de Inquilinos";
+"renters.policy.perroBueno.label" = "Perro Bueno";
+"renters.policy.accidentIllness.label" = "Accidente & Enfermedad";
+"renters.policy.preventive.wellness.label" = "Preventivo & Bienestar";
+"renters.policy.extraService.label" = "Servicio extra";
+"renters.policy.nextBilling.label" = "Próxima facturación en";
+"renters.policy.billingPreferences.action.label" = "Preferencias de facturación";
+"renters.policy.coverage.title" = "Cobertura adicionales";
+
+// MARK: - Renters Dashboard
+"dashboard.seeDetails.label" = "Ver detalles";
+"dashboard.active.label" = "Activo";
+"dashboard.inactive.label" = "Inactivo";
+"dashboard.canceled.label" = "Cancelado";
+"dashboard.terminated.label" = "Acabado";
+"dashboard.bannerTitle.havePet" = "¿Tienes\una mascota?";
+"dashboard.bannerSubtitle.havePet" = "Ahorre dinero con nuestro\nseguro para mascotas Kanguro";
+"dashboard.bannerTitle.worldBetter" = "¡Ayudemos a hacer el mundo mejor!";
+"dashboard.bannerSubtitle.worldBetter" = "Únase a Kanguro para donar por grandes causas.";
+"dashboard.bannerTitle.likingKanguro" = "¿Te gusta\nKanguro?";
+"dashboard.bannerSubtitle.likingKanguro" = "Recomienda a un amigo\ny gana recompensas.";
+
+"dashboard.popUp.editPolicy.title" = "Editar política";
+"dashboard.popUp.editPolicy.description" = "Actualmente estamos trabajando para crear la mejor experiencia de aplicación para usted.\n\nPor ahora, para realizar cambios en su política, contáctenos en rentersuw@kanguroinsurance.com";
+"dashboard.fileClaim.popup.label" = "Actualmente estamos trabajando para crear la mejor experiencia de reclamación para usted.
+
+Mientras tanto, para presentar sus reclamaciones, por favor contáctenos en rentersclaims@kanguroinsurance.com";
+
+// MARK: - Main Dashboard
+"mainDashboard.petInsuranceBanner.title" = "¿Tienes\una mascota?";
+"mainDashboard.petInsuranceBanner.subtitle" = "¡Ahorre dinero con nuestro\nseguro para mascotas Kanguro!";
+
+// MARK: - Renters Chat
+"renters.chat.title" = "Soporte";
+"renters.chat.banner.title" = "Hablar con Javier";
+"renters.chat.banner.subtitle" = "Él es nuestro especialista en Kanguro, disponible siempre para apoyarte con los reclamos y pagos + cualquier otra duda.";
+
+"renters.chat.message.actionCard" = "Chatea por mensaje de texto";
+"renters.chat.whatsapp.actionCard" = "Chatea por WhatsApp";
+"renters.chat.call.actionCard" = "Llámanos";
+"renters.chat.faster.tag"= "Más rápido";
+
+"renters.chat.sms.contactInfo.unavailable.alert" = "La información de contacto de SMS no está disponible";
+"renters.chat.whatsapp.contactInfo.unavailable.alert" = "La información de contacto de WhatsApp no está disponible";
+"renters.chat.phone.contactInfo.unavailable.alert" = "La información de contacto de teléfono no está disponible";
+"renters.chat.sms.unavailable.alert" = "SMS no está disponible en su dispositivo";
+"renters.chat.whatsapp.notInstalled.alert" = "WhatsApp no está instalado en tu dispositivo";
+"renters.chat.phone.unavailable.alert" = "Llamadas telefónicas no estan disponibles en su dispositivo";
+
+"renters.chat.opening.hours.card" = "Lun - Vie: 9:00am - 7:00pm EST\nSábado: 10:00am - 2:00pm EST\nDomingo: Cerrado";
+
+"renters.chat.emergency" = "Emergencia";
+"renters.chat.talk.vet" = "Habla con un veterinario 24/7";
+
+// MARK: - Personal Property claims
+"renters.chat.propertyClaims.title" = "Reclamaciones de propiedad personal";
+"renters.chat.propertyClaims.subtitle" = "Seleccione todos los artículos que resultaron dañados o perdidos en este incidente. Si ninguno de los elementos se vio afectado, simplemente toque Listo";
+"renters.chat.propertyClaims.scheduledItems" = "Tus artículos programados";
+
+"renters.chat.propertyClaims.item" = "Artículo";
+"renters.chat.propertyClaims.value" = "Valor";
+"renters.chat.propertyClaims.whatsItem" = "Cual es el articulo";
+"renters.chat.propertyClaims.itemTitle" = "Imagen de tu artículo";
+"renters.chat.propertyClaims.itemDescription" = "Por favor, tome una fotografía del artículo dañado.\nSi el artículo fue robado o se perdió, omita la foto.";
+"renters.chat.propertyClaims.add" = "Agregar";
+"renters.chat.propertyClaims.itemImage" = "Imagen del artículo";
+"renters.chat.propertyClaims.warrantyTitle" = "Recibo o Garantía de su artículo";
+"renters.chat.propertyClaims.warrantyDescription" = "Por favor, toma una fotografía de la garantía del artículo.\nSi no la tienes, omite la foto";
+"renters.chat.propertyClaims.warrantyImage" = "Imagen de garantía";
+"renters.chat.propertyClaims.takePicture" = "Tomar fotografías";
+"renters.chat.propertyClaims.selectPicture" = "Seleccionar imagenes";
+
+// MARK: - More actions
+"moreActions.titleLabel.label" = "MAS ACCIONES";
+"moreActions.fileClaim.card" = "Solicitar una reclamación";
+"moreActions.cloud.card" = "Nube";
+"moreActions.trackClaim.card" = "Monitorea tus reembolsos";
+"moreActions.policyDetails.card" = "Editar detalles de la póliza";
+"moreActions.changeAddress.card" = "Cambiar mi dirección";
+"moreActions.FAQ.card" = "Preguntas frecuentes";
+"moreActions.cancelPolicy.card" = "Cancelar esta póliza";
+"moreActions.residence.card" = "Añadir una residencia";
+"moreActions.payment.card" = "Configuración de pago";
+"moreActions.emailKanguro.card" = "Envía correo a Kanguro";
+"moreActions.communications.card" = "Comunicaciones";
+"moreActions.support.card.title" = "Apoyo";
+
+"moreActions.cancelPolicy.text1" = "Kanguro está muy triste de verte partir, pero siempre estaremos aquí si quieres volver. También podemos cambiar su cobertura por una opción más asequible.";
+
+"moreActions.cancelPolicy.text2" = "Puedes notificarnos que deseas cancelar\n por teléfono al +1-888-546-5264.";
+"moreActions.cancelPolicy.highlightedText2" = "+1-888-546-5264.";
+
+"moreActions.cancelPolicy.text3" = "También puede enviarnos un correo electrónico con su solicitud de cancelación.";
+"moreActions.cancelPolicy.highlightedText3" = "correo electrónico";
+
+"moreActions.trackClaim.contact.text" = "Para rastrear el estado de su reclamo, comuníquese con atención al cliente en rentersclaims@kanguroinsurance.com";
+
+// MARK: - Coverage Details - Section - Scheduled Items
+"scheduledItems.title.section" = "Artículos programados";
+"scheduledItems.valueDescription.label" = "Tiene un total de totalValueText en elementos programados.";
+"coverageDetails.hello.header" = "Hola, username";
+"coverageDetails.dwellingType.singleFamily" = "Unifamiliar";
+"coverageDetails.dwellingType.MultiFamily" = "Multifamiliar";
+"coverageDetails.dwellingType.Apartment" = "Apartamento";
+"coverageDetails.dwellingType.Townhouse" = "Casa adosada";
+"coverageDetails.dwellingType.StudentHousing" = "Alojamiento para estudiantes";
+
+// MARK: - Coverage Details - Section - Renters Insurance
+"coverageDetails.insurance.title" = "Seguro de Inquilino";
+"coverageDetails.insurance.policyStatus" = "Su poliza está policyStatus.";
+"coverageDetails.insurance.policyStatus.active" = "\n¡Con Kanguro estarás\nsiempre a salvo!";
+"coverageDetails.insurance.policyStatus.highlighted.active" = "activa";
+"coverageDetails.insurance.policyStatus.highlighted.cancelled" = "cancelada";
+"coverageDetails.insurance.policyStatus.highlighted.pending" = "pendiente";
+"coverageDetails.insurance.policyStatus.highlighted.terminated" = "terminada";
+"coverageDetails.insurance.planSummary.card" = "Resumen del plan";
+"coverageDetails.insurance.whatsCovered.card" = "¿Qué está cubierto?";
+"coverageDetails.insurance.documentation.card" = "Documentación";
+"coverageDetails.insurance.editPolicy.card" = "Editar detalles de la poliza";
+
+"coverageDetails.planSummary.liability" = "Responsabilidad";
+"coverageDetails.planSummary.deductible" = "Deducible";
+"coverageDetails.planSummary.personalProperty" = "Propiedad personal";
+"coverageDetails.planSummary.lossOfUse" = "Perdida de uso";
+
+// MARK: - Coverage Details - Section - Additional Coverage
+"coverageDetails.additionalCoverage.coverageLimit" = "Límite de cobertura";
+"coverageDetails.additionalCoverage.deductibleLimit" = "Límite deducible";
+"coverageDetails.additionalCoverage.replacementCost" = "Costo de remplazo";
+"coverageDetails.additionalCoverage.fraudProtection" = "Protección contra fraude";
+"coverageDetails.additionalCoverage.waterSewerBackup" = "Respaldo de alcantarillado de agua";
+"coverageDetails.additionalCoverage.footer" = "Tu póliza ya cuenta con esta cobertura.";
+
+// MARK: - Coverage Details - Section - Additional Parties
+"coverageDetails.additionalParties.title.section" = "Partes adicionales";
+
+// MARK: - Edit Policy Details
+"editPolicyDetails.submit.button" = "Enviar (+$value/MO)";
+"editPolicyDetails.totalPrice.label" = "Su precio total ahora será $\(value)/mo";
+"editPolicyDetails.header.label" = "Aquí están los principales\nnúmeros de su póliza";
+"editPolicyDetails.belongings.title.label" = "Sus pertenencias";
+"editPolicyDetails.belongings.description.label" = "¿Cuánto costaría reemplazar sus posesiones como muebles, ropa y electrónicos? Elija su cobertura en base a esta estimación. La cantidad seleccionada también puede ser extendida a los objetos de su compañero de cuarto. Solo asegúrese de incluirlos en su póliza cuando finalice su compra.";
+"editPolicyDetails.lossOfUse.title.label" = "Pérdida de Uso";
+"editPolicyDetails.lossOfUse.description.label" = "Esta cobertura brinda asistencia en caso de que su hogar sea declarado inhabitable. Con esta cobertura, puede recuperar los costos razonables incurridos por vivir fuera de su hogar, como la renta, comida, lavandería, etc.";
+"editPolicyDetails.deductible.label" = "Deducible";
+"editPolicyDetails.liability.label" = "Su Responsabilidad";
+"editPolicyDetails.medicalPayments.title.label" = "Pagos Médicos - $value";
+"editPolicyDetails.medicalPayments.description.label" = "La cobertura proporciona pagos voluntarios por facturas médicas menores si alguien se lesiona en su propiedad.";
+"editPolicyDetails.hurricane.title.label" = "Deducible de Huracán - $value";
+"editPolicyDetails.hurricane.description.label" = "Este deducible es el monto que restaremos de su indemnización en caso de tener una pérdida por huracán.";
+"editPolicyDetails.liability.popup.description.label" = "Esta cobertura asegura que esté protegido en caso de que dañe inadvertidamente su propia propiedad o la de un vecino debido a humo, fuego, agua o explosiones. Además, si un visitante resulta herido o mordido por su perro, nos haremos cargo de los costos médicos y legales esenciales hasta el límite que seleccione a continuación.";
+"editPolicyDetails.deductible.popup.description.label" = "Un deducible es una cantidad inicial de la que usted es responsable, pero con nuestro Kanguro, se deduce de su liquidación de reclamo. Optar por un deducible más alto reduce su prima mensual, pero también disminuye la cantidad que recibirá por una pérdida asegurada. Por ejemplo, si selecciona un deducible de $500 y tiene una mesa de $1000, le reembolsaremos $500.";
+
+// MARK: - Edit Additional Coverage
+"editAdditionalCoverage.header.label" = "Aquí están nuestras opciones adicionales de cobertura";
+"fraudProtection.popup.title" = "Protección contra Fraudes";
+"fraudProtection.popup.description" = "La cobertura incluye hasta $15,000 para cubrir tus gastos como víctima de fraude de identidad. Se aplica un deducible de $100.";
+"waterProtection.popup.title" = "Respaldos de Agua y Alcantarillado";
+"waterProtection.popup.description" = "La cobertura incluye hasta $2,500 en daños si hay una obstrucción o respaldo de alcantarillado o desagüe en tu hogar.";
+"replacementCost.popup.title" = "Costo de remplazo";
+"replacementCost.popup.description" = "En caso de que necesites utilizar tu seguro, cubriremos los costos reales de reparación o reemplazo de los artículos.";
+
+// MARK: - Claims
+"rentersClaim.title" = "Nueva reclamación";
+
+// MARK: - FAQ
+"faq.title.label" = "Información de Interés";
+"faq.subtitle.label" = "Preguntas frecuentes";
+"faq.subtitle.label.pet" = "Seguro de Mascotas";
+"faq.subtitle.label.renters" = "Seguro de Inquilinos";
+
+// MARK: - What is Covered
+"whatIsCovered.vertical.list.item.label.theft" = "Robo";
+"whatIsCovered.vertical.list.item.label.fire" = "Incendio";
+"whatIsCovered.vertical.list.item.label.smoke" = "Humo";
+"whatIsCovered.vertical.list.item.label.hail" = "Granizo";
+"whatIsCovered.vertical.list.item.label.light" = "Rayo";
+"whatIsCovered.vertical.list.item.label.wind" = "Viento";
+"whatIsCovered.vertical.list.item.label.vandalism" = "Vandalismo";
+"whatIsCovered.vertical.list.item.label.explosion" = "Explosión";
+
+"whatIsCovered.body.label" = "Protege tus pertenencias personales y ayuda a cubrir los costos relacionados con la responsabilidad personal. Kanguro te respalda durante eventos desafortunados, incluidos casos en los que alguien resulta herido en tu hogar o te demanda por daños.";
+
+"whatIsCovered.body.label.highlighted" = "incluidos casos en los que alguien resulta herido en tu hogar o te demanda por daños.";
+
+// MARK: - Feedback
+"feedback.title.label" = "¿Cómo fue su experiencia al presentar un reclamo?";
+"feedback.placeholder.textfield" = "Cuéntanos más sobre tu experiencia \n(Opcional)";
+"feedback.sendFeedback.button" = "Enviar un comentario";
+"feedback.skipFeedback.button" = "Ignorar";
+"feedback.awful" = "Muy mal";
+"feedback.notGood" = "Mal";
+"feedback.ok" = "Ok";
+"feedback.good" = "Bien";
+"feedback.awesome" = "Wow";
+"pledgeOfHonor.success.alert" = "¡Éxito!";
+"pledgeOfHonor.savedSignature.alert" = "Tu firma está guardada";
+
+// MARK: - Live Vet
+"liveVet.title" = "Veterinario en vivo 24/7";
+"liveVet.subtitle" = "Servicio de televeterinaria operado por Airvet";
+"liveVet.policy" = "Tu póliza de Kanguro ahora incluye chat en vivo o video con un veterinario. Sin costo";
+"liveVet.description" = "e inmediato - Contacta a un veterinario certificado en menos de 3 minutos.";
+"liveVet.description.2" = "Todos los veterinarios están certificados - ellos pueden recetar medicamentos para tu mascota. Todo sin salir de casa.";
+"liveVet.description.3" = "Sin costo adicional - El servicio de Airvet está incluido con tu seguro de mascotas Kanguro.";
+"liveVet.description.4" = "Bilingüe - Veterinarios disponibles en inglés y español.";
+"liveVet.description.hours" = "24/7";
+"liveVet.stepOne" = "PASO 1";
+"liveVet.stepOne.instruction" = "Descarga aquí la aplicación Airvet";
+"liveVet.stepOne.instruction.download" = "Descarga";
+"liveVet.stepOne.instruction.here" = "aquí";
+"liveVet.stepTwo" = "PASO 2";
+"liveVet.stepTwo.instruction" = "Regístrate - Cuando te pregunten, utiliza tu ID de cliente ";
+"liveVet.stepTwo.instruction.signup" = "Regístrate";
+"liveVet.stepTwo.instruction.copy" = "copiar";
+"liveVet.stepTwo.instruction.copied" = "copiado";
+"liveVet.stepThree" = "PASO 3";
+"liveVet.stepThree.instruction" = "Habla con un veterinario en menos de un minuto.";
+"liveVet.stepThree.instruction.talk" = "Habla con un veterinario";
+"liveVet.downloadApp" = "Descarga aquí la aplicación Airvet";
+"liveVet.card.title" = "Veterinario gratis 24/7";
+"liveVet.card.subtitle" = "Ahórrate el viaje al veterinario.";
+"liveVet.card.link" = "Habla con un veterinario";
+
+// MARK: - ClaimStatus
+"claimStatus.noClaim.label" = "No hay nada aquí todavía!";
+"claimStatus.open.title" = "Abierto";
+"claimStatus.closed.title" = "Cerrado";
+"claimStatus.draft.title" = "Borradores";
+"claimStatus.submitted" = "Presentada";
+"claimStatus.assigned" = "Asignado";
+"claimStatus.review" = "En revisión";
+"claimStatus.closed" = "Cerrado";
+"claimStatus.approved" = "Aprobado";
+"claimStatus.paid" = "Pagado";
+"claimStatus.denied" = "Denegado";
+
+"claimStatus.draft" = "Borrador";
+"claimStatus.deleted" = "Eliminado";
+"claimStatus.pendingMedicalHistory" = "Historial médico pendiente";
+"claimStatus.medicalHistoryInReview" = "Historial médico en revisión";
+"claimStatus.unknown" = "Desconocido";
+
+// MARK: - Claim Tracker Card
+"claimCard.direct.pay" = "Pago directo a tu veterinario";
+"claimCard.detail" = "Detailes";
+"claimCard.claim.amount" = "Valor de reclamación: ";
+"claimCard.last.update" = "Última actualización ";
+"claimCard.closed.in" = "Cerrado en ";
+"claims.claims.back" = "Reclamos";
+"claims.paid" = "Pago ";
+"claims.accident.label" = "Accidente";
+"claims.illness.label" = "Enfermedad";
+"claims.other.label" = "Otro";

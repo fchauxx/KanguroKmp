@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CheckboxView" customModule="Kanguro" customModuleProvider="target">
+            <connections>
+                <outlet property="bgView" destination="P2q-8R-WKU" id="a7S-JY-LGa"/>
+                <outlet property="selectionView" destination="E3S-KU-fYd" id="YS9-ze-anU"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="24" height="24"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P2q-8R-WKU" userLabel="bg View">
+                    <rect key="frame" x="0.0" y="0.0" width="24" height="24"/>
+                    <subviews>
+                        <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E3S-KU-fYd" userLabel="selection View">
+                            <rect key="frame" x="4" y="4" width="16" height="16"/>
+                            <color key="backgroundColor" name="TertiaryDark"/>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="E3S-KU-fYd" firstAttribute="top" secondItem="P2q-8R-WKU" secondAttribute="top" constant="4" id="38k-gQ-SEP"/>
+                        <constraint firstAttribute="width" constant="24" id="SJS-ms-BJ3"/>
+                        <constraint firstItem="E3S-KU-fYd" firstAttribute="leading" secondItem="P2q-8R-WKU" secondAttribute="leading" constant="4" id="Y3R-mU-Sls"/>
+                        <constraint firstAttribute="trailing" secondItem="E3S-KU-fYd" secondAttribute="trailing" constant="4" id="dTm-fK-Gop"/>
+                        <constraint firstAttribute="height" constant="24" id="hGv-8C-vnQ"/>
+                        <constraint firstAttribute="bottom" secondItem="E3S-KU-fYd" secondAttribute="bottom" constant="4" id="i0H-az-AtY"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                            <real key="value" value="2"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="4"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DDx-wM-8Tq" userLabel="button">
+                    <rect key="frame" x="0.0" y="0.0" width="24" height="24"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title=" "/>
+                    <connections>
+                        <action selector="buttonTouchUpInside:" destination="-1" eventType="touchUpInside" id="2rS-zf-mn7"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="P2q-8R-WKU" secondAttribute="bottom" id="1FQ-3C-Qa1"/>
+                <constraint firstAttribute="trailing" secondItem="P2q-8R-WKU" secondAttribute="trailing" id="3JX-rq-Ncv"/>
+                <constraint firstItem="DDx-wM-8Tq" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="A6j-oW-Cnw"/>
+                <constraint firstItem="P2q-8R-WKU" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Bad-FL-fd5"/>
+                <constraint firstItem="P2q-8R-WKU" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="MzR-l6-qpd"/>
+                <constraint firstAttribute="trailing" secondItem="DDx-wM-8Tq" secondAttribute="trailing" id="O2v-lD-MxQ"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="DDx-wM-8Tq" secondAttribute="bottom" id="b4C-p9-f2e"/>
+                <constraint firstItem="DDx-wM-8Tq" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="pZm-5Z-JYN"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="131.8840579710145" y="113.16964285714285"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="TertiaryDark">
+            <color red="0.6705882352941176" green="0.42745098039215684" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

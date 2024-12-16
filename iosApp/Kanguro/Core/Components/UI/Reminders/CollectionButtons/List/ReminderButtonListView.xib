@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ReminderButtonListView" customModule="Kanguro" customModuleProvider="target">
+            <connections>
+                <outlet property="stackView" destination="tNW-iL-ikj" id="3XH-A7-bgA"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="314" height="115"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G1Y-Zq-4fS">
+                    <rect key="frame" x="0.0" y="0.0" width="314" height="115"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SU2-gg-YRY">
+                            <rect key="frame" x="0.0" y="0.0" width="314" height="115"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="tNW-iL-ikj">
+                                    <rect key="frame" x="0.0" y="0.0" width="314" height="115"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </stackView>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="tNW-iL-ikj" secondAttribute="trailing" constant="32" id="eph-2f-tRW"/>
+                                <constraint firstItem="tNW-iL-ikj" firstAttribute="top" secondItem="SU2-gg-YRY" secondAttribute="top" id="fqP-ku-sM1"/>
+                                <constraint firstItem="tNW-iL-ikj" firstAttribute="leading" secondItem="SU2-gg-YRY" secondAttribute="leading" constant="32" id="nDS-if-mif"/>
+                                <constraint firstAttribute="bottom" secondItem="tNW-iL-ikj" secondAttribute="bottom" id="yBc-Gc-I9T"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="SU2-gg-YRY" firstAttribute="top" secondItem="G1Y-Zq-4fS" secondAttribute="top" id="A3P-xm-H6U"/>
+                        <constraint firstItem="SU2-gg-YRY" firstAttribute="leading" secondItem="G1Y-Zq-4fS" secondAttribute="leading" id="TJo-AW-ktK"/>
+                        <constraint firstAttribute="bottom" secondItem="SU2-gg-YRY" secondAttribute="bottom" id="dNh-KO-qL2"/>
+                        <constraint firstAttribute="trailing" secondItem="SU2-gg-YRY" secondAttribute="trailing" id="opj-10-MNl"/>
+                    </constraints>
+                </scrollView>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="G1Y-Zq-4fS" secondAttribute="trailing" id="MoX-Zb-4kq"/>
+                <constraint firstAttribute="bottom" secondItem="G1Y-Zq-4fS" secondAttribute="bottom" id="UgQ-VI-jIQ"/>
+                <constraint firstItem="G1Y-Zq-4fS" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="gNX-a6-kim"/>
+                <constraint firstItem="G1Y-Zq-4fS" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="tQP-QN-DJ7"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="65.217391304347828" y="-175.78125"/>
+        </view>
+    </objects>
+</document>

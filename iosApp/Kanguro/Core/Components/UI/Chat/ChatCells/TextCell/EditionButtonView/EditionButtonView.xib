@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EditionButtonView" customModule="Kanguro" customModuleProvider="target">
+            <connections>
+                <outlet property="backgroundView" destination="siV-AZ-lE3" id="Jkr-he-v2Y"/>
+                <outlet property="button" destination="dOb-b9-m8k" id="MHX-Gw-hTR"/>
+                <outlet property="editionImageView" destination="WRA-Ak-zuW" id="mOX-Ys-3xe"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="24" height="24"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="siV-AZ-lE3" userLabel="backgroudView">
+                    <rect key="frame" x="0.0" y="0.0" width="24" height="24"/>
+                    <color key="backgroundColor" name="TertiaryLightest"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="24" id="K0c-lT-9hZ"/>
+                        <constraint firstAttribute="width" constant="24" id="soi-rF-Bcb"/>
+                    </constraints>
+                </view>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WRA-Ak-zuW">
+                    <rect key="frame" x="0.0" y="0.0" width="24" height="24"/>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dOb-b9-m8k">
+                    <rect key="frame" x="0.0" y="0.0" width="24" height="24"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title=" "/>
+                    <connections>
+                        <action selector="editMessageTouchUpInside:" destination="-1" eventType="touchUpInside" id="8Zz-pS-QQL"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="dOb-b9-m8k" secondAttribute="trailing" id="336-ud-PhD"/>
+                <constraint firstItem="WRA-Ak-zuW" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="42t-5e-azT"/>
+                <constraint firstItem="dOb-b9-m8k" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="ATr-6r-N5o"/>
+                <constraint firstItem="siV-AZ-lE3" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Emt-H1-YND"/>
+                <constraint firstAttribute="bottom" secondItem="WRA-Ak-zuW" secondAttribute="bottom" id="Gfr-7R-Lxq"/>
+                <constraint firstAttribute="trailing" secondItem="WRA-Ak-zuW" secondAttribute="trailing" id="Jdq-jT-XKM"/>
+                <constraint firstAttribute="bottom" secondItem="dOb-b9-m8k" secondAttribute="bottom" id="b7c-Iz-j53"/>
+                <constraint firstItem="siV-AZ-lE3" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="cRQ-JV-6xq"/>
+                <constraint firstItem="WRA-Ak-zuW" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="mgr-RR-rvC"/>
+                <constraint firstAttribute="bottom" secondItem="siV-AZ-lE3" secondAttribute="bottom" id="s5w-5Y-5Hs"/>
+                <constraint firstAttribute="trailing" secondItem="siV-AZ-lE3" secondAttribute="trailing" id="twG-nz-zSh"/>
+                <constraint firstItem="dOb-b9-m8k" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="yiE-3a-YIW"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="131.8840579710145" y="81.696428571428569"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="TertiaryLightest">
+            <color red="0.91764705882352937" green="0.85490196078431369" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

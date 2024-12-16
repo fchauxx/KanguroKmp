@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "icon-step-two-airvet.svg",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AccordionCardItemView" customModule="Kanguro" customModuleProvider="target">
+            <connections>
+                <outlet property="backgroundView" destination="iN0-l3-epB" id="dDI-U6-vpB"/>
+                <outlet property="leadingTitleLabel" destination="NYI-Pf-t1g" id="nx7-Je-9h8"/>
+                <outlet property="traillingTitleLabel" destination="AfX-vX-Vqq" id="HTM-Zr-5eq"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="35"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="28k-fy-9aG">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="35"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NYI-Pf-t1g" customClass="CustomLabel" customModule="Kanguro" customModuleProvider="target">
+                            <rect key="frame" x="16" y="0.0" width="42" height="19"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AfX-vX-Vqq" customClass="CustomLabel" customModule="Kanguro" customModuleProvider="target">
+                            <rect key="frame" x="356" y="0.0" width="42" height="19"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" name="NeutralBackground"/>
+                    <constraints>
+                        <constraint firstItem="AfX-vX-Vqq" firstAttribute="centerY" secondItem="NYI-Pf-t1g" secondAttribute="centerY" id="4Ke-PC-egL"/>
+                        <constraint firstItem="AfX-vX-Vqq" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="NYI-Pf-t1g" secondAttribute="trailing" constant="16" id="MSW-Ss-epe"/>
+                        <constraint firstItem="NYI-Pf-t1g" firstAttribute="top" secondItem="28k-fy-9aG" secondAttribute="top" id="RO7-wO-l7Y"/>
+                        <constraint firstItem="NYI-Pf-t1g" firstAttribute="leading" secondItem="28k-fy-9aG" secondAttribute="leading" constant="16" id="YTP-ct-063"/>
+                        <constraint firstAttribute="bottom" secondItem="NYI-Pf-t1g" secondAttribute="bottom" constant="16" id="aQF-4U-7Na"/>
+                        <constraint firstAttribute="trailing" secondItem="AfX-vX-Vqq" secondAttribute="trailing" constant="16" id="ikg-gg-ERb"/>
+                        <constraint firstItem="AfX-vX-Vqq" firstAttribute="top" relation="greaterThanOrEqual" secondItem="28k-fy-9aG" secondAttribute="top" id="uES-cy-ey3"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" name="NeutralBackground"/>
+            <constraints>
+                <constraint firstItem="28k-fy-9aG" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="N5f-xm-fZy"/>
+                <constraint firstAttribute="bottom" secondItem="28k-fy-9aG" secondAttribute="bottom" id="Wi2-0R-4tt"/>
+                <constraint firstAttribute="trailing" secondItem="28k-fy-9aG" secondAttribute="trailing" id="XVo-6k-FW3"/>
+                <constraint firstItem="28k-fy-9aG" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="dyp-O8-iKy"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="137.68115942028987" y="112.83482142857142"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="NeutralBackground">
+            <color red="0.94117647058823528" green="0.94117647058823528" blue="0.94117647058823528" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+    </resources>
+</document>

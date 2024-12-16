@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="VetAdviceBaseViewController" customModule="Kanguro" customModuleProvider="target">
+            <connections>
+                <outlet property="catVetAdviceCardView" destination="hdB-eS-fov" id="ajv-ju-7ON"/>
+                <outlet property="dogVetAdviceCardView" destination="zgX-NJ-mAO" id="IPF-gd-yYX"/>
+                <outlet property="navigationBackButton" destination="pGJ-4q-2D6" id="5XK-wT-YYW"/>
+                <outlet property="veterinaryView" destination="HDN-vM-F5d" id="FrY-RI-yfq"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pGJ-4q-2D6" customClass="NavigationBackButton" customModule="Kanguro" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="44" width="414" height="40"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="VMW-6F-VPB"/>
+                    </constraints>
+                </view>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zKV-eV-FRG">
+                    <rect key="frame" x="0.0" y="84" width="414" height="778"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2O8-CC-f0p" userLabel="Content View">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="778"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HDN-vM-F5d" customClass="VeterinaryCardView" customModule="Kanguro" customModuleProvider="target">
+                                    <rect key="frame" x="24" y="22" width="366" height="77"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </view>
+                                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zgX-NJ-mAO" userLabel="Dog Vet Advice Card View" customClass="VetAdviceCardView" customModule="Kanguro" customModuleProvider="target">
+                                    <rect key="frame" x="24" y="151" width="366" height="128"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </view>
+                                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hdB-eS-fov" userLabel="Cat Vet Advice Card View" customClass="VetAdviceCardView" customModule="Kanguro" customModuleProvider="target">
+                                    <rect key="frame" x="24" y="374" width="366" height="128"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </view>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="hdB-eS-fov" secondAttribute="bottom" constant="74" id="ACm-sW-L5L"/>
+                                <constraint firstItem="HDN-vM-F5d" firstAttribute="leading" secondItem="2O8-CC-f0p" secondAttribute="leading" constant="24" id="Bla-0O-oj4"/>
+                                <constraint firstItem="zgX-NJ-mAO" firstAttribute="top" secondItem="HDN-vM-F5d" secondAttribute="bottom" constant="24" id="FBZ-UC-ZtO"/>
+                                <constraint firstAttribute="trailing" secondItem="HDN-vM-F5d" secondAttribute="trailing" constant="24" id="LKa-Gr-BkJ"/>
+                                <constraint firstAttribute="trailing" secondItem="hdB-eS-fov" secondAttribute="trailing" constant="24" id="MAV-CN-WQg"/>
+                                <constraint firstItem="HDN-vM-F5d" firstAttribute="top" secondItem="2O8-CC-f0p" secondAttribute="top" constant="16" id="ZV8-Ba-P2f"/>
+                                <constraint firstItem="hdB-eS-fov" firstAttribute="top" secondItem="zgX-NJ-mAO" secondAttribute="bottom" constant="24" id="fvn-8z-ERL"/>
+                                <constraint firstItem="hdB-eS-fov" firstAttribute="leading" secondItem="2O8-CC-f0p" secondAttribute="leading" constant="24" id="iGJ-yw-c9f"/>
+                                <constraint firstAttribute="trailing" secondItem="zgX-NJ-mAO" secondAttribute="trailing" constant="24" id="mvw-vN-EQa"/>
+                                <constraint firstItem="zgX-NJ-mAO" firstAttribute="leading" secondItem="2O8-CC-f0p" secondAttribute="leading" constant="24" id="sz4-8p-kk3"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="2O8-CC-f0p" firstAttribute="leading" secondItem="zKV-eV-FRG" secondAttribute="leading" id="6UA-CI-Beh"/>
+                        <constraint firstItem="2O8-CC-f0p" firstAttribute="top" secondItem="zKV-eV-FRG" secondAttribute="top" id="QXn-73-CIw"/>
+                        <constraint firstAttribute="bottom" secondItem="2O8-CC-f0p" secondAttribute="bottom" id="YeS-bU-hJD"/>
+                        <constraint firstAttribute="trailing" secondItem="2O8-CC-f0p" secondAttribute="trailing" id="tvb-TI-A1d"/>
+                    </constraints>
+                </scrollView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" name="NeutralBackground"/>
+            <constraints>
+                <constraint firstItem="pGJ-4q-2D6" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="5eJ-63-12n"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="pGJ-4q-2D6" secondAttribute="trailing" id="CCL-17-I9a"/>
+                <constraint firstItem="zKV-eV-FRG" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="WCt-pD-oH5"/>
+                <constraint firstItem="zKV-eV-FRG" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="XN9-bB-fld"/>
+                <constraint firstItem="2O8-CC-f0p" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="Ygb-yI-e6h"/>
+                <constraint firstItem="pGJ-4q-2D6" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="fbj-54-lyZ"/>
+                <constraint firstItem="zKV-eV-FRG" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="gDQ-Z1-7gd"/>
+                <constraint firstItem="zKV-eV-FRG" firstAttribute="top" secondItem="pGJ-4q-2D6" secondAttribute="bottom" id="sXW-Ni-cuB"/>
+            </constraints>
+            <point key="canvasLocation" x="131.8840579710145" y="112.5"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="NeutralBackground">
+            <color red="0.94117647058823528" green="0.94117647058823528" blue="0.94117647058823528" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+    </resources>
+</document>

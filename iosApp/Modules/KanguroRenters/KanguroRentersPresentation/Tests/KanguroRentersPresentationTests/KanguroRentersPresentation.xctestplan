@@ -1,0 +1,24 @@
+{
+  "configurations" : [
+    {
+      "id" : "B6FE860C-4B34-42BD-89F3-EF2674696A0E",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:",
+        "identifier" : "KanguroRentersPresentationTests",
+        "name" : "KanguroRentersPresentationTests"
+      }
+    }
+  ],
+  "version" : 1
+}

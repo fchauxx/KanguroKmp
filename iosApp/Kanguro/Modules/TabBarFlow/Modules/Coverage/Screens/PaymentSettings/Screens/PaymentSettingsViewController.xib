@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PaymentSettingsViewController" customModule="Kanguro" customModuleProvider="target">
+            <connections>
+                <outlet property="navigationBackButton" destination="ZYN-66-gmo" id="lbT-Wj-KPO"/>
+                <outlet property="paymentMethodActionCard" destination="1Vc-Kw-LoH" id="pk7-GR-hMz"/>
+                <outlet property="paymentTitleLabel" destination="VF9-4f-DvY" id="AOJ-hz-cTL"/>
+                <outlet property="preferencesTitleLabel" destination="G6X-Cb-G9X" id="e2e-Tp-57c"/>
+                <outlet property="reimbursementActionCard" destination="Jmo-iP-kM8" id="6Gq-D4-Mo5"/>
+                <outlet property="stackView" destination="Jyr-Rf-E8L" id="uwC-yj-SC7"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZYN-66-gmo" customClass="NavigationBackButton" customModule="Kanguro" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="44" width="414" height="40"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="kwG-fn-IxJ"/>
+                    </constraints>
+                </view>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C9m-qn-npN">
+                    <rect key="frame" x="0.0" y="108" width="414" height="754"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fyw-LT-uK6" userLabel="Content View">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="754"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XEj-dc-baJ" userLabel="Preferences View">
+                                    <rect key="frame" x="24" y="17" width="366" height="118"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G6X-Cb-G9X" userLabel="preferences label" customClass="CustomLabel" customModule="Kanguro" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="41.5" height="20.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="sGq-q8-fuP">
+                                            <rect key="frame" x="0.0" y="14" width="366" height="104"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1Vc-Kw-LoH" userLabel="Payment Action Card" customClass="ActionCard" customModule="Kanguro" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="366" height="50"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </view>
+                                                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Jmo-iP-kM8" userLabel="Reimbursement Action Card" customClass="ActionCard" customModule="Kanguro" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="54" width="366" height="50"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </view>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstItem="sGq-q8-fuP" firstAttribute="top" secondItem="G6X-Cb-G9X" secondAttribute="bottom" constant="16" id="1n3-h1-Mah"/>
+                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="G6X-Cb-G9X" secondAttribute="trailing" id="3CD-MA-kjn"/>
+                                        <constraint firstItem="G6X-Cb-G9X" firstAttribute="top" secondItem="XEj-dc-baJ" secondAttribute="top" id="BqR-Cu-nhG"/>
+                                        <constraint firstItem="G6X-Cb-G9X" firstAttribute="leading" secondItem="XEj-dc-baJ" secondAttribute="leading" id="GpT-l5-yId"/>
+                                        <constraint firstItem="sGq-q8-fuP" firstAttribute="leading" secondItem="XEj-dc-baJ" secondAttribute="leading" id="JL3-QJ-z0s"/>
+                                        <constraint firstAttribute="bottom" secondItem="sGq-q8-fuP" secondAttribute="bottom" id="Ooi-lY-17T"/>
+                                        <constraint firstAttribute="trailing" secondItem="sGq-q8-fuP" secondAttribute="trailing" id="awE-qY-DvC"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ytg-CZ-ZQW" userLabel="Payment cards View">
+                                    <rect key="frame" x="24" y="160" width="366" height="594"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Jyr-Rf-E8L" userLabel="Payment cards Stack View">
+                                            <rect key="frame" x="0.0" y="70" width="366" height="684"/>
+                                        </stackView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="payment title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VF9-4f-DvY" customClass="CustomLabel" customModule="Kanguro" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="99" height="20.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstItem="Jyr-Rf-E8L" firstAttribute="top" secondItem="VF9-4f-DvY" secondAttribute="bottom" constant="16" id="52f-A1-lal"/>
+                                        <constraint firstAttribute="trailing" secondItem="Jyr-Rf-E8L" secondAttribute="trailing" id="FNv-L5-FuS"/>
+                                        <constraint firstItem="VF9-4f-DvY" firstAttribute="leading" secondItem="Ytg-CZ-ZQW" secondAttribute="leading" id="Vyt-YK-u7g"/>
+                                        <constraint firstItem="VF9-4f-DvY" firstAttribute="top" secondItem="Ytg-CZ-ZQW" secondAttribute="top" id="mcL-j8-tNu"/>
+                                        <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Jyr-Rf-E8L" secondAttribute="bottom" id="sMb-MO-cM5"/>
+                                        <constraint firstItem="Jyr-Rf-E8L" firstAttribute="leading" secondItem="Ytg-CZ-ZQW" secondAttribute="leading" id="uL5-zP-qxd"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="XEj-dc-baJ" firstAttribute="top" secondItem="fyw-LT-uK6" secondAttribute="top" constant="32" id="189-xM-Y0K"/>
+                                <constraint firstAttribute="trailing" secondItem="Ytg-CZ-ZQW" secondAttribute="trailing" constant="24" id="BDM-Rq-aLQ"/>
+                                <constraint firstAttribute="bottom" secondItem="Ytg-CZ-ZQW" secondAttribute="bottom" id="NRJ-35-iPk"/>
+                                <constraint firstAttribute="trailing" secondItem="XEj-dc-baJ" secondAttribute="trailing" constant="24" id="YGc-eu-FUM"/>
+                                <constraint firstItem="XEj-dc-baJ" firstAttribute="leading" secondItem="fyw-LT-uK6" secondAttribute="leading" constant="24" id="aSa-wc-Pyg"/>
+                                <constraint firstItem="Ytg-CZ-ZQW" firstAttribute="leading" secondItem="fyw-LT-uK6" secondAttribute="leading" constant="24" id="fDU-g8-bGx"/>
+                                <constraint firstItem="Ytg-CZ-ZQW" firstAttribute="top" secondItem="XEj-dc-baJ" secondAttribute="bottom" constant="32" id="x3Y-ip-y3j"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="fyw-LT-uK6" secondAttribute="trailing" id="0Un-FO-ohJ"/>
+                        <constraint firstAttribute="bottom" secondItem="fyw-LT-uK6" secondAttribute="bottom" id="8sJ-Xq-jeY"/>
+                        <constraint firstItem="fyw-LT-uK6" firstAttribute="leading" secondItem="C9m-qn-npN" secondAttribute="leading" id="ROt-T2-WNl"/>
+                        <constraint firstItem="fyw-LT-uK6" firstAttribute="top" secondItem="C9m-qn-npN" secondAttribute="top" id="uhT-fW-eUx"/>
+                    </constraints>
+                </scrollView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" name="NeutralBackground"/>
+            <constraints>
+                <constraint firstItem="ZYN-66-gmo" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="JoG-gX-cc1"/>
+                <constraint firstItem="C9m-qn-npN" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Uq2-Yg-izg"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="C9m-qn-npN" secondAttribute="bottom" constant="50" id="eie-WV-aay"/>
+                <constraint firstItem="fyw-LT-uK6" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="m4k-Hx-1va"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="C9m-qn-npN" secondAttribute="trailing" id="pdX-QP-c9v"/>
+                <constraint firstItem="ZYN-66-gmo" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="qEG-aT-sh1"/>
+                <constraint firstItem="ZYN-66-gmo" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="y2F-Lc-ljP"/>
+                <constraint firstItem="C9m-qn-npN" firstAttribute="top" secondItem="ZYN-66-gmo" secondAttribute="bottom" id="zrV-OS-r6Q"/>
+            </constraints>
+            <point key="canvasLocation" x="131.8840579710145" y="85.714285714285708"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="NeutralBackground">
+            <color red="0.94117647058823528" green="0.94117647058823528" blue="0.94117647058823528" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+    </resources>
+</document>

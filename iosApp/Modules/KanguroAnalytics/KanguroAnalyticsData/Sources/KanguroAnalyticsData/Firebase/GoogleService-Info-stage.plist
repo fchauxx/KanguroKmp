@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>109758041399-3hvunuthd4ip0gcgnl17t5s7o5fqvckr.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.109758041399-3hvunuthd4ip0gcgnl17t5s7o5fqvckr</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBmf6MEjrYXUdhz-1WJbUm0aqqeXj_O-U0</string>
+	<key>GCM_SENDER_ID</key>
+	<string>109758041399</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.poatek.beta.kanguro</string>
+	<key>PROJECT_ID</key>
+	<string>kanguro-seguro-stage</string>
+	<key>STORAGE_BUCKET</key>
+	<string>kanguro-seguro-stage.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:109758041399:ios:eb94c5ae88b61607addeb2</string>
+</dict>
+</plist>

@@ -1,0 +1,764 @@
+// MARK: - TextFieldType
+"textFieldTypeTitle.email" = "Introduce tu correo electrónico";
+"textFieldTypeTitle.password" = "Ingresa tu contraseña";
+"textFieldTypePlaceholder.email" = "Correo Electrónico";
+"textFieldTypePlaceholder.password" = "Contraseña";
+"textFieldTypeError.email" = "Por favor, introduce un correo electrónico válido.";
+"textFieldTypeError.password" = "¡Contraseña inválido!";
+
+// MARK: - Common
+"common.tryAgain" = "Intenta novamente";
+"common.continue" = "Siguiente";
+"common.cancel" = "Cancelar";
+"common.ok" = "Ok";
+"common.back" = "Volver";
+"commom.years" = "años";
+"commom.year" = "año";
+"commom.months" = "meses";
+"commom.month" = "mes";
+"commom.days" = "diás";
+"commom.day" = "dia";
+"commom.active" = "Activo";
+"commom.inactive" = "Inactivo";
+"commom.terminated" = "finished";
+"commom.all" = "Todos";
+"commom.step1" = "Paso 1";
+"commom.step2" = "Paso 2";
+"commom.takePicture" = "Toma una foto";
+"commom.selectFile" = "Selecciona un archivo";
+"commom.scanDocument" = "Escanear documento";
+"common.new" = "Nuevo";
+
+// MARK: - Alerts
+"alert.defaultTitle" = "Atención";
+"alert.defaultAction" = "Ok";
+"alert.unknownError" = "Ops, algo salió mal";
+"alert.attention" = "Atención";
+"alert.cancel" = "No";
+"alert.confirm" = "Sí";
+"alert.notSupportedImage.title" = "Tipo de archivo no compatible";
+"alert.notSupportedImage.description" = "Una o más imágenes proporcionadas contienen un formato no compatible. Considere la siguiente lista de formatos: JPEG, JPG, PNG y BMP.";
+
+// MARK: - Welcome
+"welcome.description1.label" = "llámanos Kanguro...
+modernizando tu experiencia con los seguros";
+"welcome.descriptionBold1.label" = "llámanos Kanguro...";
+
+"welcome.description2.label" = "estamos enfocados en aportar valor a tu vida con coberturas diseñadas para tu día a día";
+"welcome.descriptionBold2.label" = "para tu día a día";
+
+"welcome.description3.label" = "fácil de entender, fácil de comprar, y fácil de usar";
+"welcome.subdescription3.label" = "Sólo unos pocos clics y
+estará listo!";
+
+"welcome.switchLanguage.button" = "Switch to ";
+"welcome.signIn.button" = "Iniciar sesión";
+"welcome.getQuote.label" = "¿Aún no tienes una cuenta?";
+"welcome.getQuote.button" = "Cotiza ya";
+
+// MARK: - Login
+"login.hello.label" = "hola";
+"login.continue.button" = "Siguiente";
+"login.error.notAllowed" = "Credenciales no válidas.";
+
+// MARK: - Password
+"password.hello.label" = "hola";
+"password.welcome.label" = "Bien venido";
+"password.createPassword.textField" = "Crea tu contraseña";
+"password.signIn.button" = "Iniciar sesión";
+"password.start.button" = "Empezar ahora";
+"password.faceID.label" = "Usar identificación facial";
+"password.back.button" = "Volver";
+"password.forgot.button" = "¿Olvidaste tu contraseña?";
+"password.success.alert" = "¡Su contraseña se actualizó con éxito!";
+
+// MARK: - Forgot Password
+"forgotPassword.forgotPassword.label" = "¿Olvidaste tu contraseña?";
+"forgotPassword.confirmEmail.textField" = "Por favor confirma tu correo electrónico";
+"forgotPassword.sendResetInstructions.button" = "Enviar instrucciones de reinicio";
+"forgotPassword.sentInstructions.label" = "Le enviamos instrucciones para restablecer tu contraseña!";
+"forgotPassword.securityReasons.label" = "Por razones de seguridad, NO almacenamos su contraseña y nunca la enviamos a través de ningún canal.";
+"forgotPassword.contactUs.label" = "Si continúa teniendo problemas, por favor ";
+"forgotPassword.underlinedContactUs.label" = "contáctenos";
+"forgotPassword.back.label" = "Volver";
+
+// MARK: - Force Update password
+"forceNewPassword.letstart.label" = "¡Vamos a empezar!";
+"forceNewPassword.description.label" = "Para comenzar, debe crear una nueva contraseña";
+"forceNewPassword.firstPasswordCondition.label" = "Debe tener al menos 8 caracteres de longitud";
+"forceNewPassword.secondPasswordCondition.label" = "Debe contener al menos una minúscula";
+"forceNewPassword.thirdPasswordCondition.label" = "Debe contener al menos una mayúscula";
+"forceNewPassword.fourthPasswordCondition.label" = "Debe contener al menos un dígito o un carácter especial";
+"forceNewPassword.firstCondition.label" = "8 caracteres";
+"forceNewPassword.secondCondition.label" = "menos una minúscula";
+"forceNewPassword.thirdCondition.label" = "menos una mayúscula";
+"forceNewPassword.fourthCondition.label" = "menos un dígito o un carácter especial";
+"forceNewPassword.password.textfield" = "Nueva contraseña";
+"forceNewPassword.confirmPasword.textfield" = "Repita la nueva contraseña";
+"forceNewPassword.save.label" = "Guardar";
+
+// MARK: - Email Validation
+"emailValidation.title.label" = "acabamos de enviar un código a su teléfono";
+"emailValidation.back.button" = "Volver";
+
+// MARK: - CodeConfirmationView
+"codeConfirmationView.enterCode.label" = "Ingresa el código";
+"codeConfirmationView.timerMessage.label" = "¿No ha llegado el código?\nPuedes reenviar en";
+"codeConfirmationView.resendCode.label" = "¿No ha llegado el código?";
+"codeConfirmationView.invalidCode.label" = "Codigo invalido!";
+"codeConfirmationView.resendUnderlined.label" = "Puedes reenviarlo ahora";
+
+// MARK: - HeaderView
+"header.title.label" = "¡Hola, me llamo Javier!";
+"header.subtitle.label" = "SOY TU ASISTENTE PERSONAL I.A.";
+
+// MARK: - AdditionalInfo
+"addInfo.takePicture.button" = "Toma una foto";
+"addInfo.selectPicture.button" = "Selecciona una foto";
+"addInfo.selectFile.button" = "Selecciona un archivo";
+"addInfo.close.button" = "Cerrar";
+"addInfo.file.emoji" = "📄";
+
+// MARK: - MapDetail
+"mapDetail.title.label" = "Acá están los veterinarios más cerca de donde estás";
+
+// MARK: - Dashboard
+"dashboard.hello.label" = "hola";
+"dashboard.active.label" = "Activo";
+"dashboard.inactive.label" = "Inactivo";
+"dashboard.canceled.label" = "Cancelado";
+"dashboard.terminated.label" = "Acabado";
+"dashboard.seeDetails.label" = "Ver detalles";
+"dashboard.coveragesTitle.label" = "COBERTURAS";
+"dashboard.petHealthPlanTitle.label" = "Seguro pet";
+"dashboard.reminderTitle.label" = "RECORDATORIOS";
+"dashboard.seeAll.label" = "Ver todos";
+"dashboard.updateCellphone.label" = "Actualice su número de celular para usar los servicios";
+"dashboard.languagePreference.label" = "Actualización de idioma de la aplicación detectada. La aplicación se reiniciará.";
+"dashboard.fileClaim.popup.label" = "Actualmente estamos trabajando para crear la mejor experiencia de reclamación para usted.
+
+Mientras tanto, para presentar sus reclamaciones, por favor contáctenos en rentersclaims@kanguroinsurance.com";
+
+"dashboard.bannerTitle.havePet" = "¿Tienes\una mascota?";
+"dashboard.bannerSubtitle.havePet" = "Ahorre dinero con nuestro\nseguro para mascotas Kanguro";
+
+"dashboard.bannerTitle.haveRenters" = "¿Alquilas\nun lugar?";
+"dashboard.bannerSubtitle.haveRenters" = "¡Mantén tus pertenencias\nseguras con el seguro para\ninquilinos de Kanguro!";
+
+"dashboard.bannerTitle.worldBetter" = "¡Ayudemos a hacer el mundo mejor!";
+"dashboard.bannerSubtitle.worldBetter" = "Únase a Kanguro para donar por grandes causas.";
+
+"dashboard.bannerTitle.likingKanguro" = "¿Te gusta\nKanguro?";
+"dashboard.bannerSubtitle.likingKanguro" = "Recomienda a un amigo\ny gana recompensas.";
+
+// MARK: - PetDashboard
+"pet.healthPlan.title.label" = "Plan de Salud para Mascotas";
+
+// MARK: - BottomButtonsPopUp
+"bottomButtonsPopUp.claim.pet" = "Reclamo de seguro para mascotas";
+"bottomButtonsPopUp.claim.renters" = "Reclamo de seguro para inquilinos";
+
+// MARK: - Medical History PopUp
+"medicalHistory.cardTitle.label" = "¡Hola! Necesitamos tu historial médico";
+"medicalHistory.cardSubtitle.label" = "Para asegurarnos de poder hacer nuestra magia y brindarle a tu amigo peludo el mejor cuidado posible, te pedimos amablemente que nos envíes su historial médico. No solo se trata de ayudarnos a mejorar tus reclamaciones, sino también de asegurarnos de proteger a tu mascota como compañeros de superhéroes.";
+"medicalHistory.letsDoIt.button" = "Vamos a hacerlo";
+
+// MARK: - LastActivities
+"lastActivities.lastActivities.label" = "ÚLTIMAS ACTIVIDADES";
+"lastActivityCard.rate.label" = "Califica este lugar";
+"lastActivityCard.details.label" = "Detailes";
+
+// MARK: - MoreActions
+"moreActions.titleLabel.label" = "MAS ACCIONES";
+"moreActions.talkToVet.card" = "Habla con un veterinario 24/7";
+"moreActions.fileClaim.card" = "Solicitar una reclamación";
+"moreActions.cloud.card" = "Nube";
+"moreActions.trackClaim.card" = "Monitorea tus reembolsos";
+"moreActions.vetAdvice.card" = "Consejo veterinario";
+"moreActions.claims.card" = "Reclamaciónes";
+"moreActions.getQuote.card" = "Cotiza ya";
+"moreActions.FAQ.card" = "Preguntas frecuentes";
+"moreActions.comunication.card" = "Comunicaciones";
+"moreActions.blog.card" = "Blog";
+"moreActions.petParents.card" = "Nuevos padres de mascotas";
+"moreActions.vetsLocation.card" = "Encuentra veterinario";
+"moreActions.claims.card" = "Reclamaciónes";
+"moreActions.payment.card" = "Configuración de pago";
+"moreActions.vaccination.card" = "Tarjeta de vacunacion";
+"moreActions.residence.card" = "Añadir una residencia";
+"moreActions.bannerTitle.label" = "Obtener Amazon gift cards de $25";
+"moreActions.bannerSubtitle.label" = "Recomienda a tus amigos";
+"more.cloud.actionCard" = "Nube";
+"moreActions.directPayVet.label" = "Pago directo a tu veterinario";
+
+// MARK: - TabBar
+"tabBarItem.dashboard" = "Inicio";
+"tabBarItem.cloud" = "Nube";
+"tabBarItem.coverage" = "Coberturas";
+"tabBarItem.more" = "Más";
+"tabBarItem.renters" = "Inquilinos";
+"tabBarItem.pet" = "Mascota";
+"tabBarItem.home" = "Inicio";
+"tabBarItem.chat" = "Soporte";
+
+// MARK: - Network
+"serverError.default" = "Ops... algo salió mal";
+"serverSuccess.default" = "Éxito!";
+
+// MARK: - Coverage
+"coverage.coverageTitle.label" = "Coberturas";
+
+
+// MARK: - Claim
+"claims.title.navigationBackButton" = "Cobertura";
+"claims.title.label" = "Revisa tus reembolsos";
+"claims.continue.popUp" = "Continue";
+"claims.delete.popUp" = "Borrar";
+
+// MARK: - ClaimStatus
+"claimStatus.noClaim.label" = "No hay nada aquí todavía!";
+"claimStatus.open.title" = "Abierto";
+"claimStatus.closed.title" = "Cerrado";
+"claimStatus.draft.title" = "Borradores";
+"claimStatus.submitted" = "Presentada";
+"claimStatus.assigned" = "Asignado";
+"claimStatus.review" = "En revisión";
+"claimStatus.closed" = "Cerrado";
+"claimStatus.approved" = "Aprobado";
+"claimStatus.paid" = "Pagado";
+"claimStatus.denied" = "Denegado";
+
+"claimStatus.draft" = "Borrador";
+"claimStatus.deleted" = "Eliminado";
+"claimStatus.pendingMedicalHistory" = "Historial médico pendiente";
+"claimStatus.medicalHistoryInReview" = "Historial médico en revisión";
+"claimStatus.unknown" = "Desconocido";
+
+// MARK: - ClaimStatusCards
+"claimStatusCards.lastUpdate" = "Última actualización ";
+"claimStatusCards.claimAmount" = "Valor de reclamación";
+"claimStatusCard.details.label" = "Detailes";
+"claimStatusCards.closedOn.label" = "Encerrado ";
+"claimStatusCards.paid.label" = "Pagado ";
+"claimStatusCards.creditCard.label" = "Tarjeta de crédito ";
+"claimStatusCards.createdOn.label" = "Creado en ";
+"claimStatusCards.continueClaim.label" = "Continua tu reclamación!";
+"claimStatusCards.payVet.button" = "Pago directo a tu veterinario";
+
+// MARK: - ClaimDetails
+"claimDetails.IDtitle.label" = "Reembolso ";
+"claimDetails.defaultTitle.label" = "Detalles del reembolso";
+"claimDetails.summary.label" = "RESUMEN";
+"claimDetails.lastUpdate.label" = "Última actualización en ";
+"claimDetails.claimDescription.label" = "DESCRIPCIÓN DEL RECLAMO";
+"claimDetails.attachments.label" = "ADJUNTOS";
+"claimDetails.deniedStatus.label" = "Su reclamo fue denegado porque:";
+"claimDetails.communicationStatus.label" = "Hubo un problema con su reclamo, clic aquí para obtener más información.";
+"claimDetails.pendigMedicalHistoryText.label" = "Por favor envíe los documentos requeridos.";
+"claimDetails.document.label" = "Documento";
+"claimDetails.requiredStatus.label" = "Requerido";
+"claimDetails.submitDocuments.button" = "Enviar documentos";
+
+// MARK: - DetailsButton
+"claimDetails.status.label" = "Estado";
+"claimDetails.pet.label" = "Mascota";
+"claimDetails.claim.label" = "Reembolso";
+"claimDetails.date.label" = "Fecha de remisión";
+"claimDetails.incidentDate.label" = "Fecha del incidente";
+"claimDetails.amount.label" = "Monto Reclamado";
+"claimDetails.payment.label" = "Método de pago";
+"claimDetails.paidAmount.label" = "Monto de pago";
+"claimDetails.transferredAmount.label" = "Contribución hacia deducible";
+
+// MARK: - NewClaim
+"newClaim.newClaim.navigationBar" = "Nueva reclamación";
+"newClaim.pencil.emoji" = "🖋️";
+"newClaim.bank.emoji" = "🏦";
+"newClaim.file.emoji" = "📄";
+"newClaim.mayWriteSomething.textfield" = "Escribe una descripción";
+"newClaim.summaryCell.cell" = "Resumen";
+
+// MARK: - Summary
+"summary.pet" = "Mascota";
+"summary.claim" = "Reclamación";
+"summary.attachments" = "Adjunto archivo";
+"summary.amount" = "Monto";
+"summary.date" = "Fecha";
+"summary.reimbursementMethod" = "Método de Reembolso";
+"summary.bankAccount" = "Cuenta Bancaria";
+
+// MARK: - PledgeOfHonor
+"pledgeOfHonor.title.label" = "Juramento de honor";
+"pledgeOfHonor.subtitle.label" = "Prometo que la información que proporcionaré será verídica.";
+"pledgeOfHonor.bottom.label" = "Su dinero no reembolsado será donado a ";
+"pledgeOfHonor.boldedBottom.label" = "una causa";
+"pledgeOfHonor.checkbox.label" = "Aceptas permitirnos generar un documento de Autorización Médica con tu firma que autorizará la liberación de los registros médicos de tu mascota. Leer más";
+"pledgeOfHonor.checkbox.label.highlighted" = "Leer más";
+"pledgeOfHonor.confirm.button" = "Confirmar";
+"pledgeOfHonor.sendForm.button" = "Enviar formulario";
+"pledgeOfHonor.popUp.title" = "Disponibilidad y acceso a registros médicos";
+"pledgeOfHonor.popUp.description" = "Toma en cuenta que mediante la compra de esta póliza, Usted acepta permitir que nos comuniquemos en Su nombre con Su veterinario(s) actual(es) o anterior(es) y obtener todos los registros médicos de Su Mascota, si es necesario. Para facilitar este proceso, vamos a generar un documento de Autorización Médica con tu firma, la cual nos autoriza la entrega de los registros médicos de tu mascota. Cualquier persona que, con intención de defraudar o sabiendo que está facilitando un fraude contra un asegurado, presente una solicitud o presente un reclamo que contenga declaraciones falsas o engañosas es culpable de fraude de seguros.";
+
+// MARK: - Feedback
+"feedback.title.label" = "¿Cómo fue su experiencia al presentar un reclamo?";
+"feedback.placeholder.textfield" = "Cuéntanos más sobre tu experiencia \n(Opcional)";
+"feedback.sendFeedback.button" = "Enviar un comentario";
+"feedback.skipFeedback.button" = "Ignorar";
+"feedback.awful" = "Muy mal";
+"feedback.notGood" = "Mal";
+"feedback.ok" = "Ok";
+"feedback.good" = "Bien";
+"feedback.awesome" = "Wow";
+"pledgeOfHonor.success.alert" = "¡Éxito!";
+"pledgeOfHonor.savedSignature.alert" = "Tu firma está guardada";
+
+// MARK: - CoverageDetails
+"coverageDetails.hello.label" = "hola,";
+"coverageDetails.yearsOld.label" = "de idad";
+"coverageDetails.endDateTitle.label" = "Fecha de finalización del\nperíodo de espera";
+"coverageDetails.perroBueno.label" = "Perro Bueno";
+"coverageDetails.gatoSano.label" = "Gato Sano";
+"coverageDetails.perroBueno.label" = "Perro Bueno";
+"coverageDetails.renewOn.label" = "Renovar en ";
+"coverageDetails.policyPeriod.label" = "Vigencia de la póliza: ";
+"coverageDetails.deductibleProgressBar.label" = "para alcanzar el deducible";
+"coverageDetails.annualLimitProgressBar.label" = "para alcanzar el límite anual ";
+"coverageDetails.inAnnualLimit.label" = "en límite anual";
+"coverageDetails.perroBuenoRemainingTop.label" = "Te quedan";
+"coverageDetails.perroBuenoRemainingBottom.label" = "restante";
+"coverageDetails.planSummary.label" = "Resumen del plan";
+"coverageDetails.policy.label" = "Documentos de póliza";
+"coverageDetails.preventiveAndWellness.label" = "Preventivo & Bienestar";
+"coverageDetails.payment.label" = "Pago";
+"coverageDetails.nextBilling.label" = "Próxima facturación en";
+"coverageDetails.billingPreferences.label" = "Preferencias de facturación";
+"coverageDetails.reimbursement.label" = "Reembolso";
+"coverageDetails.deductible.label" = "Deducible Anual";
+"coverageDetails.annualLimit.label" = "Límite anual";
+"coverageDetails.consumedOfTotal.label" = "de";
+"coverageDetails.accident&illness.label" = "POLIZA DE SALUD - ACCIDENTE Y ENFERMEDADES";
+"coverageDetails.whatIsCovered.card" = "Que esta cubierto";
+"coverageDetails.covered.card" = "Revisa tus beneficios";
+"coverageDetails.policyForm.card" = "Formulario de póliza";
+"coverageDetails.TXState.card" = "Enmienda del estado de TX";
+"coverageDetails.declaration.card" = "Declaración y Calendario";
+"coverageDetails.documentation.card" = "Documentación";
+"coverageDetails.purchaseDate.label" = "Fecha de compra: ";
+"coverageDetails.cancellationDate.label" = "Fecha de cancelación: ";
+"coverageDetails.finish.label" = "Fecha de finalización: ";
+"coverageDetails.policyNumber.label" = "NÚMERO DE PÓLIZA #";
+//MONTHLY PAYMENT
+"coverageDetails.MONTHLY.label" = "Mensualidad";
+"coverageDetails.QUARTERLY.label" = "Pago trimestral";
+"coverageDetails.YEARLY.label" = "Pago anual";
+"coverageDetails.monthlyPerroBueno.label" = "Perro Bueno | Accidente & Enfermedad";
+"coverageDetails.monthlyGatoSano.label" = "Gato Sano | Accidente & Enfermedad";
+"coverageDetails.monthlyAccident.label" = "Accidente & Enfermedad";
+"coverageDetails.monthlyPreventiveAndWellness.label" = "Preventivo & Bienestar | Servicio extra";
+"coverageDetails.extraService.label" = "Servicio extra";
+
+// MARK: - CardHeader
+"cardHeader.renew.label" = "Renovar en ";
+
+// MARK: - PaymentSettings
+"paymentSettings.title.label" = "Método de pago";
+"paymentSettings.payment.label" = "Pagos";
+"paymentSettings.preferences.label" = "Preferencias";
+"paymentSettings.reimbursement.label" = "Cuenta de reembolso";
+"paymentSettings.paymentMethod.label" = "Método de pago";
+
+// MARK: - BillingPreferences
+"billingPreferences.billingPreferences.label" = "Preferencias de factura";
+"billingPreferences.billingHistory.label" = "Preferencias de factura";
+
+// MARK: - More
+"more.moreActions.label" = "Más acciones";
+"more.preferences.actionCardsList" = "Preferencias";
+"more.profile.actionCard" = "Perfil";
+"more.reminders.actionCard" = "Recordatorios";
+"more.billingPreferences.actionCard" = "Preferencias de factura";
+"more.appSettings.actionCard" = "Ajustes de idioma";
+"more.getQuote.actionCard" = "Agrega una mascota";
+"more.referFriend.actionCard" = "Recomienda a un amigo";
+"more.supportCause.actionCard" = "Apoyar una causa";
+"more.support.actionCardsList" = "Apoyo";
+"more.vetAdvice.actionCard" = "Consejo veterinario";
+"more.FAQ.actionCard" = "Preguntas frecuentes";
+"more.petParents.actionCard" = "Nuevos padres de mascotas";
+"more.workinghours.monToFri" = "Lun - Vie: 9:30 am - 8:00 pm EST";
+"more.workinghours.sat" = "Sábado: 10:00 am - 2:00 pm EST";
+"more.workinghours.sun" = "Domingo: Cerrado";
+"more.contactUs.actionCard" = "Contáctenos";
+
+"more.legal.actionCardsList" = "Juridico";
+"more.termsOfUse.actionCard" = "Términos de uso";
+"more.privacyPolicy.actionCard" = "Política de privacidad";
+
+"more.logout.actionCard" = "Cerrar sesión";
+
+"more.emergency.label" = "Emergencia";
+
+// MARK: - Forgot Password
+"forgotPassword.errorTitle.alert" = "Error";
+"forgotPassword.phone" = "+1-888-546-5264";
+
+// MARK: - Blocked Account
+"blockedAccount.problemMessage.label" = "Tu cuenta de la APP presenta algunos problemas";
+"blockedAccount.contactUs.label" = "Contáctenos para solucionar el problema:";
+
+// MARK: - Update Required
+"updateRequired.title.label" = "¡Estamos mejor que nunca!";
+"updateRequired.description.label" = "Actualice la aplicación Kanguro para que pueda acceder y tener una mejor experiencia.";
+"updateRequired.button.label" = "Actualizar";
+
+// MARK: - Reminder
+"reminder.medicalHistory" = "Historial médico";
+"reminder.claim" = "Cobertura";
+"reminder.petPicture" = "Foto de mascota";
+"reminder.missingDocument" = "falta documento";
+
+// MARK: - Reminders
+"reminders.reminder.label" = "Recordatorios";
+"reminders.wantToSee.label" = "¿Qué quieres ver?";
+"reminders.all.label" = "Todos";
+"reminders.noReminder.label" = "No tienes recordatorios activos";
+"reminders.dueIn.label" = "requerido en ";
+
+// MARK: - ReferFriends
+"referFriends.title.label" = "Recomendar a un amigo";
+"referFriends.shareCode.label" = " te envío un descuento del 10% para acceder al mejor plan de salud  y bienestar de Kanguro para tu peludo. Ir al ";
+"referFriends.referralCode.sharing" = " y usa su código de referencia: ";
+"referFriends.firstDescription.label" = "¡Decidimos compartir un poco de amor contigo y tus amigos!";
+"referFriends.secondDescription.label" = "Recomiende a un amigo y le daremos una recompensa de $25 en una tarjeta de regalo de Amazon por cada persona que adquiere una póliza a través de tu código personalizado a continuación.";
+"referFriends.giftCard.label" = "\\$25 en una tarjeta de regalo de Amazon";
+"referFriends.termsOfService.label" = "Términos de uso";
+"referFriends.shareCode.sharing" = " - Use this code to create your account ";
+"referFriends.shareCode.share" = "comparte tu código";
+
+// MARK: - ReferFriendPopUp
+"referFriends.giftCardTitle.label" = "Obtenga un regalo";
+"referFriends.giftCardSubtitle.label" = "Gana $25 de Amazon invitando a amigos y familiares a Kanguro.";
+"referFriends.boldedGiftCardSubtitle.label" = "\\$25 de Amazon";
+"referFriends.later.button" = "Mas tarde";
+"referFriends.doIt.button" = "¡Vamos!";
+
+// MARK: - Support a Cause
+"supportCause.change.button" = "Cambia tu causa";
+"supportCause.title.label" = "Elige una causa";
+"supportCause.subtitle.label" = "Tu póliza está haciendo del mundo un \nlugar mejor";
+"supportCause.currentCause.label" = "Actualmente apoyas";
+
+// MARK: - Settings
+"settings.title.label" = "Idioma";
+"settings.pushNotifications.label" = "Notificaciones push";
+"settings.languageTitle.label" = "Preferencias de idioma";
+"settings.languageSubtitle.label" = "¡Díganos en qué idioma le habla a su Kanguamigo!";
+"settings.english.label" = "Inglés";
+"settings.spanish.label" = "Español";
+"settings.success.alert" = "Éxito!";
+"settings.restartApp.alert" = "La aplicación se reiniciará!";
+
+// MARK: - Profile
+"profile.title.label" = "Información del perfil";
+"profile.editProfile.textFieldView" = "Editar perfil";
+"profile.editPassword.textFieldView" = "Editar contraseña";
+"profile.firstName.label" = "Primer nombre";
+"profile.lastName.label" = "Apellido";
+"profile.policyTopTitle.label" = "Cancelar o cambiar mi Póliza";
+"profile.email.label" = "Email";
+"profile.phone.label" = "Número de teléfono";
+"profile.oldPassword.label" = "Contraseña anterior";
+"profile.newPassword.label" = "Nueva contraseña";
+"profile.repeatPassword.label" = "Repita la nueva contraseña";
+"profile.success.alert" = "Tu perfil esta actualizado!";
+"profile.messageSent.alert" = "Tu solicitud ha sido enviada";
+"profile.sure.alert" = "Esta acción eliminará de forma permanente su cuenta y sus datos personales. ¿Desea continuar?";
+
+"profile.other.label" = "Otro";
+"profile.topFirstMsg.label" = "Kanguro necesita procesar algunos datos personales para brindarle los servicios de Kanguro. Para eliminar esos datos personales, debe cerrar su cuenta.";
+"profile.bottomTitle.label" = "Cancelar o cambiar la Cobertura";
+"profile.bottomFirstMsg.label" = "Kanguro está muy triste por perderte, pero siempre estaremos aquí si quieres volver. También podemos cambiar su cobertura por una opción más económica.";
+"profile.bottomSecondMsg.label" = "Puede notificarnos que desea cancelar por teléfono al +1-888-546-5264.";
+"profile.phoneNumber.label" = "\\+1-888-546-5264";
+"profile.bottomThirdMsg.label" = "También puede enviarnos un correo electrónico con su solicitud de cancelación";
+"profile.emailUs.label" = "enviarnos";
+"profile.delete.label" = "javier@kanguroinsurance.com";
+
+"profile.account.label" = "Mi cuenta";
+"profile.accountTopTitle.label" = "ELIMINAR SU ID DE USUARIO Y CONTRASEÑA";
+"profile.switchTitle.label" = "¿Desea enviar una solicitud para iniciar la eliminación de tu cuenta y eliminar tu data personal de la APP?";
+"profile.sendRequest.button" = "Enviar solicitud";
+"profile.firstTopic.label" = "Al finalizar tu solicitud para eliminar tu cuenta no podrás ingresar de nuevo a tu cuenta de kanguro en la APP.";
+"profile.secondTopic.label" = "Tu data personal de tu cuenta será eliminada.";
+"profile.thirdTopic.label" = "No tendrás acceso a tus documentos de Kanguro lo cual significa que solo te podriamos contactar por correo electrónico hasta el momento que vuelvas abrir tu cuenta.";
+"profile.fourthTopic.label" = "Esto no afecta la cobertura de seguros ni tampoco cancela to póliza.";
+
+// MARK: - AccordionTextFieldsView
+"accordionTextFieldsView.save.button" = "Guardar";
+
+// MARK: - WhatIsCovered
+"whatIsCovered.title.label" = "¿Qué está cubierto?";
+"whatIsCovered.subtitle.label" = "Perro bueno";
+"whatIsCovered.diagnostic.label" = "Diagnóstico";
+"whatIsCovered.procedures.label" = "Procedimientos";
+"whatIsCovered.medications.label" = "Medicamentos";
+//Diagnostics
+"whatIsCovered.bloodTest.label" = "Exámenes de sangre";
+"whatIsCovered.urinalysis.label" = "Análisis de orina";
+"whatIsCovered.krays.label" = "Rayos X";
+"whatIsCovered.mri.label" = "Resonancia magnética";
+"whatIsCovered.labwork.label" = "Exámenes de laboratorio";
+"whatIsCovered.ctscans.label" = "Tomografías";
+"whatIsCovered.ultrasounds.label" = "Exámenes de ultrasonido";
+"whatIsCovered.behavioral.label" = "Exámenes de comportamiento";
+//Procedures
+"whatIsCovered.prosthetic.label" = "Prótesis de extremidades, dispositivos y ayudas para la movilidad";
+"whatIsCovered.cremation.label" = "Cremación";
+"whatIsCovered.endLife.label" = "Eutanasia";
+"whatIsCovered.vetExam.label" = "Examenes veterinarios";
+"whatIsCovered.surgery.label" = "Cirugías & Hospitalización";
+"whatIsCovered.specialty.label" = "Veterinarios especializados y de urgencias";
+"whatIsCovered.cancer.label" = "Cáncer";
+"whatIsCovered.dental.label" = "Enfermedades dentales, incluida la gingivitis.";
+//Medications
+"whatIsCovered.chronic.label" = "Medicamentos Recetados";
+"whatIsCovered.hereditary.label" = "Condiciones crónicas que puedan desarrollarse";
+"whatIsCovered.prescription.label" = "Condiciones hereditarias específicas de la raza que puedan desarrollarse";
+"whatIsCovered.blood.label" = "Trastornos de la sangre";
+"whatIsCovered.eye.label" = "Trastornos oculares";
+"whatIsCovered.musculokeletal.label" = "Trastorno musculoesquelético";
+"whatIsCovered.respiratory.label" = "Condiciones respiratorias";
+
+// MARK: - Cloud
+"cloud.title.label" = "Kanguro Nube";
+"cloud.breadcrumb.label" = "Mascota";
+"cloud.breadcrumb.policy.label" = "Póliza";
+"cloud.breadcrumb.claimDocuments.label" = "Reclamaciones";
+"cloud.orderByLatest.label" = "Último";
+"cloud.orderByOldest.label" = "Viejo";
+"cloud.backActionPolicies.label" = "Pólizas";
+"cloud.backActionCloud.label" = "Nube";
+"cloud.backActionClaims.label" = "Reclamaciónes";
+"cloud.policyOption.claimDocumentsInvoices.label" = "Documentos de reclamaciones y facturas";
+"cloud.policyOption.medicalHistory.label" = "Historial médico";
+"cloud.policyOption.digitalVaccine.label" = "Carnet digital de vacunas";
+"cloud.policyOption.policyDocuments.label" = "Documentos de póliza";
+"cloud.claimCard.label" = "Reclamo -";
+"cloud.comingSoon.label" = "¡Próximamente!";
+"cloud.description.label" = "Estamos trabajando arduamente para lanzar esta función muy pronto. Si necesita algo, por favor póngase en contacto con nosotros:";
+"cloud.support.label" = "services@kanguroseguro.com";
+"cloud.noClaims.placeholder.label" = "No se encontraron reclamaciones";
+"cloud.noFiles.placeholder.label" = "No se encontraron archivos";
+
+// MARK: - Veterinary
+"vet.instagramUsername" = "dr.b.vet";
+"vet.title.label" = "por Dr. Cristina Bustamante";
+"vet.subtitle.label" = "VETERINARIO FUNDADOR DE Dr.B Vet";
+
+// MARK: - FAQ
+"faq.title.label" = "Información
+de Interés";
+"faq.subtitle.label" = "Preguntas frequentes";
+
+// MARK: - VetAdvice
+"vetAdvice.title.label" = "Consejos para ";
+"vetAdvice.seeAdvices.label" = "Ver consejos";
+"vetAdvice.dog.name" = "Perro";
+"vetAdvice.cat.name" = "Gato";
+"vetAdvice.dog.description" = "Los mejores consejos veterinarios para perros ofrecidos por el experimentado y conocido veterinario exclusivamente a nuestra comunidad Kanguro";
+"vetAdvice.cat.description" = "Los mejores consejos veterinarios para gatos ofrecidos por el experimentado y conocido veterinario exclusivamente a nuestra comunidad Kanguro";
+
+// MARK: - PetParents
+"petParents.title.label" = "Nuevos padres de mascotas";
+"petParents.highlightedTitle.label" = "padres";
+
+// MARK: - Direct Pay to Vets
+"directPay.title.label" = "Pago directo al veterinario";
+"directPay.action.label" = "Siguiente";
+"directPay.userInformation.firstSection.title.label" = "Tu información";
+"directPay.userInformation.secondSection.title.label" = "Información del reclamo";
+"directPay.userInformation.firstField.title.label" = "Nombre de la Mascota";
+"directPay.userInformation.secondField.title.label" = "Nombre del titular de la póliza";
+"directPay.userInformation.checkbox.title.label" = "¿A qué se refiere este reclamo?";
+"directPay.userInformation.thirdField.title.label" = "Fecha del Servicio";
+"directPay.userInformation.thirdField.placeholder.label" = "Selecciona la fecha";
+"directPay.userInformation.fourthField.title.label" = "Correo electrónico del veterinario";
+"directPay.userInformation.fourthField.placeholder.label" = "Correo electrónico";
+"directPay.userInformation.fifthField.title.label" = "Nombre del Veterinario";
+"directPay.userInformation.fifthField.placeholder.label" = "Nombre del veterinario";
+"directPay.userInformation.sixthField.title.label" = "Nombre de la Clínica";
+"directPay.userInformation.sixthField.placeholder.label" = "Nombre de la clínica";
+"directPay.userInformation.claimDescription.title.label" = "Descripción";
+"directPay.userInformation.claimDescription.placeholder.label" = "Sobre tu reclamo";
+"directPay.checkbox.accident.label" = "Accidente";
+"directPay.checkbox.illness.label" = "Enfermedad";
+"directPay.searchVet.title.label" = "Correo electrónico del veterinario";
+"directPay.searchVet.placeholder.label" = "example@mail.com";
+"directPay.searchVet.description.label" = "Buscara el correo electrónico de tu veterinario";
+"directPay.searchVet.emailNotExist.label" = "Este correo electrónico no existe en nuestra base de datos de veterinarios.";
+"directPay.searchVet.continueButton.label" = "Continúa utilizando este correo electrónico.";
+
+//Getting Started
+"directPay.gettingStarted.topicLabel.first" = "Nuestro equipo de reclamaciones revisará tu envío y se pondrá en contacto contigo y con tu veterinario para confirmar la aprobación o denegación.";
+"directPay.gettingStarted.topicLabel.first.highlighted" = "Nuestro equipo de reclamaciones revisará";
+"directPay.gettingStarted.topicLabel.second" = "Serás responsable de pagar tu parte de la factura, que incluye tu deducible y el copago.";
+"directPay.gettingStarted.topicLabel.second.highlighted" = "Serás responsable de pagar tu parte de la factura";
+"directPay.gettingStarted.step" = "PASO value";
+"directPay.gettingStarted.verticalStep.first" = "Completa el formulario en la siguiente página para generar un documento.";
+"directPay.gettingStarted.verticalStep.first.highlighted" = "Complete el formulario";
+"directPay.gettingStarted.verticalStep.second" = "Pídele a tu veterinario que complete el formulario que recibió por correo electrónico, ya sea en su computadora o teléfono.";
+"directPay.gettingStarted.verticalStep.second.highlighted" = "Pídele a tu veterinario";
+"directPay.gettingStarted.verticalStep.third" = "Después de esto, nuestro equipo de reclamaciones se pondrá en contacto contigo.";
+
+"directPay.gettingStarted" = "Empezando";
+"directPay.pleaseNote" = "Ten en cuenta lo siguiente:";
+
+//Before Get started
+"directPay.beforeGetStarted" = "Antes de comenzar";
+"directPay.beforeGetStarted.topicLabel.first" = "Esto se aplica solo para reclamos de Accidente y Enfermedad nun mínimo de $900.";
+"directPay.beforeGetStarted.topicLabel.first.highlighted" = "Accidente y Enfermedad nun mínimo de $900";
+"directPay.beforeGetStarted.topicLabel.second" = "El veterinario debe estar de acuerdo en que Kanguro Insurance les pague.";
+"directPay.beforeGetStarted.topicLabel.second.highlighted" = "El veterinario debe estar de acuerdo";
+"directPay.beforeGetStarted.topicLabel.third" = "Disponible para cualquier diagnóstico, medicamento o tratamiento.";
+"directPay.beforeGetStarted.topicLabel.third.highlighted" = "diagnóstico, medicamento o tratamiento";
+"directPay.beforeGetStarted.topicLabel.fourth" = "Respuesta el mismo día de 8am a 2pm EST, si se envía después de las 2pm, respuesta al siguiente día hábil.";
+"directPay.beforeGetStarted.topicLabel.fourth.highlighted" = "8 am a 2 pm (EST). Si se envía después";
+
+"directPay.beforeGetStarted.claimValue" = "Valor del reclamo";
+
+//Almost Done
+"directPay.almostDone.title" = "¡Casi terminado!";
+"directPay.almostDone.description" = "Ahora pídele a tu veterinario que complete el formulario que recibió por correo electrónico. Después de esto, nuestro equipo de reclamaciones se pondrá en contacto contigo para confirmar la aprobación o denegación.";
+"directPay.almostDone.secondary.description" = "Si tu veterinario no recibió el correo electrónico, presiona aquí para enviar el formulario tú mismo.";
+"directPay.almostDone.tapHere.description" = "presiona aquí";
+"directPay.almostDone.description.highlighted" = "Ahora pídele a tu veterinario que complete el formulario que recibió por correo electrónico.";
+"directPay.okay.button" = "Okay";
+
+//Share with Vet
+"directPay.shareWithVet.title.label" = "Comparte con tu veterinario";
+"directPay.shareWithVet.description.label" = "Si tu veterinario no recibió el correo electrónico, sigue estos sencillos pasos:";
+"directPay.shareWithVet.step1Description.label" = "Descarga el formulario y compártelo con tu veterinario.";
+"directPay.shareWithVet.step2Description.label" = "Sube el documento firmado. Puedes subirlo con una firma digital o tomar una foto del documento impreso.";
+"directPay.shareWithVet.step2Highlighted.label" = "Sube el documento firmado.";
+"directPay.shareWithVet.downloadDoc.button.label" = "Descargar documento";
+"directPay.shareWithVet.uploadDoc.button.label" = "Subir documento firmado";
+"directPay.shareWithVet.done.button" = "Hecho";
+
+//Done
+"directPay.done.title" = "¡Documento enviado!";
+"directPay.done.description" = "Nuestro equipo de reclamaciones se pondrá en contacto contigo para confirmar la aprobación o denegación.";
+
+// MARK: - CentralChatbot
+"centralChatbot.botMsg1.label" = "Hola, ";
+"centralChatbot.botMsg2.label" = "¿Qué puedo hacer por ti y tus mascotas hoy?";
+"centralChatbot.fileClaim.label" = "Solicitar una reclamación";
+"centralChatbot.vetAdvice.label" = "Consejo veterinario";
+"centralChatbot.faq.label" = "Preguntas frecuentes";
+"centralChatbot.support.label" = "Suporte";
+"centralChatbot.petParent.label" = "Nuevos padres de mascotas";
+"chatbot.addMore" = "Agregar más";
+"chatbot.done" = "Listo";
+"chatbot.edit" = "Editar";
+"chatbot.confirm" = "Confirmar";
+
+// MARK: - Chatbot Messages
+"chatbot.newClaim.startHi.message" = "Hola, ";
+"chatbot.newClaim.startclaim.message" = "Veo que deseas hacer un reclamo de reembolso";
+"chatbot.newClaim.whoIsClaimFor.message" = "¿Para quien es el reclamo?";
+"chatbot.newClaim.noPetName.message" = "esta mascota.";
+"chatbot.newClaim.pledgeOfHonor.message" = "Para poder iniciar el proceso, necessito que por favor firmes el 'Juramento de honor'.";
+"chatbot.newClaim.selectClaimType.message" = "Por favor déjame saber por qué estas solicitando este reclamo:";
+"chatbot.newClaim.preventive.message" = "Seleccione lo que necessita reembolso:";
+"chatbot.newClaim.typeDescription.message" = "Por favor escribe una corta descripción aquí:";
+"chatbot.newClaim.selectDate.message" = "¿Cual es la fecha de la factura que me estas enviando? 🗓";
+"chatbot.newClaim.receipt.message" = "Gracias, ahora vamos a necesitar los recibos pagados en su totalidad de la visita al veterinario.";
+"chatbot.newClaim.medicalRecords.message" = "También puedes incluir notas medicas relacionadas al examen";
+"chatbot.newClaim.petActualPictureMsg1.message" = "Para fines de seguro, necesitamos una foto de tu mascota en su estado de salud actual.";
+"chatbot.newClaim.petActualPictureMsg2.message" = "Por favor, tome una foto de su mascota si está contigo. Si no lo está, por favor sube la foto más reciente que tengas.";
+"chatbot.newClaim.claimInvoice.message" = "¿Cuál es el total de la factura?";
+"chatbot.newClaim.bankAccount.message" = "Por favor, informe a tu cuenta para reembolso:";
+"chatbot.newClaim.claimSummary.message" = "Aquí tienes el resumen de tu reembolso";
+"chatbot.newClaim.claimSubmitted.message" = "¡Reembolso enviado!";
+"chatbot.newClaim.claimStatusUpdate.message" = "Puedes revisar el estado en cualquier momento en el historial de reembolsos de";
+"chatbot.newClaim.claimStatusUpdateEnd.message" = "";
+"chatbot.newClaim.thankYou.message" = "¡Gracias!";
+
+// MARK: - Chatbot Actions
+"chatbot.action.sign.label" = "Firmar";
+"chatbot.action.accident.label" = "Accidente";
+"chatbot.action.illness.label" = "Enfermedad";
+"chatbot.action.other.label" = "Otro";
+"chatbot.action.preventive.label" = "Revisiones, Exámenes y/o Vacunas";
+"chatbot.action.end.label" = "Terminar";
+"chatbot.action.seeOptions.label" = "Ver opciones";
+"chatbot.action.informAccount.label" = "Informar Cuenta";
+"chatbot.action.submitClaim.label" = "Enviar Reembolso";
+"chatbot.action.finish.label" = "Terminar";
+"chatbot.action.continue.label" = "Seguir";
+"chatbot.action.track.claims.label" = "Seguimiento de reclamos";
+
+// MARK: - Chatbot Denial Messages
+"chatbot.newClaim.denialSorry.message" = "Estimado";
+"chatbot.newClaim.denialContactUs.message" = "Por favor, póngase en contacto con nosotros para obtener más información sobre qué hacer a continuación en este caso. 1-888-546-5264.";
+"chatbot.newClaim.denialNotActive.beginning.message" = "parece que la póliza de";
+"chatbot.newClaim.denialNotActive.end.message" = "no está activa en este momento.";
+"chatbot.newClaim.denialPendingMedicalHistory.beginning.message" = "parece que";
+"chatbot.newClaim.denialPendingMedicalHistory.end.message" = "no tiene historial médico.";
+"chatbot.newClaim.denialPendingMedicalHistoryCheckReminder.message" = "Por favor, verifica la sección 'Recordatorios' en la aplicación para cualquier actualización pendiente del historial médico.";
+"chatbot.newClaim.denialAnnualLimit.message" = "hemos alcanzado el límite anual en la póliza de accidentes y enfermedades para";
+"chatbot.newClaim.denialWaitingPeriod.end.message" = "aún estamos en el período de espera en la póliza de accidentes y enfermedades para";
+"chatbot.newClaim.denialNoBenefits.end.message" = "ha alcanzado la cantidad total de beneficios disponibles.";
+"chatbot.newClaim.duplicatedClaim.message" = "Lo siento, pero parece que ya tiene un reclamo por";
+"chatbot.newClaim.duplicatedClaim.end.message" = "en este día.";
+"chatbot.newClaim.duplicatedClaim.message.2" = "¡No te preocupes! Siempre puedes hacer un seguimiento del estado de tu reclamo a través del rastreador de reclamos.";
+
+"chatbot.newClaim.genericError.message" = "Lo siento, no pude identificar su solicitud.";
+
+// MARK: - PreventiveCovered
+"preventiveCovered.title.label" = "Revisa tus beneficios";
+"preventiveCovered.covered.label" = "cobertura";
+"preventiveCovered.subtitle.label" = "Bienestar y Preventivo";
+"preventiveCovered.planCoverTitle.label" = "Lo que cubre su plan de atención preventiva";
+"preventiveCovered.remainingLimit.label" = "restante";
+"preventiveCovered.annualLimitUpTo.label" = "Hasta ";
+"preventiveCovered.annualLimit.label" = "Límite anual";
+"preventiveCovered.getReimbursement.button" = "Obtener Reembolso";
+"preventiveCovered.completed.label" = "Terminado";
+"preventiveCovered.available.label" = " Disponible";
+
+// MARK: - BankingInfo
+"bankingInfo.reimbursement.label" = "CUENTA DE REEMBOLSO";
+"bankingInfo.banking.label" = "Información bancaria";
+"bankingInfo.accountType.label" = "Tipo de cuenta";
+"bankingInfo.bankName.label" = "Nombre del banco";
+"bankingInfo.checking.label" = "Corriente";
+"bankingInfo.saving.label" = "Ahorro";
+"bankingInfo.routing.label" = "Enrutamiento";
+"bankingInfo.account.label" = "Cuenta";
+"bankingInfo.save.label" = "Save";
+"bankingInfo.continue.label" = "Seguir";
+
+// MARK: - Donation
+"donation.animals.card" = "Animales";
+"donation.globalWarming.card" = "Calentamiento Global";
+"donation.social.card" = "Causas Sociales";
+"donation.latinCommunities.card" = "Comunidades Latinas";
+
+"donation.donated.label" = "Nosotros ya donamos";
+"donation.title.label" = "Elige una causa";
+"donation.subtitle.label" = "Tu póliza está haciendo del mundo un \nlugar mejor";
+"donation.placeholder.label" = "Tu eliges, y nosotros\napoyamos";
+
+"donationCause.title.label" = "Animales";
+"donationCause.selectCause.label" = "Seleccione su causa:";
+"donation.choose.button" = "Elige esta causa";
+"donation.causeChosen.button" = "Causa seleccionada con éxito!";
+
+// MARK: - Donation
+"otp.failedMessageSending" = "Error al enviar el mensaje, ¿le gustaría intentarlo de nuevo?";
+
+// MARK: - DonationPopUp
+"donation.cardTitle.label" = "Ayudemos a mejorar el mundo mejor";
+"donation.cardSubtitle.label" = "A Kanguro le importa dar de vuelta al mundo! Por eso donamos parte de la plata que no usamos para pagar siniestros a refugios de animales, fundaciones de cambio climático, causas sociales, y organizaciones latinas que ayudan a sacar adelantes las comunidades.";
+"donation.later.button" = "Mas tarde";
+"donation.doIt.button" = "¡Vamos!";

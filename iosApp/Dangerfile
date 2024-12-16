@@ -1,0 +1,34 @@
+branch = ENV['GITHUB_REF'].split('/').last
+warn("Big PR") if git.lines_of_code > 500 && branch != 'main' && branch != 'stage'
+
+files_to_check = (git.modified_files + git.added_files).uniq
+(files_to_check - %w(Dangerfile)).each do |file|
+	next unless File.file?(file)
+	next unless File.extname(file).include?(".swift")
+  	
+	isCommentBlock = false
+
+	disabled_rules = []
+
+	filelines = File.readlines(file)
+	filelines.each_with_index do |line, index|
+		if isCommentBlock
+			if line.include?("*/")
+				isCommentBlock = false
+			end
+		elsif line.include?("/*")
+			isCommentBlock = true
+		elsif line.include?("danger:disable")
+			rule_to_disable = line.split.last
+			disabled_rules.push(rule_to_disable)
+		end 
+	end
+
+	if filelines.count > 150
+		warn("Consider to restrict all files to max 150 lines of code. File: " + File.basename(file))
+	end
+
+	if filelines.count > 1000
+		fail("Large file detected (> 1000 LOC). File: " + File.basename(file))
+	end
+end

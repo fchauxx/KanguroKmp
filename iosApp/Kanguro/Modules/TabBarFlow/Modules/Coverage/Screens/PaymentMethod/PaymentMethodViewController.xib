@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PaymentMethodViewController" customModule="Kanguro" customModuleProvider="target">
+            <connections>
+                <outlet property="loaderView" destination="L04-xj-1Nk" id="KFp-zx-AWQ"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="webView" destination="pCc-TN-Zs6" id="rME-h6-Mmq"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V53-AR-L0D">
+                    <rect key="frame" x="358" y="56" width="44" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="XvN-mT-DdC"/>
+                        <constraint firstAttribute="width" constant="44" id="kcd-i2-kh5"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" image="ic-close" title=" "/>
+                    <connections>
+                        <action selector="closeButton:" destination="-1" eventType="touchUpInside" id="uFN-VG-NlR"/>
+                    </connections>
+                </button>
+                <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pCc-TN-Zs6">
+                    <rect key="frame" x="16" y="112" width="382" height="726"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <wkWebViewConfiguration key="configuration">
+                        <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                        <wkPreferences key="preferences"/>
+                    </wkWebViewConfiguration>
+                </wkWebView>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="L04-xj-1Nk">
+                    <rect key="frame" x="197" y="438" width="20" height="20"/>
+                </activityIndicatorView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="V53-AR-L0D" secondAttribute="trailing" constant="12" id="0Qr-Eb-TMS"/>
+                <constraint firstItem="V53-AR-L0D" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="12" id="9RX-Ve-gpB"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="pCc-TN-Zs6" secondAttribute="bottom" constant="24" id="C5a-R7-Rf9"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="pCc-TN-Zs6" secondAttribute="trailing" constant="16" id="aHf-tq-7bm"/>
+                <constraint firstItem="L04-xj-1Nk" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="dPZ-nX-gx0"/>
+                <constraint firstItem="pCc-TN-Zs6" firstAttribute="top" secondItem="V53-AR-L0D" secondAttribute="bottom" constant="12" id="ePM-HG-A4w"/>
+                <constraint firstItem="pCc-TN-Zs6" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="fgc-Y4-945"/>
+                <constraint firstItem="L04-xj-1Nk" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="k9x-Cp-qjk"/>
+            </constraints>
+            <point key="canvasLocation" x="131.8840579710145" y="89.732142857142847"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ic-close" width="40" height="40"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

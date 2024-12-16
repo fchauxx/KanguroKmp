@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SummaryCard" customModule="Kanguro" customModuleProvider="target">
+            <connections>
+                <outlet property="leadingTitleLabel" destination="Q41-0g-Ljc" id="pMt-2O-3t2"/>
+                <outlet property="statusView" destination="g0V-3l-GBg" id="Pdu-8t-lhZ"/>
+                <outlet property="traillingTitleLabel" destination="KgI-s3-Kvd" id="PTF-y7-jIc"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="310" height="44"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q41-0g-Ljc" userLabel="Leading Label" customClass="CustomLabel" customModule="Kanguro" customModuleProvider="target">
+                    <rect key="frame" x="8" y="12" width="42" height="20"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KgI-s3-Kvd" userLabel="TraillingLabel" customClass="CustomLabel" customModule="Kanguro" customModuleProvider="target">
+                    <rect key="frame" x="297.5" y="11.5" width="4.5" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g0V-3l-GBg" customClass="StatusView" customModule="Kanguro" customModuleProvider="target">
+                    <rect key="frame" x="114" y="8" width="188" height="28"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="28" id="VVs-xb-Dfa"/>
+                        <constraint firstAttribute="width" relation="greaterThanOrEqual" priority="250" constant="96" id="cPq-Xl-sWz"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="g0V-3l-GBg" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="38u-a8-eJ5"/>
+                <constraint firstAttribute="trailing" secondItem="g0V-3l-GBg" secondAttribute="trailing" constant="8" id="4WD-JU-MJu"/>
+                <constraint firstItem="Q41-0g-Ljc" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="Hb5-M3-aEk"/>
+                <constraint firstAttribute="trailing" secondItem="KgI-s3-Kvd" secondAttribute="trailing" constant="8" id="PDn-eb-Vvq"/>
+                <constraint firstAttribute="bottom" secondItem="Q41-0g-Ljc" secondAttribute="bottom" constant="12" id="XLl-8F-lZQ"/>
+                <constraint firstItem="Q41-0g-Ljc" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="12" id="axo-oT-IpN"/>
+                <constraint firstItem="KgI-s3-Kvd" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="iYi-ow-2Rj"/>
+                <constraint firstItem="Q41-0g-Ljc" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="ohQ-MK-IC3"/>
+                <constraint firstItem="g0V-3l-GBg" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Q41-0g-Ljc" secondAttribute="trailing" constant="64" id="yIp-Zt-e2k"/>
+                <constraint firstItem="g0V-3l-GBg" firstAttribute="leading" secondItem="Q41-0g-Ljc" secondAttribute="trailing" priority="250" constant="64" id="ya2-on-Px9"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="137.68115942028987" y="113.83928571428571"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

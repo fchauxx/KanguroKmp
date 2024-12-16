@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "renters-faq-image.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

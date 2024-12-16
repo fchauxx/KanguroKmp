@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CoverageCardList" customModule="Kanguro" customModuleProvider="target">
+            <connections>
+                <outlet property="cardsListCollectionView" destination="3f7-7j-R02" id="VDd-md-rWB"/>
+                <outlet property="statusSelectionBgView" destination="ek1-Oy-eBu" id="cUX-bx-mzk"/>
+                <outlet property="statusSelectionView" destination="Lo3-xW-5Tf" id="WHJ-GZ-WE0"/>
+                <outlet property="titleLabel" destination="npp-VM-Rc4" id="vcO-98-ASl"/>
+                <outlet property="titleLabelView" destination="Vjr-lB-pZ3" id="d8e-vs-zoB"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="424" height="408"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="0cU-nM-ATk">
+                    <rect key="frame" x="0.0" y="0.0" width="424" height="408"/>
+                    <subviews>
+                        <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vjr-lB-pZ3" userLabel="label View">
+                            <rect key="frame" x="0.0" y="-12" width="424" height="12"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="npp-VM-Rc4" customClass="CustomLabel" customModule="Kanguro" customModuleProvider="target">
+                                    <rect key="frame" x="24" y="0.0" width="32" height="12"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="32" id="iQy-YK-Eae"/>
+                                        <constraint firstAttribute="height" constant="12" id="klS-Qp-KIq"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="npp-VM-Rc4" firstAttribute="top" secondItem="Vjr-lB-pZ3" secondAttribute="top" id="9Vk-fx-USt"/>
+                                <constraint firstItem="npp-VM-Rc4" firstAttribute="leading" secondItem="Vjr-lB-pZ3" secondAttribute="leading" constant="24" id="dVf-iV-xW8"/>
+                                <constraint firstItem="npp-VM-Rc4" firstAttribute="top" secondItem="Vjr-lB-pZ3" secondAttribute="top" id="koP-NB-c4k"/>
+                                <constraint firstAttribute="bottom" secondItem="npp-VM-Rc4" secondAttribute="bottom" id="pht-AG-j1O"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ek1-Oy-eBu" userLabel="Status selection base View">
+                            <rect key="frame" x="0.0" y="0.0" width="424" height="167"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Lo3-xW-5Tf" customClass="StatusSelectionView" customModule="Kanguro" customModuleProvider="target">
+                                    <rect key="frame" x="16" y="0.0" width="408" height="28"/>
+                                    <color key="backgroundColor" name="NeutralBackground"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="28" id="lXV-rp-2P2"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="28" id="FAH-Ce-aA8"/>
+                                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Lo3-xW-5Tf" secondAttribute="bottom" id="Fmt-6R-7XL"/>
+                                <constraint firstItem="Lo3-xW-5Tf" firstAttribute="leading" secondItem="ek1-Oy-eBu" secondAttribute="leading" constant="24" id="b7W-r2-Xph"/>
+                                <constraint firstItem="Lo3-xW-5Tf" firstAttribute="top" secondItem="ek1-Oy-eBu" secondAttribute="top" id="nYz-7G-uwb"/>
+                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Lo3-xW-5Tf" secondAttribute="trailing" id="wef-p6-Tl9"/>
+                            </constraints>
+                        </view>
+                        <collectionView multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="3f7-7j-R02">
+                            <rect key="frame" x="0.0" y="183" width="424" height="225"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="225" id="BtE-kG-oBr"/>
+                            </constraints>
+                            <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="8" sectionInsetReference="safeArea" id="9sj-sI-eyh">
+                                <size key="itemSize" width="130" height="128"/>
+                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            </collectionViewFlowLayout>
+                            <connections>
+                                <outlet property="delegate" destination="-1" id="sCl-dF-a1S"/>
+                            </connections>
+                        </collectionView>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" name="NeutralBackground"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="0cU-nM-ATk" secondAttribute="bottom" id="8QK-h8-FKp"/>
+                <constraint firstAttribute="trailing" secondItem="0cU-nM-ATk" secondAttribute="trailing" id="RPx-6j-yXc"/>
+                <constraint firstItem="0cU-nM-ATk" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="lTB-q7-pOQ"/>
+                <constraint firstItem="0cU-nM-ATk" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="xWp-Cr-OD6"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="407.24637681159425" y="-63.616071428571423"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="NeutralBackground">
+            <color red="0.94117647058823528" green="0.94117647058823528" blue="0.94117647058823528" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+    </resources>
+</document>

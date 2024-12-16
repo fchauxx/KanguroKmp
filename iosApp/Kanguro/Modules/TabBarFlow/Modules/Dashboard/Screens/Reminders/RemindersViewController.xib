@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RemindersViewController" customModule="Kanguro" customModuleProvider="target">
+            <connections>
+                <outlet property="petOptionsTitle" destination="9qr-qE-CBO" id="t4f-Yy-wHa"/>
+                <outlet property="reminderButtonListView" destination="89Y-bo-iEk" id="tUF-eM-rSs"/>
+                <outlet property="titleLabel" destination="cZS-d5-Jle" id="a64-g0-y2K"/>
+                <outlet property="verticalReminderCardList" destination="U43-mH-HmR" id="A07-Qp-g6L"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="89Y-bo-iEk" customClass="ReminderButtonListView" customModule="Kanguro" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="147.5" width="414" height="28"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="28" id="afi-cZ-kH2"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U43-mH-HmR" customClass="VerticalReminderCardList" customModule="Kanguro" customModuleProvider="target">
+                    <rect key="frame" x="32" y="199.5" width="350" height="662.5"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Beg-Cd-uUn">
+                    <rect key="frame" x="358" y="12" width="44" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="Zkr-UI-GqK"/>
+                        <constraint firstAttribute="width" constant="44" id="rDD-tl-m1d"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" image="ic-close" title=" "/>
+                    <connections>
+                        <action selector="closeTouchUpInside:" destination="-1" eventType="touchUpInside" id="yDX-TW-Grg"/>
+                    </connections>
+                </button>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic-notification-primary" translatesAutoresizingMaskIntoConstraints="NO" id="llL-Nt-aax">
+                    <rect key="frame" x="32" y="68" width="32" height="32"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="32" id="eOQ-yp-v0z"/>
+                        <constraint firstAttribute="width" constant="32" id="fdQ-I6-APx"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cZS-d5-Jle" userLabel="title" customClass="CustomLabel" customModule="Kanguro" customModuleProvider="target">
+                    <rect key="frame" x="72" y="73.5" width="4.5" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9qr-qE-CBO" userLabel="subtitle" customClass="CustomLabel" customModule="Kanguro" customModuleProvider="target">
+                    <rect key="frame" x="32" y="118.5" width="4.5" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="Beg-Cd-uUn" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="12" id="6AS-Wy-ZLt"/>
+                <constraint firstItem="9qr-qE-CBO" firstAttribute="top" secondItem="cZS-d5-Jle" secondAttribute="bottom" constant="24" id="7Fd-lF-Y8o"/>
+                <constraint firstItem="llL-Nt-aax" firstAttribute="top" secondItem="Beg-Cd-uUn" secondAttribute="bottom" constant="12" id="8ZK-I2-XqC"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="U43-mH-HmR" secondAttribute="trailing" constant="32" id="9WK-d4-xUl"/>
+                <constraint firstItem="89Y-bo-iEk" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="9aV-6a-Tx0"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Beg-Cd-uUn" secondAttribute="trailing" constant="12" id="Byp-8w-trX"/>
+                <constraint firstItem="Beg-Cd-uUn" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="cZS-d5-Jle" secondAttribute="trailing" constant="8" id="Zcm-5s-N3O"/>
+                <constraint firstItem="cZS-d5-Jle" firstAttribute="leading" secondItem="llL-Nt-aax" secondAttribute="trailing" constant="8" id="kEL-pl-3cM"/>
+                <constraint firstItem="U43-mH-HmR" firstAttribute="top" secondItem="89Y-bo-iEk" secondAttribute="bottom" constant="24" id="oyf-uR-CYS"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="89Y-bo-iEk" secondAttribute="trailing" id="p5o-Z9-RM3"/>
+                <constraint firstItem="llL-Nt-aax" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="32" id="pfN-6A-O7v"/>
+                <constraint firstItem="9qr-qE-CBO" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="32" id="sGO-na-PMx"/>
+                <constraint firstItem="89Y-bo-iEk" firstAttribute="top" secondItem="9qr-qE-CBO" secondAttribute="bottom" constant="8" id="wNh-hE-0gx"/>
+                <constraint firstItem="U43-mH-HmR" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="32" id="waQ-UL-iyP"/>
+                <constraint firstItem="cZS-d5-Jle" firstAttribute="centerY" secondItem="llL-Nt-aax" secondAttribute="centerY" id="xkt-o6-jbW"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="U43-mH-HmR" secondAttribute="bottom" id="yE1-bc-FGu"/>
+            </constraints>
+            <point key="canvasLocation" x="139" y="114"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ic-close" width="40" height="40"/>
+        <image name="ic-notification-primary" width="32" height="32"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

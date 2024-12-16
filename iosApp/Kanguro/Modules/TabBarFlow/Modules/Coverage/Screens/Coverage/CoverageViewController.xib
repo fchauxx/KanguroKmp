@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CoverageViewController" customModule="Kanguro" customModuleProvider="target">
+            <connections>
+                <outlet property="actionCardsList" destination="PKu-kX-Yba" id="Zab-re-cX6"/>
+                <outlet property="coverageList" destination="MdP-j7-rfM" id="pla-jc-eMr"/>
+                <outlet property="titleLabel" destination="R9i-yO-oRz" id="Y7W-vV-QIp"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v5c-bM-wGK" userLabel="Top background View">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="300"/>
+                    <color key="backgroundColor" name="NeutralBackground"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="300" id="Sju-P7-flp"/>
+                    </constraints>
+                </view>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hUu-v2-Cj2">
+                    <rect key="frame" x="0.0" y="48" width="414" height="764"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oln-jh-gAS" userLabel="Content View">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="788.5"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R9i-yO-oRz" customClass="CustomLabel" customModule="Kanguro" customModuleProvider="target">
+                                    <rect key="frame" x="24" y="32" width="366" height="21"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MdP-j7-rfM" customClass="CoverageCardList" customModule="Kanguro" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="53" width="414" height="258"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="258" id="dLh-MO-BmR"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PKu-kX-Yba" customClass="ActionCardsList" customModule="Kanguro" customModuleProvider="target">
+                                    <rect key="frame" x="24" y="342" width="366" height="222"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </view>
+                            </subviews>
+                            <color key="backgroundColor" name="NeutralBackground"/>
+                            <constraints>
+                                <constraint firstItem="PKu-kX-Yba" firstAttribute="leading" secondItem="oln-jh-gAS" secondAttribute="leading" constant="24" id="7ih-eP-2Ai"/>
+                                <constraint firstItem="MdP-j7-rfM" firstAttribute="top" secondItem="R9i-yO-oRz" secondAttribute="bottom" constant="24" id="8vt-rf-Nqr"/>
+                                <constraint firstItem="MdP-j7-rfM" firstAttribute="leading" secondItem="oln-jh-gAS" secondAttribute="leading" id="Exp-6k-DAB"/>
+                                <constraint firstAttribute="trailing" secondItem="PKu-kX-Yba" secondAttribute="trailing" constant="24" id="HtC-pr-a8I"/>
+                                <constraint firstAttribute="trailing" secondItem="MdP-j7-rfM" secondAttribute="trailing" id="PTt-Xp-3qN"/>
+                                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="PKu-kX-Yba" secondAttribute="bottom" constant="32" id="RQN-Wu-tMA"/>
+                                <constraint firstItem="PKu-kX-Yba" firstAttribute="top" secondItem="MdP-j7-rfM" secondAttribute="bottom" constant="24" id="VEY-9g-l1E"/>
+                                <constraint firstItem="R9i-yO-oRz" firstAttribute="leading" secondItem="oln-jh-gAS" secondAttribute="leading" constant="24" id="WRq-pd-CMo"/>
+                                <constraint firstAttribute="trailing" secondItem="R9i-yO-oRz" secondAttribute="trailing" constant="24" id="YqS-Ds-cx5"/>
+                                <constraint firstItem="R9i-yO-oRz" firstAttribute="top" secondItem="oln-jh-gAS" secondAttribute="top" constant="32" id="mkL-W3-vjt"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="20"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="oln-jh-gAS" firstAttribute="top" secondItem="hUu-v2-Cj2" secondAttribute="top" id="UUM-cJ-Pwt"/>
+                        <constraint firstAttribute="trailing" secondItem="oln-jh-gAS" secondAttribute="trailing" id="bDJ-9V-OgF"/>
+                        <constraint firstAttribute="bottom" secondItem="oln-jh-gAS" secondAttribute="bottom" id="ctA-kC-DZz"/>
+                        <constraint firstItem="oln-jh-gAS" firstAttribute="leading" secondItem="hUu-v2-Cj2" secondAttribute="leading" id="glQ-4a-KgG"/>
+                    </constraints>
+                </scrollView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="oln-jh-gAS" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="G4Y-lt-TZ1"/>
+                <constraint firstAttribute="trailing" secondItem="hUu-v2-Cj2" secondAttribute="trailing" id="VfJ-5g-jDF"/>
+                <constraint firstItem="v5c-bM-wGK" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="dgE-L5-Xs6"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="hUu-v2-Cj2" secondAttribute="bottom" constant="50" id="e4O-RN-ShB"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="v5c-bM-wGK" secondAttribute="trailing" id="qPw-b8-QXY"/>
+                <constraint firstItem="hUu-v2-Cj2" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="qSM-wS-z29"/>
+                <constraint firstItem="oln-jh-gAS" firstAttribute="height" relation="greaterThanOrEqual" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.88" id="r0F-bl-aRP"/>
+                <constraint firstItem="v5c-bM-wGK" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="why-aR-vfO"/>
+                <constraint firstItem="hUu-v2-Cj2" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="yMR-Ya-qvS"/>
+            </constraints>
+            <point key="canvasLocation" x="137.68115942028987" y="114.50892857142857"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="NeutralBackground">
+            <color red="0.94117647058823528" green="0.94117647058823528" blue="0.94117647058823528" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+    </resources>
+</document>

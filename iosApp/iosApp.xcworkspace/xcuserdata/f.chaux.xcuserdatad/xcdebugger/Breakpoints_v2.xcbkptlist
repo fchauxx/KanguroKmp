@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "3F3CB110-2B98-4121-9213-DABBAF22533C"
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BCBBB87A-8343-414C-BC33-CCA0FC7FF17B"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Kanguro/Modules/TabBarFlow/Modules/Coverage/Screens/CoverageDetails/Screens/CoverageDetails/PolicyViewModels/PolicyDocumentViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
+            landmarkName = "unknown"
+            landmarkType = "0">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A9BAE0A8-B2EC-4284-868E-F841B7E3CCA8"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Kanguro/Modules/TabBarFlow/Modules/Coverage/Screens/CoverageDetails/Screens/CoverageDetails/PolicyViewModels/PolicyDocumentViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
+            landmarkName = "PolicyDocumentViewModel"
+            landmarkType = "21">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "52AA905F-8E05-464F-8ACC-EC553E68668F"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Kanguro/Modules/TabBarFlow/Modules/Dashboard/Coordinators/DashboardCoordinator.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "175"
+            endingLineNumber = "175"
+            landmarkName = "navigateToMixedDashboard(petPolicies:renterPolicies:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9437F2D1-0C20-4453-BA13-9837D52CAF1F"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Kanguro/Modules/TabBarFlow/Modules/Dashboard/Coordinators/DashboardCoordinator.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "176"
+            endingLineNumber = "176"
+            landmarkName = "navigateToMixedDashboard(petPolicies:renterPolicies:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8737C572-B196-414E-8ECC-C3C9BA10E820"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Kanguro/Modules/TabBarFlow/Modules/Dashboard/Coordinators/DashboardCoordinator+Navigation.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "84"
+            endingLineNumber = "84"
+            landmarkName = "navigateToRentersCoverageDetails(policy:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "098607E8-EFC7-47D1-8403-C7CB93706BDE"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Kanguro/Core/Navigation/Models/Renters/RentersViewFactory.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "437"
+            endingLineNumber = "437"
+            landmarkName = "makeRentersCoverageDetails(network:router:policy:navigation:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "37153CE2-B507-40E4-AE67-8C095C1454E5"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Kanguro/Core/Navigation/Models/Renters/RentersViewFactory.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "438"
+            endingLineNumber = "438"
+            landmarkName = "makeRentersCoverageDetails(network:router:policy:navigation:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "37153CE2-B507-40E4-AE67-8C095C1454E5 - 244a6ab06bc52f94"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #15 (Any) -&gt; () in static Kanguro.RentersViewFactory.makeRentersCoverageDetails(network: KanguroNetworkDomain.NetworkProtocol, router: KanguroRentersPresentation.RentersRouter&lt;KanguroRentersDomain.RentersPage&gt;, policy: KanguroRentersDomain.RenterPolicy, navigation: Swift.Optional&lt;__C.UINavigationController&gt;) -&gt; some"
+                  moduleName = "Kanguro"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/f.chaux/Documents/developer/kanguro-ios/Kanguro/Core/Navigation/Models/Renters/RentersViewFactory.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "438"
+                  endingLineNumber = "438"
+                  offsetFromSymbolStart = "0">
+               </Location>
+               <Location
+                  uuid = "37153CE2-B507-40E4-AE67-8C095C1454E5 - b7978f84a9d11ada"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in closure #15 (Any) -&gt; () in static Kanguro.RentersViewFactory.makeRentersCoverageDetails(network: KanguroNetworkDomain.NetworkProtocol, router: KanguroRentersPresentation.RentersRouter&lt;KanguroRentersDomain.RentersPage&gt;, policy: KanguroRentersDomain.RenterPolicy, navigation: Swift.Optional&lt;__C.UINavigationController&gt;) -&gt; some"
+                  moduleName = "Kanguro"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/f.chaux/Documents/developer/kanguro-ios/Kanguro/Core/Navigation/Models/Renters/RentersViewFactory.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "438"
+                  endingLineNumber = "438"
+                  offsetFromSymbolStart = "0">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C78FAF3D-3C8D-4DBA-8BDB-846E8785FFA2"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Kanguro/Core/Navigation/Models/Renters/RentersViewFactory.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "439"
+            endingLineNumber = "439"
+            landmarkName = "makeRentersCoverageDetails(network:router:policy:navigation:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "C78FAF3D-3C8D-4DBA-8BDB-846E8785FFA2 - b7978f84a9d11d39"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in closure #15 (Any) -&gt; () in static Kanguro.RentersViewFactory.makeRentersCoverageDetails(network: KanguroNetworkDomain.NetworkProtocol, router: KanguroRentersPresentation.RentersRouter&lt;KanguroRentersDomain.RentersPage&gt;, policy: KanguroRentersDomain.RenterPolicy, navigation: Swift.Optional&lt;__C.UINavigationController&gt;) -&gt; some"
+                  moduleName = "Kanguro"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/f.chaux/Documents/developer/kanguro-ios/Kanguro/Core/Navigation/Models/Renters/RentersViewFactory.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "439"
+                  endingLineNumber = "439"
+                  offsetFromSymbolStart = "0">
+               </Location>
+               <Location
+                  uuid = "C78FAF3D-3C8D-4DBA-8BDB-846E8785FFA2 - b7978f84a9d11d39"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in closure #15 (Any) -&gt; () in static Kanguro.RentersViewFactory.makeRentersCoverageDetails(network: KanguroNetworkDomain.NetworkProtocol, router: KanguroRentersPresentation.RentersRouter&lt;KanguroRentersDomain.RentersPage&gt;, policy: KanguroRentersDomain.RenterPolicy, navigation: Swift.Optional&lt;__C.UINavigationController&gt;) -&gt; some"
+                  moduleName = "Kanguro"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/f.chaux/Documents/developer/kanguro-ios/Kanguro/Core/Navigation/Models/Renters/RentersViewFactory.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "439"
+                  endingLineNumber = "439"
+                  offsetFromSymbolStart = "0">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9D3718A4-ED13-4C94-BFD4-8F626ACAAC71"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Kanguro/Core/Navigation/Models/Renters/RentersViewFactory.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "441"
+            endingLineNumber = "441"
+            landmarkName = "makeRentersCoverageDetails(network:router:policy:navigation:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "9D3718A4-ED13-4C94-BFD4-8F626ACAAC71 - 244a6ab06bc52831"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #15 (Any) -&gt; () in static Kanguro.RentersViewFactory.makeRentersCoverageDetails(network: KanguroNetworkDomain.NetworkProtocol, router: KanguroRentersPresentation.RentersRouter&lt;KanguroRentersDomain.RentersPage&gt;, policy: KanguroRentersDomain.RenterPolicy, navigation: Swift.Optional&lt;__C.UINavigationController&gt;) -&gt; some"
+                  moduleName = "Kanguro"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/f.chaux/Documents/developer/kanguro-ios/Kanguro/Core/Navigation/Models/Renters/RentersViewFactory.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "441"
+                  endingLineNumber = "441"
+                  offsetFromSymbolStart = "0">
+               </Location>
+               <Location
+                  uuid = "9D3718A4-ED13-4C94-BFD4-8F626ACAAC71 - 244a6ab06bc52831"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #15 (Any) -&gt; () in static Kanguro.RentersViewFactory.makeRentersCoverageDetails(network: KanguroNetworkDomain.NetworkProtocol, router: KanguroRentersPresentation.RentersRouter&lt;KanguroRentersDomain.RentersPage&gt;, policy: KanguroRentersDomain.RenterPolicy, navigation: Swift.Optional&lt;__C.UINavigationController&gt;) -&gt; some"
+                  moduleName = "Kanguro"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/f.chaux/Documents/developer/kanguro-ios/Kanguro/Core/Navigation/Models/Renters/RentersViewFactory.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "441"
+                  endingLineNumber = "441"
+                  offsetFromSymbolStart = "0">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5A3E25FF-D8DC-4268-8175-C9006B5D72D3"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "Yes"
+            filePath = "Modules/KanguroNetwork/KanguroNetworkData/Sources/KanguroNetworkData/AFNetwork.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "283"
+            endingLineNumber = "283"
+            landmarkName = "serializeResponse(response:responseType:errorType:)"
+            landmarkType = "7">
+            <Actions>
+               <BreakpointActionProxy
+                  ActionExtensionID = "Xcode.BreakpointAction.DebuggerCommand">
+                  <ActionContent
+                     consoleCommand = "po response.result">
+                  </ActionContent>
+               </BreakpointActionProxy>
+            </Actions>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E558B6CD-396C-4164-9955-5218D3E35B92"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "Yes"
+            filePath = "Modules/KanguroNetwork/KanguroNetworkData/Sources/KanguroNetworkData/AFNetwork.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "280"
+            endingLineNumber = "280"
+            landmarkName = "serializeResponse(response:responseType:errorType:)"
+            landmarkType = "7">
+            <Actions>
+               <BreakpointActionProxy
+                  ActionExtensionID = "Xcode.BreakpointAction.DebuggerCommand">
+                  <ActionContent
+                     consoleCommand = "po response.result">
+                  </ActionContent>
+               </BreakpointActionProxy>
+            </Actions>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C8418982-B456-4F56-8888-7F5C132F232C"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Modules/KanguroNetwork/KanguroNetworkData/Sources/KanguroNetworkData/AFNetwork.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "290"
+            endingLineNumber = "290"
+            landmarkName = "serializeResponse(response:responseType:errorType:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MonthlyPaymentView" customModule="Kanguro" customModuleProvider="target">
+            <connections>
+                <outlet property="invoiceIntervalCostLabel" destination="iId-lM-Bgl" id="tcx-xU-4X0"/>
+                <outlet property="invoiceIntervalLabel" destination="4ik-iY-y6G" id="rnz-2E-bPL"/>
+                <outlet property="minorCostLabelsStackView" destination="cax-YY-Og3" id="BfQ-CE-7Bo"/>
+                <outlet property="petTypeCostLabel" destination="BN3-H0-90q" id="lUx-jV-QcA"/>
+                <outlet property="petTypeLabel" destination="Pia-Zc-Sr8" id="xdX-Ms-QNA"/>
+                <outlet property="preventiveAndWellnessCostLabel" destination="Crm-OP-ls9" id="fmd-E2-H16"/>
+                <outlet property="preventiveAndWellnessLabel" destination="hLI-ZK-D5w" id="uEf-XT-dMi"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="108"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="EMa-P3-Epx" userLabel="Main Stack View">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="108"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="4LA-f9-FJa" userLabel="Invoice interval Stack View">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="29"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="invoice" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4ik-iY-y6G" userLabel="MonthlyPayment Label" customClass="CustomLabel" customModule="Kanguro" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="373" height="29"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="29" id="nec-DE-DYO"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="cost" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iId-lM-Bgl" userLabel="MonthlyCost Label" customClass="CustomLabel" customModule="Kanguro" customModuleProvider="target">
+                                    <rect key="frame" x="381" y="0.0" width="33" height="29"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="29" id="dtI-Pe-sDl"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                        </stackView>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="cax-YY-Og3" userLabel="Minor costs Stack View">
+                            <rect key="frame" x="0.0" y="45" width="414" height="63"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NCv-q9-2Zf" userLabel="petType stack View">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="35.5"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="petType" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pia-Zc-Sr8" userLabel="Pet Type Label" customClass="CustomLabel" customModule="Kanguro" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="381" height="35.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="cost" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BN3-H0-90q" userLabel="Pet Type cost Label" customClass="CustomLabel" customModule="Kanguro" customModuleProvider="target">
+                                            <rect key="frame" x="381" y="0.0" width="33" height="35.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </stackView>
+                                <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xG6-tw-91A" userLabel="preventive stack view">
+                                    <rect key="frame" x="0.0" y="42.5" width="414" height="20.5"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="preventive" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hLI-ZK-D5w" userLabel="Preventive Label" customClass="CustomLabel" customModule="Kanguro" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="381" height="20.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="cost" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Crm-OP-ls9" userLabel="Preventive cost Label" customClass="CustomLabel" customModule="Kanguro" customModuleProvider="target">
+                                            <rect key="frame" x="381" y="0.0" width="33" height="20.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </stackView>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="4LA-f9-FJa" secondAttribute="trailing" id="I4Y-H4-g7A"/>
+                        <constraint firstAttribute="trailing" secondItem="cax-YY-Og3" secondAttribute="trailing" id="c02-i0-9bw"/>
+                        <constraint firstItem="4LA-f9-FJa" firstAttribute="leading" secondItem="EMa-P3-Epx" secondAttribute="leading" id="nAy-zM-u8r"/>
+                        <constraint firstItem="cax-YY-Og3" firstAttribute="leading" secondItem="EMa-P3-Epx" secondAttribute="leading" id="piY-MP-cpa"/>
+                    </constraints>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="EMa-P3-Epx" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="29L-OW-pvz"/>
+                <constraint firstAttribute="trailing" secondItem="EMa-P3-Epx" secondAttribute="trailing" id="PBz-B8-d7V"/>
+                <constraint firstAttribute="bottom" secondItem="EMa-P3-Epx" secondAttribute="bottom" id="U2x-YI-l9C"/>
+                <constraint firstItem="EMa-P3-Epx" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="tCi-K2-A8g"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="137.68115942028987" y="113.16964285714285"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

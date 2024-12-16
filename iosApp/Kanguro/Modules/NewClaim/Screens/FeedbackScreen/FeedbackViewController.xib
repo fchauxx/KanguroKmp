@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FeedbackViewController" customModule="Kanguro" customModuleProvider="target">
+            <connections>
+                <outlet property="feedbackButton" destination="I2k-zD-U7I" id="nfj-fG-OTc"/>
+                <outlet property="feedbackTextView" destination="qPH-Oc-wvg" id="BD7-Ey-b1k"/>
+                <outlet property="kanguroImageView" destination="k9v-g4-jAf" id="EAx-qc-Xsb"/>
+                <outlet property="sliderView" destination="swd-E2-2EP" id="m1H-CY-8oD"/>
+                <outlet property="textViewBG" destination="Xef-zz-J6t" id="D1V-ih-GoP"/>
+                <outlet property="titleLabel" destination="bCf-E1-lqo" id="n7x-BP-GwP"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bCf-E1-lqo" customClass="CustomLabel" customModule="Kanguro" customModuleProvider="target">
+                    <rect key="frame" x="24" y="83" width="327" height="20.333333333333329"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="feedback-5" translatesAutoresizingMaskIntoConstraints="NO" id="k9v-g4-jAf">
+                    <rect key="frame" x="83" y="115.33333333333331" width="209" height="195"/>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="swd-E2-2EP" customClass="CustomSlider" customModule="Kanguro" customModuleProvider="target">
+                    <rect key="frame" x="24" y="396.33333333333331" width="327" height="112"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="112" id="ZM0-iQ-ceC"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I2k-zD-U7I" customClass="CustomButton" customModule="Kanguro" customModuleProvider="target">
+                    <rect key="frame" x="24" y="690" width="327" height="64"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xef-zz-J6t" userLabel="Text View">
+                    <rect key="frame" x="24" y="544.33333333333337" width="327" height="121.66666666666663"/>
+                    <subviews>
+                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="qPH-Oc-wvg" customClass="CustomTextView" customModule="Kanguro" customModuleProvider="target">
+                            <rect key="frame" x="8" y="8" width="311" height="105.66666666666667"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="textColor" systemColor="labelColor"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="0.0"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                    <real key="value" value="0.0"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                    <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </textView>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="qPH-Oc-wvg" secondAttribute="trailing" constant="8" id="EfG-pC-9oB"/>
+                        <constraint firstAttribute="bottom" secondItem="qPH-Oc-wvg" secondAttribute="bottom" constant="8" id="PKN-w4-XNV"/>
+                        <constraint firstItem="qPH-Oc-wvg" firstAttribute="leading" secondItem="Xef-zz-J6t" secondAttribute="leading" constant="8" id="SH3-0w-ZTt"/>
+                        <constraint firstItem="qPH-Oc-wvg" firstAttribute="top" secondItem="Xef-zz-J6t" secondAttribute="top" constant="8" id="vA9-YL-0gB"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="8"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                            <real key="value" value="2"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                            <color key="value" name="Secondary"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" name="PrimaryMedium"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="I2k-zD-U7I" secondAttribute="bottom" constant="24" id="0sX-va-qPT"/>
+                <constraint firstItem="swd-E2-2EP" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="1Pv-t3-4Mi"/>
+                <constraint firstItem="bCf-E1-lqo" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="45j-jf-q8r"/>
+                <constraint firstItem="I2k-zD-U7I" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.0788177" id="4Ww-9t-whe"/>
+                <constraint firstItem="bCf-E1-lqo" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="36" id="7tx-lF-CoC"/>
+                <constraint firstItem="k9v-g4-jAf" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="97c-jO-JxW"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Xef-zz-J6t" secondAttribute="trailing" constant="24" id="AEb-4B-cVZ"/>
+                <constraint firstItem="I2k-zD-U7I" firstAttribute="top" secondItem="Xef-zz-J6t" secondAttribute="bottom" constant="24" id="AtV-QZ-94X"/>
+                <constraint firstItem="k9v-g4-jAf" firstAttribute="top" secondItem="bCf-E1-lqo" secondAttribute="bottom" constant="12" id="D82-Em-5Iq"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="bCf-E1-lqo" secondAttribute="trailing" constant="24" id="HCU-g9-WFZ"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="I2k-zD-U7I" secondAttribute="trailing" constant="24" id="N1J-Fh-rOi"/>
+                <constraint firstItem="Xef-zz-J6t" firstAttribute="top" secondItem="swd-E2-2EP" secondAttribute="bottom" constant="36" id="RjK-eo-QBZ"/>
+                <constraint firstItem="swd-E2-2EP" firstAttribute="top" relation="greaterThanOrEqual" secondItem="k9v-g4-jAf" secondAttribute="bottom" constant="12" id="bR6-On-inM"/>
+                <constraint firstItem="swd-E2-2EP" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="eUO-bX-f6U"/>
+                <constraint firstItem="Xef-zz-J6t" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.15" id="i8X-EP-Fs4"/>
+                <constraint firstItem="k9v-g4-jAf" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.24" id="jkY-1s-wIv"/>
+                <constraint firstItem="I2k-zD-U7I" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="leL-lM-dAc"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="swd-E2-2EP" secondAttribute="trailing" constant="24" id="m0X-I2-DQI"/>
+                <constraint firstItem="Xef-zz-J6t" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="qDQ-0n-XAW"/>
+                <constraint firstItem="k9v-g4-jAf" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.557333" id="zuQ-nN-abc"/>
+            </constraints>
+            <point key="canvasLocation" x="130.40000000000001" y="111.57635467980296"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="feedback-5" width="601" height="600"/>
+        <namedColor name="PrimaryMedium">
+            <color red="1" green="0.6470588235294118" blue="0.62745098039215685" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Secondary">
+            <color red="0.0" green="0.14117647058823529" blue="0.32941176470588235" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

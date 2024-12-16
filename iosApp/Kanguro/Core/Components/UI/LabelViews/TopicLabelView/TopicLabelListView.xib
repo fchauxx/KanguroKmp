@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TopicLabelListView" customModule="Kanguro" customModuleProvider="target">
+            <connections>
+                <outlet property="stackView" destination="vHx-LN-LQ1" id="cuL-Ec-DzX"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="vHx-LN-LQ1">
+                    <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="vHx-LN-LQ1" secondAttribute="trailing" id="MB3-yc-aq9"/>
+                <constraint firstAttribute="bottom" secondItem="vHx-LN-LQ1" secondAttribute="bottom" id="bYg-yN-9CG"/>
+                <constraint firstItem="vHx-LN-LQ1" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="gjj-ib-GH6"/>
+                <constraint firstItem="vHx-LN-LQ1" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="sXC-n6-00m"/>
+            </constraints>
+            <point key="canvasLocation" x="109" y="20"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

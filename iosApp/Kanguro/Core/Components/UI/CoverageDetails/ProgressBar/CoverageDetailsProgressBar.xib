@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CoverageDetailsProgressBar" customModule="Kanguro" customModuleProvider="target">
+            <connections>
+                <outlet property="backgroundView" destination="AiG-yU-HDg" id="8ap-sD-EFf"/>
+                <outlet property="leftToDeductibleLabel" destination="hrZ-o6-fLm" id="hRR-tn-X0W"/>
+                <outlet property="maximumDeductibleLabel" destination="Eko-bm-Jku" id="54U-4V-1ot"/>
+                <outlet property="minimumDeductibleLabel" destination="tdm-DM-oRJ" id="eY9-aN-V4v"/>
+                <outlet property="progressBarView" destination="evh-cY-Lo5" id="9zP-n5-TfB"/>
+                <outlet property="progressWidthConstraint" destination="8nj-By-boi" id="Jqv-aM-tc1"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="126"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="04G-ao-2TD">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="126"/>
+                    <subviews>
+                        <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hrZ-o6-fLm" userLabel="reachable value label" customClass="CustomLabel" customModule="Kanguro" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="41.5" height="0.0"/>
+                            <constraints>
+                                <constraint firstAttribute="width" relation="lessThanOrEqual" constant="120" id="Jgm-HZ-aTL"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FB2-2H-JmX">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="126"/>
+                            <subviews>
+                                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tdm-DM-oRJ" userLabel="minimum value Label" customClass="CustomLabel" customModule="Kanguro" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="105.5" width="41.5" height="20.5"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" relation="lessThanOrEqual" constant="120" id="HN7-tn-1et"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eko-bm-Jku" userLabel="maximum value Label" customClass="CustomLabel" customModule="Kanguro" customModuleProvider="target">
+                                    <rect key="frame" x="372.5" y="105.5" width="41.5" height="20.5"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" relation="lessThanOrEqual" constant="120" id="TyF-dX-fox"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AiG-yU-HDg" userLabel="Background View">
+                                    <rect key="frame" x="0.0" y="91.5" width="414" height="12"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="evh-cY-Lo5" userLabel="Progress View">
+                                            <rect key="frame" x="1" y="1" width="334" height="10"/>
+                                            <color key="backgroundColor" name="Primary"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="334" id="8nj-By-boi"/>
+                                            </constraints>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                    <real key="value" value="6"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                    <real key="value" value="1"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                    <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </view>
+                                    </subviews>
+                                    <color key="backgroundColor" name="NeutralBackground"/>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="evh-cY-Lo5" secondAttribute="trailing" constant="1" id="2Kw-Ek-7h0"/>
+                                        <constraint firstItem="evh-cY-Lo5" firstAttribute="leading" secondItem="AiG-yU-HDg" secondAttribute="leading" constant="1" id="6qB-nx-vUA"/>
+                                        <constraint firstAttribute="bottom" secondItem="evh-cY-Lo5" secondAttribute="bottom" constant="1" id="AhH-ra-g8G"/>
+                                        <constraint firstItem="evh-cY-Lo5" firstAttribute="top" secondItem="AiG-yU-HDg" secondAttribute="top" constant="1" id="Gtz-v0-qtT"/>
+                                        <constraint firstAttribute="height" constant="12" id="NiO-RF-kHI"/>
+                                    </constraints>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="6"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </view>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstItem="tdm-DM-oRJ" firstAttribute="leading" secondItem="FB2-2H-JmX" secondAttribute="leading" id="Fy9-Ck-PJn"/>
+                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="46" id="SbT-xU-g9b"/>
+                                <constraint firstAttribute="trailing" secondItem="Eko-bm-Jku" secondAttribute="trailing" id="Snd-ef-2c6"/>
+                                <constraint firstAttribute="bottom" secondItem="Eko-bm-Jku" secondAttribute="bottom" id="ZaU-tb-4IF"/>
+                                <constraint firstItem="AiG-yU-HDg" firstAttribute="leading" secondItem="FB2-2H-JmX" secondAttribute="leading" id="at5-e9-VbV"/>
+                                <constraint firstAttribute="bottom" secondItem="tdm-DM-oRJ" secondAttribute="bottom" id="mdy-Gp-V1O"/>
+                                <constraint firstItem="tdm-DM-oRJ" firstAttribute="top" secondItem="AiG-yU-HDg" secondAttribute="bottom" constant="2" id="pg2-b8-Co0"/>
+                                <constraint firstItem="Eko-bm-Jku" firstAttribute="top" secondItem="AiG-yU-HDg" secondAttribute="bottom" constant="2" id="uGO-em-5Tb"/>
+                                <constraint firstAttribute="trailing" secondItem="AiG-yU-HDg" secondAttribute="trailing" id="yo6-9V-q7j"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="AiG-yU-HDg" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" id="CXQ-t8-Klm"/>
+                <constraint firstItem="04G-ao-2TD" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="RRo-B9-acc"/>
+                <constraint firstAttribute="trailing" secondItem="04G-ao-2TD" secondAttribute="trailing" id="RUn-Lc-JIA"/>
+                <constraint firstAttribute="bottom" secondItem="04G-ao-2TD" secondAttribute="bottom" id="Yxs-qR-2hQ"/>
+                <constraint firstItem="04G-ao-2TD" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="lAS-Ms-mUL"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="137.68115942028987" y="125.22321428571428"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="NeutralBackground">
+            <color red="0.94117647058823528" green="0.94117647058823528" blue="0.94117647058823528" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="Primary">
+            <color red="1" green="0.41176470588235292" blue="0.38039215686274508" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

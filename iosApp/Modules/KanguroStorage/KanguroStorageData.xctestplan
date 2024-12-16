@@ -1,0 +1,24 @@
+{
+  "configurations" : [
+    {
+      "id" : "171E81FF-AC36-4D50-9686-66C70197D95F",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "codeCoverage" : false
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:..\/..\/KanguroAnalytics\/KaguroAnalyticsData",
+        "identifier" : "KanguroAnalyticsDataTests",
+        "name" : "KanguroAnalyticsDataTests"
+      }
+    }
+  ],
+  "version" : 1
+}

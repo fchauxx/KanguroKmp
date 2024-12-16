@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TagView" customModule="Kanguro" customModuleProvider="target">
+            <connections>
+                <outlet property="labelView" destination="d1V-80-MLW" id="OZm-tY-nAq"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="208" height="84"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d1V-80-MLW" customClass="CustomLabel" customModule="Kanguro" customModuleProvider="target">
+                    <rect key="frame" x="2" y="2" width="204" height="80"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" name="TertiaryLight"/>
+            <constraints>
+                <constraint firstItem="d1V-80-MLW" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="2" id="0yR-OI-PPl"/>
+                <constraint firstItem="d1V-80-MLW" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="4sN-r0-oxn"/>
+                <constraint firstItem="d1V-80-MLW" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="2" id="H8j-y2-d12"/>
+                <constraint firstAttribute="bottom" secondItem="d1V-80-MLW" secondAttribute="bottom" constant="2" id="Ycc-Co-SL8"/>
+                <constraint firstItem="d1V-80-MLW" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="adG-35-9CA"/>
+                <constraint firstAttribute="trailing" secondItem="d1V-80-MLW" secondAttribute="trailing" constant="2" id="fbo-75-OxJ"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                    <real key="value" value="4"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
+            <point key="canvasLocation" x="-97.70992366412213" y="-250.7042253521127"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="TertiaryLight">
+            <color red="0.83529411764705885" green="0.71372549019607845" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

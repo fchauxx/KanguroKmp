@@ -1,0 +1,24 @@
+{
+  "configurations" : [
+    {
+      "id" : "375CF4DE-E179-4F8E-BFAB-A8E18587003B",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:",
+        "identifier" : "KanguroSharedDataTests",
+        "name" : "KanguroSharedDataTests"
+      }
+    }
+  ],
+  "version" : 1
+}

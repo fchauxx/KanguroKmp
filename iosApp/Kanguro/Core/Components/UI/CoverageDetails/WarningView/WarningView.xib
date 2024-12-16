@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WarningView" customModule="Kanguro" customModuleProvider="target">
+            <connections>
+                <outlet property="backgroundView" destination="IbQ-GY-a88" id="Wct-Vd-o7N"/>
+                <outlet property="iconImageHeight" destination="ky7-HX-DAi" id="hIs-25-mEf"/>
+                <outlet property="iconImageView" destination="z2d-Cq-WSf" id="svQ-cK-jc5"/>
+                <outlet property="iconImageWidth" destination="2zF-au-3F9" id="GPm-Sx-wJ8"/>
+                <outlet property="leadingTitleLabel" destination="0qf-50-UrH" id="aFB-F1-BeK"/>
+                <outlet property="topicLabelView" destination="ZrX-cq-h76" id="H2o-HX-dIb"/>
+                <outlet property="traillingLabel" destination="xpW-qF-6cE" id="xm5-ax-EyH"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IbQ-GY-a88" userLabel="Warning View">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic-warning" translatesAutoresizingMaskIntoConstraints="NO" id="z2d-Cq-WSf">
+                            <rect key="frame" x="16" y="20" width="20" height="20"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="20" id="2zF-au-3F9"/>
+                                <constraint firstAttribute="height" constant="20" id="ky7-HX-DAi"/>
+                            </constraints>
+                        </imageView>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="IgX-gv-QsW">
+                            <rect key="frame" x="48" y="8" width="240" height="44"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0qf-50-UrH" userLabel="leadingTitle" customClass="CustomLabel" customModule="Kanguro" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="240" height="44"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="12" id="BCW-ux-q0e"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZrX-cq-h76" customClass="TopicLabelView" customModule="Kanguro" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="240" height="14"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="14" id="Djw-cS-J85"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </stackView>
+                        <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xpW-qF-6cE" userLabel="traillingTitle" customClass="CustomLabel" customModule="Kanguro" customModuleProvider="target">
+                            <rect key="frame" x="338" y="8" width="60" height="44"/>
+                            <constraints>
+                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="yeu-Vp-AON"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BbO-js-bL4">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title=" "/>
+                            <connections>
+                                <action selector="buttonTouchUpInsideSender:" destination="-1" eventType="touchUpInside" id="ugg-nE-1CM"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" name="AlertLight"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="BbO-js-bL4" secondAttribute="bottom" id="4bT-6W-4zu"/>
+                        <constraint firstItem="IgX-gv-QsW" firstAttribute="top" secondItem="IbQ-GY-a88" secondAttribute="top" constant="8" id="9iE-vP-u1n"/>
+                        <constraint firstItem="z2d-Cq-WSf" firstAttribute="centerY" secondItem="IbQ-GY-a88" secondAttribute="centerY" id="Ci3-8L-kRh"/>
+                        <constraint firstItem="xpW-qF-6cE" firstAttribute="centerY" secondItem="IbQ-GY-a88" secondAttribute="centerY" id="Ech-0u-iMF"/>
+                        <constraint firstAttribute="bottom" secondItem="IgX-gv-QsW" secondAttribute="bottom" constant="8" id="KUW-nk-99e"/>
+                        <constraint firstItem="xpW-qF-6cE" firstAttribute="top" secondItem="IbQ-GY-a88" secondAttribute="top" constant="8" id="Kdg-Rf-bmq"/>
+                        <constraint firstAttribute="bottom" secondItem="xpW-qF-6cE" secondAttribute="bottom" constant="8" id="MoH-3d-EiA"/>
+                        <constraint firstAttribute="trailing" secondItem="BbO-js-bL4" secondAttribute="trailing" id="QYh-hY-8Kp"/>
+                        <constraint firstItem="BbO-js-bL4" firstAttribute="top" secondItem="IbQ-GY-a88" secondAttribute="top" id="U0f-Na-H4P"/>
+                        <constraint firstAttribute="trailing" secondItem="xpW-qF-6cE" secondAttribute="trailing" constant="16" id="Zjl-CF-ZJH"/>
+                        <constraint firstItem="BbO-js-bL4" firstAttribute="leading" secondItem="IbQ-GY-a88" secondAttribute="leading" id="bPS-aA-Ngl"/>
+                        <constraint firstItem="IgX-gv-QsW" firstAttribute="leading" secondItem="z2d-Cq-WSf" secondAttribute="trailing" constant="12" id="ePQ-gn-Lqg"/>
+                        <constraint firstItem="z2d-Cq-WSf" firstAttribute="leading" secondItem="IbQ-GY-a88" secondAttribute="leading" constant="16" id="o1L-Bk-k2R"/>
+                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="IgX-gv-QsW" secondAttribute="trailing" constant="8" id="zsZ-7c-VZP"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="8"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                            <real key="value" value="1"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                            <color key="value" name="Alert"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="IbQ-GY-a88" secondAttribute="trailing" id="81D-Jz-xKB"/>
+                <constraint firstItem="IbQ-GY-a88" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Be6-1u-JXa"/>
+                <constraint firstAttribute="bottom" secondItem="IbQ-GY-a88" secondAttribute="bottom" id="EWQ-st-f3h"/>
+                <constraint firstItem="IbQ-GY-a88" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="dgP-Vt-Rce"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                    <real key="value" value="8"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
+            <point key="canvasLocation" x="137.68115942028987" y="66.964285714285708"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ic-warning" width="20" height="20"/>
+        <namedColor name="Alert">
+            <color red="0.87058823529411766" green="0.67450980392156867" blue="0.074509803921568626" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="AlertLight">
+            <color red="0.94901960784313721" green="0.87058823529411766" blue="0.62745098039215685" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

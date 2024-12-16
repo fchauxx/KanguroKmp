@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BeforeGetStartedViewController" customModule="Kanguro" customModuleProvider="target">
+            <connections>
+                <outlet property="goNextButton" destination="r9A-fU-KNY" id="SHl-CV-Agc"/>
+                <outlet property="navigationBarView" destination="bkM-3a-ik0" id="6N5-e4-ZSv"/>
+                <outlet property="subtitleLabel" destination="BwC-Xe-TsO" id="UHC-CA-SXq"/>
+                <outlet property="textFieldView" destination="F3b-3b-hhS" id="RDp-11-Thn"/>
+                <outlet property="topicLabelListView" destination="bBc-ir-EAD" id="MRj-fc-qdC"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bkM-3a-ik0" customClass="TitleNavigationBarView" customModule="Kanguro" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="377" height="115"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BwC-Xe-TsO" customClass="CustomLabel" customModule="Kanguro" customModuleProvider="target">
+                    <rect key="frame" x="32" y="140" width="41.333333333333343" height="20.333333333333314"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bBc-ir-EAD" customClass="TopicLabelListView" customModule="Kanguro" customModuleProvider="target">
+                    <rect key="frame" x="32" y="178" width="329" height="227"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r9A-fU-KNY" customClass="CustomButton" customModule="Kanguro" customModuleProvider="target">
+                    <rect key="frame" x="32" y="727" width="329" height="46"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="46" id="M9L-Hy-r0P"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                    <connections>
+                        <action selector="nextButtonTouchUpInside:" destination="-1" eventType="touchUpInside" id="PyN-12-5qf"/>
+                    </connections>
+                </button>
+                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="F3b-3b-hhS" customClass="CustomTextFieldView" customModule="Kanguro" customModuleProvider="target">
+                    <rect key="frame" x="32" y="501" width="329" height="127.99999999999994"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="76" id="zRZ-y2-rzu"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="F3b-3b-hhS" firstAttribute="top" secondItem="bBc-ir-EAD" secondAttribute="bottom" constant="40" id="02U-V1-qOw"/>
+                <constraint firstItem="F3b-3b-hhS" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="32" id="684-op-ZdB"/>
+                <constraint firstItem="bBc-ir-EAD" firstAttribute="top" secondItem="BwC-Xe-TsO" secondAttribute="bottom" constant="24" id="7jF-aR-FHq"/>
+                <constraint firstItem="bBc-ir-EAD" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="32" id="8ls-Ek-z9K"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="bBc-ir-EAD" secondAttribute="trailing" constant="32" id="C0r-9Z-dbl"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="F3b-3b-hhS" secondAttribute="trailing" constant="32" id="EO2-0N-Vh3"/>
+                <constraint firstItem="BwC-Xe-TsO" firstAttribute="top" secondItem="bkM-3a-ik0" secondAttribute="bottom" constant="40" id="FX3-8N-Fhr"/>
+                <constraint firstItem="r9A-fU-KNY" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="32" id="JLD-Mg-shh"/>
+                <constraint firstItem="BwC-Xe-TsO" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="32" id="OqJ-Z4-gki"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="bkM-3a-ik0" secondAttribute="trailing" constant="16" id="Qmv-he-tmf"/>
+                <constraint firstItem="bkM-3a-ik0" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="b7d-lf-rA4"/>
+                <constraint firstItem="r9A-fU-KNY" firstAttribute="top" secondItem="F3b-3b-hhS" secondAttribute="bottom" constant="32" id="btk-2d-qfu"/>
+                <constraint firstItem="bkM-3a-ik0" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="16" id="cO6-EG-2l1"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="r9A-fU-KNY" secondAttribute="trailing" constant="32" id="u1f-1U-7XF"/>
+            </constraints>
+            <point key="canvasLocation" x="130.53435114503816" y="19.718309859154932"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

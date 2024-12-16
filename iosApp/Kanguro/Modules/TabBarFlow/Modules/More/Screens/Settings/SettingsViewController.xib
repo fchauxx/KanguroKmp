@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SettingsViewController" customModule="Kanguro" customModuleProvider="target">
+            <connections>
+                <outlet property="englishSelectionView" destination="qXn-de-HNc" id="hOQ-O3-gZo"/>
+                <outlet property="languageSubtitleLabel" destination="OtM-qW-S4v" id="Bn1-LO-2Iw"/>
+                <outlet property="languageTitleLabel" destination="O3i-Mm-DTs" id="4l9-gg-Qy1"/>
+                <outlet property="spanishSelectionView" destination="A0p-WK-CEM" id="Ivy-Fm-YfV"/>
+                <outlet property="titleLabel" destination="keU-u5-mZV" id="Bwe-Ty-jOp"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ddq-Cg-Yuj">
+                    <rect key="frame" x="358" y="12" width="44" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="kMJ-gS-p5M"/>
+                        <constraint firstAttribute="width" constant="44" id="tvI-xU-jyr"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" image="ic-close" title=" " imagePadding="-4"/>
+                    <connections>
+                        <action selector="goBackTouchUpInside:" destination="-1" eventType="touchUpInside" id="vn8-0s-UMU"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="keU-u5-mZV" userLabel="Title Label" customClass="CustomLabel" customModule="Kanguro" customModuleProvider="target">
+                    <rect key="frame" x="32" y="80" width="42" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lTi-YR-HeZ">
+                    <rect key="frame" x="32" y="149" width="350" height="126"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O3i-Mm-DTs" userLabel="push Notifications Label" customClass="CustomLabel" customModule="Kanguro" customModuleProvider="target">
+                            <rect key="frame" x="16" y="16" width="42" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OtM-qW-S4v" userLabel="push Notifications Label" customClass="CustomLabel" customModule="Kanguro" customModuleProvider="target">
+                            <rect key="frame" x="16" y="53" width="42" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qXn-de-HNc" userLabel="English View" customClass="SelectionView" customModule="Kanguro" customModuleProvider="target">
+                            <rect key="frame" x="16" y="90" width="70" height="20"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="20" id="oDD-xo-xdz"/>
+                            </constraints>
+                        </view>
+                        <view tag="1" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="A0p-WK-CEM" userLabel="Spanish View" customClass="SelectionView" customModule="Kanguro" customModuleProvider="target">
+                            <rect key="frame" x="152" y="90" width="69.5" height="20"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="20" id="MvF-UM-KLX"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="qXn-de-HNc" secondAttribute="bottom" constant="16" id="1dH-1U-abG"/>
+                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="OtM-qW-S4v" secondAttribute="trailing" constant="16" id="4Q4-hc-qX3"/>
+                        <constraint firstItem="O3i-Mm-DTs" firstAttribute="leading" secondItem="lTi-YR-HeZ" secondAttribute="leading" constant="16" id="GbM-EP-dfi"/>
+                        <constraint firstItem="qXn-de-HNc" firstAttribute="leading" secondItem="lTi-YR-HeZ" secondAttribute="leading" constant="16" id="HnY-FW-hRS"/>
+                        <constraint firstItem="OtM-qW-S4v" firstAttribute="top" secondItem="O3i-Mm-DTs" secondAttribute="bottom" constant="16" id="I65-PS-zKK"/>
+                        <constraint firstItem="O3i-Mm-DTs" firstAttribute="top" secondItem="lTi-YR-HeZ" secondAttribute="top" constant="16" id="IqJ-9x-Pzc"/>
+                        <constraint firstItem="A0p-WK-CEM" firstAttribute="centerY" secondItem="qXn-de-HNc" secondAttribute="centerY" id="V9N-0x-syI"/>
+                        <constraint firstItem="qXn-de-HNc" firstAttribute="top" secondItem="OtM-qW-S4v" secondAttribute="bottom" constant="16" id="VU3-Gl-1oU"/>
+                        <constraint firstItem="A0p-WK-CEM" firstAttribute="leading" secondItem="qXn-de-HNc" secondAttribute="trailing" constant="66" id="WpW-nO-cS9"/>
+                        <constraint firstItem="OtM-qW-S4v" firstAttribute="leading" secondItem="lTi-YR-HeZ" secondAttribute="leading" constant="16" id="Y7o-gf-Gc4"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="8"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                            <real key="value" value="1"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                            <color key="value" name="NeutralBackground"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="ddq-Cg-Yuj" secondAttribute="trailing" constant="12" id="4oU-Gz-zXf"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="lTi-YR-HeZ" secondAttribute="trailing" constant="32" id="Hjc-ML-93U"/>
+                <constraint firstItem="keU-u5-mZV" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="32" id="IFY-yU-MLw"/>
+                <constraint firstItem="keU-u5-mZV" firstAttribute="top" secondItem="ddq-Cg-Yuj" secondAttribute="bottom" constant="24" id="J4Y-FR-19M"/>
+                <constraint firstItem="lTi-YR-HeZ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="32" id="coJ-Xy-Ejp"/>
+                <constraint firstItem="lTi-YR-HeZ" firstAttribute="top" secondItem="keU-u5-mZV" secondAttribute="bottom" constant="48" id="nE9-UI-LC6"/>
+                <constraint firstItem="ddq-Cg-Yuj" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="12" id="xMb-jy-jMW"/>
+            </constraints>
+            <point key="canvasLocation" x="137.68115942028987" y="95.758928571428569"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ic-close" width="40" height="40"/>
+        <namedColor name="NeutralBackground">
+            <color red="0.94117647058823528" green="0.94117647058823528" blue="0.94117647058823528" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

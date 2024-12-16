@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TopicLabelView" customModule="Kanguro" customModuleProvider="target">
+            <connections>
+                <outlet property="circleView" destination="8ME-l7-B2K" id="4sj-X6-w4l"/>
+                <outlet property="titleLabel" destination="3Eu-xo-6DJ" id="qqB-8q-p8X"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8ME-l7-B2K" userLabel="Circle View">
+                    <rect key="frame" x="8" y="8" width="4" height="4"/>
+                    <color key="backgroundColor" name="SecondaryMedium"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="4" id="5dv-4x-u5n"/>
+                        <constraint firstAttribute="height" constant="4" id="PKQ-lq-kUl"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="2"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Eu-xo-6DJ" customClass="CustomLabel" customModule="Kanguro" customModuleProvider="target">
+                    <rect key="frame" x="20" y="0.0" width="394" height="60"/>
+                    <constraints>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="12" id="JB6-b8-HE9"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="3Eu-xo-6DJ" secondAttribute="trailing" id="PVI-cB-KSP"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="3Eu-xo-6DJ" secondAttribute="bottom" id="fC5-na-ISU"/>
+                <constraint firstItem="8ME-l7-B2K" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="vR0-LM-pCb"/>
+                <constraint firstItem="3Eu-xo-6DJ" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="wX1-0G-ZMJ"/>
+                <constraint firstItem="3Eu-xo-6DJ" firstAttribute="leading" secondItem="8ME-l7-B2K" secondAttribute="trailing" constant="8" id="yxk-yp-P0y"/>
+                <constraint firstItem="8ME-l7-B2K" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="8" id="zap-JB-1rp"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="137.68115942028987" y="44.866071428571423"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="SecondaryMedium">
+            <color red="0.40000000000000002" green="0.48627450980392156" blue="0.59607843137254901" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

@@ -1,0 +1,630 @@
+# This file contains the fastlane.tools configuration
+# You can find the documentation at https://docs.fastlane.tools
+#
+# For a list of all available actions, check out
+#
+#     https://docs.fastlane.tools/actions
+#
+# For a list of all available plugins, check out
+#
+#     https://docs.fastlane.tools/plugins/available-plugins
+#
+
+# Uncomment the line if you want fastlane to automatically update itself
+# update_fastlane
+
+fastlane_require 'gibberish'
+fastlane_require 'date'
+
+fastlane_version "2.214.0"
+default_platform :ios
+
+#----------------------- Constants ------------------------#
+URL_REPO = "https://github.com/kanguroseguro/kanguro-ios"
+CERT_REPO = "git@github.com:kanguroseguro/kanguro-ios-certificates.git"
+APP_NAME = "Kanguro"
+APP_IDENTIFIER_FOR_ALPHA_DEV = "com.alpha.kanguro"
+APP_IDENTIFIER_FOR_BETA_STAGE = "com.beta.kanguro"
+APP_IDENTIFIER_FOR_PROD = "com.kgo.kanguro"
+ENV["FASTLANE_XCODEBUILD_SETTINGS_TIMEOUT"] = "180"
+ENV["FASTLANE_XCODE_LIST_TIMEOUT"] = "180" 
+API_KEY = ""
+TEAM_ID = "HG98BQZBBK"
+ITC_TEAM_ID = "125071760"
+
+#----------------------- Constants ------------------------#
+
+def is_ci 
+  if defined?(ENV['IS_CI']) then
+    if ENV['IS_CI'] == "true" then
+      return true
+    end
+    return false
+  end
+  return false
+end
+
+def proj
+{
+  plist: "Kanguro/App/Info.plist",
+  xcworkspace: "#{APP_NAME}.xcworkspace",
+  xcodeproj: "#{APP_NAME}.xcodeproj",
+  sdk: "iphonesimulator17.2",
+  xcconfig_dev: "Kanguro/App/Configs/Dev.xcconfig",
+  xcconfig_stage: "Kanguro/App/Configs/Stage.xcconfig",
+  xcconfig_prod: "Kanguro/App/Configs/Prod.xcconfig",
+  repo_url: "#{URL_REPO}",
+  dev_scheme: "Kanguro Dev",
+  pet_data_scheme: "KanguroPetData",
+  prod_scheme: "Kanguro Prod",
+  stage_scheme: "Kanguro Stage",
+  shared_data_scheme: "KanguroSharedData",
+  user_data_scheme: "KanguroUserData",
+  storage_data_scheme: "KanguroStorageData",
+  network_data_scheme: "KanguroNetworkData",
+  analytics_data_scheme: "KanguroAnalyticsData",
+  feature_flag_data_scheme: "KanguroFeatureFlagData",
+  app_identifier_for_dev: "#{APP_IDENTIFIER_FOR_ALPHA_DEV}",
+  app_identifier_for_stage: "#{APP_IDENTIFIER_FOR_BETA_STAGE}",
+  app_identifier_for_prod: "#{APP_IDENTIFIER_FOR_PROD}",
+  dev_debug_configuration: "Debug Dev",
+  stage_debug_configuration: "Debug Stage",
+  prod_debug_configuration: "Debug Prod",
+  dev_release_configuration: "Release Dev",  
+  stage_release_configuration: "Release Stage",  
+  prod_release_configuration: "Release Prod",  
+  firebase_app_id_dev: "1:1016988289017:ios:ffa8731120d22364aadf28",
+  firebase_app_id_stage: "1:109758041399:ios:eb94c5ae88b61607addeb2",
+  firebase_app_id_prod: "1:51513554768:ios:583b9ae2c13517d34b1e55",
+  firebase_dev_plist_path: "Kanguro/App/Firebase/GoogleService-Info-dev.plist",
+  firebase_stage_plist_path: "Kanguro/App/Firebase/GoogleService-Info-stage.plist",
+  firebase_prod_plist_path: "Kanguro/App/Firebase/GoogleService-Info-prod.plist"
+}
+end
+
+def output
+{
+  ipa_dev_release: "./build/#{proj[:dev_scheme]}.ipa",
+  ipa_stage_release: "./build/#{proj[:stage_scheme]}.ipa",
+  ipa_prod_release: "./build/#{proj[:prod_scheme]}.ipa"
+}
+end
+
+platform :ios do
+  
+  before_all do 
+    # https://github.com/fastlane/fastlane/issues/21199
+    ENV['ITMSTRANSPORTER_FORCE_ITMS_PACKAGE_UPLOAD'] = "false"
+  end
+
+  desc "Prepare your development environment for running and contributing"
+  lane :setup do |options|
+    puts "is_ci = #{is_ci}"
+    if is_ci then
+      xcode_select "#{ENV['DEVELOPER_DIR']}"
+      create_keychain(
+        name: "KanguroKeychain",
+        password: ENV['MATCH_PASSWORD'],
+        default_keychain: true,
+        unlock: true,
+        timeout: 3600,
+        lock_when_sleeps: false
+      )    
+      app_store_connect_authentication
+    end
+    tinder
+  end
+
+  desc "App Store Connect Authentication"
+  lane :app_store_connect_authentication do |options|
+	  API_KEY = app_store_connect_api_key(
+		  key_id: ENV["APPLE_KEY_ID"],
+		  issuer_id: ENV["APPLE_ISSUER_ID"],
+		  key_content: ENV["APPLE_KEY_CONTENT"],
+		  is_key_content_base64: true,
+		  in_house: false
+	  )
+end
+
+ #----------------------- Add new devices ------------------------#
+
+ desc "Add new device"
+ lane :device do
+   setup_env
+   app_store_connect_authentication
+   device_name = prompt(text: 'What is the device name: ')
+   device_UDID = prompt(text: 'What is the device UDID: ')
+   register_devices(devices: {device_name => device_UDID})
+   rematch
+ end
+
+ #----------------------- Renew provisioning profiles ------------------------#
+ desc "Renew provisioning profiles"
+ lane :rematch do
+   match(
+     git_url: "#{CERT_REPO}", 
+     app_identifier: dev_bundle_identifiers + stage_bundle_identifiers + prod_bundle_identifiers,
+     type: "development",
+     force: true
+   )  
+
+   match(
+     git_url: "#{CERT_REPO}",
+     app_identifier: dev_bundle_identifiers + stage_bundle_identifiers + prod_bundle_identifiers,
+     type: "appstore",
+     force: true
+   )
+
+   match(
+     git_url: "#{CERT_REPO}",
+     app_identifier: dev_bundle_identifiers + stage_bundle_identifiers,
+     type: "adhoc",
+     force: true
+   )
+
+ end
+
+ def dev_bundle_identifiers
+   return [
+     proj[:app_identifier_for_dev]
+   ]
+ end
+
+ def stage_bundle_identifiers
+  return [
+    proj[:app_identifier_for_stage]
+  ]
+ end
+ 
+ def prod_bundle_identifiers
+  return [
+    proj[:app_identifier_for_prod]
+  ]
+ end
+
+ desc "Install all provisioning profiles and certificates"
+ lane :tinder do |options|
+   readonly = options[:readonly] == nil ? true : options[:readonly]
+   if is_ci then 
+    app_store_connect_authentication
+    match(
+     git_url: "#{CERT_REPO}", 
+     app_identifier: dev_bundle_identifiers + stage_bundle_identifiers + prod_bundle_identifiers, 
+     type: "appstore",
+     readonly: readonly,
+     verbose: true,
+     keychain_name: "KanguroKeychain",
+     keychain_password: ENV['MATCH_PASSWORD']
+    )
+    match(
+     git_url: "#{CERT_REPO}", 
+     app_identifier: dev_bundle_identifiers + stage_bundle_identifiers, 
+     type: "adhoc",
+     readonly: readonly,
+     verbose: true,
+     keychain_name: "KanguroKeychain",
+     keychain_password: ENV['MATCH_PASSWORD']
+    )
+    match(
+     git_url: "#{CERT_REPO}", 
+     app_identifier: dev_bundle_identifiers + stage_bundle_identifiers + prod_bundle_identifiers, 
+     type: "development",
+     readonly: readonly,
+     verbose: true,
+     keychain_name: "KanguroKeychain",
+     keychain_password: ENV['MATCH_PASSWORD']
+    ) 
+   else 
+    match(
+     git_url: "#{CERT_REPO}",
+     app_identifier: dev_bundle_identifiers + stage_bundle_identifiers + prod_bundle_identifiers, 
+     type: "appstore",
+     readonly: readonly   
+     )
+
+    match(
+     git_url: "#{CERT_REPO}",
+     app_identifier: dev_bundle_identifiers + stage_bundle_identifiers,
+     type: "adhoc", 
+     readonly: readonly
+    )
+   
+    match(
+     git_url: "#{CERT_REPO}", 
+     app_identifier: dev_bundle_identifiers + stage_bundle_identifiers + prod_bundle_identifiers,
+     type: "development",
+     readonly: readonly
+    )  
+   end  
+ end
+   
+ desc "Install a specific profile and certificate"
+ private_lane :tinder_specific do |options|
+   app_store_connect_authentication
+ 
+   if is_ci
+     create_keychain(
+       name: options[:keychain_name],
+       password: options[:keychain_password],
+       default_keychain: true,
+       unlock: true,
+       timeout: 3600,
+       lock_when_sleeps: false
+     )    
+   end
+ 
+   install_specific_profile(
+     environment_config: options[:environment_config],
+     keychain_name: options[:keychain_name],
+     keychain_password: options[:keychain_password]
+   )
+ end
+ 
+ private_lane :install_specific_profile do |options|
+   case options[:environment_config]
+   when "Development-Debug"
+     match(
+       git_branch: "certificates", 
+       app_identifier: dev_bundle_identifiers,
+       type: "development",
+       readonly: true,
+       keychain_name: options[:keychain_name],
+       keychain_password: options[:keychain_password]
+     )  
+   when "Development-Release"
+     match(
+       git_branch: "certificates", 
+       app_identifier: dev_bundle_identifiers,
+       type: "adhoc",
+       readonly: true,
+       keychain_name: options[:keychain_name],
+       keychain_password: options[:keychain_password]
+     )  
+   end
+ end
+ 
+ desc "Generate .ipa file for environment"
+ lane :build_project do |options|
+   if !options[:skip_git_status]
+     ensure_git_status_clean
+   end
+   puts "#{options[:provisioning_profiles]}"
+   gym(
+     workspace: proj[:xcworkspace],
+     scheme: options[:scheme],
+     configuration: options[:configuration],
+     export_method: options[:method],
+     export_options: {
+      provisioningProfiles: options[:provisioning_profiles],
+      signingStyle: "manual",
+      teamID: TEAM_ID,
+      uploadSymbols: true
+     },
+     output_directory: "./build",
+     output_name: options[:scheme],
+     silent: true, 
+     clean: true, 
+     xcargs: "ARCHIVE=YES",
+     verbose: true
+   )
+ end
+ #------------------------------------- Testing --------------------------------------#  
+ 
+ desc "Build For Testing"
+ lane :get_derived_data_path do
+   if is_ci then
+     "/Users/runner/Library/Developer/Xcode/DerivedData/"
+   else
+     home_directory = Dir.home
+     derived_data_path = File.join(home_directory, "Library/Developer/Xcode/DerivedData/")
+     derived_data_path
+   end
+ end
+
+ lane :testing do |options|
+    setup()
+    scheme = options[:scheme]
+    configuration = options[:configuration] #"Debug Dev"
+    is_package = options[:is_package] || false
+    derived_data_path = options[:derived_data_path]
+    workspace = proj[:xcworkspace]
+    sdk = proj[:sdk]
+
+    if is_package then 
+      sh("rm -rf #{derived_data_path}/#{scheme}.xcresult")
+      run_tests(
+        scheme: scheme,
+        derived_data_path: get_derived_data_path(),
+        build_for_testing: true,
+        configuration: configuration,
+        package_path: options[:package_path],
+        destination: "platform=iOS Simulator,name=iPhone 15,OS=17.2",
+        device: "iPhone 15",
+        ensure_devices_found: true,
+        sdk: options[:sdk],
+        result_bundle: true,
+        output_directory: derived_data_path,
+	xcargs: "-skipPackagePluginValidation"
+      )
+      run_tests(
+        scheme: scheme,
+        derived_data_path: get_derived_data_path(),
+        configuration: configuration,
+        package_path: options[:package_path],
+        destination: "platform=iOS Simulator,name=iPhone 15,OS=17.2",
+        device: "iPhone 15",
+        ensure_devices_found: true,
+        sdk: options[:sdk],
+        result_bundle: false,
+        output_directory: derived_data_path,
+        test_without_building: true,
+        prelaunch_simulator: true,
+	xcargs: "-skipPackagePluginValidation"
+      )
+    else
+      run_tests(
+        workspace: workspace,
+        scheme: scheme,
+        derived_data_path: derived_data_path,
+        build_for_testing: true,
+        configuration: configuration,
+        destination: "platform=iOS Simulator,name=iPhone 15,OS=17.2",
+        sdk: sdk,
+        device: "iPhone 15",
+        ensure_devices_found: true,
+	xcargs: "-skipPackagePluginValidation"
+      )
+      run_tests(
+        workspace: workspace,
+        scheme: scheme,
+        derived_data_path: derived_data_path,
+        test_without_building: true,
+        configuration: configuration,
+        destination: "platform=iOS Simulator,name=iPhone 15,OS=17.2",
+        sdk: sdk,
+        device: "iPhone 15",
+        ensure_devices_found: true,
+	xcargs: "-skipPackagePluginValidation"
+      )
+    end
+ end
+
+#------------------------------------- dsyms --------------------------------------#
+desc "Refresh dsyms for crashlytics error report on Firebase"
+ lane :refresh_dsyms do
+   download_dsyms
+   upload_symbols_to_crashlytics
+   clean_build_artifacts
+ end
+
+desc "Download and Upload of the dsyms to Firebase/Crashlytics ALPHA"
+lane :upload_alpha_dsyms do |options|
+  upload_symbols_to_crashlytics(
+    gsp_path: "#{proj[:firebase_dev_plist_path]}",
+    dsym_path: "build/#{proj[:dev_scheme]}.app.dSYM.zip",
+    binary_path: "scripts/upload-symbols"
+  )
+  clean_build_artifacts
+end
+
+desc "Download and Upload of the dsyms to Firebase/Crashlytics BETA"
+lane :upload_beta_dsyms do |options|
+  upload_symbols_to_crashlytics(
+    gsp_path: "#{proj[:firebase_stage_plist_path]}",
+    dsym_path: "build/#{proj[:stage_scheme]}.app.dSYM.zip",
+    binary_path: "scripts/upload-symbols"
+  )
+  clean_build_artifacts
+end
+
+desc "Download and Upload of the dsyms to Firebase/Crashlytics PROD"
+lane :upload_prod_dsyms do |options|
+  upload_symbols_to_crashlytics(
+    gsp_path: "#{proj[:firebase_prod_plist_path]}",
+    dsym_path: "build/#{proj[:prod_scheme]}.app.dSYM.zip",
+    binary_path: "scripts/upload-symbols"
+  )
+  clean_build_artifacts
+end
+
+#------------------------------------- CI/CD --------------------------------------#
+def devProvisioningProfiles
+ app_dev_provisioning_profile = get_xcconfig_value(
+   path: proj[:xcconfig_dev],
+   name: 'PROVISIONING_PROFILE_SPECIFIER'
+ )
+
+ return  { 
+  "#{proj[:app_identifier_for_dev]}" => "#{app_dev_provisioning_profile}"
+}
+end
+
+def stageProvisioningProfiles
+ 
+  app_stage_provisioning_profile = get_xcconfig_value(
+   path: proj[:xcconfig_stage],
+   name: 'PROVISIONING_PROFILE_SPECIFIER'
+  )
+ 
+  return  { 
+   "#{proj[:app_identifier_for_stage]}" => "#{app_stage_provisioning_profile}"
+  }
+end
+
+#------------------------------------- ALPHA --------------------------------------#
+desc "Generate IPA and Symbols for Dev"
+lane :to_dev do |options|
+ build_project(
+  scheme: proj[:dev_scheme],
+  configuration: proj[:dev_release_configuration],
+  method: 'app-store',
+  skip_git_status: options[:skip_git_status],
+  team_id: TEAM_ID ,
+  provisioning_profiles: devProvisioningProfiles
+)
+end
+
+desc "Deliver Alpha to Test Flight"
+lane :alpha_to_store do |options|
+ app_store_connect_authentication
+ ipa = options[:ipa] || "/Users/runner/work/kanguro-ios/kanguro-ios/build/Kanguro Dev.ipa"
+ 
+ puts "ipa = #{ipa}"
+ dev_proj_version = get_xcconfig_value(
+  path: proj[:xcconfig_dev],
+  name: 'CURRENT_PROJECT_VERSION'
+ )
+ dev_mkt_version = get_xcconfig_value(
+  path: proj[:xcconfig_dev],
+  name: 'MARKETING_VERSION'
+ )
+
+ changelog = options[:changelog] || "Alpha version #{dev_mkt_version}(#{dev_proj_version})"
+ puts "changelog = #{changelog}"
+ 
+ upload_to_testflight(
+  ipa: ipa,
+  app_identifier: APP_IDENTIFIER_FOR_ALPHA_DEV,
+  api_key: API_KEY,
+  distribute_external: true,
+  groups: "Alpha testers",
+  changelog: changelog
+ )
+ after_uploaded_date = DateTime.now - 10
+ download_dsyms(
+   after_uploaded_date: "#{after_uploaded_date}", 
+   app_identifier: APP_IDENTIFIER_FOR_ALPHA_DEV,
+   output_directory: "./dsyms"
+ )
+
+ upload_debug_symbols
+ upload_alpha_dsyms
+
+end
+
+#------------------------------------- BETA ---------------------------------------#
+desc "Generate IPA and Symbols for Stage"
+lane :to_beta do |options|
+ build_project(
+  scheme: proj[:stage_scheme],
+  configuration: proj[:stage_release_configuration],
+  method: 'app-store',
+  skip_git_status: options[:skip_git_status],
+  team_id: TEAM_ID ,
+  provisioning_profiles: stageProvisioningProfiles
+)
+end
+
+desc "Deliver Beta to Test Flight"
+lane :beta_to_store do |options|
+ app_store_connect_authentication
+ ipa = options[:ipa] || "/Users/runner/work/kanguro-ios/kanguro-ios/build/Kanguro Stage.ipa"
+ 
+ puts "ipa = #{ipa}"
+ stage_proj_version = get_xcconfig_value(
+  path: proj[:xcconfig_stage],
+  name: 'CURRENT_PROJECT_VERSION'
+ )
+ stage_mkt_version = get_xcconfig_value(
+  path: proj[:xcconfig_stage],
+  name: 'MARKETING_VERSION'
+ )
+
+ changelog = options[:changelog] || "Beta version #{stage_mkt_version}(#{stage_proj_version})"
+ puts "changelog = #{changelog}"
+ 
+ upload_to_testflight(
+  ipa: ipa,
+  app_identifier: APP_IDENTIFIER_FOR_BETA_STAGE,
+  api_key: API_KEY,
+  distribute_external: true,
+  groups: "Beta Poatek",
+  changelog: changelog
+ )
+ after_uploaded_date = DateTime.now - 10
+ download_dsyms(
+   after_uploaded_date: "#{after_uploaded_date}", 
+   app_identifier: APP_IDENTIFIER_FOR_BETA_STAGE,
+   output_directory: "./dsyms"
+ )
+
+ upload_debug_symbols
+ upload_beta_dsyms
+
+end
+
+
+#------------------------------------- version -------------------------------------#
+
+desc "Increment alpha version"
+lane :increment_alpha_version do |options|
+  
+  if is_ci then
+   app_store_connect_authentication
+   latest_testflight_build_number(
+    api_key: API_KEY,
+    app_identifier: APP_IDENTIFIER_FOR_ALPHA_DEV,
+    team_id: ITC_TEAM_ID 
+   )
+  else 
+    latest_testflight_build_number(
+      app_identifier: APP_IDENTIFIER_FOR_ALPHA_DEV,
+      team_id: ITC_TEAM_ID
+    )
+  end
+  puts "path = #{proj[:xcconfig_dev]}"
+  puts "value = #{lane_context[SharedValues::LATEST_TESTFLIGHT_BUILD_NUMBER] + 1}"
+  
+  new_value = "#{lane_context[SharedValues::LATEST_TESTFLIGHT_BUILD_NUMBER] + 1}"
+  update_xcconfig_value(
+    path: proj[:xcconfig_dev],
+    name: 'CURRENT_PROJECT_VERSION',
+    value: new_value
+  )
+end  
+
+desc "Increment beta version"
+lane :increment_beta_version do |options|
+  
+  if is_ci then
+   app_store_connect_authentication 
+   latest_testflight_build_number(
+    api_key: API_KEY,
+    app_identifier: APP_IDENTIFIER_FOR_BETA_STAGE,
+    team_id: ITC_TEAM_ID
+   )
+  else 
+    latest_testflight_build_number(
+      app_identifier: APP_IDENTIFIER_FOR_BETA_STAGE,
+      team_id: ITC_TEAM_ID
+    )
+  end
+  new_value = "#{lane_context[SharedValues::LATEST_TESTFLIGHT_BUILD_NUMBER] + 1}"
+  update_xcconfig_value(
+    path: proj[:xcconfig_stage],
+    name: 'CURRENT_PROJECT_VERSION',
+    value: new_value
+  )
+end 
+
+#------------------------------------- shared --------------------------------------#
+ after_all do |lane|
+   notification(message:"Finished lane: #{lane}")
+ end
+
+ error do |lane, exception|
+   notification(subtitle: "Erro in lane: #{lane}", message:"Erro in lane: #{exception}")
+ end
+
+end
+
+#------------------------------------- Sentry --------------------------------------#
+desc "Upload Debug Symbols"
+lane :upload_debug_symbols do
+  sentry_debug_files_upload(
+    auth_token: ENV['SENTRY_AUTH_TOKEN'],
+    org_slug: 'kanguro-seguro-6t',
+    project_slug: 'kanguro-ios',
+    include_sources: true,
+  )
+end

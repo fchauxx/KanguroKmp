@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ReferFriendsPopUpViewController" customModule="Kanguro" customModuleProvider="target">
+            <connections>
+                <outlet property="doItButton" destination="vWF-R0-OmG" id="tll-RF-RKK"/>
+                <outlet property="laterButton" destination="0Xe-xp-iIM" id="my2-S5-sD7"/>
+                <outlet property="subtitleLabel" destination="ixZ-R1-Ggv" id="7RG-nr-5W4"/>
+                <outlet property="titleLabel" destination="6xK-50-Cdc" id="nqG-dS-pjb"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ovb-5d-fan">
+                    <rect key="frame" x="24" y="202" width="366" height="492"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NgL-Im-MhS">
+                            <rect key="frame" x="306" y="16" width="44" height="44"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="44" id="YbK-ua-gBi"/>
+                                <constraint firstAttribute="width" constant="44" id="rdB-Zz-ITI"/>
+                            </constraints>
+                            <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" image="ic-close" title=" ">
+                                <fontDescription key="titleFontDescription" type="system" pointSize="1"/>
+                            </buttonConfiguration>
+                            <connections>
+                                <action selector="closeTouchUpInside:" destination="-1" eventType="touchUpInside" id="bmg-Iu-wR0"/>
+                            </connections>
+                        </button>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="catAndDog" translatesAutoresizingMaskIntoConstraints="NO" id="v4o-5Y-9YR">
+                            <rect key="frame" x="0.0" y="96" width="366" height="180"/>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6xK-50-Cdc" customClass="CustomLabel" customModule="Kanguro" customModuleProvider="target">
+                            <rect key="frame" x="162.5" y="292" width="41.5" height="20.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ixZ-R1-Ggv" customClass="CustomLabel" customModule="Kanguro" customModuleProvider="target">
+                            <rect key="frame" x="162.5" y="328.5" width="41.5" height="20.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kTD-96-heJ">
+                            <rect key="frame" x="32" y="389" width="302" height="1"/>
+                            <color key="backgroundColor" name="SecondaryLightest"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="1" id="EjS-ke-T9F"/>
+                            </constraints>
+                        </view>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="oBA-c4-dPf">
+                            <rect key="frame" x="32" y="430" width="302" height="46"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Xe-xp-iIM" customClass="CustomButton" customModule="Kanguro" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="145" height="46"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="46" id="5vw-WA-Kmw"/>
+                                    </constraints>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="8"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vWF-R0-OmG" customClass="CustomButton" customModule="Kanguro" customModuleProvider="target">
+                                    <rect key="frame" x="157" y="0.0" width="145" height="46"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="8"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </button>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="16J-dm-QO5"/>
+                        <constraint firstAttribute="trailing" secondItem="v4o-5Y-9YR" secondAttribute="trailing" id="1pB-ZH-kJV"/>
+                        <constraint firstItem="ixZ-R1-Ggv" firstAttribute="top" secondItem="6xK-50-Cdc" secondAttribute="bottom" constant="16" id="52S-XU-zaV"/>
+                        <constraint firstItem="kTD-96-heJ" firstAttribute="top" secondItem="ixZ-R1-Ggv" secondAttribute="bottom" constant="40" id="5yR-Si-cC0"/>
+                        <constraint firstItem="NgL-Im-MhS" firstAttribute="top" secondItem="Ovb-5d-fan" secondAttribute="top" constant="16" id="6ZK-KT-bxO"/>
+                        <constraint firstItem="kTD-96-heJ" firstAttribute="leading" secondItem="Ovb-5d-fan" secondAttribute="leading" constant="32" id="8mF-hF-gdk"/>
+                        <constraint firstAttribute="bottom" secondItem="oBA-c4-dPf" secondAttribute="bottom" constant="16" id="925-Rv-CmN"/>
+                        <constraint firstItem="6xK-50-Cdc" firstAttribute="centerX" secondItem="Ovb-5d-fan" secondAttribute="centerX" id="9ej-qn-F3D"/>
+                        <constraint firstItem="oBA-c4-dPf" firstAttribute="leading" secondItem="Ovb-5d-fan" secondAttribute="leading" constant="32" id="EDI-l4-qHu"/>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="200" id="GyT-yl-sUS"/>
+                        <constraint firstAttribute="trailing" secondItem="oBA-c4-dPf" secondAttribute="trailing" constant="32" id="Jfl-27-hjR"/>
+                        <constraint firstItem="6xK-50-Cdc" firstAttribute="top" secondItem="v4o-5Y-9YR" secondAttribute="bottom" constant="16" id="KSn-8u-6QT"/>
+                        <constraint firstItem="v4o-5Y-9YR" firstAttribute="top" secondItem="NgL-Im-MhS" secondAttribute="bottom" constant="36" id="Tn4-fb-3ct"/>
+                        <constraint firstItem="ixZ-R1-Ggv" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Ovb-5d-fan" secondAttribute="leading" constant="32" id="UhQ-rk-fby"/>
+                        <constraint firstItem="6xK-50-Cdc" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Ovb-5d-fan" secondAttribute="leading" constant="32" id="UhZ-od-w1P"/>
+                        <constraint firstItem="ixZ-R1-Ggv" firstAttribute="centerX" secondItem="Ovb-5d-fan" secondAttribute="centerX" id="dD2-mZ-6eE"/>
+                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="6xK-50-Cdc" secondAttribute="trailing" constant="32" id="djE-Rs-sl9"/>
+                        <constraint firstAttribute="trailing" secondItem="kTD-96-heJ" secondAttribute="trailing" constant="32" id="dzg-V0-SFb"/>
+                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="ixZ-R1-Ggv" secondAttribute="trailing" constant="32" id="fRW-rO-RZ0"/>
+                        <constraint firstItem="v4o-5Y-9YR" firstAttribute="leading" secondItem="Ovb-5d-fan" secondAttribute="leading" id="ms6-ZW-h3A"/>
+                        <constraint firstAttribute="trailing" secondItem="NgL-Im-MhS" secondAttribute="trailing" constant="16" id="vXw-c2-w4G"/>
+                        <constraint firstItem="oBA-c4-dPf" firstAttribute="top" secondItem="kTD-96-heJ" secondAttribute="bottom" constant="40" id="zGK-Xp-38m"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="8"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <constraints>
+                <constraint firstItem="Ovb-5d-fan" firstAttribute="top" relation="greaterThanOrEqual" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="32" id="4hQ-wr-ciB"/>
+                <constraint firstItem="Ovb-5d-fan" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Md0-Rt-yLW"/>
+                <constraint firstAttribute="trailing" secondItem="Ovb-5d-fan" secondAttribute="trailing" constant="24" id="Y0i-kS-Y1G"/>
+                <constraint firstItem="v4o-5Y-9YR" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.200893" id="c1F-Pn-1s9"/>
+                <constraint firstItem="Ovb-5d-fan" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="24" id="euK-H0-ph5"/>
+                <constraint firstItem="Ovb-5d-fan" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="hYx-kA-svf"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="131.8840579710145" y="112.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="catAndDog" width="1049" height="764"/>
+        <image name="ic-close" width="40" height="40"/>
+        <namedColor name="SecondaryLightest">
+            <color red="0.80000000000000004" green="0.82745098039215681" blue="0.8666666666666667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

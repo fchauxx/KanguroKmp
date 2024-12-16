@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="StackButtonItem" customModule="Kanguro" customModuleProvider="target">
+            <connections>
+                <outlet property="centerLabel" destination="1aG-dq-tiU" id="CWl-Gy-ZZy"/>
+                <outlet property="leadingImage" destination="TUv-x6-IE6" id="lhW-5N-FLp"/>
+                <outlet property="leadingLabel" destination="jwf-r7-Icm" id="Igs-iV-qOo"/>
+                <outlet property="leadingStackView" destination="0bq-2r-5SG" id="iel-co-0i1"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iN0-l3-epB" userLabel="Vertical Button View">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1aG-dq-tiU" userLabel="center label" customClass="CustomLabel" customModule="Kanguro" customModuleProvider="target">
+                    <rect key="frame" x="186.5" y="12.5" width="41.5" height="19"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="19" id="Szh-Wk-HyA"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="0bq-2r-5SG">
+                    <rect key="frame" x="16" y="10" width="73.5" height="24"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TUv-x6-IE6">
+                            <rect key="frame" x="0.0" y="0.0" width="24" height="24"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="24" id="6aN-bi-YAl"/>
+                                <constraint firstAttribute="height" constant="24" id="tBP-rs-HHW"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jwf-r7-Icm" customClass="CustomLabel" customModule="Kanguro" customModuleProvider="target">
+                            <rect key="frame" x="32" y="0.0" width="41.5" height="24"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                </stackView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kE5-0w-1n5">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title=" "/>
+                    <connections>
+                        <action selector="buttonTouchUpInside:" destination="-1" eventType="touchUpInside" id="iS1-Pu-eUp"/>
+                    </connections>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7bj-e7-7rM">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="1"/>
+                    <color key="backgroundColor" name="NeutralLightest"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="fwo-9D-UQF"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" name="NeutralBackground"/>
+            <constraints>
+                <constraint firstItem="0bq-2r-5SG" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="2AK-FY-ETT"/>
+                <constraint firstItem="7bj-e7-7rM" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="6Gv-np-lk7"/>
+                <constraint firstAttribute="bottom" secondItem="kE5-0w-1n5" secondAttribute="bottom" id="8TT-5x-htN"/>
+                <constraint firstItem="1aG-dq-tiU" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="Qsj-eT-wiZ"/>
+                <constraint firstItem="kE5-0w-1n5" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Rd5-ik-eua"/>
+                <constraint firstItem="0bq-2r-5SG" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="Z3G-FV-0s5"/>
+                <constraint firstItem="0bq-2r-5SG" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="ZFB-BH-0UK"/>
+                <constraint firstAttribute="bottom" secondItem="0bq-2r-5SG" secondAttribute="bottom" constant="10" id="aPa-Wn-s9g"/>
+                <constraint firstAttribute="trailing" secondItem="kE5-0w-1n5" secondAttribute="trailing" id="ccc-2B-AcP"/>
+                <constraint firstItem="kE5-0w-1n5" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="dYE-l6-ID6"/>
+                <constraint firstItem="1aG-dq-tiU" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="feI-Ee-D5t"/>
+                <constraint firstItem="1aG-dq-tiU" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="12.5" id="m04-kO-8hR"/>
+                <constraint firstAttribute="bottom" secondItem="1aG-dq-tiU" secondAttribute="bottom" constant="12.5" id="n3C-Bc-3iP"/>
+                <constraint firstItem="7bj-e7-7rM" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="q8I-Ne-X29"/>
+                <constraint firstAttribute="trailing" secondItem="7bj-e7-7rM" secondAttribute="trailing" id="r1B-Yj-uTX"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="128.98550724637681" y="-105.13392857142857"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="NeutralBackground">
+            <color red="0.94117647058823528" green="0.94117647058823528" blue="0.94117647058823528" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="NeutralLightest">
+            <color red="0.71764705882352942" green="0.71764705882352942" blue="0.71764705882352942" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

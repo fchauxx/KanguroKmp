@@ -1,0 +1,24 @@
+{
+  "configurations" : [
+    {
+      "id" : "394E3283-A542-414B-8B39-2FFF863079CA",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "codeCoverage" : false
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:..\/..\/KanguroStorage\/KanguroStorageData",
+        "identifier" : "KanguroStorageDataTests",
+        "name" : "KanguroStorageDataTests"
+      }
+    }
+  ],
+  "version" : 1
+}

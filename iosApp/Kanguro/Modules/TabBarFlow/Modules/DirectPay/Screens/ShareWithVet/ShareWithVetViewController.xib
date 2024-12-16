@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ShareWithVetViewController" customModule="Kanguro" customModuleProvider="target">
+            <connections>
+                <outlet property="customPicker" destination="ugi-28-ZQD" id="SDv-VX-Kaf"/>
+                <outlet property="doneButton" destination="pIz-Vz-4PR" id="W7X-sO-v53"/>
+                <outlet property="navigationBarView" destination="06G-zi-de6" id="5sU-Hl-zoM"/>
+                <outlet property="shareDescription" destination="N1U-Fr-dT5" id="Nb1-mS-sO2"/>
+                <outlet property="step1Action" destination="KmD-gd-L4U" id="cvp-GH-nCl"/>
+                <outlet property="step1Description" destination="vtJ-JZ-0Na" id="H4e-FQ-vkz"/>
+                <outlet property="step1Label" destination="ZRE-Cy-7Lr" id="law-7Y-awL"/>
+                <outlet property="step2Action" destination="Pkz-Ly-S95" id="4De-Mc-hBw"/>
+                <outlet property="step2Description" destination="6hJ-Df-L8J" id="97d-5C-BPI"/>
+                <outlet property="step2Label" destination="uSM-tg-u0v" id="xeD-CG-Bbf"/>
+                <outlet property="uploadPreviewStackView" destination="bIy-YC-0La" id="QW5-PL-rhx"/>
+                <outlet property="view" destination="w79-Wa-Te8" id="Jtq-N0-KCZ"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="w79-Wa-Te8">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="06G-zi-de6" customClass="TitleNavigationBarView" customModule="Kanguro" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="82" width="393" height="80"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="80" id="M6j-q0-X7b"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pg4-9i-lIa">
+                    <rect key="frame" x="0.0" y="182" width="393" height="636"/>
+                    <subviews>
+                        <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h3n-eW-fht">
+                            <rect key="frame" x="0.0" y="0.0" width="393" height="636"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9sf-lU-yXR">
+                                    <rect key="frame" x="0.0" y="0.0" width="393" height="636"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="DhH-bM-AMK">
+                                            <rect key="frame" x="32" y="0.0" width="329" height="397.66666666666669"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N1U-Fr-dT5" customClass="CustomLabel" customModule="Kanguro" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="329" height="20.333333333333332"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OPK-yD-NMU">
+                                                    <rect key="frame" x="0.0" y="52.333333333333343" width="329" height="137.66666666666666"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZRE-Cy-7Lr" customClass="CustomLabel" customModule="Kanguro" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="0.0" width="329" height="47.333333333333336"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vtJ-JZ-0Na" customClass="CustomLabel" customModule="Kanguro" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="55.33333333333335" width="329" height="20.333333333333336"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KmD-gd-L4U" customClass="CustomButton" customModule="Kanguro" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="91.666666666666657" width="329" height="46"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="46" id="r7T-Qb-FIw"/>
+                                                            </constraints>
+                                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                            <buttonConfiguration key="configuration" style="plain"/>
+                                                        </button>
+                                                    </subviews>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="trailing" secondItem="vtJ-JZ-0Na" secondAttribute="trailing" id="2mm-2O-FAN"/>
+                                                        <constraint firstItem="vtJ-JZ-0Na" firstAttribute="top" secondItem="ZRE-Cy-7Lr" secondAttribute="bottom" constant="8" id="D9d-lF-deJ"/>
+                                                        <constraint firstAttribute="trailing" secondItem="ZRE-Cy-7Lr" secondAttribute="trailing" id="KGf-Vt-2Gn"/>
+                                                        <constraint firstItem="KmD-gd-L4U" firstAttribute="top" secondItem="vtJ-JZ-0Na" secondAttribute="bottom" constant="16" id="Lgd-gA-rfY"/>
+                                                        <constraint firstAttribute="trailing" secondItem="KmD-gd-L4U" secondAttribute="trailing" id="TlL-cK-qiT"/>
+                                                        <constraint firstItem="KmD-gd-L4U" firstAttribute="leading" secondItem="OPK-yD-NMU" secondAttribute="leading" id="mxO-qH-kds"/>
+                                                        <constraint firstItem="ZRE-Cy-7Lr" firstAttribute="top" secondItem="OPK-yD-NMU" secondAttribute="top" id="pC2-VL-eMl"/>
+                                                        <constraint firstItem="ZRE-Cy-7Lr" firstAttribute="leading" secondItem="OPK-yD-NMU" secondAttribute="leading" id="pgj-LB-bKc"/>
+                                                        <constraint firstAttribute="bottom" secondItem="KmD-gd-L4U" secondAttribute="bottom" id="sim-oO-uCM"/>
+                                                        <constraint firstItem="vtJ-JZ-0Na" firstAttribute="leading" secondItem="OPK-yD-NMU" secondAttribute="leading" id="uAg-H2-AJa"/>
+                                                    </constraints>
+                                                </view>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="38M-us-cb3">
+                                                    <rect key="frame" x="0.0" y="222" width="329" height="175.66666666666663"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uSM-tg-u0v" customClass="CustomLabel" customModule="Kanguro" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="0.0" width="329" height="85.333333333333329"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6hJ-Df-L8J" customClass="CustomLabel" customModule="Kanguro" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="93.333333333333314" width="329" height="20.333333333333329"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pkz-Ly-S95" customClass="CustomButton" customModule="Kanguro" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="129.66666666666663" width="329" height="46"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="46" id="h39-O7-z13"/>
+                                                            </constraints>
+                                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                            <buttonConfiguration key="configuration" style="plain"/>
+                                                        </button>
+                                                    </subviews>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                    <constraints>
+                                                        <constraint firstItem="uSM-tg-u0v" firstAttribute="top" secondItem="38M-us-cb3" secondAttribute="top" id="7dm-H2-mNc"/>
+                                                        <constraint firstItem="Pkz-Ly-S95" firstAttribute="top" secondItem="6hJ-Df-L8J" secondAttribute="bottom" constant="16" id="BUf-9P-NSb"/>
+                                                        <constraint firstItem="6hJ-Df-L8J" firstAttribute="top" secondItem="uSM-tg-u0v" secondAttribute="bottom" constant="8" id="DKT-ox-72Y"/>
+                                                        <constraint firstAttribute="bottom" secondItem="Pkz-Ly-S95" secondAttribute="bottom" id="IHh-af-cbY"/>
+                                                        <constraint firstItem="uSM-tg-u0v" firstAttribute="leading" secondItem="38M-us-cb3" secondAttribute="leading" id="JsM-sX-h83"/>
+                                                        <constraint firstItem="Pkz-Ly-S95" firstAttribute="top" secondItem="6hJ-Df-L8J" secondAttribute="bottom" constant="16" id="KQ5-gI-PZk"/>
+                                                        <constraint firstAttribute="trailing" secondItem="Pkz-Ly-S95" secondAttribute="trailing" id="UUX-Tl-uyh"/>
+                                                        <constraint firstItem="6hJ-Df-L8J" firstAttribute="leading" secondItem="38M-us-cb3" secondAttribute="leading" id="bv8-Vh-V5I"/>
+                                                        <constraint firstItem="Pkz-Ly-S95" firstAttribute="leading" secondItem="38M-us-cb3" secondAttribute="leading" id="fH0-B5-fG2"/>
+                                                        <constraint firstAttribute="trailing" secondItem="6hJ-Df-L8J" secondAttribute="trailing" id="seP-AM-m3V"/>
+                                                        <constraint firstAttribute="trailing" secondItem="uSM-tg-u0v" secondAttribute="trailing" id="zKf-yo-EaK"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                        </stackView>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pIz-Vz-4PR" customClass="CustomButton" customModule="Kanguro" customModuleProvider="target">
+                                            <rect key="frame" x="32" y="540" width="329" height="64"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="64" id="ngm-kI-3B5"/>
+                                            </constraints>
+                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        </button>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bIy-YC-0La" customClass="SecondaryAttachmentListView" customModule="Kanguro" customModuleProvider="target">
+                                            <rect key="frame" x="32" y="413.66666666666663" width="329" height="110.33333333333337"/>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="46" id="AHM-ye-hGM"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstItem="DhH-bM-AMK" firstAttribute="leading" secondItem="9sf-lU-yXR" secondAttribute="leading" constant="32" id="209-SP-SX0"/>
+                                        <constraint firstAttribute="bottom" secondItem="pIz-Vz-4PR" secondAttribute="bottom" constant="32" id="59b-K4-tTn"/>
+                                        <constraint firstItem="DhH-bM-AMK" firstAttribute="top" secondItem="9sf-lU-yXR" secondAttribute="top" id="Pz4-Ff-Vkn"/>
+                                        <constraint firstItem="bIy-YC-0La" firstAttribute="top" secondItem="DhH-bM-AMK" secondAttribute="bottom" constant="16" id="dDc-WQ-6bg"/>
+                                        <constraint firstAttribute="trailing" secondItem="DhH-bM-AMK" secondAttribute="trailing" constant="32" id="l5l-2I-0lc"/>
+                                        <constraint firstAttribute="trailing" secondItem="bIy-YC-0La" secondAttribute="trailing" constant="32" id="mqY-tc-GZn"/>
+                                        <constraint firstItem="pIz-Vz-4PR" firstAttribute="top" secondItem="bIy-YC-0La" secondAttribute="bottom" constant="16" id="qgZ-Md-qTD"/>
+                                        <constraint firstItem="pIz-Vz-4PR" firstAttribute="leading" secondItem="9sf-lU-yXR" secondAttribute="leading" constant="32" id="ueb-fd-bFG"/>
+                                        <constraint firstItem="bIy-YC-0La" firstAttribute="leading" secondItem="9sf-lU-yXR" secondAttribute="leading" constant="32" id="xVS-LY-Jnm"/>
+                                        <constraint firstAttribute="trailing" secondItem="pIz-Vz-4PR" secondAttribute="trailing" constant="32" id="yD1-1b-ccW"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="9sf-lU-yXR" secondAttribute="trailing" id="Dm1-bF-Q23"/>
+                                <constraint firstAttribute="bottom" secondItem="9sf-lU-yXR" secondAttribute="bottom" id="VFU-66-DIe"/>
+                                <constraint firstItem="9sf-lU-yXR" firstAttribute="top" secondItem="h3n-eW-fht" secondAttribute="top" id="olh-jF-rLe"/>
+                                <constraint firstItem="9sf-lU-yXR" firstAttribute="leading" secondItem="h3n-eW-fht" secondAttribute="leading" id="rzV-QH-PJg"/>
+                            </constraints>
+                        </scrollView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="h3n-eW-fht" firstAttribute="leading" secondItem="Pg4-9i-lIa" secondAttribute="leading" id="U1q-mY-ITp"/>
+                        <constraint firstItem="9sf-lU-yXR" firstAttribute="height" secondItem="Pg4-9i-lIa" secondAttribute="height" priority="250" id="brV-sN-qbJ"/>
+                        <constraint firstAttribute="trailing" secondItem="h3n-eW-fht" secondAttribute="trailing" id="iH6-UA-L9c"/>
+                        <constraint firstItem="h3n-eW-fht" firstAttribute="top" secondItem="Pg4-9i-lIa" secondAttribute="top" id="kgY-AO-JhY"/>
+                        <constraint firstItem="9sf-lU-yXR" firstAttribute="width" secondItem="Pg4-9i-lIa" secondAttribute="width" id="vQb-XO-JhS"/>
+                        <constraint firstAttribute="bottom" secondItem="h3n-eW-fht" secondAttribute="bottom" id="zdY-en-ClI"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ugi-28-ZQD" customClass="CustomPickerSelectionListView" customModule="Kanguro" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="drE-to-ia4"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="drE-to-ia4" firstAttribute="bottom" secondItem="ugi-28-ZQD" secondAttribute="bottom" id="DXE-AG-h8J"/>
+                <constraint firstItem="drE-to-ia4" firstAttribute="trailing" secondItem="ugi-28-ZQD" secondAttribute="trailing" id="ETa-E9-toH"/>
+                <constraint firstItem="06G-zi-de6" firstAttribute="top" secondItem="drE-to-ia4" secondAttribute="top" constant="23" id="Njm-Vt-xjx"/>
+                <constraint firstAttribute="trailing" secondItem="Pg4-9i-lIa" secondAttribute="trailing" id="Rpa-Y5-1RJ"/>
+                <constraint firstItem="ugi-28-ZQD" firstAttribute="top" secondItem="drE-to-ia4" secondAttribute="top" id="U0f-Kv-O8k"/>
+                <constraint firstItem="ugi-28-ZQD" firstAttribute="leading" secondItem="drE-to-ia4" secondAttribute="leading" id="XQt-0O-2Yq"/>
+                <constraint firstItem="06G-zi-de6" firstAttribute="leading" secondItem="drE-to-ia4" secondAttribute="leading" id="Z5R-8I-Mqq"/>
+                <constraint firstItem="drE-to-ia4" firstAttribute="bottom" secondItem="Pg4-9i-lIa" secondAttribute="bottom" id="bS9-4m-WXV"/>
+                <constraint firstItem="drE-to-ia4" firstAttribute="trailing" secondItem="06G-zi-de6" secondAttribute="trailing" id="gHq-BV-ABn"/>
+                <constraint firstItem="Pg4-9i-lIa" firstAttribute="leading" secondItem="w79-Wa-Te8" secondAttribute="leading" id="q90-sT-U1q"/>
+                <constraint firstItem="Pg4-9i-lIa" firstAttribute="top" secondItem="06G-zi-de6" secondAttribute="bottom" constant="20" id="wVK-gy-nHZ"/>
+            </constraints>
+            <point key="canvasLocation" x="-787.02290076335873" y="19.718309859154932"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ClaimTrackerItemView" customModule="Kanguro" customModuleProvider="target">
+            <connections>
+                <outlet property="confirmedIconImageView" destination="ysl-fH-Baw" id="swU-vN-biy"/>
+                <outlet property="confirmedStickView" destination="gQr-r6-wWu" id="RD5-Dn-1KU"/>
+                <outlet property="confirmedStickViewTraillingDistance" destination="Crd-wV-hkH" id="OOc-T0-1DE"/>
+                <outlet property="confirmedView" destination="XMV-by-RzN" id="Z75-ou-fCX"/>
+                <outlet property="indexLabel" destination="e6d-eE-0ze" id="72h-Wk-oRL"/>
+                <outlet property="neutralBgView" destination="OXU-m6-NGP" id="Agw-gl-Ki4"/>
+                <outlet property="neutralBgViewWidth" destination="M15-FB-f6u" id="EOH-TJ-Nse"/>
+                <outlet property="neutralStickView" destination="xwp-o4-01a" id="Vnd-Ul-t8u"/>
+                <outlet property="titleLabel" destination="Iau-M8-77H" id="qb3-uw-wqz"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="78" height="75"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="LT0-JO-ney">
+                    <rect key="frame" x="0.0" y="0.0" width="78" height="75"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="2y1-ks-nlf">
+                            <rect key="frame" x="0.0" y="0.0" width="78" height="40"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OXU-m6-NGP" userLabel="Neutral Circle View">
+                                    <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e6d-eE-0ze" customClass="CustomLabel" customModule="Kanguro" customModuleProvider="target">
+                                            <rect key="frame" x="16.5" y="10" width="7.5" height="20.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XMV-by-RzN" userLabel="Confirmed View">
+                                            <rect key="frame" x="2" y="2" width="36" height="36"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic-confirmed" translatesAutoresizingMaskIntoConstraints="NO" id="ysl-fH-Baw">
+                                                    <rect key="frame" x="8" y="8" width="20" height="20"/>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" name="PositiveLighest"/>
+                                            <constraints>
+                                                <constraint firstItem="ysl-fH-Baw" firstAttribute="top" secondItem="XMV-by-RzN" secondAttribute="top" constant="8" id="7QR-C4-3L5"/>
+                                                <constraint firstAttribute="bottom" secondItem="ysl-fH-Baw" secondAttribute="bottom" constant="8" id="GV7-oh-crI"/>
+                                                <constraint firstItem="ysl-fH-Baw" firstAttribute="leading" secondItem="XMV-by-RzN" secondAttribute="leading" constant="8" id="ZDR-Mf-69j"/>
+                                                <constraint firstAttribute="trailing" secondItem="ysl-fH-Baw" secondAttribute="trailing" constant="8" id="aDx-vO-7WN"/>
+                                            </constraints>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                    <real key="value" value="18"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </view>
+                                    </subviews>
+                                    <color key="backgroundColor" name="NeutralBackground"/>
+                                    <constraints>
+                                        <constraint firstItem="XMV-by-RzN" firstAttribute="top" secondItem="OXU-m6-NGP" secondAttribute="top" constant="2" id="2xj-QO-EVR"/>
+                                        <constraint firstAttribute="bottom" secondItem="XMV-by-RzN" secondAttribute="bottom" constant="2" id="Cm8-wr-uk7"/>
+                                        <constraint firstItem="XMV-by-RzN" firstAttribute="leading" secondItem="OXU-m6-NGP" secondAttribute="leading" constant="2" id="DlR-0r-n8T"/>
+                                        <constraint firstItem="e6d-eE-0ze" firstAttribute="centerY" secondItem="OXU-m6-NGP" secondAttribute="centerY" id="LIr-Eo-csX"/>
+                                        <constraint firstAttribute="width" constant="40" id="M15-FB-f6u"/>
+                                        <constraint firstAttribute="trailing" secondItem="XMV-by-RzN" secondAttribute="trailing" constant="2" id="NWb-dh-j6e"/>
+                                        <constraint firstAttribute="height" constant="40" id="gfq-g9-Eox"/>
+                                        <constraint firstItem="e6d-eE-0ze" firstAttribute="centerX" secondItem="OXU-m6-NGP" secondAttribute="centerX" id="lg4-ke-t85"/>
+                                    </constraints>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="19"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xwp-o4-01a" userLabel="Neutral stick View">
+                                    <rect key="frame" x="40" y="16" width="38" height="8"/>
+                                    <subviews>
+                                        <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gQr-r6-wWu" userLabel="confirmed stick view">
+                                            <rect key="frame" x="-6" y="1" width="36" height="6"/>
+                                            <color key="backgroundColor" name="PositiveLighest"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                    <real key="value" value="3"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </view>
+                                    </subviews>
+                                    <color key="backgroundColor" name="NeutralBackground"/>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="gQr-r6-wWu" secondAttribute="trailing" constant="8" id="Crd-wV-hkH"/>
+                                        <constraint firstAttribute="bottom" secondItem="gQr-r6-wWu" secondAttribute="bottom" constant="1" id="I1x-an-m4l"/>
+                                        <constraint firstAttribute="height" constant="8" id="Pnx-EF-lWZ"/>
+                                        <constraint firstItem="gQr-r6-wWu" firstAttribute="leading" secondItem="xwp-o4-01a" secondAttribute="leading" constant="-6" id="bG4-zZ-TRW"/>
+                                        <constraint firstItem="gQr-r6-wWu" firstAttribute="top" secondItem="xwp-o4-01a" secondAttribute="top" constant="1" id="pZ3-HT-4XI"/>
+                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="38" id="zDe-vK-1q0"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="CN5-kF-KWj"/>
+                            </constraints>
+                        </stackView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iau-M8-77H" customClass="CustomLabel" customModule="Kanguro" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="52" width="78" height="23"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="LT0-JO-ney" secondAttribute="bottom" id="aY6-NX-ceH"/>
+                <constraint firstItem="LT0-JO-ney" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="ix7-0A-rKb"/>
+                <constraint firstAttribute="trailing" secondItem="LT0-JO-ney" secondAttribute="trailing" id="lhM-tZ-SHr"/>
+                <constraint firstItem="LT0-JO-ney" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="pGT-R2-Zk1"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="154.34782608695653" y="94.754464285714278"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ic-confirmed" width="23" height="19"/>
+        <namedColor name="NeutralBackground">
+            <color red="0.94117647058823528" green="0.94117647058823528" blue="0.94117647058823528" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="PositiveLighest">
+            <color red="0.82745098039215681" green="0.91764705882352937" blue="0.8666666666666667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

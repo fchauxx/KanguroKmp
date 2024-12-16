@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta
+                http-equiv="X-UA-Compatible"
+                content="IE=edge">
+        <meta
+                name="viewport"
+                content="width=device-width,initial-scale=1.0">
+        <title>Kanguro</title>
+    </head>
+
+    <body>
+        <div id="iframe-container"></div>
+        <script
+                defer
+                type="text/javascript"
+                id="ciIframeSnippetScript"
+                src="https://cloudinsurance-storybook.s3-eu-west-1.amazonaws.com/ci-iframe-snippet/latest/ci-iframe-snippet.iife.js"
+                async></script>
+        <script>
+                const config = {
+                    "partner": "kanguro",
+                    "product": "portal",
+                    "environment": "sandbox",
+                    "customPayload": {
+                        "accessToken" : "%s"
+                    },
+                    "appendHostQueryParams": true,
+                    "iframeSettings": {
+                        "resizeHeightOffset": 50,
+                        "scrollTopOffset": 100
+                    },
+                    "containerId": "iframe-container"
+                };
+                document.getElementById('ciIframeSnippetScript').onload = () => ciIframeSnippet.HandlerInstance.init(config);
+
+        </script>
+    </body>
+</html>

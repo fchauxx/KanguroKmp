@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "ic-smoke.svg",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

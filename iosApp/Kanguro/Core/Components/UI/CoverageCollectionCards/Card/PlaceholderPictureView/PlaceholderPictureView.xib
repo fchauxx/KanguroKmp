@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PlaceholderPictureView" customModule="Kanguro" customModuleProvider="target">
+            <connections>
+                <outlet property="bgView" destination="Nwa-4B-jTZ" id="6DG-lg-9l9"/>
+                <outlet property="buttonImageView" destination="orx-gD-n8e" id="Mb9-8i-pcd"/>
+                <outlet property="petImageView" destination="KvU-GO-Qfl" id="rz0-ZB-lcd"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="157" height="86"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nwa-4B-jTZ" userLabel="Background View">
+                    <rect key="frame" x="0.0" y="0.0" width="157" height="86"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h4I-k6-2n3">
+                            <rect key="frame" x="133" y="8" width="16" height="16"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic-changePicture" translatesAutoresizingMaskIntoConstraints="NO" id="orx-gD-n8e">
+                                    <rect key="frame" x="2.5" y="2.5" width="11" height="11"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="11" id="TOC-9p-3EP"/>
+                                        <constraint firstAttribute="height" constant="11" id="cDr-zR-Y0M"/>
+                                    </constraints>
+                                </imageView>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xk9-59-ldd">
+                                    <rect key="frame" x="0.0" y="0.0" width="16" height="16"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain" title=" "/>
+                                    <connections>
+                                        <action selector="changePetPicture:" destination="-1" eventType="touchUpInside" id="59n-29-yOa"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" name="NeutralBackground"/>
+                            <constraints>
+                                <constraint firstItem="xk9-59-ldd" firstAttribute="leading" secondItem="h4I-k6-2n3" secondAttribute="leading" id="3Pw-gS-uKi"/>
+                                <constraint firstAttribute="bottom" secondItem="xk9-59-ldd" secondAttribute="bottom" id="DYd-Pq-cXO"/>
+                                <constraint firstAttribute="width" constant="16" id="R7M-uy-3QS"/>
+                                <constraint firstAttribute="height" constant="16" id="aXk-sY-GR2"/>
+                                <constraint firstItem="orx-gD-n8e" firstAttribute="centerY" secondItem="h4I-k6-2n3" secondAttribute="centerY" id="e0M-xm-uO3"/>
+                                <constraint firstItem="orx-gD-n8e" firstAttribute="centerX" secondItem="h4I-k6-2n3" secondAttribute="centerX" id="qpt-gQ-wi1"/>
+                                <constraint firstItem="xk9-59-ldd" firstAttribute="top" secondItem="h4I-k6-2n3" secondAttribute="top" id="rMF-oz-lRh"/>
+                                <constraint firstAttribute="trailing" secondItem="xk9-59-ldd" secondAttribute="trailing" id="xCb-Dg-kRw"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="8"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KvU-GO-Qfl">
+                            <rect key="frame" x="44.5" y="22" width="68" height="42"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="68" id="Irh-d7-56e"/>
+                                <constraint firstAttribute="height" constant="42" id="fWt-Y4-lyU"/>
+                            </constraints>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="h4I-k6-2n3" secondAttribute="trailing" constant="8" id="OeR-Ph-8qP"/>
+                        <constraint firstItem="KvU-GO-Qfl" firstAttribute="centerY" secondItem="Nwa-4B-jTZ" secondAttribute="centerY" id="Pa2-n3-pcv"/>
+                        <constraint firstItem="KvU-GO-Qfl" firstAttribute="centerX" secondItem="Nwa-4B-jTZ" secondAttribute="centerX" id="Rfc-R6-xYm"/>
+                        <constraint firstItem="h4I-k6-2n3" firstAttribute="top" secondItem="Nwa-4B-jTZ" secondAttribute="top" constant="8" id="USZ-QW-SNM"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="Nwa-4B-jTZ" secondAttribute="bottom" id="6y4-5T-BRl"/>
+                <constraint firstItem="Nwa-4B-jTZ" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="lk0-uI-Ar6"/>
+                <constraint firstAttribute="trailing" secondItem="Nwa-4B-jTZ" secondAttribute="trailing" id="s9Y-3e-vMk"/>
+                <constraint firstItem="Nwa-4B-jTZ" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="yKF-dT-uV5"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="14.492753623188406" y="-161.04910714285714"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ic-changePicture" width="12" height="12"/>
+        <namedColor name="NeutralBackground">
+            <color red="0.94117647058823528" green="0.94117647058823528" blue="0.94117647058823528" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

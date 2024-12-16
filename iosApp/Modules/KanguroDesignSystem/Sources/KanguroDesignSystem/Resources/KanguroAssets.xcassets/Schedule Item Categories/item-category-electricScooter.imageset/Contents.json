@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "item-category-electricScooter.svg",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

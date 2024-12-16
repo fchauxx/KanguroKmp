@@ -1,0 +1,23 @@
+{
+  "images" : [
+    {
+      "filename" : "Missingpets1 250x102.png",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "filename" : "Missingpets1 330x138 (1).png",
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "filename" : "Missingpets1 (655 x 273 px).png",
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

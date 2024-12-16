@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CloudPolicyFilesViewController" customModule="Kanguro" customModuleProvider="target">
+            <connections>
+                <outlet property="breadcrumb" destination="45m-cy-6Rp" id="q1X-TN-oVJ"/>
+                <outlet property="cloudActionList" destination="3Nw-5b-Agw" id="4yc-Ue-0s0"/>
+                <outlet property="navigationBackButton" destination="zGC-By-gbs" id="UEu-2b-Th6"/>
+                <outlet property="noFilesFoundPlaceholderLabel" destination="Vjg-9D-wXY" id="kD1-qe-3Qy"/>
+                <outlet property="scrollView" destination="nCk-Dy-Qgm" id="60P-xf-gCo"/>
+                <outlet property="titleLabel" destination="Zzw-GF-b85" id="t4A-hW-71q"/>
+                <outlet property="view" destination="nhc-1h-2b1" id="GGW-XF-G1g"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="nhc-1h-2b1">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zzw-GF-b85" customClass="CustomLabel" customModule="Kanguro" customModuleProvider="target">
+                    <rect key="frame" x="24" y="68" width="366" height="0.0"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P4L-JV-RGF" customClass="CloudPolic">
+                    <rect key="frame" x="24" y="100" width="366" height="0.0"/>
+                    <subviews>
+                        <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="45m-cy-6Rp" customClass="CustomLabel" customModule="Kanguro" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="0.0" height="50"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                </stackView>
+                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zGC-By-gbs" customClass="NavigationBackButton" customModule="Kanguro" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="48" width="414" height="40"/>
+                    <color key="backgroundColor" name="NeutralBackground"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="7Gw-Gw-uYj"/>
+                    </constraints>
+                </view>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nCk-Dy-Qgm">
+                    <rect key="frame" x="0.0" y="132" width="414" height="730"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O2Y-aY-cfk">
+                            <rect key="frame" x="0.0" y="0.0" width="406" height="666"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Nw-5b-Agw" userLabel="Cloud Action Cards List" customClass="ActionCardsList" customModule="Kanguro" customModuleProvider="target">
+                                    <rect key="frame" x="24" y="0.0" width="358" height="634"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="xDY-zs-3RW"/>
+                                    </constraints>
+                                </view>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vjg-9D-wXY" customClass="CustomLabel" customModule="Kanguro" customModuleProvider="target">
+                                    <rect key="frame" x="182.5" y="323" width="41.5" height="20.5"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" name="NeutralBackground"/>
+                            <constraints>
+                                <constraint firstItem="3Nw-5b-Agw" firstAttribute="leading" secondItem="O2Y-aY-cfk" secondAttribute="leading" constant="24" id="8jT-wi-mvr"/>
+                                <constraint firstItem="3Nw-5b-Agw" firstAttribute="top" secondItem="O2Y-aY-cfk" secondAttribute="top" id="TGa-bd-uSa"/>
+                                <constraint firstItem="Vjg-9D-wXY" firstAttribute="centerX" secondItem="O2Y-aY-cfk" secondAttribute="centerX" id="aqz-9G-yPn"/>
+                                <constraint firstAttribute="trailing" secondItem="3Nw-5b-Agw" secondAttribute="trailing" constant="24" id="doU-fO-VjH"/>
+                                <constraint firstAttribute="bottom" secondItem="3Nw-5b-Agw" secondAttribute="bottom" constant="32" id="el0-Qa-jar"/>
+                                <constraint firstItem="Vjg-9D-wXY" firstAttribute="centerY" secondItem="O2Y-aY-cfk" secondAttribute="centerY" id="udL-Ka-HON"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="O2Y-aY-cfk" secondAttribute="trailing" id="L5h-zO-PIM"/>
+                        <constraint firstAttribute="bottom" secondItem="O2Y-aY-cfk" secondAttribute="bottom" id="jt5-Xh-I7y"/>
+                        <constraint firstItem="O2Y-aY-cfk" firstAttribute="leading" secondItem="nCk-Dy-Qgm" secondAttribute="leading" id="kqF-oF-ubJ"/>
+                        <constraint firstItem="O2Y-aY-cfk" firstAttribute="top" secondItem="nCk-Dy-Qgm" secondAttribute="top" id="sjV-KU-KRK"/>
+                    </constraints>
+                </scrollView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="ajl-nq-D5U"/>
+            <color key="backgroundColor" name="NeutralBackground"/>
+            <constraints>
+                <constraint firstItem="zGC-By-gbs" firstAttribute="top" secondItem="ajl-nq-D5U" secondAttribute="top" id="8KP-Su-pK8"/>
+                <constraint firstItem="Zzw-GF-b85" firstAttribute="top" secondItem="ajl-nq-D5U" secondAttribute="top" constant="20" id="90a-2s-iSd"/>
+                <constraint firstItem="O2Y-aY-cfk" firstAttribute="height" secondItem="nhc-1h-2b1" secondAttribute="height" multiplier="0.743304" priority="250" id="LDB-pc-W4m"/>
+                <constraint firstItem="zGC-By-gbs" firstAttribute="leading" secondItem="ajl-nq-D5U" secondAttribute="leading" id="MKs-aG-EaQ"/>
+                <constraint firstItem="ajl-nq-D5U" firstAttribute="trailing" secondItem="Zzw-GF-b85" secondAttribute="trailing" constant="24" id="PC8-cM-A2w"/>
+                <constraint firstItem="nCk-Dy-Qgm" firstAttribute="leading" secondItem="ajl-nq-D5U" secondAttribute="leading" id="UtB-mj-hds"/>
+                <constraint firstItem="ajl-nq-D5U" firstAttribute="trailing" secondItem="zGC-By-gbs" secondAttribute="trailing" id="XU8-l6-jRK"/>
+                <constraint firstItem="nCk-Dy-Qgm" firstAttribute="top" secondItem="P4L-JV-RGF" secondAttribute="bottom" constant="32" id="YDC-9A-WfJ"/>
+                <constraint firstItem="P4L-JV-RGF" firstAttribute="leading" secondItem="ajl-nq-D5U" secondAttribute="leading" constant="24" id="bC7-ex-zIU"/>
+                <constraint firstItem="ajl-nq-D5U" firstAttribute="trailing" secondItem="P4L-JV-RGF" secondAttribute="trailing" constant="24" id="cp7-f7-Vtg"/>
+                <constraint firstItem="Zzw-GF-b85" firstAttribute="leading" secondItem="ajl-nq-D5U" secondAttribute="leading" constant="24" id="pNo-jW-vLG"/>
+                <constraint firstItem="O2Y-aY-cfk" firstAttribute="width" secondItem="nhc-1h-2b1" secondAttribute="width" multiplier="0.980676" id="rC5-qd-T56"/>
+                <constraint firstItem="P4L-JV-RGF" firstAttribute="top" secondItem="Zzw-GF-b85" secondAttribute="bottom" constant="32" id="sGz-4q-YwB"/>
+                <constraint firstItem="nCk-Dy-Qgm" firstAttribute="trailing" secondItem="ajl-nq-D5U" secondAttribute="trailing" id="y5U-Pp-U2d"/>
+                <constraint firstItem="nCk-Dy-Qgm" firstAttribute="bottom" secondItem="ajl-nq-D5U" secondAttribute="bottom" id="zbR-Le-JSg"/>
+            </constraints>
+            <point key="canvasLocation" x="-69" y="9"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="NeutralBackground">
+            <color red="0.94117647058823528" green="0.94117647058823528" blue="0.94117647058823528" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+    </resources>
+</document>

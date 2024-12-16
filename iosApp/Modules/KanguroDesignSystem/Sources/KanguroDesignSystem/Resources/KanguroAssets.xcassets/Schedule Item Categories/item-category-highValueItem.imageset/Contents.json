@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "item-category-highValueItem.svg",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

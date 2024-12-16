@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ClaimStatusList" customModule="Kanguro" customModuleProvider="target">
+            <connections>
+                <outlet property="centerLabel" destination="tlN-hB-9L7" id="UUE-vf-0E9"/>
+                <outlet property="mainTableView" destination="EKZ-KY-C5n" id="xb9-G6-eh4"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tlN-hB-9L7" userLabel="center label" customClass="CustomLabel" customModule="Kanguro" customModuleProvider="target">
+                    <rect key="frame" x="186" y="244" width="42" height="20.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="EKZ-KY-C5n">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="Slf-oY-3n4"/>
+                        <outlet property="delegate" destination="-1" id="ElG-jN-B5c"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="EKZ-KY-C5n" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Eyt-56-8hk"/>
+                <constraint firstItem="EKZ-KY-C5n" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="Jue-Bp-rxm"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="EKZ-KY-C5n" secondAttribute="trailing" id="Mhe-4b-be2"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="EKZ-KY-C5n" secondAttribute="bottom" id="Mlj-q1-Qf0"/>
+                <constraint firstItem="tlN-hB-9L7" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="200" id="Pnv-Uu-cM1"/>
+                <constraint firstItem="tlN-hB-9L7" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="au1-OK-bEa"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="139" y="111"/>
+        </view>
+    </objects>
+</document>

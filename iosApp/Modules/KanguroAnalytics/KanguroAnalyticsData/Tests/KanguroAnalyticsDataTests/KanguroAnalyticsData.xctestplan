@@ -1,0 +1,24 @@
+{
+  "configurations" : [
+    {
+      "id" : "FFD167B5-5FFC-43D2-9763-2C0D23AFC77A",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "codeCoverage" : false
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:",
+        "identifier" : "KanguroAnalyticsDataTests",
+        "name" : "KanguroAnalyticsDataTests"
+      }
+    }
+  ],
+  "version" : 1
+}

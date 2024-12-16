@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DonationCauseViewController" customModule="Kanguro" customModuleProvider="target">
+            <connections>
+                <outlet property="donationCauseListView" destination="yB2-Hp-wZJ" id="TNt-sT-g3u"/>
+                <outlet property="navigationBackButton" destination="LNP-Q2-K7v" id="wbs-5w-WwZ"/>
+                <outlet property="selectCauseLabel" destination="DF0-fe-mBY" id="95E-Ga-h2y"/>
+                <outlet property="titleImageView" destination="TYA-2C-9a1" id="gNU-14-yjK"/>
+                <outlet property="titleLabel" destination="fnv-3c-WNR" id="F5p-5O-6eZ"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DjF-7G-vZb">
+                    <rect key="frame" x="358" y="60" width="44" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="1N5-9r-sSY"/>
+                        <constraint firstAttribute="width" constant="44" id="JYx-if-uJf"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" image="ic-close" title=" " imagePadding="-4"/>
+                    <connections>
+                        <action selector="goToRootTouchUpInside:" destination="-1" eventType="touchUpInside" id="Iaa-96-kzs"/>
+                    </connections>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LNP-Q2-K7v" customClass="NavigationBackButton" customModule="Kanguro" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="104" width="382" height="40"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="7CJ-qe-j9I"/>
+                    </constraints>
+                </view>
+                <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Vaw-xB-1Mt" userLabel="Title Stack View">
+                    <rect key="frame" x="32" y="168" width="81.5" height="38"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TYA-2C-9a1">
+                            <rect key="frame" x="0.0" y="3" width="32" height="32"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="32" id="p8d-q1-jgF"/>
+                                <constraint firstAttribute="width" constant="32" id="uYr-5c-UyN"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fnv-3c-WNR" userLabel="Title Label" customClass="CustomLabel" customModule="Kanguro" customModuleProvider="target">
+                            <rect key="frame" x="40" y="9" width="41.5" height="20.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="38" id="Tpd-jo-9UL"/>
+                    </constraints>
+                </stackView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DF0-fe-mBY" customClass="CustomLabel" customModule="Kanguro" customModuleProvider="target">
+                    <rect key="frame" x="32" y="230" width="41.5" height="20.5"/>
+                    <constraints>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="16" id="U2e-9i-vQU"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yB2-Hp-wZJ" customClass="DonationCauseListView" customModule="Kanguro" customModuleProvider="target">
+                    <rect key="frame" x="32" y="264.5" width="350" height="597.5"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="K7H-pa-Bf9"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="yB2-Hp-wZJ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="32" id="14f-Tm-cjx"/>
+                <constraint firstItem="LNP-Q2-K7v" firstAttribute="top" secondItem="DjF-7G-vZb" secondAttribute="bottom" id="1tu-iS-XwU"/>
+                <constraint firstItem="DjF-7G-vZb" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="12" id="95t-Ch-csi"/>
+                <constraint firstItem="Vaw-xB-1Mt" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="32" id="F02-Gh-iKy"/>
+                <constraint firstItem="LNP-Q2-K7v" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="IWh-iq-UN9"/>
+                <constraint firstItem="yB2-Hp-wZJ" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="MM4-o4-Cb2"/>
+                <constraint firstItem="Vaw-xB-1Mt" firstAttribute="top" secondItem="LNP-Q2-K7v" secondAttribute="bottom" constant="24" id="NMb-0b-5Br"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Vaw-xB-1Mt" secondAttribute="trailing" constant="32" id="UjR-3c-bkK"/>
+                <constraint firstItem="yB2-Hp-wZJ" firstAttribute="top" secondItem="DF0-fe-mBY" secondAttribute="bottom" constant="24" id="Wc2-mK-ajs"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="DjF-7G-vZb" secondAttribute="trailing" constant="12" id="ZLl-0p-No8"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="yB2-Hp-wZJ" secondAttribute="trailing" constant="32" id="dVE-ar-TrC"/>
+                <constraint firstItem="DF0-fe-mBY" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="32" id="eV3-Da-iYw"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="LNP-Q2-K7v" secondAttribute="trailing" constant="32" id="s9X-yg-mwf"/>
+                <constraint firstItem="DF0-fe-mBY" firstAttribute="top" secondItem="Vaw-xB-1Mt" secondAttribute="bottom" constant="24" id="sU6-wq-hKh"/>
+            </constraints>
+            <point key="canvasLocation" x="137.68115942028987" y="87.723214285714278"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ic-close" width="40" height="40"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

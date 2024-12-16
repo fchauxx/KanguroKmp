@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Lato-Bold.ttf">
+            <string>Lato-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HorizontalReminderCardList" customModule="Kanguro" customModuleProvider="target">
+            <connections>
+                <outlet property="leftTitleLabel" destination="uEk-Ng-jwd" id="PJo-2o-Pxt"/>
+                <outlet property="reminderCardsCollectionView" destination="RJP-dD-Mjr" id="Lwi-qb-kr1"/>
+                <outlet property="rightTitleLabel" destination="yny-Ty-9eO" id="PzO-Jb-aA6"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="Lxt-dq-yaW">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="132"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="RJP-dD-Mjr">
+                    <rect key="frame" x="0.0" y="32" width="414" height="100"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="8" minimumInteritemSpacing="8" sectionInsetReference="safeArea" id="IXE-aN-6cI">
+                        <size key="itemSize" width="130" height="128"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="24" minY="0.0" maxX="24" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="AbS-kU-BEV"/>
+                        <outlet property="delegate" destination="-1" id="bmn-gH-HJY"/>
+                    </connections>
+                </collectionView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="REMINDERS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uEk-Ng-jwd" customClass="CustomLabel" customModule="Kanguro" customModuleProvider="target">
+                    <rect key="frame" x="24" y="0.0" width="69" height="14.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hjL-0d-7JK" userLabel="See All View">
+                    <rect key="frame" x="325.5" y="0.0" width="56.5" height="16"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Xx-6C-WKw">
+                            <rect key="frame" x="0.0" y="0.0" width="56.5" height="16"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="See all" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yny-Ty-9eO" customClass="CustomLabel" customModule="Kanguro" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="40.5" height="16"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="14"/>
+                                    <color key="textColor" name="SecondaryMedium"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic-right-arrow" translatesAutoresizingMaskIntoConstraints="NO" id="oSc-mc-G1O">
+                                    <rect key="frame" x="40.5" y="0.0" width="16" height="16"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="16" id="QPA-KP-fzY"/>
+                                        <constraint firstAttribute="width" constant="16" id="zkw-qg-kXH"/>
+                                    </constraints>
+                                </imageView>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="6Xx-6C-WKw" secondAttribute="bottom" id="7um-sG-eVt"/>
+                        <constraint firstItem="6Xx-6C-WKw" firstAttribute="top" secondItem="hjL-0d-7JK" secondAttribute="top" id="8eo-A2-n5B"/>
+                        <constraint firstAttribute="trailing" secondItem="6Xx-6C-WKw" secondAttribute="trailing" id="Sic-sD-oAE"/>
+                        <constraint firstItem="6Xx-6C-WKw" firstAttribute="leading" secondItem="hjL-0d-7JK" secondAttribute="leading" id="fUS-Il-9am"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3X5-Qt-0fy" userLabel="See all button">
+                    <rect key="frame" x="286" y="0.0" width="120" height="20"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="RBM-Fe-kZ5"/>
+                        <constraint firstAttribute="width" constant="120" id="kwZ-wt-7tk"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title=" "/>
+                    <connections>
+                        <action selector="seeAllTouchUpInside:" destination="-1" eventType="touchUpInside" id="JF0-5x-yYb"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="T3L-9A-eMr"/>
+            <color key="backgroundColor" name="NeutralBackground"/>
+            <constraints>
+                <constraint firstItem="uEk-Ng-jwd" firstAttribute="leading" secondItem="Lxt-dq-yaW" secondAttribute="leading" constant="24" id="1pV-35-LlT"/>
+                <constraint firstItem="RJP-dD-Mjr" firstAttribute="top" secondItem="hjL-0d-7JK" secondAttribute="bottom" constant="16" id="Hqa-oX-yu0"/>
+                <constraint firstItem="RJP-dD-Mjr" firstAttribute="leading" secondItem="T3L-9A-eMr" secondAttribute="leading" id="InR-a2-fOz"/>
+                <constraint firstAttribute="trailing" secondItem="hjL-0d-7JK" secondAttribute="trailing" constant="32" id="P6Z-Vj-BSF"/>
+                <constraint firstItem="uEk-Ng-jwd" firstAttribute="top" secondItem="Lxt-dq-yaW" secondAttribute="top" id="UDK-jK-tD4"/>
+                <constraint firstItem="RJP-dD-Mjr" firstAttribute="trailing" secondItem="T3L-9A-eMr" secondAttribute="trailing" id="Zrn-4B-iDT"/>
+                <constraint firstAttribute="trailing" secondItem="3X5-Qt-0fy" secondAttribute="trailing" constant="8" id="gbj-r4-seP"/>
+                <constraint firstItem="hjL-0d-7JK" firstAttribute="top" secondItem="Lxt-dq-yaW" secondAttribute="top" id="hpD-ku-eZI"/>
+                <constraint firstItem="3X5-Qt-0fy" firstAttribute="top" secondItem="Lxt-dq-yaW" secondAttribute="top" id="ktj-0p-DnZ"/>
+                <constraint firstItem="RJP-dD-Mjr" firstAttribute="bottom" secondItem="T3L-9A-eMr" secondAttribute="bottom" id="pyf-dF-moe"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="400.00000000000006" y="-125.55803571428571"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ic-right-arrow" width="16" height="17"/>
+        <namedColor name="NeutralBackground">
+            <color red="0.94117647058823528" green="0.94117647058823528" blue="0.94117647058823528" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="SecondaryMedium">
+            <color red="0.40000000000000002" green="0.48627450980392156" blue="0.59607843137254901" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DualButtonsView" customModule="Kanguro" customModuleProvider="target">
+            <connections>
+                <outlet property="stackView" destination="oGW-Y8-KKr" id="6NI-xg-HMx"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="85"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="led-lw-Y5d" userLabel="Top Line View">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="0.5"/>
+                    <color key="backgroundColor" name="NeutralLight"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="0.5" id="Dad-IV-wq6"/>
+                    </constraints>
+                </view>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="oGW-Y8-KKr" userLabel="Buttons Stack View">
+                    <rect key="frame" x="0.0" y="0.5" width="375" height="84.5"/>
+                    <color key="backgroundColor" name="NeutralLight"/>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" name="NeutralBackground"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="oGW-Y8-KKr" secondAttribute="bottom" id="0m8-a9-Nso"/>
+                <constraint firstItem="led-lw-Y5d" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="4H3-CL-Naw"/>
+                <constraint firstItem="oGW-Y8-KKr" firstAttribute="top" secondItem="led-lw-Y5d" secondAttribute="bottom" id="GCX-zd-Q7w"/>
+                <constraint firstAttribute="trailing" secondItem="oGW-Y8-KKr" secondAttribute="trailing" id="aRW-JA-HoW"/>
+                <constraint firstItem="oGW-Y8-KKr" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="ppc-FN-yNy"/>
+                <constraint firstAttribute="trailing" secondItem="led-lw-Y5d" secondAttribute="trailing" id="qM0-fl-CIA"/>
+                <constraint firstItem="led-lw-Y5d" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="uYz-2Z-wzX"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="131.15942028985509" y="129.57589285714286"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="NeutralBackground">
+            <color red="0.94117647058823528" green="0.94117647058823528" blue="0.94117647058823528" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="NeutralLight">
+            <color red="0.60784313725490191" green="0.60784313725490191" blue="0.60784313725490191" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

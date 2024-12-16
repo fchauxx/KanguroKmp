@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ScrollableInformerBaseView" customModule="Kanguro" customModuleProvider="target">
+            <connections>
+                <outlet property="backButtonView" destination="no6-X8-lJ4" id="ea7-OQ-nzh"/>
+                <outlet property="contentView" destination="bQC-Mf-NMD" id="cl4-ym-vej"/>
+                <outlet property="headerImageHeight" destination="gCZ-zt-BSC" id="W3y-Ft-OYC"/>
+                <outlet property="informerAccordionList" destination="yB5-Cq-ms6" id="MAw-Ra-hOR"/>
+                <outlet property="loaderView" destination="qq3-0F-21M" id="Sc3-IV-ElV"/>
+                <outlet property="maximumTopScrollableConstraint" destination="aEL-xf-sjZ" id="kc1-SU-mhp"/>
+                <outlet property="minimumBottomScrollableConstraint" destination="Sn8-4Z-pfW" id="TSb-Io-G5T"/>
+                <outlet property="scrollView" destination="bxu-dp-YI2" id="jzS-4o-Jbw"/>
+                <outlet property="titleLabelsView" destination="dye-Wh-TkZ" id="Who-Vd-4ut"/>
+                <outlet property="topImageView" destination="fBL-55-wh9" id="36O-nb-iLL"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="bIc-aL-Ixx">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fBL-55-wh9">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="300"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="300" id="gCZ-zt-BSC"/>
+                    </constraints>
+                </imageView>
+                <view alpha="0.69999998807907104" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="no6-X8-lJ4" userLabel="Back button View">
+                    <rect key="frame" x="16" y="52" width="40" height="40"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic-backArrow" translatesAutoresizingMaskIntoConstraints="NO" id="2JU-mm-mDK">
+                            <rect key="frame" x="8" y="8" width="24" height="24"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="24" id="STv-fB-BIq"/>
+                                <constraint firstAttribute="height" constant="24" id="kPA-6w-QBF"/>
+                            </constraints>
+                        </imageView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bAk-vp-czf">
+                            <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title=" "/>
+                            <connections>
+                                <action selector="goBackButton:" destination="-1" eventType="touchUpInside" id="BjY-1J-jBh"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="bAk-vp-czf" secondAttribute="bottom" id="8oa-oA-8eU"/>
+                        <constraint firstItem="2JU-mm-mDK" firstAttribute="centerX" secondItem="no6-X8-lJ4" secondAttribute="centerX" id="Em1-Qb-ck5"/>
+                        <constraint firstAttribute="height" constant="40" id="USj-kz-7FG"/>
+                        <constraint firstAttribute="trailing" secondItem="bAk-vp-czf" secondAttribute="trailing" id="UZ4-VY-qGw"/>
+                        <constraint firstAttribute="width" constant="40" id="nXs-9c-DWZ"/>
+                        <constraint firstItem="bAk-vp-czf" firstAttribute="top" secondItem="no6-X8-lJ4" secondAttribute="top" id="ofo-dq-Ev4"/>
+                        <constraint firstItem="2JU-mm-mDK" firstAttribute="centerY" secondItem="no6-X8-lJ4" secondAttribute="centerY" id="tRm-fk-tCj"/>
+                        <constraint firstItem="bAk-vp-czf" firstAttribute="leading" secondItem="no6-X8-lJ4" secondAttribute="leading" id="xux-LE-wRy"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="20"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bxu-dp-YI2">
+                    <rect key="frame" x="0.0" y="228" width="414" height="634"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bQC-Mf-NMD" userLabel="Content View">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="1155"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dye-Wh-TkZ" userLabel="Labels View" customClass="HeaderLabelsView" customModule="Kanguro" customModuleProvider="target">
+                                    <rect key="frame" x="24" y="0.0" width="366" height="120"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="32" id="cek-fE-D0n"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yB5-Cq-ms6" customClass="InformerAccordionViewList" customModule="Kanguro" customModuleProvider="target">
+                                    <rect key="frame" x="24" y="175" width="366" height="980"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                </view>
+                                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" hidesWhenStopped="YES" animating="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="qq3-0F-21M">
+                                    <rect key="frame" x="197" y="147" width="20" height="20"/>
+                                </activityIndicatorView>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="yB5-Cq-ms6" firstAttribute="top" secondItem="dye-Wh-TkZ" secondAttribute="bottom" constant="32" id="1zF-fK-qMV"/>
+                                <constraint firstAttribute="trailing" secondItem="dye-Wh-TkZ" secondAttribute="trailing" constant="24" id="50n-YM-LWT"/>
+                                <constraint firstItem="dye-Wh-TkZ" firstAttribute="top" secondItem="bQC-Mf-NMD" secondAttribute="top" constant="32" id="Ixc-6i-xnw"/>
+                                <constraint firstItem="yB5-Cq-ms6" firstAttribute="leading" secondItem="bQC-Mf-NMD" secondAttribute="leading" constant="24" id="KEo-XE-e02"/>
+                                <constraint firstItem="dye-Wh-TkZ" firstAttribute="leading" secondItem="bQC-Mf-NMD" secondAttribute="leading" constant="24" id="Lnc-CP-BuC"/>
+                                <constraint firstItem="qq3-0F-21M" firstAttribute="top" secondItem="dye-Wh-TkZ" secondAttribute="bottom" constant="32" id="QkX-SB-4Rr"/>
+                                <constraint firstAttribute="trailing" secondItem="yB5-Cq-ms6" secondAttribute="trailing" constant="24" id="XLR-WE-ua6"/>
+                                <constraint firstAttribute="bottom" secondItem="yB5-Cq-ms6" secondAttribute="bottom" constant="24" id="cS0-0t-aDk"/>
+                                <constraint firstItem="qq3-0F-21M" firstAttribute="centerX" secondItem="bQC-Mf-NMD" secondAttribute="centerX" id="pXf-mK-CKi"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="16"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="bQC-Mf-NMD" secondAttribute="trailing" id="47V-cE-vc4"/>
+                        <constraint firstItem="bQC-Mf-NMD" firstAttribute="leading" secondItem="bxu-dp-YI2" secondAttribute="leading" id="NtQ-V2-GTM"/>
+                        <constraint firstAttribute="bottom" secondItem="bQC-Mf-NMD" secondAttribute="bottom" id="eHB-8Z-Weh"/>
+                        <constraint firstItem="bQC-Mf-NMD" firstAttribute="top" secondItem="bxu-dp-YI2" secondAttribute="top" id="uzg-46-Azy"/>
+                    </constraints>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="48J-jn-TAc"/>
+                    </connections>
+                </scrollView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="O7Y-fe-LGd"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="no6-X8-lJ4" firstAttribute="leading" secondItem="O7Y-fe-LGd" secondAttribute="leading" constant="16" id="8R6-Jf-7tS"/>
+                <constraint firstItem="bxu-dp-YI2" firstAttribute="trailing" secondItem="O7Y-fe-LGd" secondAttribute="trailing" id="EkR-uG-Rp6"/>
+                <constraint firstItem="O7Y-fe-LGd" firstAttribute="bottom" secondItem="bxu-dp-YI2" secondAttribute="bottom" constant="50" id="PHN-gB-rZD"/>
+                <constraint firstItem="fBL-55-wh9" firstAttribute="leading" secondItem="bIc-aL-Ixx" secondAttribute="leading" id="RkU-a7-Lpw"/>
+                <constraint firstItem="fBL-55-wh9" firstAttribute="trailing" secondItem="O7Y-fe-LGd" secondAttribute="trailing" id="SBd-G4-drp"/>
+                <constraint firstItem="bxu-dp-YI2" firstAttribute="top" secondItem="fBL-55-wh9" secondAttribute="bottom" constant="-72" id="Sn8-4Z-pfW" userLabel="MinimumBottomScroll View.top = Image View.bottom - 72"/>
+                <constraint firstItem="bxu-dp-YI2" firstAttribute="top" relation="greaterThanOrEqual" secondItem="O7Y-fe-LGd" secondAttribute="top" constant="72" id="aEL-xf-sjZ" userLabel="MaximumTopScroll View.top ≥ Safe Area.top + 72"/>
+                <constraint firstItem="bxu-dp-YI2" firstAttribute="leading" secondItem="O7Y-fe-LGd" secondAttribute="leading" id="gpL-ur-38g"/>
+                <constraint firstItem="fBL-55-wh9" firstAttribute="top" secondItem="bIc-aL-Ixx" secondAttribute="top" id="nWr-7t-J5x"/>
+                <constraint firstItem="no6-X8-lJ4" firstAttribute="top" secondItem="O7Y-fe-LGd" secondAttribute="top" constant="8" id="sMk-rt-qRy" userLabel="BackButtonTopView.top = Safe Area.top + 8"/>
+                <constraint firstItem="bQC-Mf-NMD" firstAttribute="width" secondItem="bIc-aL-Ixx" secondAttribute="width" id="uGQ-b1-2Bi"/>
+            </constraints>
+            <point key="canvasLocation" x="131.8840579710145" y="129.91071428571428"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ic-backArrow" width="24" height="24"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

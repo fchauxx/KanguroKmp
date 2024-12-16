@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CommunicationChatbotViewController" customModule="Kanguro" customModuleProvider="target">
+            <connections>
+                <outlet property="chatbotView" destination="C6C-Rs-5no" id="gs1-pc-UHv"/>
+                <outlet property="navigationBackButton" destination="iWQ-Uz-Qhk" id="XuJ-CN-Mcr"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C6C-Rs-5no" customClass="ChatbotView" customModule="Kanguro" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="262.66666666666669" width="390" height="547.33333333333326"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iWQ-Uz-Qhk" customClass="NavigationBackButton" customModule="Kanguro" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="47" width="390" height="44"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="Y0q-Fi-7gC"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tco-IN-4jX" customClass="NewClaimHeaderView" customModule="Kanguro" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="90.999999999999986" width="390" height="171.66666666666663"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" name="NeutralBackground"/>
+            <constraints>
+                <constraint firstItem="tco-IN-4jX" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.203202" id="6CR-Ks-sZU"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="tco-IN-4jX" secondAttribute="trailing" id="6mD-Al-BEp"/>
+                <constraint firstItem="tco-IN-4jX" firstAttribute="top" secondItem="iWQ-Uz-Qhk" secondAttribute="bottom" id="DPS-t1-6KN"/>
+                <constraint firstItem="C6C-Rs-5no" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="EpC-rk-ZVc"/>
+                <constraint firstItem="tco-IN-4jX" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="PGU-aK-bhB"/>
+                <constraint firstItem="C6C-Rs-5no" firstAttribute="top" secondItem="tco-IN-4jX" secondAttribute="bottom" id="Tbz-LY-196"/>
+                <constraint firstItem="C6C-Rs-5no" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="ep2-jK-mnG"/>
+                <constraint firstItem="iWQ-Uz-Qhk" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="gWA-IA-k3E"/>
+                <constraint firstItem="iWQ-Uz-Qhk" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="igQ-wo-5FN"/>
+                <constraint firstItem="iWQ-Uz-Qhk" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="vPI-lF-oYx"/>
+                <constraint firstItem="C6C-Rs-5no" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="wLg-hO-7fc"/>
+            </constraints>
+            <point key="canvasLocation" x="120" y="20.616113744075829"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="NeutralBackground">
+            <color red="0.94117647058823528" green="0.94117647058823528" blue="0.94117647058823528" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

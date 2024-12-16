@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="default" indentationWidth="10" rowHeight="299" id="KGk-i7-Jjw" customClass="OpenClaimCard" customModule="Kanguro" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="391" height="299"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="391" height="299"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QTv-WC-U9M" userLabel="Top View">
+                        <rect key="frame" x="16" y="16" width="359" height="155"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dog-tobias" translatesAutoresizingMaskIntoConstraints="NO" id="ij7-fO-tXy">
+                                <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Vac-Dw-yIX"/>
+                                    <constraint firstAttribute="width" constant="40" id="qil-pd-zGf"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="c1m-CS-0l9">
+                                <rect key="frame" x="48" y="0.0" width="85" height="155"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t5q-C9-DmE" customClass="CustomLabel" customModule="Kanguro" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="85" height="72"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jbA-gi-e8h" customClass="CustomLabel" customModule="Kanguro" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="75" width="85" height="80"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="last update" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lxe-Kb-VAm" customClass="CustomLabel" customModule="Kanguro" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="155" width="85" height="0.0"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="edi-sK-HRq" userLabel="Details button" customClass="CustomButton" customModule="Kanguro" customModuleProvider="target">
+                                <rect key="frame" x="286" y="0.0" width="73" height="28"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="73" id="gcx-k9-wct"/>
+                                    <constraint firstAttribute="height" constant="28" id="ilN-FG-hkC"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="14"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="ij7-fO-tXy" secondAttribute="bottom" id="0Gd-RI-gr0"/>
+                            <constraint firstItem="ij7-fO-tXy" firstAttribute="leading" secondItem="QTv-WC-U9M" secondAttribute="leading" id="5Ni-EK-29M"/>
+                            <constraint firstItem="c1m-CS-0l9" firstAttribute="leading" secondItem="ij7-fO-tXy" secondAttribute="trailing" constant="8" id="SNW-1b-3iK"/>
+                            <constraint firstItem="edi-sK-HRq" firstAttribute="top" secondItem="QTv-WC-U9M" secondAttribute="top" id="dcP-7V-siZ"/>
+                            <constraint firstAttribute="trailing" secondItem="edi-sK-HRq" secondAttribute="trailing" id="glL-9V-RUP"/>
+                            <constraint firstItem="ij7-fO-tXy" firstAttribute="top" secondItem="QTv-WC-U9M" secondAttribute="top" id="q4y-p7-pUu"/>
+                            <constraint firstItem="edi-sK-HRq" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="c1m-CS-0l9" secondAttribute="trailing" constant="4" id="sXb-b2-iRI"/>
+                            <constraint firstItem="c1m-CS-0l9" firstAttribute="top" secondItem="QTv-WC-U9M" secondAttribute="top" id="y2a-oq-Izb"/>
+                            <constraint firstAttribute="bottom" secondItem="c1m-CS-0l9" secondAttribute="bottom" id="ygB-37-CFF"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mvS-Al-PvU" customClass="ClaimTrackerView" customModule="Kanguro" customModuleProvider="target">
+                        <rect key="frame" x="16" y="195" width="359" height="64"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="64" id="fWA-Bw-JUc"/>
+                        </constraints>
+                    </view>
+                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xZF-vA-Qlk" customClass="CustomButton" customModule="Kanguro" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="267" width="391" height="32"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="32" id="RQJ-ZR-jUT"/>
+                        </constraints>
+                        <state key="normal" title="Button"/>
+                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                    </button>
+                </subviews>
+                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstItem="QTv-WC-U9M" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="5vu-6g-WTT"/>
+                    <constraint firstItem="mvS-Al-PvU" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="6Rv-Dr-0cv"/>
+                    <constraint firstItem="mvS-Al-PvU" firstAttribute="top" secondItem="QTv-WC-U9M" secondAttribute="bottom" constant="24" id="B71-YF-xbB"/>
+                    <constraint firstAttribute="trailing" secondItem="mvS-Al-PvU" secondAttribute="trailing" constant="16" id="CF5-2a-wua"/>
+                    <constraint firstAttribute="trailing" secondItem="QTv-WC-U9M" secondAttribute="trailing" constant="16" id="ExZ-NX-9iW"/>
+                    <constraint firstItem="QTv-WC-U9M" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="JsH-WJ-e4o"/>
+                    <constraint firstItem="xZF-vA-Qlk" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="RLz-ru-K20"/>
+                    <constraint firstItem="xZF-vA-Qlk" firstAttribute="top" secondItem="mvS-Al-PvU" secondAttribute="bottom" constant="8" id="ZHb-4y-IEc"/>
+                    <constraint firstAttribute="bottom" secondItem="xZF-vA-Qlk" secondAttribute="bottom" id="dJT-Go-Z7R"/>
+                    <constraint firstAttribute="trailing" secondItem="xZF-vA-Qlk" secondAttribute="trailing" id="tlM-UI-Grf"/>
+                </constraints>
+                <userDefinedRuntimeAttributes>
+                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                        <real key="value" value="8"/>
+                    </userDefinedRuntimeAttribute>
+                </userDefinedRuntimeAttributes>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <accessibility key="accessibilityConfiguration" identifier="OpenClaimCard"/>
+            <connections>
+                <outlet property="costLabel" destination="jbA-gi-e8h" id="DFo-eN-APm"/>
+                <outlet property="detailsButton" destination="edi-sK-HRq" id="DPH-km-xvR"/>
+                <outlet property="lastUpdateLabel" destination="lxe-Kb-VAm" id="Pzz-eo-a6b"/>
+                <outlet property="petImageView" destination="ij7-fO-tXy" id="MvB-IX-BkB"/>
+                <outlet property="petNameLabel" destination="t5q-C9-DmE" id="Ed0-q8-rQp"/>
+                <outlet property="trackerView" destination="mvS-Al-PvU" id="Bet-pO-t3t"/>
+                <outlet property="vetPayButton" destination="xZF-vA-Qlk" id="FJr-Tl-gIO"/>
+            </connections>
+            <point key="canvasLocation" x="161.59420289855075" y="195.87053571428569"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="dog-tobias" width="120" height="120"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DonationCauseCardView" customModule="Kanguro" customModuleProvider="target">
+            <connections>
+                <outlet property="arrowImageView" destination="Bn0-so-jg4" id="We9-fZ-BtT"/>
+                <outlet property="bottomView" destination="QXT-K4-3Dc" id="R3i-IS-CkD"/>
+                <outlet property="buttonViewBottomTitleLabel" destination="mML-1R-Zci" id="aYs-0N-3gB"/>
+                <outlet property="buttonViewTopTitleLabel" destination="X9N-yF-uHm" id="ZeX-xQ-08Y"/>
+                <outlet property="chooseButton" destination="PU4-He-Qu4" id="acK-yi-lnp"/>
+                <outlet property="descriptionLabel" destination="Yhb-Mc-O2p" id="Ux9-QG-p3u"/>
+                <outlet property="stackView" destination="dMb-Uz-ihP" id="hJL-N0-Qke"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="424" height="252"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="dMb-Uz-ihP" userLabel="main Stack View">
+                    <rect key="frame" x="0.0" y="0.0" width="424" height="252"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PDz-DX-E6C" userLabel="Button View">
+                            <rect key="frame" x="0.0" y="0.0" width="424" height="75"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="VAQ-ga-oeE" userLabel="Labels Stack View">
+                                    <rect key="frame" x="16" y="16" width="41.5" height="43"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X9N-yF-uHm" userLabel="top Label" customClass="CustomLabel" customModule="Kanguro" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="41.5" height="20.5"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="12" id="HOV-3v-ba1"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mML-1R-Zci" userLabel="bottom Label" customClass="CustomLabel" customModule="Kanguro" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="22.5" width="41.5" height="20.5"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="12" id="zYq-rE-Tgj"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </stackView>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic-down-arrow" translatesAutoresizingMaskIntoConstraints="NO" id="Bn0-so-jg4">
+                                    <rect key="frame" x="384" y="25.5" width="24" height="24"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="24" id="8jg-k3-zhG"/>
+                                        <constraint firstAttribute="height" constant="24" id="gO6-kU-Z67"/>
+                                    </constraints>
+                                </imageView>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ghB-I8-dE6">
+                                    <rect key="frame" x="0.0" y="0.0" width="424" height="75"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain" title=" "/>
+                                    <connections>
+                                        <action selector="arrowViewButtonWithSender:" destination="-1" eventType="touchUpInside" id="IXY-KB-0ZK"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="ghB-I8-dE6" secondAttribute="trailing" id="0Ra-ys-HiR"/>
+                                <constraint firstItem="ghB-I8-dE6" firstAttribute="top" secondItem="PDz-DX-E6C" secondAttribute="top" id="4Op-ri-XTh"/>
+                                <constraint firstItem="VAQ-ga-oeE" firstAttribute="top" secondItem="PDz-DX-E6C" secondAttribute="top" constant="16" id="FwL-KI-9WX"/>
+                                <constraint firstAttribute="bottom" secondItem="ghB-I8-dE6" secondAttribute="bottom" id="Lss-2D-FAO"/>
+                                <constraint firstItem="VAQ-ga-oeE" firstAttribute="leading" secondItem="PDz-DX-E6C" secondAttribute="leading" constant="16" id="OQc-Xz-Ke0"/>
+                                <constraint firstAttribute="bottom" secondItem="VAQ-ga-oeE" secondAttribute="bottom" constant="16" id="Ov5-Op-dnH"/>
+                                <constraint firstItem="Bn0-so-jg4" firstAttribute="centerY" secondItem="PDz-DX-E6C" secondAttribute="centerY" id="a58-IN-SxQ"/>
+                                <constraint firstItem="ghB-I8-dE6" firstAttribute="leading" secondItem="PDz-DX-E6C" secondAttribute="leading" id="ame-Ei-L7U"/>
+                                <constraint firstItem="VAQ-ga-oeE" firstAttribute="centerY" secondItem="PDz-DX-E6C" secondAttribute="centerY" id="dfR-FV-Xqf"/>
+                                <constraint firstAttribute="trailing" secondItem="Bn0-so-jg4" secondAttribute="trailing" constant="16" id="gE7-sP-OkN"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QXT-K4-3Dc" userLabel="Bottom View">
+                            <rect key="frame" x="0.0" y="83" width="424" height="169"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yhb-Mc-O2p" userLabel="Description Label" customClass="CustomLabel" customModule="Kanguro" customModuleProvider="target">
+                                    <rect key="frame" x="16" y="0.0" width="392" height="65"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="12" id="SL8-qb-dZ5"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PU4-He-Qu4" customClass="CustomButton" customModule="Kanguro" customModuleProvider="target">
+                                    <rect key="frame" x="16" y="89" width="392" height="64"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="64" id="hVf-iN-kqo"/>
+                                    </constraints>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="PU4-He-Qu4" firstAttribute="top" secondItem="Yhb-Mc-O2p" secondAttribute="bottom" constant="24" id="0c5-JE-eDU"/>
+                                <constraint firstAttribute="trailing" secondItem="Yhb-Mc-O2p" secondAttribute="trailing" constant="16" id="3jn-yC-DyN"/>
+                                <constraint firstItem="Yhb-Mc-O2p" firstAttribute="leading" secondItem="QXT-K4-3Dc" secondAttribute="leading" constant="16" id="9eU-1q-HbN"/>
+                                <constraint firstItem="Yhb-Mc-O2p" firstAttribute="top" secondItem="QXT-K4-3Dc" secondAttribute="top" id="BSa-8o-LqX"/>
+                                <constraint firstAttribute="trailing" secondItem="PU4-He-Qu4" secondAttribute="trailing" constant="16" id="YLJ-Kt-Njy"/>
+                                <constraint firstAttribute="bottom" secondItem="PU4-He-Qu4" secondAttribute="bottom" constant="16" id="axN-vG-PHy"/>
+                                <constraint firstItem="PU4-He-Qu4" firstAttribute="leading" secondItem="QXT-K4-3Dc" secondAttribute="leading" constant="16" id="e4R-QY-cJj"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" name="NeutralBackground"/>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="dMb-Uz-ihP" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="D8s-bD-zoR"/>
+                <constraint firstAttribute="bottom" secondItem="dMb-Uz-ihP" secondAttribute="bottom" id="Qv7-Aa-JLv"/>
+                <constraint firstItem="dMb-Uz-ihP" firstAttribute="trailing" secondItem="iN0-l3-epB" secondAttribute="trailing" id="Zdf-06-193"/>
+                <constraint firstItem="dMb-Uz-ihP" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="zuY-ZM-JFa"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                    <real key="value" value="8"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
+            <point key="canvasLocation" x="144.92753623188406" y="-117.85714285714285"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ic-down-arrow" width="24" height="24"/>
+        <namedColor name="NeutralBackground">
+            <color red="0.94117647058823528" green="0.94117647058823528" blue="0.94117647058823528" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

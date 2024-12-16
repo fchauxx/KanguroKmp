@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "item-category-jewelry.svg",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

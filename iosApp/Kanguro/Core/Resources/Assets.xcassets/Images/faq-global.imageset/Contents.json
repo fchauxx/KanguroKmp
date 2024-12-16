@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "faq-global.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

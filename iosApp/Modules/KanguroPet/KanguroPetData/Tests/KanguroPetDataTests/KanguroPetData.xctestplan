@@ -1,0 +1,24 @@
+{
+  "configurations" : [
+    {
+      "id" : "E96BC4F3-63A6-4D6C-8372-FEEFF487D454",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "testExecutionOrdering" : "random"
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:",
+        "identifier" : "KanguroPetDataTests",
+        "name" : "KanguroPetDataTests"
+      }
+    }
+  ],
+  "version" : 1
+}

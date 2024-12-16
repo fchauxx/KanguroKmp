@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CheckboxOptionView" customModule="Kanguro" customModuleProvider="target">
+            <connections>
+                <outlet property="checkboxView" destination="2Km-zj-DnR" id="blR-cG-Db6"/>
+                <outlet property="optionLabel" destination="D8m-X8-tdE" id="UsH-GA-dA8"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="477" height="314"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="KKO-jl-6Er">
+                    <rect key="frame" x="0.0" y="59" width="477" height="221"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Km-zj-DnR" customClass="CheckboxView" customModule="Kanguro" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="98.666666666666657" width="24" height="24"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="24" id="Y7P-mq-1hw"/>
+                                <constraint firstAttribute="width" secondItem="2Km-zj-DnR" secondAttribute="height" multiplier="1:1" id="y0t-ed-0T8"/>
+                            </constraints>
+                        </view>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Option" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D8m-X8-tdE" customClass="CustomLabel" customModule="Kanguro" customModuleProvider="target">
+                            <rect key="frame" x="32" y="100.33333333333334" width="445" height="20.333333333333329"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="KKO-jl-6Er" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="HkQ-BC-Yna"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="KKO-jl-6Er" secondAttribute="trailing" id="Ne3-9d-rFU"/>
+                <constraint firstItem="KKO-jl-6Er" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="Woz-WO-1eo"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="KKO-jl-6Er" secondAttribute="bottom" id="YuQ-jy-kAR"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-260" y="-167"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="86" id="1O1-GX-xTq" customClass="VerticalReminderCardCell" customModule="Kanguro" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="392" height="86"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1O1-GX-xTq" id="X34-gG-E3h">
+                <rect key="frame" x="0.0" y="0.0" width="392" height="86"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nzz-aP-drb" userLabel="bg View">
+                        <rect key="frame" x="1" y="1" width="390" height="84"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dmc-sP-hsj" userLabel="Pet name Label" customClass="CustomLabel" customModule="Kanguro" customModuleProvider="target">
+                                <rect key="frame" x="369.5" y="14" width="4.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="53d-KS-Imf">
+                                <rect key="frame" x="349.5" y="16" width="16" height="16"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="16" id="gfi-xS-HDJ"/>
+                                    <constraint firstAttribute="height" constant="16" id="gvU-3a-KcP"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="x76-Sv-yUN" userLabel="Labels Stack View">
+                                <rect key="frame" x="15" y="16" width="4.5" height="52"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zr8-ED-0Ko" userLabel="Reminder TitleLabel" customClass="CustomLabel" customModule="Kanguro" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="4.5" height="52"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iUx-xU-Ief" userLabel="Subtitle Label" customClass="CustomLabel" customModule="Kanguro" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="52" width="4.5" height="14"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="14" id="QrY-8U-IYu"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V1p-kE-rH3">
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="84"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title=" "/>
+                                <connections>
+                                    <action selector="reminderButtonTouchUpInside:" destination="1O1-GX-xTq" eventType="touchUpInside" id="kUQ-aH-XtS"/>
+                                </connections>
+                            </button>
+                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dZU-r4-CW1">
+                                <rect key="frame" x="358" y="56" width="16" height="16"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="16" id="6PC-I2-av8"/>
+                                    <constraint firstAttribute="width" constant="16" id="lBQ-Fh-Qh8"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="V1p-kE-rH3" firstAttribute="leading" secondItem="nzz-aP-drb" secondAttribute="leading" id="0kP-ua-PGw"/>
+                            <constraint firstAttribute="bottom" secondItem="x76-Sv-yUN" secondAttribute="bottom" constant="16" id="1To-il-1vi"/>
+                            <constraint firstItem="53d-KS-Imf" firstAttribute="top" secondItem="nzz-aP-drb" secondAttribute="top" constant="16" id="5Ag-hg-d14"/>
+                            <constraint firstItem="x76-Sv-yUN" firstAttribute="top" secondItem="nzz-aP-drb" secondAttribute="top" constant="16" id="8I2-Vb-6kf"/>
+                            <constraint firstAttribute="trailing" secondItem="dZU-r4-CW1" secondAttribute="trailing" constant="16" id="94l-nD-W0d"/>
+                            <constraint firstAttribute="trailing" secondItem="V1p-kE-rH3" secondAttribute="trailing" id="BZe-gf-aAb"/>
+                            <constraint firstAttribute="bottom" secondItem="dZU-r4-CW1" secondAttribute="bottom" constant="12" id="Ifo-zo-S5O"/>
+                            <constraint firstItem="Dmc-sP-hsj" firstAttribute="leading" secondItem="53d-KS-Imf" secondAttribute="trailing" constant="4" id="Laz-jh-m8e"/>
+                            <constraint firstAttribute="trailing" secondItem="Dmc-sP-hsj" secondAttribute="trailing" constant="16" id="X9K-Xh-dSp"/>
+                            <constraint firstAttribute="bottom" secondItem="V1p-kE-rH3" secondAttribute="bottom" id="cBI-Bv-vY5"/>
+                            <constraint firstItem="Dmc-sP-hsj" firstAttribute="centerY" secondItem="53d-KS-Imf" secondAttribute="centerY" id="czd-Xo-Cgh"/>
+                            <constraint firstItem="V1p-kE-rH3" firstAttribute="top" secondItem="nzz-aP-drb" secondAttribute="top" id="kCa-Dn-TJg"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                <real key="value" value="0.0"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="8"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="x76-Sv-yUN" firstAttribute="leading" secondItem="X34-gG-E3h" secondAttribute="leading" constant="16" id="0Jx-xT-Rfs"/>
+                    <constraint firstAttribute="bottom" secondItem="nzz-aP-drb" secondAttribute="bottom" constant="1" id="76g-T2-nYe"/>
+                    <constraint firstItem="nzz-aP-drb" firstAttribute="top" secondItem="X34-gG-E3h" secondAttribute="top" constant="1" id="7FI-C2-rML"/>
+                    <constraint firstItem="nzz-aP-drb" firstAttribute="leading" secondItem="X34-gG-E3h" secondAttribute="leading" constant="1" id="a4T-55-vcB"/>
+                    <constraint firstAttribute="trailing" secondItem="nzz-aP-drb" secondAttribute="trailing" constant="1" id="jds-0a-cke"/>
+                </constraints>
+                <userDefinedRuntimeAttributes>
+                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                        <real key="value" value="8"/>
+                    </userDefinedRuntimeAttribute>
+                </userDefinedRuntimeAttributes>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="contentBGView" destination="nzz-aP-drb" id="FLN-za-2q1"/>
+                <outlet property="iconImageView" destination="dZU-r4-CW1" id="yBF-0D-fQE"/>
+                <outlet property="leadingBgConstraint" destination="a4T-55-vcB" id="Wwj-kG-2VQ"/>
+                <outlet property="petNameLabel" destination="Dmc-sP-hsj" id="Xuh-f7-p1Z"/>
+                <outlet property="petPhotoImageView" destination="53d-KS-Imf" id="pxx-Cy-fhI"/>
+                <outlet property="subtitleLabel" destination="iUx-xU-Ief" id="XWn-KE-Nmq"/>
+                <outlet property="titleLabel" destination="zr8-ED-0Ko" id="t2p-tY-JWA"/>
+            </connections>
+            <point key="canvasLocation" x="-700" y="-15.401785714285714"/>
+        </tableViewCell>
+    </objects>
+</document>

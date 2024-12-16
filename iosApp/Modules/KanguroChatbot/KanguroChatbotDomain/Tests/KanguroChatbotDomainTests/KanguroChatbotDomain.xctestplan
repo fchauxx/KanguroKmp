@@ -1,0 +1,24 @@
+{
+  "configurations" : [
+    {
+      "id" : "6B88C8DB-F1F7-4AAB-951D-58585CC39BF9",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:",
+        "identifier" : "KanguroChatbotDomainTests",
+        "name" : "KanguroChatbotDomainTests"
+      }
+    }
+  ],
+  "version" : 1
+}

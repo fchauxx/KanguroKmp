@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CodeConfirmationView" customModule="Kanguro" customModuleProvider="target">
+            <connections>
+                <outlet property="belowMessagesStackView" destination="s1v-ik-uaP" id="K9b-Jb-SIY"/>
+                <outlet property="codeValidationStackView" destination="sXf-Q2-5j7" id="sM9-b8-Ltw"/>
+                <outlet property="countdownLabel" destination="oSr-73-7Rs" id="WSG-Sw-AnT"/>
+                <outlet property="enterCodeLabel" destination="1am-CM-Jec" id="wg0-cb-MMI"/>
+                <outlet property="invalidCodeLabel" destination="Wbf-FZ-z2g" id="Mtf-4P-43w"/>
+                <outlet property="loaderImageView" destination="Ai0-mw-lOH" id="aX0-hA-jiS"/>
+                <outlet property="resendCodeLabel" destination="IZF-oC-Vzy" id="uAm-df-9UW"/>
+                <outlet property="validationButton" destination="LC8-un-xJm" id="b8e-Rx-VLA"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="500" height="149"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="enter the code" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1am-CM-Jec" customClass="CustomLabel" customModule="Kanguro" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="111" height="20.333333333333332"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="sXf-Q2-5j7" userLabel="OTP Text Fields Stack view">
+                    <rect key="frame" x="0.0" y="28.333333333333329" width="464" height="56"/>
+                </stackView>
+                <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" alignment="top" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="s1v-ik-uaP" userLabel="Messages Stack View">
+                    <rect key="frame" x="0.0" y="92.333333333333343" width="112" height="20.333333333333336"/>
+                    <subviews>
+                        <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="invalid code" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wbf-FZ-z2g" userLabel="Invalid Code" customClass="CustomLabel" customModule="Kanguro" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="90.333333333333329" height="0.0"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="bOi-wn-IOa">
+                            <rect key="frame" x="0.0" y="0.0" width="112" height="20.333333333333332"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="message" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IZF-oC-Vzy" customClass="CustomLabel" customModule="Kanguro" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="68.666666666666671" height="20.333333333333332"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="timer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oSr-73-7Rs" customClass="CustomLabel" customModule="Kanguro" customModuleProvider="target">
+                                    <rect key="frame" x="72.666666666666671" y="0.0" width="39.333333333333329" height="20.333333333333332"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                </stackView>
+                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4OR-fg-gvV" userLabel="ConfirmationView">
+                    <rect key="frame" x="472" y="46.333333333333343" width="20" height="20"/>
+                    <subviews>
+                        <imageView hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ai0-mw-lOH" userLabel="Loader Image">
+                            <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="20" id="YlE-y5-hiY"/>
+                                <constraint firstAttribute="height" constant="20" id="cZP-Mg-tcE"/>
+                            </constraints>
+                        </imageView>
+                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LC8-un-xJm" userLabel="Validation Button">
+                            <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="20" id="Dob-sS-GgQ"/>
+                                <constraint firstAttribute="width" constant="20" id="hkm-Ir-qqb"/>
+                            </constraints>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" image="ic-correct" title=" " imagePadding="-4"/>
+                            <connections>
+                                <action selector="validationButtonTouchUpInside:" destination="-1" eventType="touchUpInside" id="9jr-zC-9Q5"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="LC8-un-xJm" firstAttribute="leading" secondItem="4OR-fg-gvV" secondAttribute="leading" id="5WH-Aa-Nn9"/>
+                        <constraint firstItem="Ai0-mw-lOH" firstAttribute="top" secondItem="4OR-fg-gvV" secondAttribute="top" id="7Dv-Bo-Mjo"/>
+                        <constraint firstAttribute="bottom" secondItem="Ai0-mw-lOH" secondAttribute="bottom" id="EMU-sr-22x"/>
+                        <constraint firstAttribute="bottom" secondItem="LC8-un-xJm" secondAttribute="bottom" id="Lms-XH-96D"/>
+                        <constraint firstItem="Ai0-mw-lOH" firstAttribute="leading" secondItem="4OR-fg-gvV" secondAttribute="leading" id="MmP-2Z-olD"/>
+                        <constraint firstAttribute="trailing" secondItem="Ai0-mw-lOH" secondAttribute="trailing" id="eH0-zB-NCr"/>
+                        <constraint firstItem="LC8-un-xJm" firstAttribute="top" secondItem="4OR-fg-gvV" secondAttribute="top" id="hO0-lt-oZg"/>
+                        <constraint firstAttribute="trailing" secondItem="LC8-un-xJm" secondAttribute="trailing" id="jxv-HX-kny"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="s1v-ik-uaP" firstAttribute="top" secondItem="sXf-Q2-5j7" secondAttribute="bottom" constant="8" id="2Pa-X9-Q8L"/>
+                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="4OR-fg-gvV" secondAttribute="trailing" constant="8" id="AXz-YO-s5a"/>
+                <constraint firstItem="sXf-Q2-5j7" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="HUK-TH-KML"/>
+                <constraint firstItem="1am-CM-Jec" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="QKU-CC-Du9"/>
+                <constraint firstItem="4OR-fg-gvV" firstAttribute="centerY" secondItem="sXf-Q2-5j7" secondAttribute="centerY" id="R5p-gF-ji3"/>
+                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="s1v-ik-uaP" secondAttribute="trailing" constant="32" id="Rdt-w7-CcN"/>
+                <constraint firstItem="sXf-Q2-5j7" firstAttribute="top" secondItem="1am-CM-Jec" secondAttribute="bottom" constant="8" id="ods-a3-UjC"/>
+                <constraint firstItem="s1v-ik-uaP" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="sff-8y-wIc"/>
+                <constraint firstItem="4OR-fg-gvV" firstAttribute="leading" secondItem="sXf-Q2-5j7" secondAttribute="trailing" constant="8" id="uGE-Tf-iee"/>
+                <constraint firstItem="1am-CM-Jec" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="wxc-q5-U94"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="131.19999999999999" y="128.94088669950739"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ic-correct" width="24" height="24"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
