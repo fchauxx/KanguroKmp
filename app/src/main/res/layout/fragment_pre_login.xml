@@ -19,12 +19,6 @@
             app:defaultNavHost="true"
             app:navGraph="@navigation/nav_pre_login" />
 
-
-        <androidx.compose.ui.platform.ComposeView
-            android:id="@+id/compose_view"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
-
         <ImageButton
             android:id="@+id/closeButton"
             style="@style/KanguroCloseButtonX" />

@@ -1,4 +1,4 @@
-package com.insurtech.kanguro.designsystem.ui.composables.liveVet
+package com.insurtech.kanguro.shared.ui
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Column
@@ -9,35 +9,50 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
-import androidx.compose.material.Text
 import androidx.compose.material3.Surface
+import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.input.nestedscroll.nestedScroll
+import androidx.compose.ui.geometry.Offset
+import androidx.compose.ui.input.nestedscroll.NestedScrollConnection
+import androidx.compose.ui.input.nestedscroll.NestedScrollSource
 import androidx.compose.ui.layout.ContentScale
-import androidx.compose.ui.platform.rememberNestedScrollInteropConnection
-import androidx.compose.ui.res.painterResource
-import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.SpanStyle
 import androidx.compose.ui.text.buildAnnotatedString
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.withStyle
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.sp
-import com.insurtech.kanguro.designsystem.R
-import com.insurtech.kanguro.designsystem.ui.composables.commumComponents.HeaderBackAndClose
-import com.insurtech.kanguro.designsystem.ui.composables.commumComponents.KanguroButton
-import com.insurtech.kanguro.designsystem.ui.composables.commumComponents.LoadingErrorStateOverlay
-import com.insurtech.kanguro.designsystem.ui.composables.liveVet.model.LiveVetEvent
-import com.insurtech.kanguro.designsystem.ui.theme.MobaBodyRegular
-import com.insurtech.kanguro.designsystem.ui.theme.MobaTitle3
-import com.insurtech.kanguro.designsystem.ui.theme.MobaTitle3SemiBold
-import com.insurtech.kanguro.designsystem.ui.theme.NeutralBackground
-import com.insurtech.kanguro.designsystem.ui.theme.SecondaryDark
-import com.insurtech.kanguro.designsystem.ui.theme.spacingNanoLarge
-import com.insurtech.kanguro.designsystem.ui.theme.spacingXxs
-import com.insurtech.kanguro.designsystem.ui.theme.spacingXxxs
-import com.insurtech.kanguro.domain.model.AirvetUserDetails
+import com.insurtech.kanguro.shared.data.AirvetUserDetails
+import com.insurtech.kanguro.shared.spacingNanoLarge
+import com.insurtech.kanguro.shared.spacingXxs
+import com.insurtech.kanguro.shared.spacingXxxs
+import com.insurtech.kanguro.shared.theme.MobaBodyRegular
+import com.insurtech.kanguro.shared.theme.MobaTitle3
+import com.insurtech.kanguro.shared.theme.MobaTitle3SemiBold
+import com.insurtech.kanguro.shared.theme.SecondaryDark
+import kanguro.shared.generated.resources.Res
+import kanguro.shared.generated.resources.img_live_vet_on_phone
+import kanguro.shared.generated.resources.live_vet_button
+import kanguro.shared.generated.resources.live_vet_description
+import kanguro.shared.generated.resources.live_vet_description_2
+import kanguro.shared.generated.resources.live_vet_description_3
+import kanguro.shared.generated.resources.live_vet_description_4
+import kanguro.shared.generated.resources.live_vet_description_highlight
+import kanguro.shared.generated.resources.live_vet_policy
+import kanguro.shared.generated.resources.live_vet_subtitle
+import kanguro.shared.generated.resources.live_vet_title
+import org.jetbrains.compose.resources.painterResource
+import org.jetbrains.compose.resources.stringResource
+import org.jetbrains.compose.ui.tooling.preview.Preview
+
+class CustomNestedScrollConnection : NestedScrollConnection {
+    // Implement necessary functions for nested scrolling, such as:
+    override fun onPreScroll(available: Offset, source: NestedScrollSource): Offset {
+        // Handle pre-scroll logic here
+        return Offset.Zero // Return the consumed scroll offset
+    }
+}
 
 @Composable
 fun LiveVetBottomSheetScreenContent(
@@ -47,15 +62,13 @@ fun LiveVetBottomSheetScreenContent(
     airvetUserDetails: AirvetUserDetails,
     onEvent: (LiveVetEvent) -> Unit = {}
 ) {
+    val nestedScrollConnection = remember { CustomNestedScrollConnection() }
     Column(
         modifier = modifier
             .padding(top = spacingXxxs, start = spacingXxxs, end = spacingXxxs)
     ) {
         LiveVetHeader(
             modifier = Modifier
-                .nestedScroll(
-                    rememberNestedScrollInteropConnection()
-                )
                 .verticalScroll(
                     rememberScrollState()
                 ),
@@ -72,13 +85,13 @@ fun LiveVetBottomSheetScreenContent(
                 onEvent = onEvent
             )
         } else {
-            LoadingErrorStateOverlay(
+         /*   LoadingErrorStateOverlay(
                 isLoading = isLoading,
                 isError = isError,
                 loaderColor = NeutralBackground
             ) {
                 onEvent(LiveVetEvent.OnTryAgainPressed)
-            }
+            }*/
         }
     }
 }
@@ -101,7 +114,7 @@ private fun Content(
 
             Image(
                 modifier = Modifier.fillMaxWidth(),
-                painter = painterResource(id = R.drawable.img_live_vet_on_phone),
+                painter = painterResource(resource = Res.drawable.img_live_vet_on_phone),
                 contentDescription = null,
                 contentScale = ContentScale.FillWidth
             )
@@ -114,7 +127,7 @@ private fun Content(
         KanguroButton(
             modifier = Modifier
                 .padding(top = spacingXxxs, bottom = spacingXxs),
-            text = stringResource(id = R.string.live_vet_button),
+            text = stringResource(resource = Res.string.live_vet_button),
             enabled = true
         ) {
             onEvent(
@@ -134,9 +147,6 @@ private fun LiveVetHeader(
     Column(
         modifier = modifier.fillMaxWidth()
     ) {
-        HeaderBackAndClose(
-            onClosePressed = onClosePressed
-        )
         Column(
             modifier = Modifier.padding(
                 start = spacingXxxs,
@@ -159,8 +169,8 @@ private fun LiveVetTitleComponent(
 ) {
     Text(
         modifier = modifier,
-        text = stringResource(id = R.string.live_vet_title),
-        style = MobaTitle3SemiBold
+        text = stringResource(Res.string.live_vet_title),
+        style = MobaTitle3SemiBold()
     )
 }
 
@@ -170,8 +180,8 @@ private fun LiveVetSubtitleComponent(
 ) {
     Text(
         modifier = modifier,
-        text = stringResource(id = R.string.live_vet_subtitle),
-        style = MobaTitle3.copy(fontSize = 16.sp)
+        text = stringResource(Res.string.live_vet_subtitle),
+        style = MobaTitle3().copy(fontSize = 16.sp)
     )
 }
 
@@ -179,9 +189,9 @@ private fun LiveVetSubtitleComponent(
 private fun LiveVetDescriptionText() {
     Text(
         text = buildAnnotatedString {
-            append(stringResource(id = R.string.live_vet_policy))
+            append(stringResource(Res.string.live_vet_policy))
         },
-        style = MobaBodyRegular.copy(color = SecondaryDark)
+        style = MobaBodyRegular().copy(color = SecondaryDark)
     )
     Spacer(modifier = Modifier.height(spacingNanoLarge))
     Text(
@@ -191,33 +201,36 @@ private fun LiveVetDescriptionText() {
                     fontWeight = FontWeight.Bold
                 )
             ) {
-                append(stringResource(id = R.string.live_vet_description_highlight))
+                append(stringResource(Res.string.live_vet_description_highlight))
             }
             append(" ")
-            append(stringResource(id = R.string.live_vet_description))
+            append(stringResource(Res.string.live_vet_description))
         },
-        style = MobaBodyRegular.copy(color = SecondaryDark)
+        style = MobaBodyRegular().copy(color = SecondaryDark)
     )
     Spacer(modifier = Modifier.height(spacingNanoLarge))
     Text(
         text = buildAnnotatedString {
-            append(stringResource(id = R.string.live_vet_description_2))
+            append(stringResource(Res.string.live_vet_description_2))
         },
-        style = MobaBodyRegular.copy(color = SecondaryDark)
+        style = MobaBodyRegular().copy(color = SecondaryDark)
     )
     Spacer(modifier = Modifier.height(spacingNanoLarge))
     Text(
         text = buildAnnotatedString {
-            append(stringResource(id = R.string.live_vet_description_3))
+            append(stringResource(Res.string.live_vet_description_3))
         },
-        style = MobaBodyRegular.copy(color = SecondaryDark)
+        style = MobaBodyRegular().copy(color = SecondaryDark)
     )
     Spacer(modifier = Modifier.height(spacingNanoLarge))
     Text(
         text = buildAnnotatedString {
-            append(stringResource(id = R.string.live_vet_description_4))
+            append(stringResource(Res.string.live_vet_description_4))
+            append(stringResource(Res.string.live_vet_description_4))
+            append(stringResource(Res.string.live_vet_description_4))
+            append(stringResource(Res.string.live_vet_description_4))
         },
-        style = MobaBodyRegular.copy(color = SecondaryDark)
+        style = MobaBodyRegular().copy(color = SecondaryDark)
     )
 }
 

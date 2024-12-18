@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hello">Hello Kanguro</string>
+    <string name="live_vet_title">Live Vet 24/7</string>
+    <string name="live_vet_subtitle">Televet service Powered by Airvet</string>
+    <string name="live_vet_policy">Your Kanguro Policy now includes live chat or video with a vet. Free of charge</string>
+    <string name="live_vet_description">and immediate - Contact a certified vet at any time, within the next 3 minutes</string>
+    <string name="live_vet_description_2">All vets are certified - they can prescribe medication for your pet. All without leaving the house</string>
+    <string name="live_vet_description_3">Free of charge - The airvet service is included with your Kanguro Pet Insurance</string>
+    <string name="live_vet_description_4">Bilingual - Vets in English and Spanish are available</string>
+    <string name="live_vet_description_highlight">24/7</string>
+    <string name="live_vet_step_1_full_text">Download the Airvet App here.</string>
+    <string name="live_vet_step_1">the Airvet App</string>
+    <string name="live_vet_step_1_highlight">Download</string>
+    <string name="live_vet_step_1_download_app_highlight">here</string>
+    <string name="live_vet_step_2">- When asked, use your customer id \"%1$s\".</string>
+    <string name="live_vet_step_2_highlight">Sign up</string>
+    <string name="live_vet_step_2_button">copy</string>
+    <string name="live_vet_step_2_button_clicked">copied</string>
+    <string name="live_vet_step_3">in under a minute.</string>
+    <string name="live_vet_step_3_highlight">Talk to a vet</string>
+    <string name="live_vet_button">Download the Airvet App</string>
+    <string name="airvet_link_error">Error opening Airvet</string>
+</resources>

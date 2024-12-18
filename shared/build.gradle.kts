@@ -4,6 +4,7 @@ plugins {
     // alias(libs.plugins.kotlinMultiplatform)
     id("com.android.library")
     id("org.jetbrains.compose")
+    alias(libs.plugins.kotlinxSerialization)
 }
 
 kotlin {
@@ -11,7 +12,7 @@ kotlin {
     listOf(
         iosX64(),
         iosArm64(),
-        iosSimulatorArm64()
+        iosSimulatorArm64(),
     ).forEach {
         it.binaries.framework {
             baseName = "shared"
@@ -19,14 +20,24 @@ kotlin {
         }
     }
     sourceSets {
+        androidMain{
+            dependencies {
+                implementation(libs.ktor.client.okhttp)
+            }
+        }
         commonMain {
             dependencies {
+                implementation(compose.components.uiToolingPreview)
                 implementation(compose.foundation)
                 implementation(compose.material3)
                 implementation(compose.components.resources)
                 implementation(compose.ui)
-                implementation(compose.components.uiToolingPreview)
+                implementation(compose.material)
                 implementation(compose.runtime)
+                implementation(libs.compose.view.model)
+                implementation(libs.ktor.client.core)
+                implementation(libs.ktor.client.contentnegotiation)
+                implementation(libs.ktor.client.serialization.json)
             }
         }
         commonTest {
@@ -35,6 +46,7 @@ kotlin {
         }
         iosMain {
             dependencies {
+                implementation(libs.ktor.client.darwin)
             }
         }
     }
@@ -70,4 +82,3 @@ android {
         targetCompatibility = JavaVersion.VERSION_17
     }
 }
-

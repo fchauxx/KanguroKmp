@@ -20,6 +20,7 @@ androidLegacySupportVersion = "1.0.0"
 androidLifecycleExtensionsVersion = "2.2.0"
 androidLifecycleLiveDataKtxVersion = "2.5.1"
 androidLifecycleViewModelVersion = "2.5.1"
+composeLifecycleViewModelVersion = "2.8.0"
 androidLocalBroadcastManagerVersion = "1.1.0"
 androidMaterialVersion = "1.9.0"
 androidMultidexVersion = "1.0.3"
@@ -65,6 +66,8 @@ turbineVersion = "1.0.0"
 immutableCollectionsVersion = "0.3.7"
 agp = "8.6.0"
 compose-plugin = "1.6.11"
+ktor = "2.3.11"
+uiAndroidVersion = "1.7.6"
 
 [libraries]
 android-gradle-plugin = { group = "com.android.tools.build", name = "gradle", version.ref = "androidGradlePluginVersion" }
@@ -117,7 +120,7 @@ compose-ui-tooling = { group = "androidx.compose.ui", name = "ui-tooling" }
 compose-constraint-layout = { group = "androidx.constraintlayout", name = "constraintlayout-compose", version.ref = "androidComposeConstrainLayout" }
 compose-flow-layout = { group = "com.google.accompanist", name = "accompanist-flowlayout", version.ref = "androidComposeFlowLayout" }
 accompanist-themeadapter-material = { group = "com.google.accompanist", name = "accompanist-themeadapter-material", version.ref = "accompanistVersion" }
-compose-view-model = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-compose", version.ref = "androidLifecycleViewModelVersion" }
+compose-view-model = { group = "org.jetbrains.androidx.lifecycle", name = "lifecycle-viewmodel-compose", version.ref = "composeLifecycleViewModelVersion" }
 compose-activity = { group = "androidx.activity", name = "activity-compose", version.ref = "androidActivityKtxVersion" }
 
 dagger-hilt-android = { group = "com.google.dagger", name = "hilt-android", version.ref = "daggerHiltVersion" }
@@ -191,6 +194,12 @@ timber = { group = "com.jakewharton.timber", name = "timber", version.ref = "tim
 turbine = { group = "app.cash.turbine", name = "turbine", version.ref = "turbineVersion" }
 
 immutableCollections = { group = "org.jetbrains.kotlinx", name = "kotlinx-collections-immutable", version.ref = "immutableCollectionsVersion" }
+ktor-client-core = { group= "io.ktor", name="ktor-client-core", version.ref ="ktor" }
+ktor-client-okhttp = { group= "io.ktor", name="ktor-client-okhttp", version.ref ="ktor" }
+ktor-client-darwin = { group= "io.ktor", name="ktor-client-ios", version.ref ="ktor" }
+ktor-client-contentnegotiation = { group= "io.ktor", name="ktor-client-content-negotiation", version.ref ="ktor" }
+ktor-client-serialization-json = { group= "io.ktor", name="ktor-serialization-kotlinx-json", version.ref ="ktor" }
+ui-android = { group = "androidx.compose.ui", name = "ui-android", version.ref = "uiAndroidVersion" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
@@ -208,7 +217,6 @@ kotlin-parcelize = { id = "org.jetbrains.kotlin.plugin.parcelize", version.ref =
 
 navigation-safeargs = { id = "androidx.navigation.safeargs", version.ref = "androidNavigationVersion" }
 
-kotlinMultiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlinVersion" }
 kotlinCocoapods = { id = "org.jetbrains.kotlin.native.cocoapods", version.ref = "kotlinVersion" }
 compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlinVersion" }
-jetbrainsCompose = { id = "org.jetbrains.compose", version.ref = "compose-plugin" }
+kotlinxSerialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlinVersion" }

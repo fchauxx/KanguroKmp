@@ -8,7 +8,6 @@ import androidx.navigation.Navigation
 import androidx.navigation.fragment.findNavController
 import com.insurtech.kanguro.analytics.AnalyticsEnums
 import com.insurtech.kanguro.databinding.FragmentPreLoginBinding
-import com.insurtech.kanguro.shared.App
 import com.insurtech.kanguro.ui.custom.KanguroBottomSheetFragment
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -24,9 +23,6 @@ class PreLoginFragment : KanguroBottomSheetFragment<FragmentPreLoginBinding>() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding.closeButton.setOnClickListener { findNavController().navigateUp() }
-        binding.composeView.setContent {
-            App()
-        }
     }
 
     override fun getOwnNavController(): NavController {

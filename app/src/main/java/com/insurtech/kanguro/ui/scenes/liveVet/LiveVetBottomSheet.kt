@@ -16,6 +16,7 @@ import com.insurtech.kanguro.databinding.BottomsheetLiveVetBinding
 import com.insurtech.kanguro.designsystem.ui.composables.liveVet.LiveVetBottomSheetScreenContent
 import com.insurtech.kanguro.designsystem.ui.composables.liveVet.model.LiveVetEvent
 import com.insurtech.kanguro.domain.model.AirvetUserDetails
+import com.insurtech.kanguro.shared.ui.SharedLiveVetBottomSheet
 import com.insurtech.kanguro.ui.custom.KanguroBottomSheetFragment
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -37,10 +38,13 @@ class LiveVetBottomSheet : KanguroBottomSheetFragment<BottomsheetLiveVetBinding>
 
     private fun setupUi() {
         binding.composeView.setContent {
-            LiveVetBottomSheet(
+            /*LiveVetBottomSheet(
                 modifier = Modifier.fillMaxSize(),
                 viewModel = viewModel,
                 onEvent = ::onEvent
+            )*/
+            SharedLiveVetBottomSheet(
+                modifier = Modifier.fillMaxSize()
             )
         }
     }
